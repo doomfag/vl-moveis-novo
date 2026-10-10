@@ -20,7 +20,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useStore, api } from "./store-context";
-import { whatsapp } from "@/lib/types";
+import { type Product, whatsapp } from "@/lib/types";
 const categories = [
   "Colchões",
   "Bases e camas",
@@ -40,7 +40,7 @@ export function Header() {
   return (
     <>
       <div className="announcement">
-        <span>Seu lar, com mais conforto.</span>
+        <span>VL Móveis · Móveis e colchões</span>
         <span className="desktop">
           <MapPin size={12} /> Sepetiba e Campo Grande · Rio de Janeiro
         </span>
@@ -63,26 +63,28 @@ export function Header() {
             {menu ? <X /> : <Menu />}
           </button>
           <Link href="/" className="brand" aria-label="VL Móveis, início">
-            <span className="brand-icon">
-              <Armchair size={28} strokeWidth={1.6} />
-            </span>
+            <img
+              className="brand-logo"
+              src="/logo-vl.png"
+              width={70}
+              height={58}
+              alt="VL"
+            />
             <span>
               <strong>
                 VL<span> Móveis</span>
               </strong>
-              <small>SEU LAR. SEU JEITO.</small>
             </span>
           </Link>
           <form action="/catalogo" className="search">
-            <Search size={19} />
             <input
               name="q"
               aria-label="Buscar produtos"
-              placeholder="O que falta para sua casa ficar completa?"
+              placeholder="Buscar produtos"
               autoComplete="off"
             />
             <button aria-label="Buscar">
-              <ArrowUpRight size={19} />
+              <Search size={22} />
             </button>
           </form>
           <div className="header-actions">
@@ -139,12 +141,15 @@ export function Footer() {
         <div className="container footer-grid">
           <div>
             <Link href="/" className="brand light">
-              <span className="brand-icon">
-                <Armchair size={28} />
-              </span>
+              <img
+                className="brand-logo"
+                src="/logo-vl.png"
+                width={70}
+                height={58}
+                alt="VL"
+              />
               <span>
                 <strong>VL Móveis</strong>
-                <small>SEU LAR. SEU JEITO.</small>
               </span>
             </Link>
             <p>
@@ -190,7 +195,6 @@ export function Footer() {
             <h3>Pode ficar à vontade</h3>
             <Link href="/privacidade">Privacidade</Link>
             <Link href="/termos">Compras e entregas</Link>
-            <Link href="/catalogos">Catálogos Ortobom</Link>
             <div className="footer-security">
               <ShieldCheck size={22} />
               <span>
@@ -355,10 +359,44 @@ export function Chat() {
 export function CompareDock() {
   const s = useStore(),
     path = usePathname();
+  const [products, setProducts] = useState<Product[]>([]);
+  useEffect(() => {
+    if (s.compare.length)
+      api("products")
+        .then((d) => setProducts(d.products))
+        .catch(() => {});
+  }, [s.compare.length]);
+  const items = s.compare
+    .map((id) => products.find((p) => p.id === id))
+    .filter((p): p is Product => !!p);
   return s.compare.length && path !== "/comparar" ? (
-    <Link href="/comparar" className="compare-dock">
-      <Scale size={18} /> Comparar {s.compare.length} produtos{" "}
-      <ArrowUpRight size={16} />
-    </Link>
+    <div
+      className="compare-dock"
+      aria-label="Produtos selecionados para comparação"
+    >
+      <div className="compare-chips">
+        <Scale size={20} />
+        {items.map((p) => (
+          <div className="compare-chip" key={p.id}>
+            <img src={p.images[0]} alt="" width={40} height={34} />
+            <span>{p.name}</span>
+            <button
+              onClick={() => s.toggleCompare(p.id)}
+              aria-label={"Remover " + p.name + " da comparação"}
+            >
+              <X size={14} />
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="compare-actions">
+        <button className="compare-clear" onClick={s.clearCompare}>
+          Limpar
+        </button>
+        <Link href="/comparar" className="button button-dark">
+          Comparar ({s.compare.length})
+        </Link>
+      </div>
+    </div>
   ) : null;
 }

@@ -16,7 +16,9 @@ export type Product = {
   stock: number | null;
   active: boolean;
   featured: boolean;
-  source?: { catalog: string; page: number; url: string };
+  photoNote?: string;
+  discountPercent?: number;
+  source?: { catalog: string; page: number; url?: string };
   sourceText?: string;
   specs: Record<string, string>;
   variantInventory: Record<string, VariantInventory>;
@@ -26,6 +28,7 @@ export type User = {
   name: string;
   email: string;
   role: "customer" | "admin";
+  emailVerified: boolean;
 };
 export type CartLine = {
   productId: string;
@@ -45,9 +48,11 @@ export type Promotion = {
 export const variantKey = (color: string, size: string) =>
   JSON.stringify([color, size]);
 export function variantPrice(p: Product, color: string, size: string) {
-  return (
-    p.variantInventory[variantKey(color, size)]?.priceCents ?? p.priceCents
-  );
+  const price =
+    p.variantInventory[variantKey(color, size)]?.priceCents ?? p.priceCents;
+  return price === null
+    ? null
+    : Math.max(1, Math.round((price * (100 - (p.discountPercent || 0))) / 100));
 }
 export const money = (cents: number) =>
   new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(

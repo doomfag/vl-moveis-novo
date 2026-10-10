@@ -8,3 +8,7 @@ data/*.sqlite*
 *.tsbuildinfo
 playwright-report/
 test-results/
+
+data/emails-local/
+
+__pycache__/

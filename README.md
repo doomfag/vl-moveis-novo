@@ -20,7 +20,7 @@ npm start
 
 ## Acesso administrativo
 
-1. Abra “Entre ou cadastre-se” e crie sua conta com uma senha exclusiva, de pelo menos 12 caracteres.
+1. Abra “Entre ou cadastre-se” e crie sua conta com uma senha exclusiva, de pelo menos 12 caracteres. Confirme o e-mail pelo link recebido antes de entrar. Em teste local sem Resend conectado, use `npm run emails -- seu-email` no terminal da pasta do projeto e abra o link mostrado; é uma prévia local, nenhum e-mail foi enviado.
 2. No terminal do **servidor da loja**, habilite somente a conta da pessoa responsável:
 
 ```bash
@@ -33,12 +33,12 @@ O comando exige uma conta existente. O primeiro usuário cadastrado **não** gan
 
 ## O que funciona
 
-- Home, catálogo, busca por texto, filtro por categoria, favoritos e comparação de até quatro produtos.
+- Home, catálogo, busca por texto, filtro por categoria, favoritos e comparação de até três produtos.
 - Produto com descrição, medidas, fonte original, fotografia por cor quando fornecida e consulta de entrega por CEP.
-- Cadastro, login, logout e sessão persistente. Sacola local para visitantes, migrada para a conta ao entrar.
+- Cadastro com confirmação de e-mail, reenvio de confirmação, recuperação de senha, login, logout e sessão persistente. Sacola local para visitantes, migrada para a conta ao entrar.
 - Produtos sem preço geram orçamento pelo WhatsApp **(21) 99001-5722**. Nenhum preço, desconto, estoque ou avaliação foi inventado.
 - Pedido de produtos com preço e estoque cadastrados, para retirada em Sepetiba ou Campo Grande. O pedido calcula o valor no servidor e reserva estoque; não cobra o cliente.
-- Administração de produtos, imagens, preços, quantidade geral e quantidade/preço por combinação de cor e medida. Arquivar preserva o histórico; produtos com reserva não podem ser removidos.
+- Administração de produtos, imagens, preços, desconto percentual por produto, desconto em reais em pedidos pendentes, quantidade geral e quantidade/preço por combinação de cor e medida. Arquivar preserva o histórico; produtos com reserva não podem ser removidos.
 - Confirmação manual de pagamento, baixa transacional de estoque, lançamento idempotente no caixa e conclusão da entrega. Cancelamento de pedido pendente libera as reservas. Não há estorno automatizado de pedidos pagos.
 - Atendimento cliente/equipe com histórico persistente e atualização periódica. Ainda não há notificações externas ou atendimento por IA.
 - Banners com foto, texto, destino interno e publicação no carrossel. Despesas e entradas manuais no fluxo de caixa. Dashboard atualizado a cada 15 segundos enquanto aberto.
@@ -46,16 +46,17 @@ O comando exige uma conta existente. O primeiro usuário cadastrado **não** gan
 
 ## Catálogos e revisão dos produtos
 
-Os quatro PDFs originais ficam em `public/catalogos`. `data/catalog.json` contém a importação inicial; cada item registra catálogo e página. `data/import-report.json` descreve as fontes e as limitações. Fotos extraídas ficam em `public/catalogo`.
+Os quatro PDFs originais ficam em `sources/catalogs`, apenas como fontes internas da importação; não são servidos no site. A página e os links de Catálogos Ortobom foram retirados. `data/catalog.json` contém a importação inicial; cada item registra catálogo e página. `data/import-report.json` descreve as fontes e as limitações. Fotos extraídas ficam em `public/catalogo`.
 
-**Revise a disponibilidade atual e as combinações de medida/altura antes de vender.** Há documentação histórica de 2021, e algumas páginas contêm tabelas de vários produtos. A importação é uma seleção estruturada dos documentos, não uma confirmação comercial do fabricante. Os PDFs completos continuam acessíveis em “Catálogos Ortobom”. Móveis de outros fabricantes e eletros não estão nesses arquivos: essas categorias aguardam cadastro da loja.
+**Revise a disponibilidade atual e as combinações de medida/altura antes de vender.** Há documentação histórica de 2021, e algumas páginas contêm tabelas de vários produtos. A importação é uma seleção estruturada dos documentos, não uma confirmação comercial do fabricante. Os PDFs originais são usados somente internamente. Móveis de outros fabricantes e eletros não estão nesses arquivos: essas categorias aguardam cadastro da loja.
 
 As medidas são mostradas na ordem usada pela fonte. Quando não há fotografia própria de outra cor, não simulamos uma cor no produto. O administrador pode enviar a fotografia real de cada variação. O catálogo não contém os preços de venda da VL Móveis nem o estoque atual.
 
 Para refazer a extração, opcionalmente instale PyMuPDF, Pillow e Tesseract e execute:
 
 ```bash
-python3 scripts/import-catalogs.py --sources public/catalogos
+python3 scripts/import-catalogs.py --sources sources/catalogs
+python3 scripts/refine-catalog-media.py
 ```
 
 Isso atualiza o arquivo de importação e as fotografias; **não sobrescreve os produtos já administrados no banco**. O banco só recebe o catálogo inicial quando não há produtos cadastrados.
@@ -74,7 +75,7 @@ O banco SQLite fica em `data/store.sqlite`, fora do Git. Contém contas, sessõe
 
 Senhas com scrypt e salt aleatório; tokens de sessão aleatórios armazenados como hash; cookies HttpOnly/SameSite/Secure; autorização de administrador no servidor; checagem de origem nas mutações; limites de tentativas; validação com Zod; SQL parametrizado; preço recalculado no servidor; operações de estoque/caixa transacionais; auditoria; imagens decodificadas e regravadas em WebP, com limites de tamanho/pixels; CSP com nonce por resposta, proteção contra frames e cabeçalhos de segurança.
 
-A CSP permite estilos inline para cores e layout; scripts de produção exigem nonce. O ambiente de desenvolvimento permite `unsafe-eval` para as ferramentas do Next. Nenhuma dessas medidas equivale a uma garantia de segurança absoluta. Esta versão ainda não inclui verificação de e-mail, recuperação automática de senha, MFA, antifraude, integração fiscal, auditoria independente ou rotinas automatizadas de backup. Recuperação de acesso e pedidos de privacidade são atendidos pela equipe.
+A CSP permite estilos inline para cores e layout; scripts de produção exigem nonce. O ambiente de desenvolvimento permite `unsafe-eval` para as ferramentas do Next. Nenhuma dessas medidas equivale a uma garantia de segurança absoluta. Esta versão ainda não inclui MFA, antifraude, integração fiscal, auditoria independente ou rotinas automatizadas de backup. Recuperação por e-mail já funciona quando o envio está conectado. Pedidos de privacidade são atendidos pela equipe.
 
 ## Integrações e escolhas recomendadas
 
@@ -95,3 +96,31 @@ npm run test:ui
 Os testes de API usam o build de produção e criam um banco isolado. `npm test` recompila antes de executar; após um build recente, `npm run test:api` evita a recompilação. Os testes de navegador iniciam o build de produção na porta 3102, usam outro banco e removem as imagens de teste. Não usam nem alteram contas, pedidos ou estoque da instalação principal. Para `test:ui`, Chromium deve estar instalado: use `CHROMIUM_PATH` ou instale o navegador do Playwright com `npx playwright install chromium`. Capturas ficam em `VL_ARTIFACTS_DIR` (por padrão `/workspace/vl-moveis-validation` neste ambiente).
 
 O ambiente cloud já é isolado: use este checkout, sem criar um Git worktree para tarefas normais.
+
+## Confirmação de e-mail e Resend
+
+O cadastro cria uma conta pendente e não concede sessão. Um link de uso único confirma o endereço; só depois o cliente entra com e-mail e senha. Links de confirmação expiram em 24 horas, e os de recuperação em 30 minutos. O banco guarda apenas o hash do token. Reenviar invalida o link anterior, e trocar a senha encerra todas as sessões. Um link de recuperação também comprova o endereço. Contas antigas ainda sem confirmação precisam confirmar o e-mail para entrar.
+
+Para envio real, configure no servidor (ou no arquivo `.env.local` do seu computador, fora do Git):
+
+```dotenv
+RESEND_API_KEY=coloque-a-chave-aqui-no-seu-servidor
+EMAIL_FROM=VL Móveis <contato@seu-dominio-verificado.com.br>
+APP_ORIGIN=https://endereco-publico-da-loja
+```
+
+São exemplos de configuração, não credenciais funcionais. Cadastre/verifique o domínio remetente no Resend e copie os registros DNS indicados pelo serviço. Se usa Zoho Mail, mantenha seus registros de recebimento e configure o Resend para envio transacional, preferencialmente em um subdomínio dedicado. Não apague os registros MX do Zoho e não crie dois registros SPF para o mesmo nome. Depois reinicie o servidor e faça um cadastro com uma caixa de e-mail que você controla para validar a entrega real e o link. Apenas declarar uma variável não confirma entrega.
+
+Em testes locais, `APP_ORIGIN` pode ser a origem local do navegador indicada no terminal. Sem a chave do Resend, o desenvolvimento usa **prévia local**, gravada em `data/emails-local` com acesso restrito, fora do Git. A tela informa que nenhum e-mail foi enviado. Use `npm run emails -- seu-email` no terminal do projeto para ler a última mensagem e abrir o link. **Não há prévia local para origens públicas.** Em produção sem serviço conectado, o cadastro não finge enviar e-mail: informa que a configuração está pendente.
+
+A chave do Resend não deve ser enviada no chat, compartilhada com clientes ou colocada no JavaScript do navegador. A confirmação comprova controle do endereço de e-mail; não substitui controles de pagamento e antifraude.
+
+## Descontos no painel
+
+Em **Produtos e estoque → Editar**, informe o desconto de 0 a 90%. Ele se aplica ao preço geral e aos preços de variação, é mostrado fora da foto e é recalculado pelo servidor ao reservar o pedido. Sem preço cadastrado, continua sob consulta.
+
+Em **Pedidos e clientes**, pedidos pendentes permitem desconto em reais. Esse valor é separado do subtotal, aparece no total do cliente e no caixa após confirmar o recebimento. Só um administrador pode alterar descontos, e pedidos pagos/concluídos não permitem alteração retroativa. Todas essas alterações deixam auditoria. Não há cobrança online automática.
+
+## Atualizar sua cópia local
+
+Encerre o servidor com Ctrl+C, baixe a versão atual da branch `preview-vl-moveis` no GitHub e extraia sobre a mesma pasta do projeto, substituindo os arquivos do código. Preserve `.env.local`, `data/store.sqlite` e arquivos WAL; eles não são incluídos no ZIP. Não apague a pasta antiga com seus dados. Depois execute `bash iniciar-linux.sh` na pasta do projeto. As imagens originais são atualizadas com uma migração que preserva preços, estoque, pedidos e imagens personalizadas. A rota de PDFs antigos permanece bloqueada mesmo se arquivos de uma versão anterior ainda estiverem no disco.

@@ -16,10 +16,19 @@ if (!existsSync(path)) {
 }
 const db = new DatabaseSync(path);
 db.exec("PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000");
-const row = db.prepare("SELECT id FROM users WHERE email=?").get(email);
+const row = db
+  .prepare("SELECT id,email_verified_at FROM users WHERE email=?")
+  .get(email);
 if (!row) {
   console.error(
     "Conta não encontrada. Cadastre-se na loja antes de habilitar o painel.",
+  );
+  db.close();
+  process.exit(1);
+}
+if (!row.email_verified_at) {
+  console.error(
+    "Confirme o e-mail da conta antes de habilitar o painel. Em teste local, use npm run emails -- seu-email para abrir o link de confirmação.",
   );
   db.close();
   process.exit(1);

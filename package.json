@@ -12,7 +12,8 @@
     "format": "prettier --write app components lib tests scripts/*.mjs next.config.ts proxy.ts",
     "format:check": "prettier --check app components lib tests scripts/*.mjs next.config.ts proxy.ts",
     "test:ui": "node tests/browser.mjs",
-    "test:api": "node --test tests/*.test.mjs"
+    "test:api": "node --test tests/*.test.mjs",
+    "emails": "node scripts/emails.mjs"
   },
   "engines": {
     "node": ">=24 <25"

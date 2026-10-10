@@ -22,7 +22,7 @@ body {
   font-family: var(--font);
   color: var(--ink);
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.55;
 }
 button,
@@ -83,15 +83,15 @@ h4 {
 }
 h1 {
   font-size: 42px;
-  letter-spacing: -1.8px;
+  letter-spacing: 0;
 }
 h2 {
   font-size: 30px;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 h3 {
   font-size: 17px;
-  letter-spacing: -0.3px;
+  letter-spacing: 0;
 }
 p {
   color: #686b64;
@@ -122,7 +122,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 8px max(40px, calc((100vw - 1200px) / 2));
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.15px;
 }
 .announcement span,
@@ -166,7 +166,7 @@ p {
 }
 .brand strong {
   font-size: 25px;
-  letter-spacing: -1.2px;
+  letter-spacing: 0;
 }
 .brand strong span {
   font-weight: 500;
@@ -174,7 +174,7 @@ p {
 .brand small {
   display: block;
   letter-spacing: 2.1px;
-  font-size: 8px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 8px;
 }
@@ -194,7 +194,7 @@ p {
   background: transparent;
   min-width: 0;
   flex: 1;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0;
   height: 21px;
 }
@@ -223,11 +223,11 @@ p {
 }
 .account-link small {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .account-link b {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 .icon-button {
@@ -245,7 +245,7 @@ p {
 .badge-count {
   background: var(--orange);
   color: white;
-  font-size: 9px;
+  font-size: 14px;
   position: absolute;
   top: 0;
   right: -6px;
@@ -261,7 +261,7 @@ p {
   align-items: center;
   gap: 32px;
   height: 46px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
 }
 .nav a {
@@ -285,7 +285,7 @@ p {
   font-weight: 700;
 }
 .home-breadcrumb {
-  font-size: 10px;
+  font-size: 14px;
   color: #969990;
   padding-block: 20px 16px;
 }
@@ -330,7 +330,7 @@ p {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 1.5px;
   font-weight: 700;
   margin-bottom: 25px;
@@ -343,12 +343,12 @@ p {
 }
 .hero h1 {
   font-size: 53px;
-  letter-spacing: -2.4px;
+  letter-spacing: 0;
   line-height: 1.06;
   margin-bottom: 18px;
 }
 .hero p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   max-width: 310px;
   margin-bottom: 23px;
@@ -357,7 +357,7 @@ p {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 14px;
   margin-top: 18px;
   color: #787d72;
 }
@@ -370,7 +370,7 @@ p {
   border: 1px solid var(--orange);
   border-radius: 7px;
   padding: 13px 19px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   color: white;
   transition:
@@ -404,13 +404,13 @@ p {
 .button.compact {
   padding: 8px 12px;
   min-height: 33px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .text-link {
   display: inline-flex;
   gap: 7px;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
   background: none;
@@ -473,11 +473,11 @@ p {
   backdrop-filter: blur(10px);
 }
 .hero-stamp b {
-  font-size: 11px;
+  font-size: 14px;
   display: block;
 }
 .hero-stamp small {
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
 }
 .benefits {
@@ -509,10 +509,10 @@ p {
   display: block;
 }
 .benefits b {
-  font-size: 11px;
+  font-size: 14px;
 }
 .benefits small {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
   margin-top: 3px;
 }
@@ -532,7 +532,7 @@ p {
   margin: 8px 0 0;
 }
 .section-heading p {
-  font-size: 12px;
+  font-size: 14px;
   margin: 10px 0 0;
 }
 .section-heading > .text-link {
@@ -540,7 +540,7 @@ p {
   white-space: nowrap;
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 1.7px;
   font-weight: 700;
   text-transform: uppercase;
@@ -583,7 +583,7 @@ p {
   place-items: center;
 }
 .category-tile h3 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 12px;
 }
@@ -638,7 +638,7 @@ p {
   background: #ffffffd9;
   border: 1px solid #e9e9e1;
   border-radius: 4px;
-  font-size: 8px;
+  font-size: 14px;
   padding: 4px 7px;
   font-weight: 600;
 }
@@ -664,13 +664,13 @@ p {
   padding: 17px 17px 11px;
 }
 .product-content .eyebrow {
-  font-size: 8px;
+  font-size: 14px;
   color: #888e82;
   letter-spacing: 1px;
 }
 .product-name {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
   margin: 6px 0;
@@ -680,7 +680,7 @@ p {
   color: var(--orange-dark);
 }
 .product-size {
-  font-size: 9px;
+  font-size: 14px;
   margin-bottom: 15px;
   color: #898e80;
   min-height: 14px;
@@ -691,17 +691,17 @@ p {
 .product-price strong {
   display: block;
   font-size: 16px;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 }
 .product-price span {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
   margin-top: 3px;
 }
 .product-cta {
   width: 100%;
-  font-size: 10px;
+  font-size: 14px;
   padding-inline: 10px;
   min-height: 37px;
 }
@@ -712,7 +712,7 @@ p {
   width: 100%;
   background: none;
   border: 0;
-  font-size: 9px;
+  font-size: 14px;
   color: #8a8e82;
   display: flex;
   justify-content: center;
@@ -754,7 +754,7 @@ p {
   max-width: 65%;
 }
 .editorial-card .eyebrow {
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 1.2px;
 }
 .editorial-card h2 {
@@ -763,7 +763,7 @@ p {
   line-height: 1.12;
 }
 .editorial-card p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -808,11 +808,11 @@ p {
 }
 .guide-options b {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
 }
 .guide-options small {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
   margin-top: 5px;
 }
@@ -827,7 +827,7 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .visit-banner {
   display: flex;
@@ -842,15 +842,15 @@ p {
 .visit-banner h2 {
   font-size: 23px;
   margin: 10px 0 8px;
-  letter-spacing: -0.6px;
+  letter-spacing: 0;
 }
 .visit-banner p {
-  font-size: 11px;
+  font-size: 14px;
   margin: 0;
 }
 .visit-banner > .button {
   margin-left: auto;
-  font-size: 10px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .visit-icon {
@@ -876,19 +876,19 @@ p {
   font-size: 23px;
 }
 .footer-grid > div > p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
   color: #a6ad9e;
   margin: 22px 0 17px;
 }
 .footer-grid h3 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin: 5px 0 23px;
 }
 .footer-grid > div > a:not(.brand) {
   display: flex;
-  font-size: 10px;
+  font-size: 14px;
   color: #b7beb0;
   margin-bottom: 11px;
 }
@@ -905,24 +905,24 @@ p {
   gap: 10px;
   margin-top: 23px;
   color: #b7beb0;
-  font-size: 9px;
+  font-size: 14px;
 }
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 24px 28px;
-  font-size: 9px;
+  font-size: 14px;
   color: #888e7f;
 }
 .footer-bottom p {
-  font-size: 9px;
+  font-size: 14px;
   line-height: 1.7;
   color: #888e7f;
   margin: 0;
 }
 .footer-bottom > span {
-  font-size: 9px;
+  font-size: 14px;
 }
 .chat-launcher {
   position: fixed;
@@ -938,7 +938,7 @@ p {
   align-items: center;
   gap: 9px;
   box-shadow: 0 5px 20px #17201426;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
 }
 .chat-launcher > svg {
@@ -959,7 +959,7 @@ p {
   transition:
     opacity 0.25s,
     transform 0.25s;
-  font-size: 12px;
+  font-size: 14px;
   max-width: 90vw;
   box-shadow: 0 7px 22px #0002;
 }
@@ -980,7 +980,7 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .chat-window {
   position: fixed;
@@ -1013,11 +1013,11 @@ p {
   border-radius: 8px;
 }
 .chat-head b {
-  font-size: 12px;
+  font-size: 14px;
   display: block;
 }
 .chat-head small {
-  font-size: 9px;
+  font-size: 14px;
   color: #b9c0b2;
 }
 .chat-head > button {
@@ -1049,20 +1049,20 @@ p {
 }
 .message p {
   margin: 3px 0 0;
-  font-size: 11px;
+  font-size: 14px;
   white-space: pre-wrap;
   color: var(--ink);
 }
 .message small {
-  font-size: 8px;
+  font-size: 14px;
   color: var(--muted);
 }
 .chat-welcome {
   padding: 26px 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .chat-welcome .button {
-  font-size: 10px;
+  font-size: 14px;
   margin: 12px 0 15px;
 }
 .chat-input {
@@ -1078,7 +1078,7 @@ p {
   padding: 10px;
   border: 1px solid var(--border);
   border-radius: 7px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .chat-input button {
   border: 0;
@@ -1099,7 +1099,7 @@ p {
   gap: 8px;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 10px;
+  font-size: 14px;
   color: #8b9182;
   margin: 0 0 32px;
 }
@@ -1122,14 +1122,14 @@ p {
   border-right: 1px solid var(--border);
 }
 .filters h3 {
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   gap: 9px;
   align-items: center;
   margin: 0 0 28px;
 }
 .filters h4 {
-  font-size: 11px;
+  font-size: 14px;
   margin: 25px 0 15px;
 }
 .filters > button {
@@ -1141,11 +1141,11 @@ p {
   width: 100%;
   border: 0;
   padding: 9px 0;
-  font-size: 11px;
+  font-size: 14px;
   color: #707867;
 }
 .filters > button span {
-  font-size: 9px;
+  font-size: 14px;
   color: #969d8d;
 }
 .filters > button.active {
@@ -1153,7 +1153,7 @@ p {
   font-weight: 700;
 }
 .filters .muted {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
   margin-top: 12px;
 }
@@ -1161,7 +1161,7 @@ p {
   display: flex;
   align-items: center !important;
   gap: 9px;
-  font-size: 11px !important;
+  font-size: 14px !important;
   margin: 15px 0 !important;
   color: #68735e !important;
 }
@@ -1182,17 +1182,17 @@ p {
   margin: 12px 0 8px;
 }
 .filter-help p {
-  font-size: 10px;
+  font-size: 14px;
 }
 .filter-help .text-link {
-  font-size: 9px;
+  font-size: 14px;
 }
 .catalog-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 21px;
   min-height: 35px;
 }
@@ -1205,7 +1205,7 @@ p {
   gap: 10px;
 }
 .catalog-toolbar select {
-  font-size: 10px;
+  font-size: 14px;
   padding: 8px 12px;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -1231,7 +1231,7 @@ p {
   stroke-width: 1.3;
 }
 .empty-state p {
-  font-size: 12px;
+  font-size: 14px;
   max-width: 520px;
   margin: 0;
   line-height: 1.8;
@@ -1245,7 +1245,7 @@ p {
 }
 .muted {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
 }
 .pdp {
   display: grid;
@@ -1296,14 +1296,14 @@ p {
   mix-blend-mode: multiply;
 }
 .photo-note {
-  font-size: 9px;
+  font-size: 14px;
   color: #929884;
   margin-top: 16px;
 }
 .product-details h1 {
   font-size: 32px;
   line-height: 1.25;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   margin: 12px 0;
 }
 .review-summary {
@@ -1311,7 +1311,7 @@ p {
   align-items: center;
   gap: 6px;
   color: #868e7b;
-  font-size: 10px;
+  font-size: 14px;
 }
 .pdp-price {
   border-block: 1px solid var(--border);
@@ -1320,15 +1320,15 @@ p {
 }
 .pdp-price strong {
   font-size: 28px;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 .pdp-price p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
   margin: 6px 0 0;
 }
 .variant-section h3 {
-  font-size: 11px;
+  font-size: 14px;
   margin: 20px 0 10px;
 }
 .variant-section h3 span {
@@ -1361,7 +1361,7 @@ p {
   border: 1px solid var(--border);
   border-radius: 7px;
   background: white;
-  font-size: 12px;
+  font-size: 14px;
 }
 .pdp-ctas {
   display: flex;
@@ -1370,15 +1370,15 @@ p {
   margin-top: 23px;
 }
 .pdp-ctas .button {
-  font-size: 12px;
+  font-size: 14px;
 }
 .pdp-ctas .compare-button {
-  font-size: 10px;
+  font-size: 14px;
   padding: 5px;
 }
 .stock-note {
   color: var(--orange-dark);
-  font-size: 11px;
+  font-size: 14px;
 }
 .shipping-box {
   background: #f5f6f0;
@@ -1390,7 +1390,7 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .shipping-box form {
   display: flex;
@@ -1402,17 +1402,17 @@ p {
   border-radius: 6px;
   width: 100%;
   min-width: 0;
-  font-size: 11px;
+  font-size: 14px;
 }
 .shipping-box .button {
-  font-size: 10px;
+  font-size: 14px;
   min-height: 36px;
   padding: 10px 15px;
 }
 .shipping-box > p {
   display: flex;
   gap: 6px;
-  font-size: 9px;
+  font-size: 14px;
   margin: 13px 0 0;
   align-items: center;
 }
@@ -1420,17 +1420,17 @@ p {
   margin-top: 13px;
 }
 .shipping-result p {
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 .shipping-result a {
-  font-size: 10px;
+  font-size: 14px;
 }
 .pdp-assurance {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: 14px;
   color: #7a846f;
   margin-top: 18px;
 }
@@ -1445,7 +1445,7 @@ p {
   margin-top: 14px;
 }
 .product-description p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   white-space: pre-line;
 }
@@ -1459,7 +1459,7 @@ p {
   margin-bottom: 25px;
 }
 .spec-card dl {
-  font-size: 11px;
+  font-size: 14px;
   margin: 0;
 }
 .spec-card dt {
@@ -1487,7 +1487,7 @@ p {
   border-radius: 10px;
 }
 .review-form > p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .review-card {
@@ -1504,11 +1504,11 @@ p {
   color: var(--orange-dark);
 }
 .review-card h4 {
-  font-size: 12px;
+  font-size: 14px;
   margin: 10px 0;
 }
 .review-card p {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 0;
   white-space: pre-wrap;
 }
@@ -1519,7 +1519,7 @@ p {
   margin-left: 8px;
   font-weight: 400;
   color: var(--green);
-  font-size: 9px;
+  font-size: 14px;
 }
 .rating-input {
   margin: 17px 0;
@@ -1536,7 +1536,7 @@ p {
   border-radius: 7px;
   background: #fff4ee;
   color: #a33d13;
-  font-size: 11px;
+  font-size: 14px;
   margin: 14px 0;
   white-space: pre-wrap;
 }
@@ -1544,7 +1544,7 @@ p {
   scroll-margin-top: 150px;
 }
 label {
-  font-size: 11px;
+  font-size: 14px;
   color: #616b55;
 }
 form label {
@@ -1562,7 +1562,7 @@ form select {
   border: 1px solid #dedfd7;
   background: white;
   color: var(--ink);
-  font-size: 12px;
+  font-size: 14px;
 }
 form textarea {
   resize: vertical;
@@ -1594,7 +1594,7 @@ form label > small {
   color: var(--orange-dark);
 }
 .account-story > p {
-  font-size: 12px;
+  font-size: 14px;
   max-width: 300px;
   line-height: 1.9;
 }
@@ -1602,7 +1602,7 @@ form label > small {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
   color: #828c76;
   margin-block: 22px;
 }
@@ -1626,7 +1626,7 @@ form label > small {
   border: 0;
   background: none;
   padding: 12px 25px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   border-bottom: 2px solid transparent;
 }
@@ -1637,10 +1637,10 @@ form label > small {
 }
 .account-form h2 {
   font-size: 25px;
-  letter-spacing: -0.6px;
+  letter-spacing: 0;
 }
 .account-form > p {
-  font-size: 11px;
+  font-size: 14px;
 }
 .account-form form label {
   margin: 21px 0;
@@ -1650,7 +1650,7 @@ form label > small {
   margin-top: 12px;
 }
 .account-form form > small {
-  font-size: 9px;
+  font-size: 14px;
   line-height: 1.8;
   display: block;
 }
@@ -1671,7 +1671,7 @@ form label > small {
   border: 1px solid var(--border);
   background: var(--soft);
   border-radius: 9px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 .account-quick-links > a > svg:last-child {
@@ -1699,7 +1699,7 @@ form label > small {
   font-size: 14px;
 }
 .order-card > p {
-  font-size: 11px;
+  font-size: 14px;
   margin: 15px 0;
   line-height: 1.8;
 }
@@ -1713,7 +1713,7 @@ form label > small {
   color: #9a6a21;
   padding: 4px 9px;
   border-radius: 5px;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -1737,12 +1737,12 @@ form label > small {
   font-size: 14px;
 }
 .legal-card p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   margin-bottom: 0;
 }
 .legal-card p.muted {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 12px;
 }
 .legal-card .text-link {
@@ -1782,14 +1782,14 @@ form label > small {
 }
 .cart-line-name {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
 }
 .cart-line p {
-  font-size: 10px;
+  font-size: 14px;
   margin: 6px 0;
 }
 .cart-line strong {
-  font-size: 13px;
+  font-size: 14px;
 }
 .quantity {
   display: flex;
@@ -1808,7 +1808,7 @@ form label > small {
 .quantity > span {
   min-width: 24px;
   text-align: center;
-  font-size: 11px;
+  font-size: 14px;
 }
 .remove-line {
   margin-left: auto;
@@ -1826,7 +1826,7 @@ form label > small {
   flex-shrink: 0;
 }
 .cart-help p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .cart-summary {
@@ -1840,14 +1840,14 @@ form label > small {
 }
 .cart-summary h2 {
   font-size: 22px;
-  letter-spacing: -0.6px;
+  letter-spacing: 0;
 }
 .summary-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: 14px;
   margin: 17px 0;
 }
 .summary-row > span:first-child {
@@ -1863,30 +1863,30 @@ form label > small {
   border-top: 1px solid var(--border);
   padding-top: 21px;
   margin-top: 22px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .summary-total strong {
   font-size: 19px;
 }
 .cart-summary > p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
   margin-top: 18px;
 }
 .cart-summary > .button {
   width: 100%;
   margin-top: 16px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .cart-summary > .text-link {
-  font-size: 10px;
+  font-size: 14px;
   display: flex;
   margin-top: 18px;
 }
 .cart-summary small {
   display: block;
   line-height: 1.8;
-  font-size: 9px;
+  font-size: 14px;
   margin-top: 15px;
   color: var(--muted);
 }
@@ -1903,7 +1903,7 @@ form label > small {
   border: 1px solid var(--border);
   border-radius: 6px;
   max-width: 100%;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--ink);
 }
 .cart-summary textarea {
@@ -1928,7 +1928,7 @@ form label > small {
 .comparison {
   border-collapse: collapse;
   width: 100%;
-  font-size: 11px;
+  font-size: 14px;
   table-layout: fixed;
 }
 .comparison th,
@@ -1963,19 +1963,19 @@ form label > small {
 .comparison thead a {
   display: block;
   margin-top: 17px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .comparison tbody th {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .comparison tbody td {
-  font-size: 11px;
+  font-size: 14px;
   color: #747d68;
   line-height: 1.9;
 }
 .comparison .button {
-  font-size: 9px;
+  font-size: 14px;
   padding: 10px;
 }
 .remove-compare {
@@ -1988,7 +1988,7 @@ form label > small {
   display: flex;
   gap: 9px;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   margin: 20px 0;
 }
 .store-locations {
@@ -2013,7 +2013,7 @@ form label > small {
   margin: 15px 0;
 }
 .store-locations p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   max-width: 340px;
   margin-bottom: 25px;
@@ -2039,7 +2039,7 @@ form label > small {
   line-height: 1.4;
 }
 .document-card p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
   min-height: 58px;
 }
@@ -2051,7 +2051,7 @@ form label > small {
   margin: 33px 0 16px;
 }
 .prose p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .prose > .button {
@@ -2071,14 +2071,14 @@ form label > small {
 .admin-heading h1 {
   font-size: 31px;
   margin: 13px 0 10px;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 .admin-heading p {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
 }
 .admin-heading > .button {
-  font-size: 10px;
+  font-size: 14px;
 }
 .admin-layout {
   display: grid;
@@ -2097,7 +2097,7 @@ form label > small {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 14px;
   text-align: left;
   width: 100%;
   padding: 13px 10px;
@@ -2117,7 +2117,7 @@ form label > small {
   background: #eccaac;
   padding: 0 5px;
   border-radius: 5px;
-  font-size: 9px;
+  font-size: 14px;
 }
 .admin-nav > a {
   border-top: 1px solid var(--border);
@@ -2139,7 +2139,7 @@ form label > small {
   font-size: 25px;
 }
 .admin-content > .section-heading .button {
-  font-size: 10px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .metric-grid {
@@ -2158,17 +2158,17 @@ form label > small {
   border-radius: 9px;
 }
 .metric span {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .metric strong {
   font-size: 28px;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   display: block;
   margin: 9px 0;
 }
 .metric small {
-  font-size: 9px;
+  font-size: 14px;
   color: #9aa18f;
   display: block;
   line-height: 1.8;
@@ -2186,7 +2186,7 @@ form label > small {
   background: white;
 }
 .panel p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .panel h3 {
@@ -2201,14 +2201,14 @@ form label > small {
 .admin-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 10px;
+  font-size: 14px;
   min-width: 570px;
 }
 .admin-table th {
   background: var(--soft);
   text-align: left;
   padding: 15px;
-  font-size: 9px;
+  font-size: 14px;
   color: #7c8570;
   font-weight: 600;
 }
@@ -2222,7 +2222,7 @@ form label > small {
   display: block;
   margin-top: 5px;
   color: #7b866c;
-  font-size: 9px;
+  font-size: 14px;
   white-space: normal;
 }
 .admin-table td > small > svg {
@@ -2231,14 +2231,14 @@ form label > small {
 }
 .admin-table td > .text-link {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   margin-top: 11px;
 }
 .admin-table td:nth-child(3) {
   white-space: nowrap;
 }
 .admin-table .button {
-  font-size: 9px;
+  font-size: 14px;
 }
 .admin-search {
   display: flex;
@@ -2254,7 +2254,7 @@ form label > small {
   outline: none;
   background: transparent;
   width: 100%;
-  font-size: 11px;
+  font-size: 14px;
 }
 .admin-search:focus-within {
   outline: 2px solid var(--orange);
@@ -2282,17 +2282,17 @@ form label > small {
   min-width: 0;
 }
 .admin-product-list b {
-  font-size: 11px;
+  font-size: 14px;
   display: block;
 }
 .admin-product-list small {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   margin-top: 5px;
   color: #89977a;
 }
 .admin-product-list article > span {
-  font-size: 11px;
+  font-size: 14px;
 }
 .danger {
   color: #ad542d !important;
@@ -2341,7 +2341,7 @@ form label > small {
 }
 .modal .description-input {
   min-height: 135px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .modal h3 {
   margin: 25px 0 10px;
@@ -2371,7 +2371,7 @@ form label > small {
   border-radius: 7px;
 }
 .image-editor > small {
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
 }
 .file-input {
@@ -2385,7 +2385,7 @@ form label > small {
 .image-editor .button,
 .color-editor .button {
   cursor: pointer;
-  font-size: 10px;
+  font-size: 14px;
 }
 .color-editor {
   display: flex;
@@ -2395,7 +2395,7 @@ form label > small {
 }
 .color-editor > input:first-child {
   max-width: 180px;
-  font-size: 11px !important;
+  font-size: 14px !important;
 }
 .color-editor > img {
   height: 45px;
@@ -2418,7 +2418,7 @@ form label > small {
 .variant-stock summary {
   font-weight: 600;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
 }
 .variant-stock > p {
   margin-top: 13px;
@@ -2486,7 +2486,7 @@ form label > small {
 }
 .admin-chat > aside > p {
   padding: 15px;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .admin-chat > aside > button {
@@ -2505,11 +2505,11 @@ form label > small {
 }
 .admin-chat > aside b {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
 }
 .admin-chat > aside small {
   display: block;
-  font-size: 8px;
+  font-size: 14px;
   color: #869477;
   overflow-wrap: anywhere;
 }
@@ -2525,7 +2525,7 @@ form label > small {
   display: grid;
   place-items: center;
   border-radius: 100%;
-  font-size: 12px;
+  font-size: 14px;
   flex-shrink: 0;
 }
 .admin-conversation {
@@ -2614,7 +2614,7 @@ form label > small {
     gap: 14px;
   }
   .category-tile h3 {
-    font-size: 11px;
+    font-size: 14px;
   }
   .benefits {
     gap: 10px;
@@ -2632,7 +2632,7 @@ form label > small {
     font-size: 27px;
   }
   .editorial-card .eyebrow {
-    font-size: 7px;
+    font-size: 14px;
   }
   .guide-options {
     gap: 12px;
@@ -2642,10 +2642,10 @@ form label > small {
     padding: 20px 13px;
   }
   .guide-options b {
-    font-size: 10px;
+    font-size: 14px;
   }
   .guide-options small {
-    font-size: 9px;
+    font-size: 14px;
   }
   .footer-grid {
     gap: 25px;
@@ -2661,7 +2661,7 @@ form label > small {
     padding-inline: 12px;
   }
   .catalog-results .product-name {
-    font-size: 12px;
+    font-size: 14px;
   }
   .catalog-results .product-price strong {
     font-size: 15px;
@@ -2698,7 +2698,7 @@ form label > small {
     padding: 9px;
   }
   .admin-nav button {
-    font-size: 9px;
+    font-size: 14px;
   }
   .admin-chat {
     grid-template-columns: 195px minmax(0, 1fr);
@@ -2739,7 +2739,7 @@ form label > small {
     height: 40px;
   }
   .header-main .brand small {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 1.7px;
   }
   .header-actions {
@@ -2749,11 +2749,11 @@ form label > small {
     padding: 10px 12px;
   }
   .search input {
-    font-size: 10px;
+    font-size: 14px;
   }
   .nav {
     gap: 19px;
-    font-size: 10px;
+    font-size: 14px;
     overflow-x: auto;
     height: 43px;
     scrollbar-width: none;
@@ -2772,15 +2772,15 @@ form label > small {
     font-size: 43px;
   }
   .hero p {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 265px;
   }
   .hero-eyebrow {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 1px;
   }
   .hero-note {
-    font-size: 8px;
+    font-size: 14px;
   }
   .hero-stamp {
     right: 20px;
@@ -2788,10 +2788,10 @@ form label > small {
     padding: 9px 11px;
   }
   .hero-stamp b {
-    font-size: 9px;
+    font-size: 14px;
   }
   .hero-stamp small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .hero-controls {
     left: 30px;
@@ -2826,7 +2826,7 @@ form label > small {
     aspect-ratio: 1.6;
   }
   .category-tile h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .product-grid,
   .product-grid.three {
@@ -2837,7 +2837,7 @@ form label > small {
     padding: 17px;
   }
   .product-name {
-    font-size: 13px;
+    font-size: 14px;
   }
   .product-price strong {
     font-size: 17px;
@@ -2846,7 +2846,7 @@ form label > small {
     aspect-ratio: 1.15;
   }
   .product-size {
-    font-size: 10px;
+    font-size: 14px;
   }
   .editorial-grid {
     grid-template-columns: 1fr;
@@ -2861,7 +2861,7 @@ form label > small {
     font-size: 30px;
   }
   .editorial-card .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
   }
   .editorial-card > img {
     max-width: 47%;
@@ -2881,10 +2881,10 @@ form label > small {
     gap: 15px;
   }
   .guide-options b {
-    font-size: 12px;
+    font-size: 14px;
   }
   .guide-options small {
-    font-size: 11px;
+    font-size: 14px;
   }
   .visit-banner {
     flex-wrap: wrap;
@@ -2896,17 +2896,17 @@ form label > small {
   }
   .visit-banner > .button {
     margin-left: 80px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 35px;
   }
   .footer-grid h3 {
-    font-size: 13px;
+    font-size: 14px;
   }
   .footer-grid > div > a:not(.brand) {
-    font-size: 11px;
+    font-size: 14px;
   }
   .footer-bottom {
     align-items: flex-start;
@@ -2939,13 +2939,13 @@ form label > small {
     margin-left: auto;
   }
   .filters.open > button {
-    font-size: 12px;
+    font-size: 14px;
   }
   .filter-help {
     display: none;
   }
   .catalog-results .product-name {
-    font-size: 13px;
+    font-size: 14px;
   }
   .catalog-results .product-price strong {
     font-size: 17px;
@@ -2977,13 +2977,13 @@ form label > small {
     gap: 25px;
   }
   .product-details .eyebrow {
-    font-size: 10px;
+    font-size: 14px;
   }
   .pdp-ctas {
     max-width: 100%;
   }
   .variant-section h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .account-page {
     gap: 35px;
@@ -3012,13 +3012,13 @@ form label > small {
     padding: 22px 0;
   }
   .cart-summary > .button {
-    font-size: 12px;
+    font-size: 14px;
   }
   .cart-summary h2 {
     font-size: 25px;
   }
   .cart-summary label {
-    font-size: 12px;
+    font-size: 14px;
   }
   .comparison {
     min-width: 700px;
@@ -3046,7 +3046,7 @@ form label > small {
     flex-shrink: 0;
     white-space: nowrap;
     padding: 12px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .admin-nav > a {
     display: none;
@@ -3074,16 +3074,16 @@ form label > small {
     gap: 10px;
   }
   .admin-product-list b {
-    font-size: 12px;
+    font-size: 14px;
   }
   .admin-product-list small {
-    font-size: 10px;
+    font-size: 14px;
   }
   .admin-product-list article > span {
-    font-size: 11px;
+    font-size: 14px;
   }
   .admin-content > .section-heading .button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .promotion-list {
     grid-template-columns: 1fr 1fr;
@@ -3101,7 +3101,7 @@ form label > small {
   }
   .announcement {
     padding: 8px 20px;
-    font-size: 9px;
+    font-size: 14px;
     gap: 10px;
   }
   .header-main {
@@ -3129,10 +3129,10 @@ form label > small {
   }
   .header-main .brand strong {
     font-size: 21px;
-    letter-spacing: -0.8px;
+    letter-spacing: 0;
   }
   .header-main .brand small {
-    font-size: 6px;
+    font-size: 14px;
     letter-spacing: 1.7px;
     margin-top: 6px;
   }
@@ -3153,7 +3153,7 @@ form label > small {
     margin-top: 1px;
   }
   .search input {
-    font-size: 11px;
+    font-size: 14px;
   }
   .nav {
     display: none;
@@ -3170,14 +3170,14 @@ form label > small {
     border-top: 1px solid var(--border);
   }
   .nav.nav-open a {
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px 0;
   }
   .nav .all-categories {
     border: 0;
   }
   .home-breadcrumb {
-    font-size: 9px;
+    font-size: 14px;
     padding: 17px 0 12px;
   }
   .hero {
@@ -3204,23 +3204,23 @@ form label > small {
     padding: 29px 25px 0;
   }
   .hero-eyebrow {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 1.2px;
     margin-bottom: 18px;
   }
   .hero h1 {
     font-size: 40px;
-    letter-spacing: -1.8px;
+    letter-spacing: 0;
     margin-bottom: 13px;
   }
   .hero p {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.7;
     max-width: 275px;
     margin-bottom: 19px;
   }
   .hero-content .button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 11px 16px;
     min-height: 38px;
   }
@@ -3264,10 +3264,10 @@ form label > small {
     width: 20px;
   }
   .benefits b {
-    font-size: 9px;
+    font-size: 14px;
   }
   .benefits small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .section {
     margin: 32px 0;
@@ -3279,11 +3279,11 @@ form label > small {
   }
   .section-heading h2 {
     font-size: 23px;
-    letter-spacing: -0.7px;
+    letter-spacing: 0;
     line-height: 1.25;
   }
   .section-heading > .text-link {
-    font-size: 9px;
+    font-size: 14px;
     gap: 3px;
     white-space: nowrap;
     flex-shrink: 0;
@@ -3292,15 +3292,15 @@ form label > small {
     width: 13px;
   }
   .section-heading .eyebrow {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 1.1px;
   }
   .section-heading p {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.8;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
   }
   .category-row {
     gap: 15px 12px;
@@ -3311,7 +3311,7 @@ form label > small {
     padding: 12px;
   }
   .category-tile h3 {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.4;
     margin: 9px 0 0;
   }
@@ -3335,7 +3335,7 @@ form label > small {
     padding: 25px 10px 12px;
   }
   .product-tag {
-    font-size: 6px;
+    font-size: 14px;
     padding: 3px 4px;
     left: 8px;
     top: 9px;
@@ -3357,17 +3357,17 @@ form label > small {
     padding: 12px 10px 9px;
   }
   .product-content .eyebrow {
-    font-size: 6px;
+    font-size: 14px;
     letter-spacing: 0.8px;
   }
   .product-name,
   .catalog-results .product-name {
-    font-size: 11px;
+    font-size: 14px;
     min-height: 34px;
     line-height: 1.5;
   }
   .product-size {
-    font-size: 8px;
+    font-size: 14px;
     line-height: 1.6;
     margin-bottom: 13px;
     min-height: 26px;
@@ -3377,16 +3377,16 @@ form label > small {
   }
   .product-price strong,
   .catalog-results .product-price strong {
-    font-size: 13px;
-    letter-spacing: -0.2px;
+    font-size: 14px;
+    letter-spacing: 0;
   }
   .product-price span {
-    font-size: 7px;
+    font-size: 14px;
     line-height: 1.6;
     margin-top: 4px;
   }
   .product-cta {
-    font-size: 8px;
+    font-size: 14px;
     min-height: 34px;
     padding: 8px 7px;
     gap: 3px;
@@ -3396,7 +3396,7 @@ form label > small {
     flex-shrink: 0;
   }
   .compare-button {
-    font-size: 7px;
+    font-size: 14px;
     padding-top: 9px;
     gap: 4px;
   }
@@ -3414,7 +3414,7 @@ form label > small {
     max-width: 76%;
   }
   .editorial-card .eyebrow {
-    font-size: 6px;
+    font-size: 14px;
     letter-spacing: 1px;
   }
   .editorial-card h2 {
@@ -3422,11 +3422,11 @@ form label > small {
     margin: 15px 0 12px;
   }
   .editorial-card p {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.7;
   }
   .editorial-card .text-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .editorial-card > img {
     height: 60%;
@@ -3445,16 +3445,16 @@ form label > small {
     gap: 13px;
   }
   .guide-options b {
-    font-size: 11px;
+    font-size: 14px;
   }
   .guide-options small {
-    font-size: 9px;
+    font-size: 14px;
   }
   .guide-options > button > svg {
     width: 21px;
   }
   .guide-results > p {
-    font-size: 10px;
+    font-size: 14px;
     align-items: flex-start;
   }
   .guide-results > .product-grid {
@@ -3479,22 +3479,22 @@ form label > small {
     max-width: calc(100% - 65px);
   }
   .visit-banner .eyebrow {
-    font-size: 6px;
+    font-size: 14px;
     letter-spacing: 0.9px;
   }
   .visit-banner h2 {
     font-size: 18px;
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
     line-height: 1.3;
     margin: 8px 0;
   }
   .visit-banner p {
-    font-size: 9px;
+    font-size: 14px;
     line-height: 1.8;
   }
   .visit-banner > .button {
     margin-left: 60px;
-    font-size: 9px;
+    font-size: 14px;
     padding: 10px 13px;
     min-height: 36px;
   }
@@ -3510,7 +3510,7 @@ form label > small {
   }
   .footer-grid > div:first-child > p {
     margin: 16px 0 12px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .footer-grid > div:last-child {
     grid-column: 1/-1;
@@ -3522,11 +3522,11 @@ form label > small {
     grid-column: 1/-1;
   }
   .footer-grid h3 {
-    font-size: 11px;
+    font-size: 14px;
     margin-bottom: 18px;
   }
   .footer-grid > div > a:not(.brand) {
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 11px;
   }
   .footer-security {
@@ -3536,7 +3536,7 @@ form label > small {
     padding-block: 20px 76px;
   }
   .footer-bottom p {
-    font-size: 8px;
+    font-size: 14px;
   }
   .chat-launcher {
     bottom: 17px;
@@ -3552,7 +3552,7 @@ form label > small {
     bottom: 17px;
     padding: 11px 13px;
     gap: 8px;
-    font-size: 9px;
+    font-size: 14px;
   }
   .compare-dock > svg {
     width: 15px;
@@ -3565,7 +3565,7 @@ form label > small {
   }
   .toast {
     top: 155px;
-    font-size: 11px;
+    font-size: 14px;
     padding: 13px 18px;
     width: max-content;
     max-width: calc(100% - 30px);
@@ -3575,7 +3575,7 @@ form label > small {
     padding-bottom: 35px;
   }
   .breadcrumbs {
-    font-size: 8px;
+    font-size: 14px;
     gap: 5px;
     margin-bottom: 25px;
   }
@@ -3589,10 +3589,10 @@ form label > small {
     font-size: 31px;
   }
   .inner-page > .section-heading p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .catalog-toolbar {
-    font-size: 9px;
+    font-size: 14px;
     gap: 12px;
   }
   .catalog-toolbar > span {
@@ -3601,16 +3601,16 @@ form label > small {
   .catalog-toolbar > label {
     flex-basis: 100%;
     justify-content: flex-end;
-    font-size: 9px;
+    font-size: 14px;
   }
   .catalog-toolbar select {
-    font-size: 10px;
+    font-size: 14px;
     padding: 7px 10px;
   }
   .catalog-toolbar > .button {
     padding: 8px 10px;
     min-height: 32px;
-    font-size: 9px;
+    font-size: 14px;
   }
   .empty-state {
     padding: 48px 15px;
@@ -3620,11 +3620,11 @@ form label > small {
   .empty-state h1,
   .empty-state h2 {
     font-size: 26px;
-    letter-spacing: -0.8px;
+    letter-spacing: 0;
     line-height: 1.3;
   }
   .empty-state p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .pdp {
     gap: 26px;
@@ -3634,7 +3634,7 @@ form label > small {
     padding: 38px 20px;
   }
   .gallery-main .product-tag {
-    font-size: 8px;
+    font-size: 14px;
     max-width: none;
   }
   .gallery-main .favorite-button {
@@ -3652,13 +3652,13 @@ form label > small {
     height: 55px;
   }
   .photo-note {
-    font-size: 8px;
+    font-size: 14px;
   }
   .product-details h1 {
     font-size: 27px;
   }
   .review-summary {
-    font-size: 9px;
+    font-size: 14px;
   }
   .pdp-price {
     padding: 19px 0;
@@ -3668,22 +3668,22 @@ form label > small {
     font-size: 25px;
   }
   .pdp-price p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .variant-section h3 {
-    font-size: 11px;
+    font-size: 14px;
   }
   .variant-section .muted {
-    font-size: 9px;
+    font-size: 14px;
   }
   .size-select {
-    font-size: 11px;
+    font-size: 14px;
   }
   .pdp-ctas .button {
-    font-size: 11px;
+    font-size: 14px;
   }
   .pdp-ctas .compare-button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .pdp-ctas .compare-button svg {
     width: 15px;
@@ -3693,7 +3693,7 @@ form label > small {
     margin-top: 20px;
   }
   .shipping-box h3 {
-    font-size: 11px;
+    font-size: 14px;
   }
   .shipping-box form {
     align-items: center;
@@ -3701,10 +3701,10 @@ form label > small {
   .shipping-box form input {
     margin: 0;
     padding: 10px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .shipping-box .button {
-    font-size: 9px;
+    font-size: 14px;
     padding: 11px 12px;
   }
   .product-description,
@@ -3717,20 +3717,20 @@ form label > small {
     font-size: 26px;
   }
   .product-description p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .spec-card {
     padding: 23px;
   }
   .spec-card dt,
   .spec-card dd {
-    font-size: 10px;
+    font-size: 14px;
   }
   .review-form {
     padding: 23px;
   }
   .review-form > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .account-page {
     grid-template-columns: 1fr;
@@ -3750,13 +3750,13 @@ form label > small {
     display: block;
   }
   .account-story p {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 100%;
     margin-bottom: 12px;
   }
   .account-story > div {
     margin: 15px 0;
-    font-size: 9px;
+    font-size: 14px;
   }
   .account-story > img {
     display: none;
@@ -3771,10 +3771,10 @@ form label > small {
     font-size: 24px;
   }
   .account-form > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .account-tabs button {
-    font-size: 12px;
+    font-size: 14px;
     padding: 11px 22px;
   }
   .account-quick-links {
@@ -3782,19 +3782,19 @@ form label > small {
   }
   .account-quick-links > a {
     padding: 18px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .order-card {
     padding: 18px;
   }
   .order-card h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .order-card > div > svg {
     width: 18px;
   }
   .order-card .status {
-    font-size: 8px;
+    font-size: 14px;
   }
   .cart-line {
     gap: 13px;
@@ -3806,13 +3806,13 @@ form label > small {
     padding: 8px;
   }
   .cart-line-name {
-    font-size: 11px;
+    font-size: 14px;
   }
   .cart-line p {
-    font-size: 8px;
+    font-size: 14px;
   }
   .cart-line strong {
-    font-size: 12px;
+    font-size: 14px;
   }
   .quantity {
     margin-top: 12px;
@@ -3833,16 +3833,16 @@ form label > small {
     font-size: 24px;
   }
   .cart-summary .summary-row {
-    font-size: 10px;
+    font-size: 14px;
   }
   .cart-summary .summary-total strong {
     font-size: 18px;
   }
   .cart-summary > .button {
-    font-size: 11px;
+    font-size: 14px;
   }
   .cart-summary > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .comparison th:first-child {
     width: 125px;
@@ -3855,7 +3855,7 @@ form label > small {
     padding: 15px;
   }
   .comparison-tip {
-    font-size: 10px;
+    font-size: 14px;
     align-items: flex-start;
   }
   .comparison-tip > svg {
@@ -3882,14 +3882,14 @@ form label > small {
     line-height: 1.4;
   }
   .document-card p {
-    font-size: 10px;
+    font-size: 14px;
     min-height: 80px;
   }
   .document-card .text-link {
-    font-size: 9px;
+    font-size: 14px;
   }
   .prose p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .prose h2 {
     font-size: 21px;
@@ -3904,17 +3904,17 @@ form label > small {
   }
   .admin-heading h1 {
     font-size: 25px;
-    letter-spacing: -0.7px;
+    letter-spacing: 0;
   }
   .admin-heading p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .admin-heading .eyebrow {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 1px;
   }
   .admin-heading > .button {
-    font-size: 8px;
+    font-size: 14px;
     padding: 9px;
     min-height: 32px;
     margin-top: 20px;
@@ -3926,7 +3926,7 @@ form label > small {
     margin-inline: -5px;
   }
   .admin-nav button {
-    font-size: 9px;
+    font-size: 14px;
     padding: 10px;
   }
   .admin-content > h2 {
@@ -3944,10 +3944,10 @@ form label > small {
     font-size: 25px;
   }
   .metric small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .metric span {
-    font-size: 9px;
+    font-size: 14px;
   }
   .metric-grid.three .metric:last-child {
     grid-column: 1/-1;
@@ -3960,10 +3960,10 @@ form label > small {
     font-size: 23px;
   }
   .admin-content > .section-heading p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .admin-content > .section-heading > .button {
-    font-size: 8px;
+    font-size: 14px;
     padding: 9px;
     min-height: 33px;
     margin-top: 8px;
@@ -3977,13 +3977,13 @@ form label > small {
     padding: 3px;
   }
   .admin-product-list b {
-    font-size: 10px;
+    font-size: 14px;
   }
   .admin-product-list small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .admin-product-list article > span {
-    font-size: 9px;
+    font-size: 14px;
     max-width: 88px;
     text-align: right;
   }
@@ -3994,7 +3994,7 @@ form label > small {
     width: 15px;
   }
   .admin-search input {
-    font-size: 10px;
+    font-size: 14px;
   }
   .admin-chat {
     grid-template-columns: 1fr;
@@ -4009,10 +4009,10 @@ form label > small {
     padding: 10px;
   }
   .admin-chat > aside b {
-    font-size: 11px;
+    font-size: 14px;
   }
   .admin-chat > aside small {
-    font-size: 9px;
+    font-size: 14px;
   }
   .admin-conversation {
     height: 410px;
@@ -4027,10 +4027,10 @@ form label > small {
     grid-template-columns: 1fr;
   }
   .cash-form .section-heading h3 {
-    font-size: 13px;
+    font-size: 14px;
   }
   .cash-form .button {
-    font-size: 9px;
+    font-size: 14px;
   }
   .modal-backdrop {
     padding: 10px;
@@ -4077,25 +4077,25 @@ form label > small {
     height: 70px;
   }
   .modal form > label.button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .modal form > p.muted {
-    font-size: 10px;
+    font-size: 14px;
   }
   .variant-stock summary {
-    font-size: 11px;
+    font-size: 14px;
   }
   .variant-stock .summary-row {
     align-items: flex-start;
   }
   .variant-stock .summary-row small {
-    font-size: 9px;
+    font-size: 14px;
   }
   .modal-actions {
     gap: 10px;
   }
   .modal-actions .button {
-    font-size: 11px;
+    font-size: 14px;
   }
   .modal .checks {
     gap: 0;
@@ -4119,10 +4119,386 @@ form label > small {
   border-radius: 0;
   padding: 0;
   width: auto;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 560px) {
   .header .search input {
-    font-size: 11px;
+    font-size: 14px;
   }
+}
+
+/* Clear, familiar typography and a readable store header. */
+.header {
+  background: #c9470a;
+  color: #fff;
+  border-bottom: 0;
+}
+.header-main {
+  gap: 28px;
+  min-height: 96px;
+  height: auto;
+  padding-block: 16px;
+}
+.brand-logo {
+  width: 70px;
+  height: 58px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.brand strong,
+.brand strong span {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.header .account-link small {
+  color: #fff;
+  font-size: 14px;
+}
+.header .account-link b {
+  font-size: 15px;
+}
+.header .badge-count {
+  background: #202020;
+  color: #fff;
+}
+.header .nav {
+  border-top: 1px solid #ffffff40;
+  gap: 24px;
+  font-size: 15px;
+  height: 50px;
+}
+.header .nav-special {
+  color: #fff;
+}
+.header .nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.header .all-categories {
+  border-right-color: #ffffff40;
+}
+.header form.search {
+  background: #fff;
+  color: #454545;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 0 0 18px;
+  min-height: 50px;
+  gap: 0;
+}
+.header form.search input {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  font-size: 16px;
+  height: 50px;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+}
+.header form.search button {
+  height: 50px;
+  width: 56px;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #eee;
+  color: #333;
+  border-radius: 0 8px 8px 0;
+  flex-shrink: 0;
+}
+.header form.search:focus-within {
+  outline: 3px solid #202020;
+  outline-offset: 2px;
+}
+.product-name {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.product-price strong {
+  font-size: 21px;
+}
+.product-content .eyebrow {
+  letter-spacing: 0.3px;
+}
+.product-gallery .gallery-main {
+  background: #fff;
+}
+.photo-note {
+  font-size: 14px;
+  color: #555;
+}
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+.comparison {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 16px;
+}
+.comparison thead th {
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding: 24px;
+}
+.comparison thead th:first-child {
+  width: 180px;
+}
+.comparison thead img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0 auto 16px;
+}
+.comparison td {
+  text-align: center;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+.comparison th {
+  font-weight: 400;
+}
+.comparison tbody th {
+  color: #555;
+  background: #fff;
+}
+.comparison .best-value {
+  font-weight: 700;
+  color: #202020;
+}
+.comparison .best-value small {
+  color: #c9470a;
+  margin-left: 8px;
+  font-size: 14px;
+}
+.compare-selection {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 14px;
+}
+.compare-selection input {
+  accent-color: #202020;
+  width: 18px;
+  height: 18px;
+}
+.compare-dock {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0;
+  background: #fff;
+  color: #202020;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px max(20px, calc((100vw - 1280px) / 2));
+  box-shadow: 0 -3px 20px #0000000a;
+  z-index: 65;
+}
+.compare-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.compare-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+.compare-chip img {
+  width: 40px;
+  height: 34px;
+  object-fit: contain;
+}
+.compare-chip button {
+  border: 0;
+  background: none;
+  padding: 4px;
+  display: flex;
+}
+.compare-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.compare-actions .button {
+  min-height: 40px;
+  padding: 8px 20px;
+}
+.compare-clear {
+  background: none;
+  border: 0;
+  font-size: 14px;
+}
+.comparison-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.auth-notice {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 8px;
+  margin-block: 18px;
+}
+.verification-page {
+  max-width: 600px;
+  padding-block: 60px;
+}
+@media (max-width: 1050px) {
+  .header-main {
+    gap: 16px;
+  }
+  .header .nav {
+    gap: 18px;
+    overflow-x: auto;
+  }
+  .header-actions {
+    gap: 14px;
+  }
+  .account-link span {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .header-main {
+    min-height: 120px;
+    padding-block: 10px;
+    gap: 12px;
+    height: auto;
+  }
+  .header .brand {
+    margin-right: auto;
+  }
+  .brand-logo {
+    width: 50px;
+    height: 44px;
+  }
+  .brand strong,
+  .brand strong span {
+    font-size: 22px;
+  }
+  .header form.search {
+    width: 100%;
+    flex-basis: 100%;
+    min-height: 46px;
+    margin: 0;
+    order: 5;
+  }
+  .header form.search input,
+  .header form.search button {
+    height: 46px;
+  }
+  .header .nav {
+    height: auto;
+    overflow: visible;
+  }
+  .header .nav:not(.nav-open) {
+    display: none;
+  }
+  .header .nav.nav-open {
+    color: #202020;
+    background: #fff;
+    gap: 0;
+  }
+  .header .nav.nav-open a {
+    color: #202020;
+    font-size: 16px;
+  }
+  .header .nav.nav-open a:hover {
+    color: #c9470a;
+  }
+  .product-content {
+    padding: 14px 12px;
+  }
+  .product-name {
+    font-size: 16px;
+    min-height: 48px;
+  }
+  .product-price strong {
+    font-size: 18px;
+  }
+  .product-cta {
+    font-size: 14px;
+    padding: 10px 8px;
+    white-space: normal;
+  }
+  .comparison {
+    min-width: 680px;
+  }
+  .compare-dock {
+    gap: 12px;
+    padding: 10px 14px;
+  }
+  .compare-chips {
+    max-width: calc(100% - 100px);
+  }
+  .compare-chip span {
+    max-width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .compare-chip img {
+    display: none;
+  }
+  .compare-actions {
+    margin-left: auto;
+    gap: 8px;
+  }
+  .compare-clear {
+    display: none;
+  }
+  .compare-dock .button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .chat-fab {
+    bottom: 95px;
+  }
+}
+
+.footer-top .brand-logo {
+  filter: invert(1);
+}
+.photo-source-label {
+  color: #555;
+  font-size: 14px;
+  margin: 8px 0;
+}
+.account-help {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.order-discount-form {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.order-discount-form input {
+  max-width: 160px;
+}
+.discount-label {
+  color: #a23503;
+  font-weight: 700;
 }

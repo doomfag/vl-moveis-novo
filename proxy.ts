@@ -1,6 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
 export function proxy(request: NextRequest) {
+  if (/^\/catalogos(?:\/|$)/.test(request.nextUrl.pathname)) {
+    return new NextResponse("Página não encontrada.", {
+      status: 404,
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
   const nonce = randomBytes(16).toString("base64");
   const dev = process.env.NODE_ENV !== "production";
   const csp = [
@@ -24,6 +33,7 @@ export function proxy(request: NextRequest) {
 }
 export const config = {
   matcher: [
+    "/catalogos/:path*",
     "/((?!api|_next/static|_next/image|catalogos/|catalogo/.*\\.(?:webp|png|jpg|jpeg)|favicon.ico).*)",
   ],
 };

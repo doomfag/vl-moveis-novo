@@ -18,13 +18,6 @@ export function ProductCard({ product: p }: { product: Product }) {
             height={400}
           />
         </Link>
-        <span className="product-tag">
-          {p.category === "Hotelaria"
-            ? "Linha hotelaria"
-            : p.category === "Bases e camas"
-              ? "Mais espaço em casa"
-              : "Ortobom"}
-        </span>
         <button
           className={
             "favorite-button " + (s.favorites.includes(p.id) ? "selected" : "")
@@ -45,6 +38,9 @@ export function ProductCard({ product: p }: { product: Product }) {
         <Link href={"/produto/" + p.slug} className="product-name">
           {p.name}
         </Link>
+        {p.photoNote?.includes("embalagem") && (
+          <p className="photo-source-label">Foto do produto na embalagem</p>
+        )}
         <p className="product-size">
           {p.sizes.length > 1
             ? p.sizes.length + " medidas disponíveis"
@@ -52,6 +48,11 @@ export function ProductCard({ product: p }: { product: Product }) {
           {p.colors.length > 1 ? " · " + p.colors.length + " cores" : ""}
         </p>
         <div className="product-price">
+          {!!p.discountPercent && price !== null && (
+            <span className="discount-label">
+              {p.discountPercent}% de desconto
+            </span>
+          )}
           <strong>
             {price === null ? "Preço sob consulta" : money(price)}
           </strong>
@@ -83,18 +84,15 @@ export function ProductCard({ product: p }: { product: Product }) {
             Adicionar à sacola <ShoppingBag size={16} />
           </button>
         )}
-        <button
-          className={
-            "compare-button " + (s.compare.includes(p.id) ? "selected" : "")
-          }
-          onClick={() => s.toggleCompare(p.id)}
-          aria-pressed={s.compare.includes(p.id)}
-        >
-          <Scale size={14} />{" "}
-          {s.compare.includes(p.id)
-            ? "Selecionado para comparar"
-            : "Comparar produto"}
-        </button>
+        <label className="compare-selection">
+          <input
+            type="checkbox"
+            checked={s.compare.includes(p.id)}
+            onChange={() => s.toggleCompare(p.id)}
+            aria-label="Comparar produto"
+          />
+          Comparar
+        </label>
       </div>
     </article>
   );

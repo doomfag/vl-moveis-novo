@@ -36,6 +36,7 @@ type Context = {
   setCart: (items: CartLine[]) => void;
   add: (p: Product, color: string, size: string) => void;
   toggleCompare: (id: string) => void;
+  clearCompare: () => void;
   toggleFavorite: (id: string) => void;
 };
 const ctx = createContext<Context | null>(null);
@@ -80,7 +81,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         const c = read("vl_compare", []);
         const f = read("vl_favorites", []);
         if (active) {
-          setCompare(Array.isArray(c) ? c.slice(0, 4) : []);
+          setCompare(Array.isArray(c) ? c.slice(0, 3) : []);
           setFavorites(Array.isArray(f) ? f : []);
         }
         const { user: u } = await api<{ user: User | null }>("auth/me");
@@ -154,8 +155,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     let next = compare.includes(id)
       ? compare.filter((x) => x !== id)
       : [...compare, id];
-    if (next.length > 4) {
-      notify("Você pode comparar até 4 produtos.");
+    if (next.length > 3) {
+      notify("Você pode comparar até 3 produtos.");
       return;
     }
     setCompare(next);
@@ -187,6 +188,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setCart,
         add,
         toggleCompare,
+        clearCompare: () => {
+          setCompare([]);
+          try {
+            localStorage.setItem("vl_compare", "[]");
+          } catch {}
+        },
         toggleFavorite,
       }}
     >

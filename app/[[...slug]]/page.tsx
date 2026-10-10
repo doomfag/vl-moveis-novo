@@ -20,11 +20,10 @@ export async function generateMetadata({ params }: Props) {
     admin: "Administração",
     lojas: "Nossas lojas",
     favoritos: "Seus favoritos",
-    catalogos: "Catálogos Ortobom",
     privacidade: "Privacidade",
     termos: "Compras e entregas",
   };
-  return { title: titles[slug[0]] || "Seu lar. Seu jeito." };
+  return { title: titles[slug[0]] || "VL Móveis" };
 }
 export default async function Page({ params }: Props) {
   const { slug = [] } = await params;
@@ -35,11 +34,14 @@ export default async function Page({ params }: Props) {
     "produto",
     "sacola",
     "conta",
+    "confirmar-email",
+    "reenviar-confirmacao",
+    "recuperar-senha",
+    "redefinir-senha",
     "comparar",
     "admin",
     "lojas",
     "favoritos",
-    "catalogos",
     "privacidade",
     "termos",
   ];

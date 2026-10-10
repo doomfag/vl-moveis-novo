@@ -3,24 +3,21 @@
   "sources": [
     {
       "name": "comercial",
-      "pages": 128,
-      "url": "/catalogos/comercial.pdf"
+      "pages": 128
     },
     {
       "name": "travesseiros",
-      "pages": 16,
-      "url": "/catalogos/travesseiros.pdf"
+      "pages": 16
     },
     {
       "name": "hotelaria",
-      "pages": 16,
-      "url": "/catalogos/hotelaria.pdf"
+      "pages": 16
     },
     {
       "name": "revendedor-2021",
-      "pages": 63,
-      "url": "/catalogos/revendedor-2021.pdf"
+      "pages": 63
     }
   ],
-  "note": "Preços e estoque não fornecidos. Medidas transcritas do catálogo; fotos por cor somente quando existem na fonte. Disponibilidade atual e combinações de altura/medida precisam ser conferidas pela loja."
+  "note": "Preços e estoque não fornecidos. Medidas transcritas do catálogo; fotos por cor somente quando existem na fonte. Disponibilidade atual e combinações de altura/medida precisam ser conferidas pela loja.",
+  "mediaReview": "Fotos extraídas dos arquivos originais, sem gerar produtos. Modelos de travesseiro sem foto confirmada fora da embalagem são identificados."
 }

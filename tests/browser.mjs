@@ -1,6 +1,13 @@
 import { chromium, expect } from "@playwright/test";
 import { spawn, execFileSync } from "node:child_process";
-import { mkdtempSync, rmSync, mkdirSync, existsSync } from "node:fs";
+import {
+  mkdtempSync,
+  rmSync,
+  mkdirSync,
+  existsSync,
+  readdirSync,
+  readFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { randomBytes, randomUUID } from "node:crypto";
@@ -25,6 +32,9 @@ const server = spawn(
       ...process.env,
       APP_ORIGIN: origin,
       DB_PATH: join(dir, "store.sqlite"),
+      EMAIL_MODE: "local",
+      EMAIL_PREVIEW_DIR: join(dir, "emails"),
+      RESEND_API_KEY: "",
     },
     stdio: ["ignore", "pipe", "pipe"],
   },
@@ -103,14 +113,14 @@ try {
     await page.getByRole("button", { name: "Buscar", exact: true }).click();
     await expect(page.locator(".product-card")).toHaveCount(1);
     await page
-      .getByRole("button", { name: "Comparar produto", exact: true })
-      .click();
+      .getByRole("checkbox", { name: "Comparar produto", exact: true })
+      .check();
     await page.goto(origin + "/catalogo?categoria=Bases%20e%20camas");
     await page
       .locator(".product-card")
       .first()
-      .getByRole("button", { name: "Comparar produto", exact: true })
-      .click();
+      .getByRole("checkbox", { name: "Comparar produto", exact: true })
+      .check();
     await page.goto(origin + "/comparar");
     await expect(page.locator(".comparison thead th")).toHaveCount(3);
   });
@@ -150,7 +160,35 @@ try {
       await page.getByLabel("Seu nome", { exact: true }).fill("Teste da loja");
       await page.getByLabel("E-mail", { exact: true }).fill(email);
       await page.getByLabel("Senha", { exact: true }).fill(password);
+      await page.getByLabel("Confirmar senha", { exact: true }).fill(password);
       await page.getByRole("button", { name: "Criar minha conta" }).click();
+      await expect(page.locator(".auth-notice")).toContainText(
+        "aguardando confirmação",
+      );
+      const pending = await context.request.get(origin + "/api/auth/me");
+      if ((await pending.json()).user !== null)
+        throw new Error("Unverified account received session");
+      const messages = readdirSync(join(dir, "emails"))
+        .map((name) =>
+          JSON.parse(readFileSync(join(dir, "emails", name), "utf8")),
+        )
+        .filter((m) => m.to === email);
+      const link = messages[0].text.match(/https?:\/\/[^\s]+/)[0];
+      await page.goto(link);
+      await page
+        .getByRole("button", { name: "Confirmar e-mail", exact: true })
+        .click();
+      await expect(
+        page.getByRole("status").filter({ hasText: "E-mail confirmado" }),
+      ).toBeVisible();
+      await page
+        .getByRole("link", { name: "Ir para minha conta", exact: true })
+        .click();
+      await page.getByLabel("E-mail", { exact: true }).fill(email);
+      await page.getByLabel("Senha", { exact: true }).fill(password);
+      await page
+        .getByRole("button", { name: "Entrar na minha conta", exact: true })
+        .click();
       await expect(
         page.getByRole("heading", { name: "Olá, Teste." }),
       ).toBeVisible();
@@ -191,6 +229,9 @@ try {
         })
         .click();
       await page.getByLabel("Preço em reais", { exact: true }).fill("1000");
+      await page
+        .getByLabel("Desconto no produto (%)", { exact: true })
+        .fill("10");
       await page.getByLabel("Quantidade em estoque", { exact: true }).fill("3");
       const response = page.waitForResponse(
         (r) =>
@@ -225,6 +266,13 @@ try {
       ).toBeVisible();
       await page.goto(origin + "/admin");
       await page.getByRole("button", { name: /^Pedidos e clientes/ }).click();
+      await page
+        .getByLabel("Desconto no pedido (R$)", { exact: true })
+        .fill("50");
+      await page
+        .getByRole("button", { name: "Aplicar desconto", exact: true })
+        .click();
+      await expect(page.locator(".admin-table")).toContainText("850,00");
       page.once("dialog", (d) => d.accept());
       await page
         .getByRole("button", { name: "Pagamento recebido", exact: true })
@@ -233,7 +281,7 @@ try {
       await page
         .getByRole("button", { name: "Fluxo de caixa", exact: true })
         .click();
-      await expect(page.locator(".metric").first()).toContainText("1.000,00");
+      await expect(page.locator(".metric").first()).toContainText("850,00");
     },
   );
   await check(

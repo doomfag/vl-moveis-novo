@@ -115,7 +115,6 @@ export function ProductPage({
               width={800}
               height={650}
             />
-            <span className="product-tag">Qualidade Ortobom</span>
             <button
               className={
                 "favorite-button " +
@@ -145,8 +144,8 @@ export function ProductPage({
             ))}
           </div>
           <p className="photo-note">
-            Fotografias do catálogo do fabricante. Confira cor e medidas com a
-            loja.
+            {p.photoNote ||
+              "Fotos reais fornecidas pelo fabricante. Confira cor e medidas na descrição."}
           </p>
         </div>
         <div className="product-details">
@@ -166,6 +165,9 @@ export function ProductPage({
               : "Ainda sem avaliações. Seja o primeiro."}
           </a>
           <div className="pdp-price">
+            {!!p.discountPercent && price !== null && (
+              <p>{p.discountPercent}% de desconto aplicado</p>
+            )}
             <strong>
               {price === null ? "Preço sob consulta" : money(price)}
             </strong>
@@ -310,21 +312,10 @@ export function ProductPage({
       <section className="section product-description">
         <div>
           <span className="eyebrow accent">CONHEÇA SEU PRÓXIMO CONFORTO</span>
-          <h2>Feito para os seus dias.</h2>
+          <h2>Descrição do produto</h2>
           {p.description.split("\n\n").map((t, i) => (
             <p key={i}>{t}</p>
           ))}
-          {p.source && (
-            <a
-              href={p.source.url}
-              className="text-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BookOpen size={17} /> Ver especificações no catálogo original{" "}
-              <ArrowUpRight size={15} />
-            </a>
-          )}
         </div>
         <div className="spec-card">
           <h3>Um olhar nos detalhes</h3>

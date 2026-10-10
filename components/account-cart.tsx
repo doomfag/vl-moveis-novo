@@ -22,6 +22,8 @@ export function Account() {
     [register, setRegister] = useState(false),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
+    [message, setMessage] = useState(""),
+    [pendingEmail, setPendingEmail] = useState(""),
     [orders, setOrders] = useState<any[]>([]);
   useEffect(() => {
     if (s.user)
@@ -35,6 +37,11 @@ export function Account() {
     setBusy(true);
     setError("");
     const fields = new FormData(e.currentTarget);
+    if (register && fields.get("password") !== fields.get("passwordConfirm")) {
+      setError("As senhas precisam ser iguais.");
+      setBusy(false);
+      return;
+    }
     try {
       const data = await api(
         register ? "auth/register" : "auth/login",
@@ -47,6 +54,12 @@ export function Account() {
             }
           : { email: fields.get("email"), password: fields.get("password") },
       );
+      if (data.requiresVerification) {
+        setMessage(data.message);
+        setPendingEmail(data.email);
+        setRegister(false);
+        return;
+      }
       await s.login(data.user);
       s.notify(
         register
@@ -176,13 +189,7 @@ export function Account() {
     <div className="container account-page">
       <div className="account-story">
         <span className="eyebrow accent">BEM-VINDO À VL MÓVEIS</span>
-        <h1>
-          Seu lar.
-          <br />
-          Seu jeito.
-          <br />
-          <span>Seu cantinho aqui.</span>
-        </h1>
+        <h1>Minha conta VL Móveis</h1>
         <p>
           Guarde suas escolhas, acompanhe seus pedidos e converse com a gente em
           um só lugar.
@@ -218,12 +225,18 @@ export function Account() {
             Criar conta
           </button>
         </div>
-        <h2>{register ? "Sinta-se em casa." : "Que bom ter você de volta."}</h2>
+        <h2>{register ? "Criar conta" : "Entrar"}</h2>
         <p>
           {register
             ? "São só alguns detalhes para começar."
             : "Entre para continuar de onde parou."}
         </p>
+        {message && (
+          <div className="auth-notice" role="status">
+            <p>{message}</p>
+            {pendingEmail && <p>E-mail: {pendingEmail}</p>}
+          </div>
+        )}
         <form onSubmit={submit}>
           {register && (
             <label>
@@ -262,6 +275,19 @@ export function Account() {
             />
           </label>
           {register && (
+            <label>
+              Confirmar senha
+              <input
+                name="passwordConfirm"
+                type="password"
+                autoComplete="new-password"
+                minLength={12}
+                maxLength={128}
+                required
+              />
+            </label>
+          )}
+          {register && (
             <small className="muted">
               Use uma senha exclusiva com pelo menos 12 caracteres. Ao criar sua
               conta, você conhece nossa{" "}
@@ -283,16 +309,14 @@ export function Account() {
           </button>
         </form>
         {!register && (
-          <a
-            href={whatsapp(
-              "Olá! Preciso de ajuda para recuperar o acesso à minha conta.",
-            )}
-            className="text-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Preciso de ajuda para entrar
-          </a>
+          <div className="account-help">
+            <Link href="/recuperar-senha" className="text-link">
+              Esqueci minha senha
+            </Link>
+            <Link href="/reenviar-confirmacao" className="text-link">
+              Reenviar confirmação de e-mail
+            </Link>
+          </div>
         )}
       </div>
     </div>

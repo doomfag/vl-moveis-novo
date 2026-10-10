@@ -15,7 +15,7 @@ docs = {}
 for f in sources:
     key = f.stem if f.stem in ['comercial','travesseiros','hotelaria','revendedor-2021'] else 'comercial' if '8368' in f.name else 'travesseiros' if '8537' in f.name else 'hotelaria' if 'HOTELARIA' in f.name else 'revendedor-2021' if 'revendedor' in f.name else None
     if key:
-        target = ROOT / 'public/catalogos' / (key + '.pdf')
+        target = ROOT / 'sources/catalogs' / (key + '.pdf')
         target.parent.mkdir(parents=True, exist_ok=True)
         if f.resolve() != target.resolve(): shutil.copyfile(f, target)
         docs[key] = fitz.open(target)
@@ -94,7 +94,7 @@ pillow_names={3:'Espuma Viscoelástica',4:'Espuma Látex',5:'Flocos',6:'Nuvem',7
 for page,name in pillow_names.items():
     p=docs['travesseiros'][page-1]
     pix=p.get_pixmap(matrix=fitz.Matrix(1.7,1.7)); temp=ROOT.parent/'catalog-analysis'/f'pillow-{page}.png';temp.parent.mkdir(exist_ok=True);pix.save(temp)
-    cache=ROOT.parent/'catalog-analysis'/f'ocr-{hashlib.sha256((ROOT / "public/catalogos/travesseiros.pdf").read_bytes()).hexdigest()[:16]}-{page}.txt'
+    cache=ROOT.parent/'catalog-analysis'/f'ocr-{hashlib.sha256((ROOT / "sources/catalogs/travesseiros.pdf").read_bytes()).hexdigest()[:16]}-{page}.txt'
     if cache.exists(): result=cache.read_text()
     else:
         result=subprocess.run(['tesseract',str(temp),'stdout','-l','eng'],capture_output=True,text=True,check=True,env={**os.environ,'OMP_THREAD_LIMIT':'1'}).stdout

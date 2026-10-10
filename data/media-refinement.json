@@ -1,0 +1,1580 @@
+{
+  "colchao-ortobom-exclusive-gel": {
+    "replacements": {
+      "/catalogo/comercial-3.webp": "/catalogo/comercial-3-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster",
+      "Altura": "34 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-ortobom-exclusive-visco": {
+    "replacements": {
+      "/catalogo/comercial-4.webp": "/catalogo/comercial-4-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster",
+      "Altura": "30 cm"
+    }
+  },
+  "colchao-ortobom-exclusive-foam": {
+    "replacements": {
+      "/catalogo/comercial-5.webp": "/catalogo/comercial-5-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster com toque suave",
+      "Altura": "30 cm"
+    }
+  },
+  "colchao-ortobom-new-freedom": {
+    "replacements": {
+      "/catalogo/comercial-6.webp": "/catalogo/comercial-6-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 78 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster com toque super soft",
+      "Altura": "32 cm",
+      "Estrutura de molas": "Superpocket",
+      "Espuma": "D33"
+    }
+  },
+  "colchao-ortobom-exclusive-sleep": {
+    "replacements": {
+      "/catalogo/comercial-7.webp": "/catalogo/comercial-7-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 138 cm · 188 × 88 cm · 188 × 128 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster com toque suave",
+      "Altura": "32 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-ortobom-exclusive-spring": {
+    "replacements": {
+      "/catalogo/comercial-8.webp": "/catalogo/comercial-8-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha com toque super soft",
+      "Altura": "30 cm"
+    }
+  },
+  "colchao-ortobom-orthopedic": {
+    "replacements": {
+      "/catalogo/comercial-9.webp": "/catalogo/comercial-9-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% poliéster",
+      "Altura": "27 cm"
+    }
+  },
+  "colchao-ortobom-exclusive-lfk": {
+    "replacements": {
+      "/catalogo/comercial-10.webp": "/catalogo/comercial-10-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 188 × 78 cm · 188 × 128 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha de poliéster e linho",
+      "Altura": "30 cm",
+      "Estrutura de molas": "LFK"
+    }
+  },
+  "colchao-ortobom-fit-spring-pocket": {
+    "replacements": {
+      "/catalogo/comercial-12.webp": "/catalogo/comercial-12-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha com toque suave",
+      "Altura": "30 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-ortobom-fit-progressive": {
+    "replacements": {
+      "/catalogo/comercial-13.webp": "/catalogo/comercial-13-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha com toque suave",
+      "Altura": "28 cm",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "colchao-ortobom-fit-spring": {
+    "replacements": {
+      "/catalogo/comercial-14.webp": "/catalogo/comercial-14-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 78 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% poliéster",
+      "Altura": "26 cm"
+    }
+  },
+  "colchao-ortobom-fit-ortopedico": {
+    "replacements": {
+      "/catalogo/comercial-15.webp": "/catalogo/comercial-15-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 138 cm · 188 × 128 cm · 188 × 88 cm · 188 × 78 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "53% Poliester e 47% Viscose",
+      "Altura": "24 cm"
+    }
+  },
+  "colchao-ortobom-fit-23": {
+    "replacements": {
+      "/catalogo/comercial-16.webp": "/catalogo/comercial-16-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% poliéster",
+      "Altura": "12 cm"
+    }
+  },
+  "colchao-ortobom-fit-28": {
+    "replacements": {
+      "/catalogo/comercial-17.webp": "/catalogo/comercial-17-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 188 × 158 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100%poliéster",
+      "Altura": "13 cm"
+    }
+  },
+  "colchao-ortobom-fit-33": {
+    "replacements": {
+      "/catalogo/comercial-18.webp": "/catalogo/comercial-18-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100%poliéster",
+      "Altura": "13 cm"
+    }
+  },
+  "colchao-ortobom-fit-45": {
+    "replacements": {
+      "/catalogo/comercial-19.webp": "/catalogo/comercial-19-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% poliéster",
+      "Altura": "13 cm"
+    }
+  },
+  "colchao-ortobom-baby-light-d18": {
+    "replacements": {
+      "/catalogo/comercial-20.webp": "/catalogo/comercial-20-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "130 × 60 cm · 130 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "superior e faixa lateral em tecido Resistente em Poliéster"
+    }
+  },
+  "colchao-ortobom-pic-go": {
+    "replacements": {
+      "/catalogo/comercial-21.webp": "/catalogo/comercial-21-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster",
+      "Altura": "17 cm"
+    }
+  },
+  "colchao-ortobom-self": {
+    "replacements": {
+      "/catalogo/comercial-22.webp": "/catalogo/comercial-22-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 108 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% Poliéster",
+      "Altura": "17 cm"
+    }
+  },
+  "colchao-ortobom-star-exclusive": {
+    "replacements": {
+      "/catalogo/comercial-23.webp": "/catalogo/comercial-23-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "100% Poliéster",
+      "Altura": "42 cm"
+    }
+  },
+  "colchao-ortobom-star-new": {
+    "replacements": {
+      "/catalogo/comercial-24.webp": "/catalogo/comercial-24-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha de poliéster e viscose",
+      "Altura": "38 cm"
+    }
+  },
+  "colchao-ortobom-star-black": {
+    "replacements": {
+      "/catalogo/comercial-25.webp": "/catalogo/comercial-25-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "100% poliéster",
+      "Altura": "38 cm",
+      "Espuma": "D26"
+    }
+  },
+  "colchao-ortobom-star-superpocket": {
+    "replacements": {
+      "/catalogo/comercial-26.webp": "/catalogo/comercial-26-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha de poliéster e viscose",
+      "Altura": "36 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-ortobom-baby-malha-petit-blanc": {
+    "replacements": {
+      "/catalogo/comercial-27.webp": "/catalogo/comercial-27-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "130 × 60 cm · 130 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% poliéster"
+    }
+  },
+  "colchao-ortobom-baby-malha-petit-perle": {
+    "replacements": {
+      "/catalogo/comercial-28.webp": "/catalogo/comercial-28-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "130 × 60 cm · 130 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "malha 100% poliéster"
+    }
+  },
+  "colchao-ortobom-airtech-springpocket": {
+    "replacements": {
+      "/catalogo/comercial-30.webp": "/catalogo/comercial-30-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-ortobom-airtech-progressive": {
+    "replacements": {
+      "/catalogo/comercial-31.webp": "/catalogo/comercial-31-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "colchao-ortobom-airtech-1-5-0": {
+    "replacements": {
+      "/catalogo/comercial-32.webp": "/catalogo/comercial-32-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 193 × 203 cm",
+      "Linha": "Ortobom",
+      "Material": "malha",
+      "Altura": "28 cm"
+    }
+  },
+  "colchao-ortobom-airtech-1-0-0": {
+    "replacements": {
+      "/catalogo/comercial-33.webp": "/catalogo/comercial-33-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "malha",
+      "Altura": "28 cm"
+    }
+  },
+  "colchao-ortobom-airtech-6-0": {
+    "replacements": {
+      "/catalogo/comercial-34.webp": "/catalogo/comercial-34-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "malha",
+      "Altura": "28 cm"
+    }
+  },
+  "colchao-ortobom-iso-dupla-face": {
+    "replacements": {
+      "/catalogo/comercial-35.webp": "/catalogo/comercial-35-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "198 × 158 cm · 188 × 138 cm · 188 × 128 cm · 198 × 108 cm · 188 × 88 cm · 188 × 78 cm",
+      "Linha": "Ortobom",
+      "Material": "tecido 100%poliéster com tratamento antialérgico e antiácaro",
+      "Espuma": "D28"
+    }
+  },
+  "colchao-ortobom-iso-6-0": {
+    "replacements": {
+      "/catalogo/comercial-36.webp": "/catalogo/comercial-36-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "viscose",
+      "Espuma": "D28"
+    }
+  },
+  "colchao-ortobom-iso-1-0-0": {
+    "replacements": {
+      "/catalogo/comercial-37.webp": "/catalogo/comercial-37-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 158 × 198 cm · 138 × 188 cm · 128 × 188 cm · 108 × 198 cm · 88 × 188 cm · 78 × 188 cm",
+      "Linha": "Ortobom",
+      "Material": "viscose",
+      "Espuma": "D33"
+    }
+  },
+  "colchao-ortobom-iso-1-5-0": {
+    "replacements": {
+      "/catalogo/comercial-38.webp": "/catalogo/comercial-38-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "viscose",
+      "Espuma": "D45"
+    }
+  },
+  "colchao-ortobom-iso-nanolastic": {
+    "replacements": {
+      "/catalogo/comercial-39.webp": "/catalogo/comercial-39-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "poliéster",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "colchao-ortobom-physical-superpocket": {
+    "replacements": {
+      "/catalogo/comercial-40.webp": "/catalogo/comercial-40-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster bordado em Matelassê com Espuma Certifi cada 100% Poliuretano",
+      "Altura": "24 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-ortobom-physical-nanolastic": {
+    "replacements": {
+      "/catalogo/comercial-41.webp": "/catalogo/comercial-41-produto.webp"
+    },
+    "extras": [
+      "/catalogo/comercial-41-detalhes.webp"
+    ],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 188 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster bordado em Matelassê com Espuma Certifi cada 100% Poliuretano",
+      "Altura": "23 cm",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "colchao-ortobom-physical-super-hiper-resistente": {
+    "replacements": {
+      "/catalogo/comercial-42.webp": "/catalogo/comercial-42-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano"
+    }
+  },
+  "colchao-ortobom-physical-hiper-resistente": {
+    "replacements": {
+      "/catalogo/comercial-43.webp": "/catalogo/comercial-43-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano"
+    }
+  },
+  "colchao-ortobom-physical-mega-resistente": {
+    "replacements": {
+      "/catalogo/comercial-44.webp": "/catalogo/comercial-44-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "colchao-ortobom-physical-ultra-resistente": {
+    "replacements": {
+      "/catalogo/comercial-45.webp": "/catalogo/comercial-45-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "colchao-ortobom-physical-super-resistente": {
+    "replacements": {
+      "/catalogo/comercial-46.webp": "/catalogo/comercial-46-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "colchao-ortobom-physical-resistente-liso": {
+    "replacements": {
+      "/catalogo/comercial-47.webp": "/catalogo/comercial-47-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "150 × 70 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster"
+    }
+  },
+  "colchao-ortobom-physical-resistente": {
+    "replacements": {
+      "/catalogo/comercial-48.webp": "/catalogo/comercial-48-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "colchao-auxiliar-cori-nero": {
+    "replacements": {
+      "/catalogo/comercial-49.webp": "/catalogo/comercial-49-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "171 × 79 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster, bordado em Matelassê em Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "colchao-auxiliar-dream": {
+    "replacements": {
+      "/catalogo/comercial-50.webp": "/catalogo/comercial-50-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "172 × 79 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster",
+      "Espuma": "D28"
+    }
+  },
+  "colchao-auxiliar-orthopedic": {
+    "replacements": {
+      "/catalogo/comercial-51.webp": "/catalogo/comercial-51-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "172 × 79 cm",
+      "Linha": "Ortobom",
+      "Material": "tecido 100% Poliéster"
+    }
+  },
+  "colchao-auxiliar-union": {
+    "replacements": {
+      "/catalogo/comercial-52.webp": "/catalogo/comercial-52-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "171 × 79 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster",
+      "Espuma": "D28"
+    }
+  },
+  "colchao-auxiliar-cori-bianco": {
+    "replacements": {
+      "/catalogo/comercial-53.webp": "/catalogo/comercial-53-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "171 × 79 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster, bordado em Matelassê em Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "colchonete-physical": {
+    "replacements": {
+      "/catalogo/comercial-54.webp": "/catalogo/comercial-54-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster"
+    }
+  },
+  "colchao-ortobom-baby-physical-d18": {
+    "replacements": {
+      "/catalogo/comercial-55.webp": "/catalogo/comercial-55-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "130 × 60 cm · 130 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster"
+    }
+  },
+  "colchao-ortobom-iso-superpocket": {
+    "replacements": {
+      "/catalogo/comercial-56.webp": "/catalogo/comercial-56-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "malha",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "conjugado-union-ortopedic": {
+    "replacements": {
+      "/catalogo/comercial-58.webp": "/catalogo/comercial-58-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 108 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster, bordado em Matelassê com Espuma Certifi cada 100% Poliuretano"
+    }
+  },
+  "conjugado-union-spring": {
+    "replacements": {
+      "/catalogo/comercial-59.webp": "/catalogo/comercial-59-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster, bordado em Espuma Certifi cada 100% Poliuretano",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "conjugado-cori-bianco-vazado": {
+    "replacements": {
+      "/catalogo/comercial-60.webp": "/catalogo/comercial-60-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster"
+    }
+  },
+  "conjugado-cori-nero-vazado": {
+    "replacements": {
+      "/catalogo/comercial-61.webp": "/catalogo/comercial-61-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster"
+    }
+  },
+  "cabeceira-piave-linho": {
+    "replacements": {
+      "/catalogo/comercial-63.webp": "/catalogo/comercial-63-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "125 × 90 cm · 125 × 140 cm · 125 × 160 cm · 125 × 188 cm · 125 × 195 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "cabeceira-piave-veludo": {
+    "replacements": {
+      "/catalogo/comercial-64.webp": "/catalogo/comercial-64-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "125 × 90 cm · 125 × 140 cm · 125 × 160 cm · 125 × 188 cm · 125 × 195 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "cabeceira-murat-facto": {
+    "replacements": {
+      "/catalogo/comercial-65.webp": "/catalogo/comercial-65-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "125 × 90 cm · 125 × 140 cm · 125 × 160 cm · 125 × 188 cm · 125 × 195 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "base-sommier-corino": {
+    "replacements": {
+      "/catalogo/comercial-67.webp": "/catalogo/comercial-67-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 69 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "base-sommier-camurca": {
+    "replacements": {
+      "/catalogo/comercial-69.webp": "/catalogo/comercial-69-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 69 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "base-sommier-linho": {
+    "replacements": {
+      "/catalogo/comercial-71.webp": "/catalogo/comercial-71-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 69 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "100% Poliéster e pés rosqueáveis"
+    }
+  },
+  "base-sommier-bau-camurca": {
+    "replacements": {
+      "/catalogo/comercial-73.webp": "/catalogo/comercial-73-produto.webp",
+      "/catalogo/comercial-74.webp": "/catalogo/comercial-74-produto.webp",
+      "/catalogo/comercial-75.webp": "/catalogo/comercial-75-produto.webp",
+      "/catalogo/comercial-76.webp": "/catalogo/comercial-76-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "base-sommier-bau-corino": {
+    "replacements": {
+      "/catalogo/comercial-77.webp": "/catalogo/comercial-77-produto.webp",
+      "/catalogo/comercial-78.webp": "/catalogo/comercial-78-produto.webp",
+      "/catalogo/comercial-79.webp": "/catalogo/comercial-79-produto.webp",
+      "/catalogo/comercial-80.webp": "/catalogo/comercial-80-produto.webp",
+      "/catalogo/comercial-81.webp": "/catalogo/comercial-81-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "base-bau-corino-branco-vazada": {
+    "replacements": {
+      "/catalogo/comercial-82.webp": "/catalogo/comercial-82-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+    }
+  },
+  "base-bau-corino-preto-vazada": {
+    "replacements": {
+      "/catalogo/comercial-83.webp": "/catalogo/comercial-83-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+    }
+  },
+  "base-corino-branco-vazada": {
+    "replacements": {
+      "/catalogo/comercial-84.webp": "/catalogo/comercial-84-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+    }
+  },
+  "base-corino-preto-vazada": {
+    "replacements": {
+      "/catalogo/comercial-85.webp": "/catalogo/comercial-85-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+    }
+  },
+  "base-bau-physical-branco": {
+    "replacements": {
+      "/catalogo/comercial-86.webp": "/catalogo/comercial-86-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em tecido 100% Poliéster"
+    }
+  },
+  "base-bau-physical-preto": {
+    "replacements": {
+      "/catalogo/comercial-87.webp": "/catalogo/comercial-87-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em tecido 100% Poliéster"
+    }
+  },
+  "base-sommier-light-preto": {
+    "replacements": {
+      "/catalogo/comercial-88.webp": "/catalogo/comercial-88-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em tecido 100% Poliéster na cor preta"
+    }
+  },
+  "base-sommier-light-branco": {
+    "replacements": {
+      "/catalogo/comercial-89.webp": "/catalogo/comercial-89-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em tecido 100% Poliéster na cor branca"
+    }
+  },
+  "base-sommier-excelente": {
+    "replacements": {
+      "/catalogo/comercial-90.webp": "/catalogo/comercial-90-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
+      "Linha": "Ortobom",
+      "Material": "lateral em tecido 100% Poliéster, bordado em espuma 100% Poliuretano"
+    }
+  },
+  "colchao-orthotel-boutique": {
+    "replacements": {
+      "/catalogo/hotelaria-4.webp": "/catalogo/hotelaria-4-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "200 × 200 cm · 193 × 203 cm · 186 × 198 cm · 158 × 198 cm · 138 × 198 cm · 138 × 188 cm · 100 × 200 cm · 88 × 198 cm · 88 × 188 cm",
+      "Linha": "Hotelaria",
+      "Material": "100% malha de alta gramatura (300 g/m2)",
+      "Altura": "40 cm",
+      "Estrutura de molas": "Pocket",
+      "Espuma": "D45"
+    }
+  },
+  "colchao-orthotel-dupla-face": {
+    "replacements": {
+      "/catalogo/hotelaria-5.webp": "/catalogo/hotelaria-5-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "200 × 200 cm · 193 × 203 cm · 186 × 198 cm · 158 × 198 cm · 138 × 198 cm · 138 × 188 cm · 100 × 200 cm · 88 × 188 cm",
+      "Linha": "Hotelaria",
+      "Material": "malha nas duas faces",
+      "Altura": "33 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-orthotel-superpocket-superluxo": {
+    "replacements": {
+      "/catalogo/hotelaria-6.webp": "/catalogo/hotelaria-6-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "193 × 203 cm · 186 × 198 cm · 158 × 198 cm · 138 × 188 cm · 100 × 200 cm · 88 × 188 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster",
+      "Altura": "30 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-orthotel-superluxo": {
+    "replacements": {
+      "/catalogo/hotelaria-7.webp": "/catalogo/hotelaria-7-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "193 × 203 cm · 186 × 198 cm · 158 × 198 cm · 138 × 188 cm · 100 × 200 cm · 88 × 188 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster"
+    }
+  },
+  "colchao-orthotel-superpocket-luxo": {
+    "replacements": {
+      "/catalogo/hotelaria-8.webp": "/catalogo/hotelaria-8-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "193 × 203 cm · 186 × 198 cm · 158 × 198 cm · 138 × 188 cm · 100 × 200 cm · 88 × 188 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster",
+      "Altura": "27 cm",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "colchao-orthotel-luxo": {
+    "replacements": {
+      "/catalogo/hotelaria-9.webp": "/catalogo/hotelaria-9-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 200 × 100 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster"
+    }
+  },
+  "colchao-orthotel-standard": {
+    "replacements": {
+      "/catalogo/hotelaria-10.webp": "/catalogo/hotelaria-10-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 200 × 100 cm · 198 × 186 cm · 193 × 203 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster",
+      "Altura": "24 cm"
+    }
+  },
+  "colchao-versatil-orthotel-luxo": {
+    "replacements": {
+      "/catalogo/hotelaria-11.webp": "/catalogo/hotelaria-11-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "200 × 100 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster"
+    }
+  },
+  "colchao-versatil-orthotel-standard": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "182 × 90 × 26 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster e Polipropileno",
+      "Observação": "Colchão e base vendidos separadamente."
+    }
+  },
+  "baby-hospitalar": {
+    "replacements": {
+      "/catalogo/comercial-101.webp": "/catalogo/comercial-101-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "70 × 130 cm · 60 × 130 cm",
+      "Linha": "Ortobom",
+      "Material": "plástico",
+      "Altura": "08 cm"
+    }
+  },
+  "colchonete-maca-de-resgate": {
+    "replacements": {
+      "/catalogo/comercial-103.webp": "/catalogo/comercial-103-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "188 × 78 cm",
+      "Linha": "Ortobom",
+      "Material": "napa azul 100% Poliéster impermeável"
+    }
+  },
+  "colchonete-para-academia": {
+    "replacements": {
+      "/catalogo/comercial-104.webp": "/catalogo/comercial-104-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "90 × 43 cm",
+      "Linha": "Ortobom",
+      "Material": "Napa 100% Poliéster"
+    }
+  },
+  "travesseiro-hospitalar": {
+    "replacements": {
+      "/catalogo/comercial-105.webp": "/catalogo/comercial-105-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "60 × 40 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "suavencosto-hospitalar-alveolado": {
+    "replacements": {
+      "/catalogo/comercial-106.webp": "/catalogo/comercial-106-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "30 × 45 cm · 40 × 40 cm",
+      "Linha": "Ortobom",
+      "Material": "em napa"
+    }
+  },
+  "travesseiro-conforto-anatomico": {
+    "replacements": {
+      "/catalogo/comercial-108.webp": "/catalogo/comercial-108-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "40 × 60 cm",
+      "Linha": "Ortobom",
+      "Material": "100% algodão"
+    }
+  },
+  "suporte-anatomico": {
+    "replacements": {
+      "/catalogo/comercial-109.webp": "/catalogo/comercial-109-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "24 × 48 cm",
+      "Linha": "Ortobom",
+      "Material": "leve e respirável"
+    }
+  },
+  "suporte-ortopedico-lombar": {
+    "replacements": {
+      "/catalogo/comercial-110.webp": "/catalogo/comercial-110-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "material sintético 100% PVC"
+    }
+  },
+  "almofada-redonda-com-orificio": {
+    "replacements": {
+      "/catalogo/comercial-111.webp": "/catalogo/comercial-111-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante",
+      "Altura": "15 cm"
+    }
+  },
+  "almofada-terapeutica": {
+    "replacements": {
+      "/catalogo/comercial-112.webp": "/catalogo/comercial-112-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "mochila-camping": {
+    "replacements": {
+      "/catalogo/comercial-123.webp": "/catalogo/comercial-123-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Poliéster"
+    }
+  },
+  "suavencosto-sleep-baby": {
+    "replacements": {
+      "/catalogo/comercial-124.webp": "/catalogo/comercial-124-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "40 × 60 cm · 40 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "malha Belga 90% Poliéster e 10% Viscose"
+    }
+  },
+  "suavencosto-sleep": {
+    "replacements": {
+      "/catalogo/comercial-125.webp": "/catalogo/comercial-125-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "40 × 40 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "encosto-dino-veludo": {
+    "replacements": {
+      "/catalogo/comercial-126.webp": "/catalogo/comercial-126-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "75 × 50 cm",
+      "Linha": "Ortobom",
+      "Material": "super-resistente em veludo e 100% Poliéster"
+    }
+  },
+  "travesseiro-espuma-viscoelastica": {
+    "replacements": {
+      "/catalogo/travesseiros-3.webp": "/catalogo/comercial-114-travesseiro-espuma-viscoelastica.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "40 × 60 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-espuma-latex": {
+    "replacements": {
+      "/catalogo/travesseiros-4.webp": "/catalogo/comercial-114-travesseiro-espuma-latex.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "40 × 60 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-flocos": {
+    "replacements": {
+      "/catalogo/travesseiros-5.webp": "/catalogo/comercial-115-travesseiro-flocos.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "45 × 65 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-nuvem": {
+    "replacements": {
+      "/catalogo/travesseiros-6.webp": "/catalogo/comercial-115-travesseiro-nuvem.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "40 × 60 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-percal-200-fios": {
+    "replacements": {
+      "/catalogo/travesseiros-7.webp": "/catalogo/comercial-116-travesseiro-percal-200-fios.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-max-malha": {
+    "replacements": {
+      "/catalogo/travesseiros-8.webp": "/catalogo/comercial-116-travesseiro-max-malha.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-aman": {
+    "replacements": {
+      "/catalogo/travesseiros-9.webp": "/catalogo/comercial-117-travesseiro-aman.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "50 × 130 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-amore": {
+    "replacements": {
+      "/catalogo/travesseiros-10.webp": "/catalogo/comercial-117-travesseiro-amore.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-high-comfort": {
+    "replacements": {
+      "/catalogo/travesseiros-11.webp": "/catalogo/comercial-118-travesseiro-high-comfort.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-percal-200-fios-plus": {
+    "replacements": {
+      "/catalogo/travesseiros-12.webp": "/catalogo/comercial-118-travesseiro-percal-200-fios-plus.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-casadinho": {
+    "replacements": {
+      "/catalogo/travesseiros-13.webp": "/catalogo/comercial-119-travesseiro-casadinho.webp"
+    },
+    "extras": [],
+    "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem.",
+    "specs": {
+      "Medidas": "45 × 65 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-orthotel-percal": {
+    "replacements": {
+      "/catalogo/travesseiros-14.webp": "/catalogo/hotelaria-14-travesseiro-orthotel-percal.webp"
+    },
+    "extras": [],
+    "photoNote": "Fotografia do Travesseiro Orthotel Percal 200 Fios, fornecida pelo fabricante.",
+    "specs": {
+      "Medidas": "50 × 90 cm",
+      "Linha": "Hotelaria",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "travesseiro-soneca": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": "Foto da embalagem deste modelo, fornecida pelo fabricante.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "Consulte a composição na descrição"
+    }
+  },
+  "elegant-superpocket": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Bambu Fresh em malha de Poliéster com Viscose, bordado em Matelassê em Espuma Firme Selada 100% Poliuretano",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "elegant-nanolastic": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Ecobambu em Malha de Poliéster com Viscose, bordado em Matelassê em Espuma Firme Selada 100% Poliuretano",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "light-superpocket": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Jacquard Belga em Poliéster com Viscose, bordado em Matelassê com Espuma Selada 100% Poliuretano",
+      "Estrutura de molas": "Superpocket"
+    }
+  },
+  "light-nanolastic": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Jacquard italiano de Poliéster com Viscose, bordado em Matelassê em Espuma Selada 100% Poliuretano",
+      "Estrutura de molas": "Nanolastic"
+    }
+  },
+  "light-d45": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano"
+    }
+  },
+  "light-d33": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano"
+    }
+  },
+  "light-d28": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano"
+    }
+  },
+  "light-d23": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano"
+    }
+  },
+  "cabeceira-velluto": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar medida",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "colchao-hospitalar-ortobom": {
+    "replacements": {
+      "/catalogo/comercial-102.webp": "/catalogo/comercial-102-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "D20 · 78 × 188 × 12 cm · D26 · 88 × 188 × 12 cm · D28 · 88 × 188 × 12 cm · D33 · 88 × 188 × 12 cm · D45 · 88 × 188 × 12 cm",
+      "Linha": "Ortobom",
+      "Material": "plástico",
+      "Altura": "12 cm"
+    }
+  },
+  "colchonete-alveolado": {
+    "replacements": {
+      "/catalogo/comercial-107.webp": "/catalogo/comercial-107-produto.webp"
+    },
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Azul D28 · 190 × 80 × 7 cm · Cinza D20 · 190 × 80 × 7 cm · Cinza D33 · 190 × 80 × 3 cm",
+      "Linha": "Ortobom",
+      "Material": "Veja as especificações do fabricante"
+    }
+  },
+  "protetor-de-colchao-impermeavel": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "190 × 90 cm · 190 × 140 cm · 200 × 160 cm · 200 × 190 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster com tratamento em Poliuretano"
+    }
+  },
+  "saia-babado-para-cama-box": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "190 × 90 cm · 190 × 140 cm · 200 × 160 cm · 200 × 190 cm",
+      "Linha": "Ortobom",
+      "Material": "Poliéster com tratamento em Poliuretano"
+    }
+  },
+  "almofada-roll": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "85 × 20 cm · 135 × 20 cm · 155 × 20 cm",
+      "Linha": "Ortobom",
+      "Material": "malha com bordado em manta acrílica e espuma",
+      "Suporta até": "40 kg",
+      "Espuma": "D23"
+    }
+  },
+  "mini-base-para-pet": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "45 × 65 cm · 60 × 80 cm · 80 × 100 cm",
+      "Linha": "Ortobom",
+      "Material": "malha com bordado em manta acrílica e espuma",
+      "Suporta até": "40 kg",
+      "Espuma": "D23"
+    }
+  },
+  "base-orthotel-standard-vazada": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "200 × 100 × 32 cm",
+      "Linha": "Hotelaria",
+      "Material": "Maquinetado em Poliéster e Polipropileno"
+    }
+  },
+  "travesseiro-pluma": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": "Foto da embalagem deste modelo, fornecida pelo fabricante.",
+    "specs": {
+      "Medidas": "50 × 70 cm",
+      "Linha": "Ortobom",
+      "Material": "tecido 100% Algodão 200 Fios"
+    }
+  },
+  "capa-para-colchao-union": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consultar compatibilidade",
+      "Linha": "Ortobom",
+      "Material": "tecido 100% Algodão 200 Fios"
+    }
+  },
+  "conjugado-prime-spring": {
+    "replacements": {},
+    "extras": [],
+    "photoNote": null,
+    "specs": {
+      "Medidas": "Consulte o catálogo",
+      "Linha": "Ortobom",
+      "Material": "Bambu Fresh em malha de Poliéster com Viscose, bordado em Matelassê em Espuma Firme Selada 100% Poliuretano"
+    }
+  }
+}

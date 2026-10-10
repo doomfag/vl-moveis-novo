@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { randomUUID, createHmac, timingSafeEqual } from "node:crypto";
+import {
+  randomUUID,
+  randomBytes,
+  createHmac,
+  timingSafeEqual,
+} from "node:crypto";
+import { mailAvailable, localEmailMode, sendAccountEmail } from "@/lib/mail";
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import sharp from "sharp";
@@ -42,11 +48,7 @@ class Failure extends Error {
 function fail(status: number, message: string): never {
   throw new Failure(status, message);
 }
-const email = z
-  .string()
-  .email()
-  .max(254)
-  .transform((s) => s.toLowerCase().trim());
+const email = z.string().trim().toLowerCase().email().max(254);
 const cartSchema = z
   .array(
     z.object({
@@ -88,6 +90,8 @@ const productSchema = z.object({
     )
     .min(1)
     .max(20),
+  discountPercent: z.number().int().min(0).max(90).optional(),
+  photoNote: z.string().max(500).optional(),
   priceCents: z.number().int().min(1).max(100000000).nullable(),
   stock: z.number().int().min(0).max(1000000).nullable(),
   active: z.boolean(),
@@ -104,7 +108,10 @@ const productSchema = z.object({
     .object({
       catalog: z.string().max(100),
       page: z.number().int().min(1),
-      url: z.string().regex(/^\/catalogos\/[a-z0-9-]+\.pdf#page=\d+$/),
+      url: z
+        .string()
+        .regex(/^\/catalogos\/[a-z0-9-]+\.pdf#page=\d+$/)
+        .optional(),
     })
     .optional(),
   sourceText: z.string().max(25000).optional(),
@@ -176,6 +183,50 @@ function reserved(p: Product, key: string) {
 }
 function totalReserved(p: Product) {
   return reservationRows(p).reduce((n, l) => n + Number(l.n), 0);
+}
+function accountOrigin(req: NextRequest) {
+  const origin = process.env.APP_ORIGIN || req.headers.get("origin");
+  if (!origin)
+    fail(503, "Configure o endereço da loja para enviar confirmações.");
+  const url = new URL(origin);
+  const loopback = ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
+  if (url.protocol !== "https:" && !loopback)
+    fail(503, "Configure HTTPS e APP_ORIGIN para enviar confirmações.");
+  return url.origin;
+}
+async function accountLink(
+  userId: string,
+  recipient: string,
+  purpose: "verify" | "reset",
+  origin: string,
+) {
+  const token = randomBytes(32).toString("hex");
+  transaction(() => {
+    db()
+      .prepare("DELETE FROM email_tokens WHERE user_id=? AND purpose=?")
+      .run(userId, purpose);
+    db()
+      .prepare(
+        "INSERT INTO email_tokens(token,user_id,purpose,expires) VALUES(?,?,?,?)",
+      )
+      .run(
+        tokenHash(token),
+        userId,
+        purpose,
+        Date.now() + (purpose === "verify" ? 86400000 : 1800000),
+      );
+  });
+  try {
+    await sendAccountEmail(recipient, purpose, token, origin);
+  } catch {
+    db()
+      .prepare("DELETE FROM email_tokens WHERE token=?")
+      .run(tokenHash(token));
+    fail(
+      503,
+      "Não foi possível enviar a mensagem agora. Tente reenviar a confirmação mais tarde.",
+    );
+  }
 }
 async function dispatch(req: NextRequest, path: string[]) {
   const route = path.join("/"),
@@ -297,18 +348,117 @@ async function dispatch(req: NextRequest, path: string[]) {
     if (db().prepare("SELECT id FROM users WHERE email=?").get(input.email))
       fail(
         409,
-        "Não foi possível cadastrar este e-mail. Tente entrar na conta.",
+        "Não foi possível cadastrar este e-mail. Tente entrar ou reenviar a confirmação.",
+      );
+    const origin = accountOrigin(req);
+    if (!mailAvailable(origin))
+      fail(
+        503,
+        "O envio de e-mails da loja ainda não está configurado. Fale com a equipe.",
       );
     const id = randomUUID();
     db()
       .prepare("INSERT INTO users(id,email,name,password) VALUES(?,?,?,?)")
       .run(id, input.email, input.name, hashPassword(input.password));
-    const r = NextResponse.json(
-      { user: { id, name: input.name, email: input.email, role: "customer" } },
+    await accountLink(id, input.email, "verify", origin);
+    return NextResponse.json(
+      {
+        requiresVerification: true,
+        email: input.email,
+        localPreview: localEmailMode(origin),
+        message: localEmailMode(origin)
+          ? "Conta aguardando confirmação. Neste teste local, a mensagem está na prévia de e-mails do servidor; nenhum e-mail foi enviado."
+          : "Confira sua caixa de entrada e confirme o e-mail para ativar sua conta.",
+      },
       { status: 201 },
     );
-    session(r, id);
-    return r;
+  }
+  if (
+    (route === "auth/resend" || route === "auth/forgot-password") &&
+    method === "POST"
+  ) {
+    const input = z.object({ email }).parse(await body(req));
+    const purpose = route === "auth/resend" ? "verify" : "reset";
+    if (
+      limited(purpose + ":" + input.email, 3, 900000) ||
+      limited(purpose + ":global", 100, 3600000)
+    )
+      fail(429, "Aguarde antes de solicitar outro e-mail.");
+    const origin = accountOrigin(req);
+    if (!mailAvailable(origin))
+      fail(
+        503,
+        "O envio de e-mails da loja ainda não está configurado. Fale com a equipe.",
+      );
+    const row = db()
+      .prepare("SELECT id,email_verified_at FROM users WHERE email=?")
+      .get(input.email);
+    if (row && (purpose === "reset" || !row.email_verified_at)) {
+      try {
+        await accountLink(String(row.id), input.email, purpose, origin);
+      } catch {
+        /* Keep recovery responses independent of whether an account exists. */
+      }
+    }
+    return {
+      ok: true,
+      localPreview: localEmailMode(origin),
+      message: localEmailMode(origin)
+        ? "Se houver uma conta elegível, a mensagem foi preparada na prévia local. Nenhum e-mail foi enviado para a internet."
+        : "Se houver uma conta com esse e-mail, você receberá as instruções. Confira também o spam.",
+    };
+  }
+  if (
+    (route === "auth/verify" || route === "auth/reset-password") &&
+    method === "POST"
+  ) {
+    const input = z
+      .object({
+        token: z.string().regex(/^[a-f0-9]{64}$/),
+        password: z.string().min(12).max(128).optional(),
+      })
+      .parse(await body(req));
+    const purpose = route === "auth/verify" ? "verify" : "reset";
+    if (purpose === "reset" && !input.password)
+      fail(400, "Informe a nova senha.");
+    if (limited("token:global", 200, 900000))
+      fail(429, "Muitas tentativas. Aguarde um instante.");
+    transaction(() => {
+      const row = db()
+        .prepare(
+          "SELECT * FROM email_tokens WHERE token=? AND purpose=? AND expires>?",
+        )
+        .get(tokenHash(input.token), purpose, Date.now());
+      if (!row)
+        fail(
+          400,
+          "Link inválido, expirado ou já utilizado. Solicite um novo e-mail.",
+        );
+      db()
+        .prepare(
+          "UPDATE users SET email_verified_at=COALESCE(email_verified_at,CURRENT_TIMESTAMP) WHERE id=?",
+        )
+        .run(row.user_id);
+      if (purpose === "reset") {
+        db()
+          .prepare("UPDATE users SET password=? WHERE id=?")
+          .run(hashPassword(input.password!), row.user_id);
+        db().prepare("DELETE FROM sessions WHERE user_id=?").run(row.user_id);
+        db()
+          .prepare("DELETE FROM email_tokens WHERE user_id=?")
+          .run(row.user_id);
+      } else
+        db()
+          .prepare("DELETE FROM email_tokens WHERE token=?")
+          .run(tokenHash(input.token));
+    });
+    return {
+      ok: true,
+      message:
+        purpose === "verify"
+          ? "E-mail confirmado. Você já pode entrar na sua conta."
+          : "Senha atualizada. Entre com a nova senha.",
+    };
   }
   if (route === "auth/login" && method === "POST") {
     const input = z
@@ -329,6 +479,11 @@ async function dispatch(req: NextRequest, path: string[]) {
         : "00000000000000000000000000000000:" + "0".repeat(128),
     );
     if (!row || !valid) fail(401, "E-mail ou senha incorretos.");
+    if (!row.email_verified_at)
+      fail(
+        403,
+        "Confirme seu e-mail antes de entrar. Use a opção Reenviar confirmação.",
+      );
     const r = NextResponse.json({ user: publicUser(row) });
     session(r, String(row.id));
     return r;
@@ -599,6 +754,10 @@ async function dispatch(req: NextRequest, path: string[]) {
           logistics: "Entrega sob orçamento; retirada nas lojas",
           inventory: "Estoque local transacional",
           assistant: "Atendimento humano; histórico preservado",
+          email:
+            process.env.RESEND_API_KEY && process.env.EMAIL_FROM
+              ? "Resend configurado; confirme o domínio no serviço"
+              : "Envio externo não conectado",
         },
       };
     if (route === "admin/products" && method === "PUT") {
@@ -661,7 +820,48 @@ async function dispatch(req: NextRequest, path: string[]) {
       audit(u, "product.archive", p.id);
       return { ok: true };
     }
-    if (path[1] === "orders" && path[2] && method === "PATCH") {
+    if (
+      path[1] === "orders" &&
+      path[2] &&
+      path[3] === "discount" &&
+      method === "PATCH"
+    ) {
+      const input = z
+        .object({ discountCents: z.number().int().min(0).max(100000000) })
+        .parse(await body(req));
+      transaction(() => {
+        const order = db()
+          .prepare("SELECT * FROM orders WHERE id=?")
+          .get(path[2]);
+        if (!order) fail(404, "Pedido não encontrado.");
+        if (order.status !== "pending")
+          fail(
+            409,
+            "Descontos só podem ser alterados antes da confirmação do pagamento.",
+          );
+        const data = JSON.parse(String(order.data));
+        const subtotal = data.items.reduce(
+          (total: number, line: { priceCents: number; quantity: number }) =>
+            total + line.priceCents * line.quantity,
+          0,
+        );
+        if (input.discountCents >= subtotal)
+          fail(400, "O desconto precisa ser menor que o subtotal do pedido.");
+        data.subtotalCents = subtotal;
+        data.discountCents = input.discountCents;
+        db()
+          .prepare("UPDATE orders SET total=?,data=? WHERE id=?")
+          .run(subtotal - input.discountCents, JSON.stringify(data), path[2]);
+        audit(u, "order.discount", path[2]);
+      });
+      return { ok: true };
+    }
+    if (
+      path[1] === "orders" &&
+      path[2] &&
+      path.length === 3 &&
+      method === "PATCH"
+    ) {
       const input = z
         .object({ status: z.enum(["paid", "completed", "cancelled"]) })
         .parse(await body(req));

@@ -22,12 +22,19 @@ import {
   X,
   BookOpen,
 } from "lucide-react";
-import { type Product, type Promotion, money, whatsapp } from "@/lib/types";
+import {
+  type Product,
+  type Promotion,
+  money,
+  whatsapp,
+  variantPrice,
+} from "@/lib/types";
 import { ProductCard } from "./product-card";
 import { useStore } from "./store-context";
 import { ProductPage } from "./product-page";
 import { Account, Cart } from "./account-cart";
 import Admin from "./admin";
+import { AccountSecurity } from "./account-security";
 const cats = [
   "Colchões",
   "Bases e camas",
@@ -636,21 +643,71 @@ function Catalog({
 }
 function Compare({ products }: { products: Product[] }) {
   const s = useStore();
-  const items = products.filter((p) => s.compare.includes(p.id));
+  const [differencesOnly, setDifferencesOnly] = useState(true);
+  const items = s.compare
+    .map((id) => products.find((p) => p.id === id))
+    .filter((p): p is Product => !!p);
+  const prices = items.map((p) =>
+    variantPrice(p, p.colors[0].name, p.sizes[0]),
+  );
+  const knownPrices = prices.filter((p): p is number => p !== null);
+  const lowest = knownPrices.length >= 2 ? Math.min(...knownPrices) : null;
+  const specs = [...new Set(items.flatMap((p) => Object.keys(p.specs)))].filter(
+    (k) => !["Medidas", "Linha"].includes(k),
+  );
+  const rows: { label: string; values: string[] }[] = [
+    {
+      label: "Preço",
+      values: prices.map((p) => (p === null ? "Sob consulta" : money(p))),
+    },
+    { label: "Marca", values: items.map((p) => p.brand) },
+    { label: "Categoria", values: items.map((p) => p.category) },
+    {
+      label: "Medidas disponíveis",
+      values: items.map((p) => p.sizes.join(" · ")),
+    },
+    {
+      label: "Cores com foto",
+      values: items.map((p) => p.colors.map((c) => c.name).join(", ")),
+    },
+    ...specs.map((label) => ({
+      label,
+      values: items.map((p) => {
+        const value = p.specs[label];
+        return !value ||
+          /Veja as especificações|Consulte o catálogo/i.test(value)
+          ? "Não informado"
+          : value;
+      }),
+    })),
+  ];
+  const visibleRows = rows.filter(
+    (row) =>
+      row.label === "Preço" || !differencesOnly || new Set(row.values).size > 1,
+  );
   return (
     <div className="container inner-page">
       <Heading
-        eyebrow="UMA ESCOLHA MAIS TRANQUILA"
-        title="Lado a lado fica mais fácil"
-        description="Compare os detalhes que importam para você. Sem preços confirmados, não calculamos qual custa menos."
+        eyebrow="COMPARAÇÃO"
+        title={`${items.length} produtos lado a lado`}
       />
       {items.length ? (
         <>
+          <label className="comparison-controls">
+            <input
+              type="checkbox"
+              checked={differencesOnly}
+              onChange={(e) => setDifferencesOnly(e.target.checked)}
+            />{" "}
+            Mostrar apenas diferenças
+          </label>
           <div className="comparison-wrap">
             <table className="comparison">
               <thead>
                 <tr>
-                  <th>O que comparar</th>
+                  <th>
+                    <span className="sr-only">Característica</span>
+                  </th>
                   {items.map((p) => (
                     <th key={p.id}>
                       <button
@@ -658,68 +715,56 @@ function Compare({ products }: { products: Product[] }) {
                         onClick={() => s.toggleCompare(p.id)}
                         aria-label={"Remover " + p.name}
                       >
-                        <X size={16} />
+                        <X size={18} />
                       </button>
                       <img
                         src={p.images[0]}
                         alt={p.name}
-                        width={240}
+                        width={180}
                         height={180}
                       />
+                      <small>{p.brand}</small>
+                      <br />
                       <Link href={"/produto/" + p.slug}>{p.name}</Link>
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {[
-                  ["Categoria", (p: Product) => p.category],
-                  [
-                    "Preço",
-                    (p: Product) =>
-                      p.priceCents === null
-                        ? "Sob consulta"
-                        : money(p.priceCents),
-                  ],
-                  ["Medidas", (p: Product) => p.sizes.join(" · ")],
-                  [
-                    "Cores com foto",
-                    (p: Product) => p.colors.map((c) => c.name).join(", "),
-                  ],
-                  ["Detalhes", (p: Product) => p.description],
-                  [
-                    "Especificações",
-                    (p: Product) =>
-                      p.source
-                        ? "Disponíveis no catálogo original"
-                        : "Cadastradas pela loja",
-                  ],
-                ].map(([label, fn]) => (
-                  <tr key={label as string}>
-                    <th>{label as string}</th>
-                    {items.map((p) => (
-                      <td key={p.id}>{(fn as (p: Product) => string)(p)}</td>
+                {visibleRows.map((row) => (
+                  <tr key={row.label}>
+                    <th scope="row">{row.label}</th>
+                    {row.values.map((value, i) => (
+                      <td
+                        key={items[i].id}
+                        className={
+                          row.label === "Preço" &&
+                          lowest !== null &&
+                          prices[i] === lowest
+                            ? "best-value"
+                            : ""
+                        }
+                      >
+                        {value}
+                        {row.label === "Preço" &&
+                          lowest !== null &&
+                          prices[i] === lowest && <small>MENOR PREÇO</small>}
+                      </td>
                     ))}
                   </tr>
                 ))}
                 <tr>
-                  <th>Vamos conversar?</th>
+                  <th>
+                    <span className="sr-only">Detalhes</span>
+                  </th>
                   {items.map((p) => (
                     <td key={p.id}>
-                      <a
-                        className="button button-outline"
-                        href={whatsapp(
-                          "Olá! Quero comparar " +
-                            items.map((x) => x.name).join(" e ") +
-                            ". Tenho interesse em " +
-                            p.name +
-                            ".",
-                        )}
-                        target="_blank"
-                        rel="noreferrer"
+                      <Link
+                        className="button button-dark"
+                        href={"/produto/" + p.slug}
                       >
-                        Pedir orientação <ArrowUpRight size={15} />
-                      </a>
+                        Ver produto <ArrowRight size={16} />
+                      </Link>
                     </td>
                   ))}
                 </tr>
@@ -727,21 +772,19 @@ function Compare({ products }: { products: Product[] }) {
             </table>
           </div>
           <p className="comparison-tip">
-            <ShieldCheck size={18} /> O melhor produto depende de medidas,
-            preferência de conforto e orçamento. A comparação não substitui
-            orientação médica.
+            {differencesOnly ? "Características iguais foram ocultadas. " : ""}
+            Preços correspondem à primeira cor e medida cadastradas; confirme a
+            mesma medida para comparar valores. Características não informadas
+            não são estimadas.
           </p>
         </>
       ) : (
         <div className="empty-state">
           <Scale size={40} />
-          <h2>Quais opções chamaram sua atenção?</h2>
-          <p>
-            Selecione “Comparar produto” nos cards. Você pode colocar até quatro
-            lado a lado.
-          </p>
+          <h2>Selecione os produtos que deseja comparar</h2>
+          <p>Marque “Comparar” nos produtos para ver até três lado a lado.</p>
           <Link href="/catalogo" className="button">
-            Explorar produtos <ArrowRight size={17} />
+            Ver produtos <ArrowRight size={17} />
           </Link>
         </div>
       )}
@@ -793,55 +836,6 @@ function Information({ view }: { view: string }) {
             O endereço da sede administrativa não substitui a confirmação do
             endereço de cada loja.
           </p>
-        </div>
-      </div>
-    );
-  if (view === "catalogos")
-    return (
-      <div className="container inner-page">
-        <Heading
-          eyebrow="CONHEÇA CADA DETALHE"
-          title="Catálogos originais Ortobom"
-          description="Consulte as medidas, os materiais e as fotos fornecidas pelo fabricante. Disponibilidade e preço são confirmados pela VL Móveis."
-        />
-        <div className="document-grid">
-          {[
-            {
-              id: "comercial",
-              title: "Catálogo comercial",
-              text: "Colchões, bases, cabeceiras e acessórios.",
-            },
-            {
-              id: "hotelaria",
-              title: "Manual de hotelaria 2024",
-              text: "Conforto e soluções para o seu negócio.",
-            },
-            {
-              id: "travesseiros",
-              title: "Catálogo de travesseiros",
-              text: "Diferentes materiais e jeitos de descansar.",
-            },
-            {
-              id: "revendedor-2021",
-              title: "Linha revendedor 2021",
-              text: "Referência histórica. Consulte a disponibilidade atual.",
-            },
-          ].map((d) => (
-            <a
-              key={d.id}
-              href={"/catalogos/" + d.id + ".pdf"}
-              target="_blank"
-              rel="noreferrer"
-              className="document-card"
-            >
-              <BookOpen size={30} />
-              <h3>{d.title}</h3>
-              <p>{d.text}</p>
-              <span className="text-link">
-                Abrir PDF <ArrowUpRight size={17} />
-              </span>
-            </a>
-          ))}
         </div>
       </div>
     );
@@ -954,6 +948,17 @@ export default function Storefront({
         </Suspense>
       ) : view === "produto" && selected ? (
         <ProductPage product={selected} products={products} />
+      ) : [
+          "confirmar-email",
+          "reenviar-confirmacao",
+          "recuperar-senha",
+          "redefinir-senha",
+        ].includes(view) ? (
+        <Suspense
+          fallback={<div className="container empty-state">Carregando…</div>}
+        >
+          <AccountSecurity view={view} />
+        </Suspense>
       ) : view === "conta" ? (
         <Account />
       ) : view === "sacola" ? (

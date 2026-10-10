@@ -732,6 +732,42 @@ function OrderTable({
                   <td>
                     {o.status === "pending" ? (
                       <>
+                        <form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            const fields = new FormData(e.currentTarget);
+                            perform(
+                              "admin/orders/" + o.id + "/discount",
+                              "PATCH",
+                              {
+                                discountCents:
+                                  decimal(
+                                    String(fields.get("discount") || "0"),
+                                  ) || 0,
+                              },
+                            );
+                          }}
+                          className="order-discount-form"
+                        >
+                          <label>
+                            Desconto no pedido (R$)
+                            <input
+                              name="discount"
+                              type="number"
+                              min="0"
+                              step="0.01"
+                              defaultValue={
+                                (JSON.parse(o.data).discountCents || 0) / 100
+                              }
+                            />
+                          </label>
+                          <button
+                            className="button button-outline compact"
+                            disabled={busy}
+                          >
+                            Aplicar desconto
+                          </button>
+                        </form>
                         <button
                           className="button button-dark compact"
                           disabled={busy}
@@ -928,6 +964,24 @@ function ProductEditor({
                   update({ priceCents: decimal(e.target.value) })
                 }
               />
+            </label>
+            <label>
+              Desconto no produto (%)
+              <input
+                type="number"
+                min="0"
+                max="90"
+                step="1"
+                aria-label="Desconto no produto (%)"
+                value={p.discountPercent || 0}
+                onChange={(e) =>
+                  update({ discountPercent: Number(e.target.value) })
+                }
+              />
+              <small>
+                Aplicado sobre o preço geral e os preços por variação. Use 0
+                para retirar.
+              </small>
             </label>
             <label>
               Quantidade em estoque
@@ -1149,16 +1203,7 @@ function ProductEditor({
               </div>
             ))}
           </details>
-          {p.source && (
-            <a
-              className="text-link"
-              href={p.source.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Conferir no catálogo original <ArrowUpRight size={15} />
-            </a>
-          )}
+
           <div className="form-columns checks">
             <label className="check-label">
               <input

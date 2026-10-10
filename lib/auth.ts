@@ -24,7 +24,7 @@ export function currentUser(req: NextRequest): User | null {
   if (!raw || !/^[a-f0-9]{64}$/.test(raw)) return null;
   const r = db()
     .prepare(
-      "SELECT u.id,u.name,u.email,u.role FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token=? AND s.expires>?",
+      "SELECT u.id,u.name,u.email,u.role,u.email_verified_at FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token=? AND s.expires>? AND u.email_verified_at IS NOT NULL",
     )
     .get(tokenHash(raw), Date.now());
   return r ? publicUser(r) : null;
