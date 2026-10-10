@@ -13,7 +13,8 @@ export async function generateMetadata({ params }: Props) {
     };
   }
   const titles: Record<string, string> = {
-    catalogo: "Encontre seu conforto",
+    catalogo: "Produtos",
+    ajuda: "Ajuda e perguntas frequentes",
     sacola: "Sua sacola",
     conta: "Sua conta",
     comparar: "Compare e escolha",
@@ -30,6 +31,7 @@ export default async function Page({ params }: Props) {
   const page = slug[0] || "home";
   const allowed = [
     "home",
+    "ajuda",
     "catalogo",
     "produto",
     "sacola",

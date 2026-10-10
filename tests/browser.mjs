@@ -84,7 +84,7 @@ try {
     async () => {
       const response = await page.goto(origin);
       await expect(
-        page.getByRole("heading", { name: "Seu lar merece mais conforto." }),
+        page.getByRole("heading", { name: "Móveis, colchões e eletros" }),
       ).toBeVisible();
       const csp = response.headers()["content-security-policy"];
       if (
@@ -104,6 +104,81 @@ try {
             images.filter((i) => i.complete && i.naturalWidth === 0).length,
         );
       if (broken) throw new Error("Broken product images");
+    },
+  );
+  await check(
+    "Ajuda: filtros, busca sem acentos, respostas e crediário pelo WhatsApp",
+    async () => {
+      await page.goto(origin + "/ajuda");
+      await expect(
+        page.getByRole("heading", { name: "Ajuda e perguntas frequentes" }),
+      ).toBeVisible();
+      await page
+        .getByRole("button", { name: "Pagamento", exact: true })
+        .click();
+      await expect(page.locator(".help-questions details")).toHaveCount(5);
+      await page
+        .getByRole("searchbox", { name: "Buscar na ajuda" })
+        .fill("crediario");
+      await expect(page.locator(".help-questions details")).toHaveCount(3);
+      await page
+        .locator("summary")
+        .filter({ hasText: "Vocês têm cartão da loja e crediário?" })
+        .click();
+      await expect(page.locator("details[open]")).toContainText("até 36 vezes");
+      await expect(page.locator("details[open]")).toContainText("SPC e Serasa");
+      await expect(page.locator("details[open] a")).toHaveAttribute(
+        "href",
+        /^https:\/\/wa\.me\/5521990015722\?text=/,
+      );
+      await page
+        .getByRole("searchbox", { name: "Buscar na ajuda" })
+        .fill("xxxxxxxxx");
+      await expect(
+        page.locator(".help-content").getByRole("status"),
+      ).toContainText("Nenhuma pergunta encontrada");
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.getByRole("searchbox", { name: "Buscar na ajuda" }).fill("");
+      const overflow = await page.evaluate(
+        () => document.documentElement.scrollWidth > window.innerWidth,
+      );
+      if (overflow) throw new Error("Ajuda excede largura do celular");
+      await page.setViewportSize({ width: 1440, height: 1080 });
+    },
+  );
+  await check(
+    "Ajuda para escolher usa fotos e características do modelo selecionado",
+    async () => {
+      await page.goto(origin);
+      const guide = page.locator(".product-guide");
+      await expect(guide).toBeVisible();
+      await guide
+        .getByRole("button", { name: "Travesseiros", exact: true })
+        .click();
+      const options = guide.locator("select option");
+      if ((await options.count()) < 2)
+        throw new Error("Missing pillow options");
+      const value = await options.nth(1).getAttribute("value");
+      await guide.locator("select").selectOption(value);
+      const name = await options.nth(1).textContent();
+      await expect(
+        guide.getByRole("heading", { name, exact: true }),
+      ).toBeVisible();
+      const photo = await guide.locator("img").getAttribute("src");
+      await guide
+        .getByRole("link", { name: "Ver produto", exact: true })
+        .click();
+      await expect(page.locator(".gallery-main img")).toHaveAttribute(
+        "src",
+        photo,
+      );
+      await page.goto(origin);
+      await expect(page.locator(".credit-section")).toContainText(
+        "até 36 vezes",
+      );
+      await expect(page.locator(".credit-section")).toContainText(
+        "não são contratadas pelo site",
+      );
     },
   );
   await check("Busca, categoria e comparação funcionam", async () => {

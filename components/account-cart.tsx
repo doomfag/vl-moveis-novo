@@ -79,7 +79,7 @@ export function Account() {
       <div className="container inner-page">
         <div className="section-heading">
           <div>
-            <span className="eyebrow accent">SEU CANTINHO NA VL</span>
+            <span className="eyebrow accent">MINHA CONTA</span>
             <h1>Olá, {s.user.name.split(" ")[0]}.</h1>
             <p>É bom ter você por aqui.</p>
           </div>
@@ -153,7 +153,7 @@ export function Account() {
           ) : (
             <div className="empty-state small">
               <Package size={36} />
-              <h3>Seu primeiro conforto está esperando.</h3>
+              <h3>Você ainda não tem pedidos.</h3>
               <p>Os pedidos feitos nesta conta aparecerão aqui.</p>
               <Link className="button" href="/catalogo">
                 Explorar produtos <ArrowRight size={17} />
@@ -190,12 +190,9 @@ export function Account() {
       <div className="account-story">
         <span className="eyebrow accent">BEM-VINDO À VL MÓVEIS</span>
         <h1>Minha conta VL Móveis</h1>
-        <p>
-          Guarde suas escolhas, acompanhe seus pedidos e converse com a gente em
-          um só lugar.
-        </p>
+        <p>Acompanhe seus pedidos e atualize seus dados de cadastro.</p>
         <div>
-          <ShieldCheck size={20} /> Uma conta só sua, com senha protegida.
+          <ShieldCheck size={20} /> Cadastro com confirmação de e-mail.
         </div>
         <img
           src="/catalogo/hotelaria-1-ambiente.webp"
@@ -243,7 +240,7 @@ export function Account() {
               Seu nome
               <input
                 name="name"
-                placeholder="Como podemos chamar você?"
+                placeholder="Nome completo"
                 autoComplete="name"
                 minLength={2}
                 maxLength={80}
@@ -387,7 +384,7 @@ export function Cart({ products }: { products: Product[] }) {
         <div>
           <span className="eyebrow accent">SUAS PRÓXIMAS BOAS ESCOLHAS</span>
           <h1>Sua sacola.</h1>
-          <p>Um passo mais perto de se sentir em casa.</p>
+          <p>Confira os produtos e as condições do pedido.</p>
         </div>
         <Link href="/catalogo" className="text-link">
           Continuar explorando <ArrowUpRight size={17} />
@@ -493,7 +490,7 @@ export function Cart({ products }: { products: Product[] }) {
             </div>
           </div>
           <aside className="cart-summary">
-            <h2>Uma boa escolha.</h2>
+            <h2>Resumo do pedido</h2>
             <div className="summary-row">
               <span>Produtos com preço cadastrado</span>
               <b>{money(total)}</b>
@@ -582,10 +579,10 @@ export function Cart({ products }: { products: Product[] }) {
       ) : (
         <div className="empty-state">
           <ShoppingBag size={42} />
-          <h2>Ainda tem espaço para boas escolhas.</h2>
-          <p>Explore a loja e encontre o conforto que combina com você.</p>
+          <h2>Sua sacola está vazia.</h2>
+          <p>Adicione produtos para solicitar um pedido ou orçamento.</p>
           <Link className="button" href="/catalogo">
-            Encontrar meu conforto <ArrowRight size={17} />
+            Ver produtos <ArrowRight size={17} />
           </Link>
         </div>
       )}

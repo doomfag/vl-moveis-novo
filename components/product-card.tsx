@@ -58,7 +58,7 @@ export function ProductCard({ product: p }: { product: Product }) {
           </strong>
           <span>
             {price === null
-              ? "Vamos encontrar a melhor opção para você."
+              ? "Consulte preço e disponibilidade."
               : "Consulte as condições de pagamento."}
           </span>
         </div>

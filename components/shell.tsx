@@ -49,7 +49,7 @@ export function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          Fale com a gente <ArrowUpRight size={13} />
+          Atendimento <ArrowUpRight size={13} />
         </a>
       </div>
       <header className="header">
@@ -126,8 +126,8 @@ export function Header() {
               {c}
             </Link>
           ))}
-          <Link href="/catalogo?categoria=Hotelaria" className="nav-special">
-            Para seu negócio <ArrowUpRight size={13} />
+          <Link href="/ajuda" className="nav-special">
+            Ajuda
           </Link>
         </nav>
       </header>
@@ -153,9 +153,9 @@ export function Footer() {
               </span>
             </Link>
             <p>
-              Conforto de verdade, atendimento de perto.
+              Móveis, colchões e eletros.
               <br />
-              Da nossa loja para a sua casa.
+              Sepetiba e Campo Grande.
             </p>
             <a
               className="social"
@@ -167,7 +167,7 @@ export function Footer() {
             </a>
           </div>
           <div>
-            <h3>Encontre seu conforto</h3>
+            <h3>Produtos</h3>
             {categories.slice(0, 4).map((c) => (
               <Link
                 key={c}
@@ -179,7 +179,7 @@ export function Footer() {
             <Link href="/comparar">Compare produtos</Link>
           </div>
           <div>
-            <h3>Estamos por perto</h3>
+            <h3>Atendimento</h3>
             <Link href="/lojas">Loja em Sepetiba</Link>
             <Link href="/lojas">Loja em Campo Grande</Link>
             <a
@@ -192,15 +192,15 @@ export function Footer() {
             <Link href="/conta">Minha conta e pedidos</Link>
           </div>
           <div>
-            <h3>Pode ficar à vontade</h3>
+            <h3>Informações</h3>
+            <Link href="/ajuda">Ajuda e perguntas frequentes</Link>
             <Link href="/privacidade">Privacidade</Link>
             <Link href="/termos">Compras e entregas</Link>
             <div className="footer-security">
               <ShieldCheck size={22} />
               <span>
-                Seus dados tratados
-                <br />
-                com cuidado e respeito.
+                Política de privacidade
+                <br />e proteção de dados.
               </span>
             </div>
           </div>
@@ -213,7 +213,7 @@ export function Footer() {
           Sede Administrativa: Estrada do Piaí, nº 6269 · Rio de Janeiro – RJ ·
           CEP 23545-353
         </p>
-        <span>Feito para você se sentir em casa.</span>
+        <span>VL Móveis</span>
       </div>
     </footer>
   );
@@ -275,7 +275,7 @@ export function Chat() {
         aria-label={open ? "Fechar atendimento" : "Abrir atendimento"}
       >
         {open ? <X size={22} /> : <MessageCircle size={22} />}
-        <span>{open ? "Fechar" : "Vamos conversar?"}</span>
+        <span>{open ? "Fechar" : "Atendimento"}</span>
       </button>
       {open && (
         <section className="chat-window" aria-label="Atendimento VL Móveis">
@@ -285,7 +285,7 @@ export function Chat() {
             </span>
             <div>
               <b>Atendimento VL Móveis</b>
-              <small>Uma conversa de verdade.</small>
+              <small>Atendimento da loja</small>
             </div>
             <button
               className="icon-button"

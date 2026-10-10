@@ -12,11 +12,9 @@ import {
   ShieldCheck,
   MessageCircle,
   SlidersHorizontal,
-  Check,
   Armchair,
   BedDouble,
   Scale,
-  Sparkles,
   Heart,
   Search,
   X,
@@ -35,6 +33,7 @@ import { ProductPage } from "./product-page";
 import { Account, Cart } from "./account-cart";
 import Admin from "./admin";
 import { AccountSecurity } from "./account-security";
+import { Help, Credit } from "./help";
 const cats = [
   "Colchões",
   "Bases e camas",
@@ -75,18 +74,16 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
   const defaults: Promotion[] = [
     {
       id: "home",
-      title: "Seu lar merece\nmais conforto.",
-      subtitle:
-        "Colchões, móveis e boas escolhas para transformar os seus dias. Com o cuidado de quem está pertinho de você.",
-      cta: "Encontre seu conforto",
+      title: "Móveis, colchões\ne eletros",
+      subtitle: "Consulte os produtos, medidas e disponibilidade da VL Móveis.",
+      cta: "Ver produtos",
       href: "/catalogo",
       active: true,
     },
     {
       id: "sleep",
-      title: "Dias melhores\ncomeçam à noite.",
-      subtitle:
-        "Conheça a linha Ortobom e encontre o colchão que combina com o seu descanso.",
+      title: "Colchões Ortobom",
+      subtitle: "Veja os modelos e compare suas especificações.",
       cta: "Explorar colchões",
       href: "/catalogo?categoria=Colch%C3%B5es",
       active: true,
@@ -108,7 +105,7 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
       <div className="hero-image">
         <img
           src={current.image || "/catalogo/hotelaria-1-ambiente.webp"}
-          alt="Um quarto acolhedor com cama e colchão Ortobom"
+          alt="Quarto com cama e colchão Ortobom"
           fetchPriority="high"
           width={1190}
           height={940}
@@ -117,7 +114,7 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
       <div className="hero-shade" />
       <div className="hero-content" key={current.id}>
         <span className="hero-eyebrow">
-          <span /> BEM-VINDO À SUA NOVA CASA
+          <span /> VL MÓVEIS
         </span>
         <h1>
           {current.title.split("\n").map((t, i) => (
@@ -132,8 +129,8 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
           {current.cta} <ArrowUpRight size={18} />
         </Link>
         <div className="hero-note">
-          <ShieldCheck size={15} /> Atendimento de perto. Escolhas com
-          confiança.
+          <ShieldCheck size={15} /> Atendimento em Sepetiba, Campo Grande e pelo
+          WhatsApp.
         </div>
       </div>
       <div className="hero-controls">
@@ -167,8 +164,8 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
       <div className="hero-stamp">
         <BedDouble size={19} />
         <div>
-          <b>Conforto Ortobom</b>
-          <small>Para descansar de verdade.</small>
+          <b>Colchões Ortobom</b>
+          <small>Consulte os modelos.</small>
         </div>
       </div>
     </section>
@@ -203,9 +200,7 @@ function Home({
   return (
     <>
       <div className="container">
-        <div className="home-breadcrumb">
-          Um novo jeito de se sentir em casa.
-        </div>
+        <div className="home-breadcrumb">VL Móveis</div>
         <Hero promotions={promotions} />
         <div className="benefits">
           <div>
@@ -219,28 +214,28 @@ function Home({
             <BedDouble />
             <span>
               <b>Qualidade Ortobom</b>
-              <small>Conforto em cada detalhe</small>
+              <small>Colchões, bases e travesseiros</small>
             </span>
           </div>
           <div>
             <MessageCircle />
             <span>
-              <b>Atendimento de verdade</b>
-              <small>Conte com a nossa equipe</small>
+              <b>Atendimento</b>
+              <small>Loja e WhatsApp</small>
             </span>
           </div>
           <div>
             <Truck />
             <span>
-              <b>Entrega do seu jeito</b>
+              <b>Entrega e retirada</b>
               <small>Consulte ou retire na loja</small>
             </span>
           </div>
         </div>
         <section className="section">
           <Heading
-            eyebrow="CADA CANTINHO IMPORTA"
-            title="O que deixa sua casa mais você?"
+            eyebrow="CATEGORIAS"
+            title="Categorias de produtos"
             href="/catalogo"
           />
           <div className="category-row">
@@ -272,9 +267,9 @@ function Home({
         </section>
         <section className="section">
           <Heading
-            eyebrow="ESCOLHAS QUE FAZEM A DIFERENÇA"
-            title="Seu próximo conforto está aqui"
-            description="Peças selecionadas para cuidar da sua casa — e do seu descanso."
+            eyebrow="PRODUTOS"
+            title="Produtos em destaque"
+            description="Consulte os detalhes de cada produto."
             href="/catalogo"
           />
           <div className="product-grid">
@@ -289,21 +284,15 @@ function Home({
             href="/catalogo?categoria=Bases%20e%20camas"
           >
             <div>
-              <span className="eyebrow accent">
-                UM QUARTO, MAIS POSSIBILIDADES
-              </span>
-              <h2>
-                Mais espaço.
-                <br />
-                Menos bagunça.
-              </h2>
+              <span className="eyebrow accent">BASES E CAMAS</span>
+              <h2>Bases baú</h2>
               <p>
-                Conheça as bases baú que unem
+                Bases com compartimento
                 <br />
-                conforto e praticidade.
+                para armazenamento.
               </p>
               <span className="text-link">
-                Encontrar a sua <ArrowUpRight size={18} />
+                Ver bases <ArrowUpRight size={18} />
               </span>
             </div>
             <img
@@ -322,18 +311,11 @@ function Home({
             href="/catalogo?categoria=Travesseiros"
           >
             <div>
-              <span className="eyebrow">
-                PEQUENOS DETALHES. GRANDES DESCANSOS.
-              </span>
-              <h2>
-                Deite. Relaxe.
-                <br />
-                Sinta a diferença.
-              </h2>
+              <span className="eyebrow">TRAVESSEIROS</span>
+              <h2>Travesseiros</h2>
               <p>
-                Um travesseiro que combina
-                <br />
-                com seu jeito de dormir.
+                Compare materiais
+                <br />e medidas disponíveis.
               </p>
               <span className="text-link">
                 Explorar travesseiros <ArrowUpRight size={18} />
@@ -353,21 +335,29 @@ function Home({
         </section>
         <section className="section">
           <Heading
-            eyebrow="NÃO PRECISA ESCOLHER SOZINHO"
-            title="Vamos encontrar o seu conforto?"
-            description="Compare detalhes e conte com a gente para fazer uma escolha tranquila."
+            eyebrow="ESPECIFICAÇÕES"
+            title="Ajuda para escolher"
+            description="Selecione um produto para consultar suas características."
           />
           <ComfortGuide products={products} />
+        </section>
+        <Credit />
+        <section className="section">
+          <Heading
+            title="Ajuda e perguntas frequentes"
+            description="Entrega, pagamento, garantia e cadastro."
+          />
+          <Link href="/ajuda" className="button button-dark">
+            Consultar ajuda <ArrowRight size={17} />
+          </Link>
         </section>
         <section className="visit-banner">
           <div className="visit-icon">
             <Armchair size={46} strokeWidth={1.2} />
           </div>
           <div>
-            <span className="eyebrow accent">
-              DO ONLINE PARA UM CAFÉ COM A GENTE
-            </span>
-            <h2>Toque, experimente, sinta-se em casa.</h2>
+            <span className="eyebrow accent">LOJAS</span>
+            <h2>Visite nossas lojas</h2>
             <p>
               Visite a VL Móveis em Sepetiba ou Campo Grande, no Rio de Janeiro.
             </p>
@@ -381,71 +371,75 @@ function Home({
   );
 }
 function ComfortGuide({ products }: { products: Product[] }) {
-  const [choice, setChoice] = useState("");
-  const options = [
-    {
-      id: "pocket",
-      title: "Descanso a dois",
-      text: "Molas ensacadas e conforto individual.",
-      icon: <BedDouble />,
-    },
-    {
-      id: "foam",
-      title: "Sustentação e firmeza",
-      text: "Descubra as opções de espuma.",
-      icon: <ShieldCheck />,
-    },
-    {
-      id: "space",
-      title: "Um quarto mais prático",
-      text: "Espaço extra com uma base baú.",
-      icon: <Armchair />,
-    },
-  ];
-  const selected = choice
-    ? products
-        .filter((p) =>
-          choice === "pocket"
-            ? p.category === "Colchões" && /ensacad/i.test(p.description)
-            : choice === "foam"
-              ? p.category === "Colchões" && /Fit (33|45)/i.test(p.name)
-              : /Baú/i.test(p.name),
-        )
-        .slice(0, 3)
-    : [];
+  const categories = cats.filter((c) => products.some((p) => p.category === c));
+  const [category, setCategory] = useState(categories[0] || "");
+  const [productId, setProductId] = useState("");
+  const list = products.filter((p) => p.category === category);
+  const selected = list.find((p) => p.id === productId) || list[0];
+  if (!selected) return null;
+  const specs = Object.entries(selected.specs).filter(
+    ([label, value]) =>
+      label !== "Medidas" &&
+      !/Veja as especificações|Consulte o catálogo/i.test(value),
+  );
   return (
-    <>
-      <div className="guide-options">
-        {options.map((o) => (
-          <button
-            key={o.id}
-            className={choice === o.id ? "chosen" : ""}
-            onClick={() => setChoice(choice === o.id ? "" : o.id)}
-            aria-pressed={choice === o.id}
-          >
-            {o.icon}
-            <span>
-              <b>{o.title}</b>
-              <small>{o.text}</small>
-            </span>
-            {choice === o.id ? <Check size={19} /> : <ArrowUpRight size={19} />}
-          </button>
-        ))}
-      </div>
-      {choice && (
-        <div className="guide-results">
-          <p>
-            <Sparkles size={16} /> Opções com características que combinam com o
-            que você procura. Confira as medidas antes de escolher.
-          </p>
-          <div className="product-grid three">
-            {selected.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
+    <div className="product-guide">
+      <img
+        src={selected.images[0]}
+        alt={selected.name}
+        width={600}
+        height={600}
+        loading="lazy"
+      />
+      <div>
+        <div className="help-categories">
+          {categories.map((c) => (
+            <button
+              key={c}
+              aria-pressed={category === c}
+              className={category === c ? "active" : ""}
+              onClick={() => {
+                setCategory(c);
+                setProductId("");
+              }}
+            >
+              {c}
+            </button>
+          ))}
         </div>
-      )}
-    </>
+        <label className="guide-select">
+          Produto
+          <select
+            aria-label="Produto para consultar características"
+            value={selected.id}
+            onChange={(e) => setProductId(e.target.value)}
+          >
+            {list.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <h3>{selected.name}</h3>
+        <dl className="guide-specs">
+          <div>
+            <dt>Medidas disponíveis</dt>
+            <dd>{selected.sizes.join(" · ")}</dd>
+          </div>
+          {specs.map(([label, value]) => (
+            <div key={label}>
+              <dt>{label}</dt>
+              <dd>{value}</dd>
+            </div>
+          ))}
+        </dl>
+        {selected.photoNote && <p className="muted">{selected.photoNote}</p>}
+        <Link className="button button-dark" href={"/produto/" + selected.slug}>
+          Ver produto <ArrowRight size={16} />
+        </Link>
+      </div>
+    </div>
   );
 }
 function Catalog({
@@ -496,24 +490,24 @@ function Catalog({
         <span>{favorites ? "Favoritos" : "Produtos"}</span>
       </div>
       <Heading
-        eyebrow={favorites ? "SEU CANTINHO ESPECIAL" : "ENCONTRE SEU CONFORTO"}
+        eyebrow={favorites ? "FAVORITOS" : "PRODUTOS"}
         title={
           favorites
             ? "Escolhas que você guardou"
             : q
               ? "Resultados para “" + q + "”"
-              : category || "Boas escolhas para a sua casa"
+              : category || "Todos os produtos"
         }
         description={
           favorites
             ? "Seus favoritos ficam salvos neste dispositivo."
-            : "Descubra detalhes, compare e escolha no seu tempo."
+            : "Consulte modelos, medidas e disponibilidade."
         }
       />
       <div className="catalog-layout">
         <aside className={"filters " + (mobileFilters ? "open" : "")}>
           <h3>
-            <SlidersHorizontal size={17} /> Encontre do seu jeito
+            <SlidersHorizontal size={17} /> Filtros
             <button
               className="mobile icon-button"
               onClick={() => setMobileFilters(false)}
@@ -554,8 +548,8 @@ function Catalog({
           </p>
           <div className="filter-help">
             <MessageCircle size={24} />
-            <h4>Uma ajudinha?</h4>
-            <p>Fale com quem entende de conforto.</p>
+            <h4>Precisa de ajuda?</h4>
+            <p>Consulte nossa equipe.</p>
             <a
               href={whatsapp("Olá! Preciso de ajuda para escolher um produto.")}
               className="text-link"
@@ -605,7 +599,7 @@ function Catalog({
               <Search size={38} />
               <h2>
                 {favorites
-                  ? "Seus próximos favoritos vão morar aqui."
+                  ? "Nenhum produto nos favoritos."
                   : "Vamos encontrar o que você precisa."}
               </h2>
               <p>
@@ -797,8 +791,8 @@ function Information({ view }: { view: string }) {
       <div className="container inner-page">
         <Heading
           eyebrow="ESTAMOS POR PERTO"
-          title="Pode entrar. A casa é sua."
-          description="Duas lojas no Rio de Janeiro para você conhecer seu próximo conforto de perto."
+          title="Nossas lojas"
+          description="Atendimento em Sepetiba e Campo Grande, no Rio de Janeiro."
         />
         <div className="store-locations">
           {["Sepetiba", "Campo Grande"].map((name) => (
@@ -820,7 +814,7 @@ function Information({ view }: { view: string }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Combinar minha visita <ArrowUpRight size={17} />
+                Consultar endereço e horário <ArrowUpRight size={17} />
               </a>
             </article>
           ))}
@@ -965,6 +959,8 @@ export default function Storefront({
         <Cart products={products} />
       ) : view === "comparar" ? (
         <Compare products={products} />
+      ) : view === "ajuda" ? (
+        <Help />
       ) : view === "admin" ? (
         <Admin />
       ) : (

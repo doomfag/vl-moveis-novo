@@ -170,7 +170,7 @@ test(
           (await fetch(origin + "/catalogos/comercial.pdf")).status,
           404,
         );
-        assert.match(await home.text(), /Seu lar merece/);
+        assert.match(await home.text(), /Móveis, colchões/);
         assert.match(
           home.headers.get("content-security-policy"),
           /frame-ancestors 'none'/,

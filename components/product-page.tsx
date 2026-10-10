@@ -173,7 +173,7 @@ export function ProductPage({
             </strong>
             <p>
               {price === null
-                ? "Um atendimento próximo para encontrar sua melhor escolha."
+                ? "Consulte preço e disponibilidade com a loja."
                 : "Consulte as formas e condições de pagamento com a loja."}
             </p>
           </div>
@@ -265,7 +265,7 @@ export function ProductPage({
           </div>
           <div className="shipping-box">
             <h3>
-              <Truck size={18} /> Como seu conforto chega até você
+              <Truck size={18} /> Entrega e retirada
             </h3>
             <form onSubmit={calculate}>
               <input
@@ -304,14 +304,14 @@ export function ProductPage({
             </p>
           </div>
           <div className="pdp-assurance">
-            <ShieldCheck size={18} /> Sem pressão. Conte com a nossa equipe para
-            escolher.
+            <ShieldCheck size={18} /> Consulte modelo, medida e disponibilidade
+            antes do pedido.
           </div>
         </div>
       </div>
       <section className="section product-description">
         <div>
-          <span className="eyebrow accent">CONHEÇA SEU PRÓXIMO CONFORTO</span>
+          <span className="eyebrow accent">DESCRIÇÃO</span>
           <h2>Descrição do produto</h2>
           {p.description.split("\n\n").map((t, i) => (
             <p key={i}>{t}</p>
@@ -427,7 +427,7 @@ export function ProductPage({
         <div className="section-heading">
           <div>
             <span className="eyebrow accent">OS DETALHES TAMBÉM IMPORTAM</span>
-            <h2>Confortos que combinam.</h2>
+            <h2>Produtos relacionados</h2>
           </div>
           <Link href="/catalogo" className="text-link">
             Ver todos <ArrowUpRight size={16} />

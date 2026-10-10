@@ -113,7 +113,15 @@ São exemplos de configuração, não credenciais funcionais. Cadastre/verifique
 
 Em testes locais, `APP_ORIGIN` pode ser a origem local do navegador indicada no terminal. Sem a chave do Resend, o desenvolvimento usa **prévia local**, gravada em `data/emails-local` com acesso restrito, fora do Git. A tela informa que nenhum e-mail foi enviado. Use `npm run emails -- seu-email` no terminal do projeto para ler a última mensagem e abrir o link. **Não há prévia local para origens públicas.** Em produção sem serviço conectado, o cadastro não finge enviar e-mail: informa que a configuração está pendente.
 
+No painel do Resend, abra **Domains** e confira se o domínio remetente está **Verified**. Em **API keys → Create API key**, crie uma chave com permissão **Sending access**, restrita ao domínio de envio quando disponível. Copie a chave uma única vez diretamente para `RESEND_API_KEY` no arquivo privado `.env.local`, na pasta que contém `package.json`; não cole na conversa. O endereço em **Emails → To** é um destinatário, não comprova um remetente verificado.
+
+Para a prévia no seu computador, use `APP_ORIGIN` com o endereço exibido pelo iniciador. Remova uma eventual linha `EMAIL_MODE=local` ao ativar envio real; ela força a prévia e impede entrega. Não substitua o arquivo `.env.local` inteiro caso já tenha outras configurações. Salve e reinicie com `bash iniciar-linux.sh`. Teste o cadastro com uma caixa de e-mail que você controla e confirme o status **Delivered** em **Emails**. O link local só funciona no computador onde o site está rodando.
+
 A chave do Resend não deve ser enviada no chat, compartilhada com clientes ou colocada no JavaScript do navegador. A confirmação comprova controle do endereço de e-mail; não substitui controles de pagamento e antifraude.
+
+## Ajuda e crediário
+
+`/ajuda` contém busca por texto (sem distinção de acentos), categorias e respostas expansíveis. A página inicial apresenta fotos e especificações do modelo selecionado, sem acrescentar características não documentadas. Cartão VL Móveis e crediário são solicitados na loja ou pelo WhatsApp; até 36 parcelas dependem de aprovação da financeira, com consulta ao SPC e Serasa. O site não contrata essas modalidades nem cobra automaticamente por Pix, cartão ou boleto.
 
 ## Descontos no painel
 

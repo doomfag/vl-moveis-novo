@@ -4,11 +4,11 @@ import { Header, Footer, Chat, CompareDock } from "@/components/shell";
 import "./globals.css";
 export const metadata: Metadata = {
   title: {
-    default: "VL Móveis | Seu lar. Seu jeito.",
+    default: "VL Móveis",
     template: "%s | VL Móveis",
   },
   description:
-    "Colchões Ortobom, bases, cabeceiras e conforto para sua casa. Atendimento em Sepetiba e Campo Grande, Rio de Janeiro.",
+    "Móveis, colchões Ortobom, bases, cabeceiras e travesseiros. Atendimento em Sepetiba e Campo Grande, Rio de Janeiro.",
 };
 export default function RootLayout({
   children,

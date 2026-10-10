@@ -4502,3 +4502,192 @@ textarea {
   color: #a23503;
   font-weight: 700;
 }
+
+/* Ajuda, características e condições de financiamento. */
+.help-page > h1 {
+  font-size: clamp(28px, 3vw, 40px);
+  margin-bottom: 12px;
+}
+.help-page > p {
+  color: #555;
+  margin-bottom: 36px;
+}
+.help-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.help-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+.help-search input {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  outline-offset: 5px;
+}
+.help-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+.help-categories button {
+  border: 1px solid #ccc;
+  background: white;
+  color: #333;
+  border-radius: 4px;
+  padding: 9px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+.help-categories button.active {
+  background: #242424;
+  color: white;
+  border-color: #242424;
+}
+.help-questions details {
+  border-top: 1px solid #ddd;
+  padding: 0 0 0;
+}
+.help-questions details:last-child {
+  border-bottom: 1px solid #ddd;
+}
+.help-questions summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  padding: 20px 0;
+  list-style: none;
+  font-weight: 500;
+}
+.help-questions summary::-webkit-details-marker {
+  display: none;
+}
+.help-questions summary span {
+  color: #555;
+}
+.help-questions details[open] summary span {
+  transform: rotate(45deg);
+}
+.help-questions details p {
+  margin: 0 0 20px;
+  line-height: 1.7;
+  color: #444;
+}
+.help-questions details .text-link {
+  margin-bottom: 20px;
+}
+.help-links {
+  margin-top: 30px;
+  line-height: 1.9;
+}
+.help-links a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.credit-section {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 36px 0;
+  margin: 40px 0;
+}
+.credit-section > div {
+  flex: 1;
+}
+.credit-section h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.credit-section p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #444;
+}
+.credit-section > a {
+  flex-shrink: 0;
+}
+.product-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+}
+.product-guide > img {
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: contain;
+  background: #fafafa;
+  border-radius: 8px;
+}
+.product-guide h3 {
+  font-size: 22px;
+  margin: 24px 0 16px;
+}
+.guide-select {
+  display: block;
+  font-weight: 600;
+}
+.guide-select select {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 12px;
+  font: inherit;
+  background: white;
+}
+.guide-specs {
+  margin-bottom: 24px;
+}
+.guide-specs > div {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(0, 2fr);
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid #ddd;
+  line-height: 1.6;
+}
+.guide-specs dt {
+  font-weight: 600;
+}
+.guide-specs dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #444;
+}
+@media (max-width: 767px) {
+  .credit-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .credit-section > a {
+    width: 100%;
+  }
+  .product-guide {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .product-guide > img {
+    max-height: 360px;
+  }
+  .help-categories button {
+    font-size: 14px;
+  }
+  .guide-specs > div {
+    gap: 12px;
+  }
+}
