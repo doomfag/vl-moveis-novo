@@ -28,6 +28,7 @@ test(
         env: {
           ...process.env,
           DB_PATH: join(dir, "store.sqlite"),
+          BACKUP_DIR: join(dir, "backups"),
           APP_ORIGIN: "",
           INVENTORY_WEBHOOK_SECRET: secret,
           EMAIL_MODE: "local",
@@ -262,6 +263,62 @@ test(
               .status,
             200,
           );
+        },
+      );
+      await t.test(
+        "Backup privado: visitante e cliente bloqueados, download restaurável para o admin",
+        async () => {
+          assert.equal((await request("admin/backup")).status, 401);
+          assert.equal(
+            (await request("admin/backup", "GET", undefined, customerCookie))
+              .status,
+            403,
+          );
+          assert.equal(
+            (
+              await request("admin/backup", "POST", {}, adminCookie, {
+                Origin: "https://outside.example.test",
+              })
+            ).status,
+            403,
+          );
+          const response = await fetch(origin + "/api/admin/backup", {
+            method: "POST",
+            headers: { Origin: origin, Cookie: adminCookie },
+          });
+          assert.equal(response.status, 200);
+          assert.equal(response.headers.get("cache-control"), "no-store");
+          assert.equal(
+            response.headers.get("content-type"),
+            "application/gzip",
+          );
+          assert.match(
+            response.headers.get("content-disposition"),
+            /attachment; filename="vl-moveis-/,
+          );
+          const archive = join(dir, "download.tar.gz");
+          const { writeFileSync, mkdirSync } = await import("node:fs");
+          writeFileSync(archive, Buffer.from(await response.arrayBuffer()));
+          const restoredDir = join(dir, "restored");
+          mkdirSync(restoredDir);
+          execFileSync("tar", ["-xzf", archive, "-C", restoredDir]);
+          const restored = new DatabaseSync(join(restoredDir, "store.sqlite"), {
+            readOnly: true,
+          });
+          assert.ok(
+            restored
+              .prepare("SELECT id FROM users WHERE email=?")
+              .get(adminEmail),
+          );
+          restored.close();
+          const status = await request(
+            "admin/backup",
+            "GET",
+            undefined,
+            adminCookie,
+          );
+          assert.equal(status.data.count, 1);
+          assert.ok(status.data.lastBackupAt);
         },
       );
       let p;

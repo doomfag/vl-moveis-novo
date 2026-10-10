@@ -68,5 +68,11 @@ export async function sendAccountEmail(
     }),
     signal: AbortSignal.timeout(15000),
   });
-  if (!response.ok) throw new Error("Email delivery failed");
+  if (!response.ok) {
+    console.error(
+      "Resend rejected account email; HTTP status:",
+      response.status,
+    );
+    throw new Error("Email delivery failed");
+  }
 }

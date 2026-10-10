@@ -54,6 +54,7 @@ const tabs = [
   { id: "promotions", label: "Banners e campanhas", icon: Megaphone },
   { id: "cash", label: "Fluxo de caixa", icon: Wallet },
   { id: "integrations", label: "Integrações", icon: Settings },
+  { id: "backup", label: "Backup", icon: ShieldCheck },
 ];
 function emptyProduct(): Product {
   const id = "produto-" + crypto.randomUUID().slice(0, 8);
@@ -563,6 +564,7 @@ export default function Admin() {
                   </div>
                 </>
               )}
+              {tab === "backup" && <BackupPanel />}
               {tab === "integrations" && (
                 <>
                   <h2>Tudo conectado, no seu tempo.</h2>
@@ -1565,5 +1567,92 @@ function AdminChat({
         </div>
       </div>
     </>
+  );
+}
+
+function BackupPanel() {
+  const [status, setStatus] = useState<{
+    count: number;
+    lastBackupAt: string | null;
+    automatic: boolean;
+  } | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState("");
+  async function refresh() {
+    setStatus(await api("admin/backup"));
+  }
+  useEffect(() => {
+    refresh().catch(() => setMessage("Não foi possível consultar as cópias."));
+  }, []);
+  async function download() {
+    setBusy(true);
+    setMessage("");
+    try {
+      const response = await fetch("/api/admin/backup", { method: "POST" });
+      if (!response.ok)
+        throw new Error(
+          (await response.json()).error || "Não foi possível criar a cópia.",
+        );
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download =
+        response.headers
+          .get("Content-Disposition")
+          ?.match(/filename="([^"]+)"/)?.[1] || "vl-moveis-backup.tar.gz";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 60000);
+      await refresh();
+      setMessage(
+        "Cópia preparada para download. Guarde o arquivo em um local privado fora do Render.",
+      );
+    } catch (error) {
+      setMessage(
+        error instanceof Error
+          ? error.message
+          : "Não foi possível baixar a cópia.",
+      );
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <div className="panel">
+      <h2>Backup dos dados da loja</h2>
+      <p>
+        Inclui contas, pedidos, estoque, mensagens e fotos enviadas pelo painel.
+      </p>
+      {status && (
+        <>
+          <p>
+            {status.automatic
+              ? "Cópias automáticas diárias ativas. As três mais recentes ficam no servidor."
+              : "Cópias automáticas ainda não estão ativas nesta instalação."}
+          </p>
+          <p>
+            {status.lastBackupAt
+              ? "Última cópia: " +
+                new Date(status.lastBackupAt).toLocaleString("pt-BR", {
+                  timeZone: "America/Sao_Paulo",
+                })
+              : "Nenhuma cópia criada ainda."}
+          </p>
+        </>
+      )}
+      <p>
+        Baixe uma cópia regularmente e guarde em seu computador ou armazenamento
+        privado. As cópias no servidor também podem ser perdidas se o disco for
+        excluído.
+      </p>
+      <button className="button button-dark" disabled={busy} onClick={download}>
+        {busy ? "Preparando cópia…" : "Baixar backup agora"}
+      </button>
+      {message && <p role="status">{message}</p>}
+      <p>
+        O arquivo contém dados privados. A restauração deve ser feita com o site
+        parado, para preservar os dados atuais.
+      </p>
+    </div>
   );
 }

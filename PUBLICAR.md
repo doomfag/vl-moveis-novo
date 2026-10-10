@@ -33,3 +33,11 @@ A conta de teste criada no computador não é automaticamente transferida ao ser
 ## Pagamentos e frete
 
 Esta publicação permite catálogo, atendimento, cadastro, painel e pedidos sujeitos à confirmação. O site ainda não cobra automaticamente por Pix, cartão ou boleto nem calcula frete de transportadora. Cartão VL Móveis e crediário são atendidos pelo WhatsApp/loja. Não anuncie cobrança automática antes da integração real.
+
+## Backup
+
+O contêiner inicia o site com `scripts/start-production.mjs`. Ele cria uma cópia consistente do banco SQLite e das fotos enviadas um minuto após iniciar e a cada 24 horas enquanto o serviço fica ativo. Guarda as três cópias mais recentes em `/var/lib/vl-moveis/backups`, no disco privado; falhas são informadas nos logs. A aba **Backup** do administrador mostra a última cópia e permite baixar um arquivo `.tar.gz` atualizado, com banco, fotos, instruções e hashes SHA-256. Clientes e visitantes não têm acesso.
+
+**Guarde regularmente uma cópia fora do Render**, em computador ou armazenamento privado. As cópias locais não sobrevivem à exclusão do disco e não constituem backup externo automático. Nenhum serviço externo de armazenamento foi contratado ou conectado. Chaves de API, variáveis privadas e o código do site não entram no arquivo; preserve essas configurações separadamente no painel privado. As fotos originais do catálogo estão no repositório, enquanto as enviadas pelo admin ficam na cópia.
+
+Para restaurar, pare o serviço, preserve o banco e as fotos atuais, extraia o arquivo em pasta privada e confira os hashes do `manifest.json`. Restaure `store.sqlite` em `DB_PATH` e o conteúdo de `photos` em `CATALOG_UPLOAD_DIR`, com permissões privadas do usuário do serviço. Somente com o serviço parado, retire os antigos arquivos `-wal` e `-shm` antes de iniciar com o banco restaurado. Confira cadastro, login, produtos e fotos. O teste automatizado verifica recuperação de dados gravados em WAL e fotos, integridade, retenção e preservação das cópias em falhas.

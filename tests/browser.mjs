@@ -451,6 +451,21 @@ try {
       await expect(page.locator(".metric").first()).toContainText("850,00");
     },
   );
+  await check("Admin baixa backup pelo painel", async () => {
+    await page.goto(origin + "/admin");
+    await page.getByRole("button", { name: "Backup", exact: true }).click();
+    await expect(
+      page.getByRole("heading", { name: "Backup dos dados da loja" }),
+    ).toBeVisible();
+    const downloadReady = page.waitForEvent("download");
+    await page.getByRole("button", { name: "Baixar backup agora" }).click();
+    const downloaded = await downloadReady;
+    if (!downloaded.suggestedFilename().endsWith(".tar.gz"))
+      throw new Error("Invalid backup download");
+    await expect(page.locator(".admin-content p[role=status]")).toContainText(
+      "Cópia preparada para download",
+    );
+  });
   await check(
     "Admin responde atendimento com histórico e publica campanha",
     async () => {
@@ -671,6 +686,42 @@ try {
       },
     );
   }
+  await check(
+    "Recuperação de senha no celular conclui troca e permite novo login",
+    async () => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.goto(origin + "/recuperar-senha");
+      await page.getByLabel("E-mail", { exact: true }).fill(email);
+      await page.getByRole("button", { name: "Enviar instruções" }).click();
+      await expect(page.locator(".auth-notice")).toBeVisible();
+      const mail = readdirSync(join(dir, "emails"))
+        .map((name) =>
+          JSON.parse(readFileSync(join(dir, "emails", name), "utf8")),
+        )
+        .find((m) => m.to === email && m.text.includes("/redefinir-senha"));
+      if (!mail) throw new Error("Recovery email missing");
+      await page.goto(mail.text.match(/https?:\/\/[^\s]+/)[0]);
+      await page
+        .getByLabel("Nova senha", { exact: true })
+        .fill(password + "new");
+      await page
+        .getByLabel("Confirmar nova senha", { exact: true })
+        .fill(password + "new");
+      await page.getByRole("button", { name: "Salvar nova senha" }).click();
+      await expect(page.locator(".auth-notice")).toContainText(
+        "Senha atualizada",
+      );
+      await page.goto(origin + "/conta");
+      await page.getByLabel("E-mail", { exact: true }).fill(email);
+      await page.getByLabel("Senha", { exact: true }).fill(password + "new");
+      await page
+        .getByRole("button", { name: "Entrar na minha conta", exact: true })
+        .click();
+      await expect(
+        page.getByRole("heading", { name: "Olá, Teste." }),
+      ).toBeVisible();
+    },
+  );
   if (errors.length)
     throw new Error("Browser errors: " + [...new Set(errors)].join(" | "));
   console.log(

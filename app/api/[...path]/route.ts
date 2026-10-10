@@ -8,6 +8,10 @@ import {
 import { mailAvailable, localEmailMode, sendAccountEmail } from "@/lib/mail";
 import { writeFile, mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import { createReadStream } from "node:fs";
+import { Readable } from "node:stream";
 import sharp from "sharp";
 import { z } from "zod";
 import {
@@ -399,6 +403,7 @@ async function dispatch(req: NextRequest, path: string[]) {
         await accountLink(String(row.id), input.email, purpose, origin);
       } catch {
         /* Keep recovery responses independent of whether an account exists. */
+        console.error("Account email delivery failed for purpose:", purpose);
       }
     }
     return {
@@ -686,6 +691,38 @@ async function dispatch(req: NextRequest, path: string[]) {
   }
   if (path[0] === "admin") {
     const u = authorize(req, true);
+    if (route === "admin/backup" && (method === "GET" || method === "POST")) {
+      if (method === "POST" && limited("backup:" + u.id, 3, 3600000))
+        fail(
+          429,
+          "Você já solicitou três cópias nesta hora. Tente mais tarde.",
+        );
+      const run = promisify(execFile);
+      const { stdout } = await run(
+        process.execPath,
+        [
+          resolve(/* turbopackIgnore: true */ "scripts/backup.mjs"),
+          ...(method === "GET" ? ["--status"] : []),
+        ],
+        { timeout: 120000 },
+      );
+      const result = JSON.parse(stdout);
+      if (method === "GET") return result;
+      audit(u, "backup.download", result.name);
+      return new NextResponse(
+        Readable.toWeb(
+          createReadStream(result.file),
+        ) as ReadableStream<Uint8Array>,
+        {
+          headers: {
+            "Content-Type": "application/gzip",
+            "Content-Disposition": `attachment; filename="${result.name}"`,
+            "Content-Length": String(result.bytes),
+            "X-Content-Type-Options": "nosniff",
+          },
+        },
+      );
+    }
     if (route === "admin/upload" && method === "POST") {
       if (!req.headers.get("content-type")?.startsWith("multipart/form-data"))
         fail(415, "Envie uma imagem.");

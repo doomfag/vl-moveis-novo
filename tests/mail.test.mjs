@@ -50,6 +50,27 @@ test("E-mail: Resend recebe destinatário, remetente e link correto, sem fallbac
       "https://loja.example.test",
     );
     assert.equal(calls, 1);
+    globalThis.fetch = async (url, options) => {
+      const data = JSON.parse(options.body);
+      assert.equal(data.from, process.env.EMAIL_FROM);
+      assert.equal(data.subject, "Redefina sua senha — VL Móveis");
+      assert.ok(
+        data.text.includes(
+          "https://vlmoveis.net.br/redefinir-senha?token=" + token,
+        ),
+      );
+      assert.ok(data.text.includes("30 minutos"));
+      return new Response(JSON.stringify({ id: "reset-test" }), {
+        status: 200,
+      });
+    };
+    process.env.EMAIL_FROM = "VL Móveis <contato@vlmoveis.net.br>";
+    await sendAccountEmail(
+      "cliente@example.test",
+      "reset",
+      token,
+      "https://vlmoveis.net.br",
+    );
     globalThis.fetch = async () => new Response("Rejected", { status: 403 });
     await assert.rejects(
       sendAccountEmail(
