@@ -1,0 +1,26 @@
+{
+  "count": 128,
+  "sources": [
+    {
+      "name": "comercial",
+      "pages": 128,
+      "url": "/catalogos/comercial.pdf"
+    },
+    {
+      "name": "travesseiros",
+      "pages": 16,
+      "url": "/catalogos/travesseiros.pdf"
+    },
+    {
+      "name": "hotelaria",
+      "pages": 16,
+      "url": "/catalogos/hotelaria.pdf"
+    },
+    {
+      "name": "revendedor-2021",
+      "pages": 63,
+      "url": "/catalogos/revendedor-2021.pdf"
+    }
+  ],
+  "note": "Preços e estoque não fornecidos. Medidas transcritas do catálogo; fotos por cor somente quando existem na fonte. Disponibilidade atual e combinações de altura/medida precisam ser conferidas pela loja."
+}

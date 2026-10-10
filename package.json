@@ -1,0 +1,36 @@
+{
+  "name": "vl-moveis",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "admin": "node scripts/admin.mjs",
+    "test": "npm run build && npm run test:api",
+    "format": "prettier --write app components lib tests scripts/*.mjs next.config.ts proxy.ts",
+    "format:check": "prettier --check app components lib tests scripts/*.mjs next.config.ts proxy.ts",
+    "test:ui": "node tests/browser.mjs",
+    "test:api": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "lucide-react": "1.54.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "3.9.9",
+    "typescript": "7.0.2"
+  }
+}

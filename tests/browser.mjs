@@ -1,0 +1,359 @@
+import { chromium, expect } from "@playwright/test";
+import { spawn, execFileSync } from "node:child_process";
+import { mkdtempSync, rmSync, mkdirSync, existsSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
+import { randomBytes, randomUUID } from "node:crypto";
+const dir = mkdtempSync(join(tmpdir(), "vl-browser-")),
+  origin = "http://localhost:3102";
+const artifacts = resolve(
+  process.env.VL_ARTIFACTS_DIR || "/workspace/vl-moveis-validation",
+);
+mkdirSync(artifacts, { recursive: true });
+const server = spawn(
+  process.execPath,
+  [
+    "node_modules/next/dist/bin/next",
+    "start",
+    "--hostname",
+    "127.0.0.1",
+    "--port",
+    "3102",
+  ],
+  {
+    env: {
+      ...process.env,
+      APP_ORIGIN: origin,
+      DB_PATH: join(dir, "store.sqlite"),
+    },
+    stdio: ["ignore", "pipe", "pipe"],
+  },
+);
+let logs = "";
+for (const stream of [server.stdout, server.stderr])
+  stream.on("data", (b) => {
+    logs = (logs + b.toString()).slice(-10000);
+  });
+let browser;
+const uploaded = [];
+const results = [];
+try {
+  const deadline = Date.now() + 45000;
+  while (Date.now() < deadline) {
+    try {
+      if ((await fetch(origin + "/api/health")).ok) break;
+    } catch {}
+    await new Promise((r) => setTimeout(r, 300));
+  }
+  if (!(await fetch(origin + "/api/health")).ok)
+    throw new Error("Production server did not start");
+  browser = await chromium.launch({
+    executablePath:
+      process.env.CHROMIUM_PATH ||
+      (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
+    headless: true,
+  });
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 1080 },
+    locale: "pt-BR",
+  });
+  const page = await context.newPage(),
+    errors = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  page.on("console", (msg) => {
+    if (msg.type() === "error")
+      errors.push(msg.text() + " at " + msg.location().url);
+  });
+  const check = async (name, fn) => {
+    await fn();
+    results.push(name);
+    console.log("PASS", name);
+  };
+  await check(
+    "Home de produção: hidratação, imagens e CSP com nonce",
+    async () => {
+      const response = await page.goto(origin);
+      await expect(
+        page.getByRole("heading", { name: "Seu lar merece mais conforto." }),
+      ).toBeVisible();
+      const csp = response.headers()["content-security-policy"];
+      if (
+        !csp.includes("'nonce-") ||
+        csp.includes("script-src 'self' 'unsafe-inline'")
+      )
+        throw new Error("Missing script nonce policy");
+      await page.locator(".product-card").first().waitFor();
+      await page.screenshot({
+        path: join(artifacts, "home-desktop.png"),
+        fullPage: true,
+      });
+      const broken = await page
+        .locator("img")
+        .evaluateAll(
+          (images) =>
+            images.filter((i) => i.complete && i.naturalWidth === 0).length,
+        );
+      if (broken) throw new Error("Broken product images");
+    },
+  );
+  await check("Busca, categoria e comparação funcionam", async () => {
+    await page
+      .getByRole("textbox", { name: "Buscar produtos" })
+      .fill("Exclusive Gel");
+    await page.getByRole("button", { name: "Buscar", exact: true }).click();
+    await expect(page.locator(".product-card")).toHaveCount(1);
+    await page
+      .getByRole("button", { name: "Comparar produto", exact: true })
+      .click();
+    await page.goto(origin + "/catalogo?categoria=Bases%20e%20camas");
+    await page
+      .locator(".product-card")
+      .first()
+      .getByRole("button", { name: "Comparar produto", exact: true })
+      .click();
+    await page.goto(origin + "/comparar");
+    await expect(page.locator(".comparison thead th")).toHaveCount(3);
+  });
+  await check(
+    "Troca de cor muda a fotografia real e sacola preserva variação",
+    async () => {
+      await page.goto(origin + "/produto/base-sommier-bau-camurca");
+      const old = await page.locator(".gallery-main img").getAttribute("src");
+      await page
+        .getByRole("button", { name: "Selecionar cor Marrom", exact: true })
+        .click();
+      const next = await page.locator(".gallery-main img").getAttribute("src");
+      if (old === next || !next.includes("comercial-76"))
+        throw new Error("Color did not change photograph");
+      await page
+        .getByRole("button", { name: "Salvar na sacola para orçamento" })
+        .click();
+      await page.goto(origin + "/sacola");
+      await expect(page.locator(".cart-line")).toHaveCount(1);
+      await expect(page.locator(".cart-line")).toContainText("Marrom");
+      const link = await page
+        .getByRole("link", { name: "Pedir orçamento da sacola" })
+        .getAttribute("href");
+      if (!link.startsWith("https://wa.me/5521990015722?text="))
+        throw new Error("Wrong WhatsApp link");
+    },
+  );
+  const email = "browser-" + randomUUID() + "@example.test",
+    password = randomBytes(18).toString("base64");
+  await check(
+    "Cadastro e conta funcionam no navegador de produção",
+    async () => {
+      await page.goto(origin + "/conta");
+      await page
+        .getByRole("button", { name: "Criar conta", exact: true })
+        .click();
+      await page.getByLabel("Seu nome", { exact: true }).fill("Teste da loja");
+      await page.getByLabel("E-mail", { exact: true }).fill(email);
+      await page.getByLabel("Senha", { exact: true }).fill(password);
+      await page.getByRole("button", { name: "Criar minha conta" }).click();
+      await expect(
+        page.getByRole("heading", { name: "Olá, Teste." }),
+      ).toBeVisible();
+      await page.goto(origin + "/sacola");
+      await expect(page.locator(".cart-line")).toHaveCount(1);
+    },
+  );
+  await check("Atendimento envia mensagem real ao servidor", async () => {
+    await page.getByRole("button", { name: "Abrir atendimento" }).click();
+    await page
+      .getByRole("textbox", { name: "Mensagem", exact: true })
+      .fill("Olá, tenho interesse nesta base.");
+    await page
+      .getByRole("button", { name: "Enviar mensagem", exact: true })
+      .click();
+    await expect(page.locator(".message.customer")).toContainText(
+      "Olá, tenho interesse nesta base.",
+    );
+    await page
+      .getByRole("button", { name: "Fechar chat", exact: true })
+      .click();
+  });
+  execFileSync(process.execPath, ["scripts/admin.mjs", email], {
+    env: { ...process.env, DB_PATH: join(dir, "store.sqlite") },
+    stdio: "pipe",
+  });
+  await check(
+    "Admin edita produto e foto enviada é servida sem reiniciar",
+    async () => {
+      await page.goto(origin + "/admin");
+      await page
+        .getByRole("button", { name: "Produtos e estoque", exact: true })
+        .click();
+      await page
+        .getByRole("button", {
+          name: "Editar Base Sommier Baú Camurça",
+          exact: true,
+        })
+        .click();
+      await page.getByLabel("Preço em reais", { exact: true }).fill("1000");
+      await page.getByLabel("Quantidade em estoque", { exact: true }).fill("3");
+      const response = page.waitForResponse(
+        (r) =>
+          r.url().endsWith("/api/admin/upload") &&
+          r.request().method() === "POST",
+      );
+      await page
+        .locator(".image-editor input[type=file]")
+        .setInputFiles("public/catalogo/comercial-73.webp");
+      const upload = await response;
+      const result = await upload.json();
+      if (!upload.ok()) throw new Error("Image upload failed");
+      uploaded.push(result.url.split("/").pop());
+      const image = await page.request.get(origin + result.url);
+      if (!image.ok())
+        throw new Error("Uploaded image unavailable on live production server");
+      await page
+        .getByRole("button", { name: "Salvar produto", exact: true })
+        .click();
+      await expect(page.getByRole("dialog")).toHaveCount(0);
+    },
+  );
+  await check(
+    "Pedido pelo navegador e baixa de estoque/caixa pelo painel",
+    async () => {
+      await page.goto(origin + "/sacola");
+      await page
+        .getByRole("button", { name: "Enviar pedido à loja", exact: true })
+        .click();
+      await expect(
+        page.getByRole("heading", { name: "Pedido recebido pela loja." }),
+      ).toBeVisible();
+      await page.goto(origin + "/admin");
+      await page.getByRole("button", { name: /^Pedidos e clientes/ }).click();
+      page.once("dialog", (d) => d.accept());
+      await page
+        .getByRole("button", { name: "Pagamento recebido", exact: true })
+        .click();
+      await expect(page.locator(".admin-table .status.paid")).toHaveCount(1);
+      await page
+        .getByRole("button", { name: "Fluxo de caixa", exact: true })
+        .click();
+      await expect(page.locator(".metric").first()).toContainText("1.000,00");
+    },
+  );
+  await check(
+    "Admin responde atendimento com histórico e publica campanha",
+    async () => {
+      await page
+        .getByRole("button", { name: "Atendimento", exact: true })
+        .click();
+      await page.locator(".admin-chat aside button").first().click();
+      await expect(page.locator(".admin-conversation .message")).toHaveCount(1);
+      await page
+        .getByRole("textbox", { name: "Resposta ao cliente" })
+        .fill("Olá! Vamos confirmar a disponibilidade.");
+      await page
+        .getByRole("button", { name: "Enviar resposta", exact: true })
+        .click();
+      await expect(page.locator(".admin-conversation .message")).toHaveCount(2);
+      await page
+        .getByRole("button", { name: "Banners e campanhas", exact: true })
+        .click();
+      await page
+        .getByRole("button", { name: "Criar banner", exact: true })
+        .click();
+      await page
+        .getByLabel("Título", { exact: true })
+        .fill("Sua casa, seu conforto.");
+      await page
+        .getByLabel("Texto de apoio", { exact: true })
+        .fill("Campanha de validação isolada.");
+      await page.getByLabel("Publicar campanha na página inicial").check();
+      await page
+        .getByRole("button", { name: "Salvar campanha", exact: true })
+        .click();
+      await expect(page.getByRole("dialog")).toHaveCount(0);
+      await page.goto(origin);
+      await expect(
+        page.getByRole("heading", { name: "Sua casa, seu conforto." }),
+      ).toBeVisible();
+    },
+  );
+  const mobile = await browser.newContext({
+      viewport: { width: 390, height: 844 },
+      isMobile: true,
+      hasTouch: true,
+      deviceScaleFactor: 1,
+      locale: "pt-BR",
+    }),
+    mobilePage = await mobile.newPage();
+  await check(
+    "Celular: menu, produto, imagens e ausência de rolagem horizontal",
+    async () => {
+      await mobilePage.goto(origin);
+      await mobilePage.screenshot({
+        path: join(artifacts, "home-mobile.png"),
+        fullPage: true,
+      });
+      await mobilePage.getByRole("button", { name: "Abrir menu" }).click();
+      await expect(
+        mobilePage.getByRole("navigation", { name: "Categorias" }),
+      ).toBeVisible();
+      await mobilePage
+        .getByRole("navigation", { name: "Categorias" })
+        .getByRole("link", { name: "Travesseiros", exact: true })
+        .click();
+      await expect(mobilePage.locator(".product-card")).toHaveCount(14);
+      for (const route of [
+        "/",
+        "/catalogo",
+        "/produto/base-sommier-bau-camurca",
+        "/conta",
+        "/sacola",
+      ]) {
+        await mobilePage.goto(origin + route);
+        await mobilePage.waitForTimeout(150);
+        const overflow = await mobilePage.evaluate(
+          () => document.documentElement.scrollWidth > innerWidth + 1,
+        );
+        if (overflow) throw new Error("Horizontal overflow on " + route);
+      }
+      await mobilePage.goto(origin + "/produto/base-sommier-bau-camurca");
+      await mobilePage
+        .getByRole("button", { name: "Selecionar cor Marrom", exact: true })
+        .click();
+      await mobilePage.screenshot({
+        path: join(artifacts, "product-mobile.png"),
+        fullPage: true,
+      });
+    },
+  );
+  await check("Desktop, notebook e TV: layout se adapta", async () => {
+    for (const width of [768, 1024, 1920, 2560]) {
+      await page.setViewportSize({ width, height: 1080 });
+      await page.goto(origin);
+      const overflow = await page.evaluate(
+        () => document.documentElement.scrollWidth > innerWidth + 1,
+      );
+      if (overflow) throw new Error("Horizontal overflow at " + width);
+    }
+  });
+  if (errors.length)
+    throw new Error("Browser errors: " + [...new Set(errors)].join(" | "));
+  console.log(
+    `Browser validation: ${results.length} checks passed; no browser errors.`,
+  );
+} catch (e) {
+  console.error(e.message);
+  process.exitCode = 1;
+} finally {
+  await browser?.close();
+  server.kill("SIGTERM");
+  await new Promise((r) => {
+    if (server.exitCode !== null) return r();
+    server.once("exit", r);
+    setTimeout(() => {
+      server.kill("SIGKILL");
+      r();
+    }, 4000).unref();
+  });
+  for (const name of uploaded)
+    if (/^[a-f0-9-]{36}\.webp$/.test(name))
+      rmSync(resolve("public/catalogo", name), { force: true });
+  rmSync(dir, { recursive: true, force: true });
+}
