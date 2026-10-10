@@ -4,9 +4,8 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   ArrowRight,
-  ArrowUpRight,
-  ChevronLeft,
   ChevronRight,
+  ArrowUpRight,
   MapPin,
   Truck,
   ShieldCheck,
@@ -34,6 +33,7 @@ import { Account, Cart } from "./account-cart";
 import Admin from "./admin";
 import { AccountSecurity } from "./account-security";
 import { Help, Credit } from "./help";
+import { Compare } from "./comparison";
 const cats = [
   "Colchões",
   "Bases e camas",
@@ -79,6 +79,7 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
       cta: "Ver produtos",
       href: "/catalogo",
       active: true,
+      image: "/catalogo/hotelaria-1-ambiente.webp",
     },
     {
       id: "sleep",
@@ -86,16 +87,19 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
       subtitle: "Veja os modelos e compare suas especificações.",
       cta: "Explorar colchões",
       href: "/catalogo?categoria=Colch%C3%B5es",
+      image: "/catalogo/comercial-3-produto-hd.webp",
       active: true,
     },
   ];
   const slides = promotions.length ? promotions : defaults;
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const current = slides[index % slides.length];
   useEffect(() => {
-    const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), 9000);
+    if (paused || slides.length < 2) return;
+    const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), 7000);
     return () => clearInterval(t);
-  }, [slides.length]);
+  }, [slides.length, paused]);
   return (
     <section
       className="hero"
@@ -105,7 +109,11 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
       <div className="hero-image">
         <img
           src={current.image || "/catalogo/hotelaria-1-ambiente.webp"}
-          alt="Quarto com cama e colchão Ortobom"
+          alt={
+            current.id === "home"
+              ? "Quarto com cama e colchão Ortobom"
+              : current.title.replaceAll("\n", " ")
+          }
           fetchPriority="high"
           width={1190}
           height={940}
@@ -144,29 +152,17 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
             />
           ))}
         </div>
-        <div>
+        {slides.length > 1 && (
           <button
-            aria-label="Destaque anterior"
-            onClick={() =>
-              setIndex((index - 1 + slides.length) % slides.length)
+            className="hero-pause"
+            onClick={() => setPaused(!paused)}
+            aria-label={
+              paused ? "Retomar troca automática" : "Pausar troca automática"
             }
           >
-            <ChevronLeft size={18} />
+            {paused ? "Retomar" : "Pausar"}
           </button>
-          <button
-            aria-label="Próximo destaque"
-            onClick={() => setIndex((index + 1) % slides.length)}
-          >
-            <ChevronRight size={18} />
-          </button>
-        </div>
-      </div>
-      <div className="hero-stamp">
-        <BedDouble size={19} />
-        <div>
-          <b>Colchões Ortobom</b>
-          <small>Consulte os modelos.</small>
-        </div>
+        )}
       </div>
     </section>
   );
@@ -632,156 +628,6 @@ function Catalog({
           )}
         </div>
       </div>
-    </div>
-  );
-}
-function Compare({ products }: { products: Product[] }) {
-  const s = useStore();
-  const [differencesOnly, setDifferencesOnly] = useState(true);
-  const items = s.compare
-    .map((id) => products.find((p) => p.id === id))
-    .filter((p): p is Product => !!p);
-  const prices = items.map((p) =>
-    variantPrice(p, p.colors[0].name, p.sizes[0]),
-  );
-  const knownPrices = prices.filter((p): p is number => p !== null);
-  const lowest = knownPrices.length >= 2 ? Math.min(...knownPrices) : null;
-  const specs = [...new Set(items.flatMap((p) => Object.keys(p.specs)))].filter(
-    (k) => !["Medidas", "Linha"].includes(k),
-  );
-  const rows: { label: string; values: string[] }[] = [
-    {
-      label: "Preço",
-      values: prices.map((p) => (p === null ? "Sob consulta" : money(p))),
-    },
-    { label: "Marca", values: items.map((p) => p.brand) },
-    { label: "Categoria", values: items.map((p) => p.category) },
-    {
-      label: "Medidas disponíveis",
-      values: items.map((p) => p.sizes.join(" · ")),
-    },
-    {
-      label: "Cores com foto",
-      values: items.map((p) => p.colors.map((c) => c.name).join(", ")),
-    },
-    ...specs.map((label) => ({
-      label,
-      values: items.map((p) => {
-        const value = p.specs[label];
-        return !value ||
-          /Veja as especificações|Consulte o catálogo/i.test(value)
-          ? "Não informado"
-          : value;
-      }),
-    })),
-  ];
-  const visibleRows = rows.filter(
-    (row) =>
-      row.label === "Preço" || !differencesOnly || new Set(row.values).size > 1,
-  );
-  return (
-    <div className="container inner-page">
-      <Heading
-        eyebrow="COMPARAÇÃO"
-        title={`${items.length} produtos lado a lado`}
-      />
-      {items.length ? (
-        <>
-          <label className="comparison-controls">
-            <input
-              type="checkbox"
-              checked={differencesOnly}
-              onChange={(e) => setDifferencesOnly(e.target.checked)}
-            />{" "}
-            Mostrar apenas diferenças
-          </label>
-          <div className="comparison-wrap">
-            <table className="comparison">
-              <thead>
-                <tr>
-                  <th>
-                    <span className="sr-only">Característica</span>
-                  </th>
-                  {items.map((p) => (
-                    <th key={p.id}>
-                      <button
-                        className="remove-compare icon-button"
-                        onClick={() => s.toggleCompare(p.id)}
-                        aria-label={"Remover " + p.name}
-                      >
-                        <X size={18} />
-                      </button>
-                      <img
-                        src={p.images[0]}
-                        alt={p.name}
-                        width={180}
-                        height={180}
-                      />
-                      <small>{p.brand}</small>
-                      <br />
-                      <Link href={"/produto/" + p.slug}>{p.name}</Link>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {visibleRows.map((row) => (
-                  <tr key={row.label}>
-                    <th scope="row">{row.label}</th>
-                    {row.values.map((value, i) => (
-                      <td
-                        key={items[i].id}
-                        className={
-                          row.label === "Preço" &&
-                          lowest !== null &&
-                          prices[i] === lowest
-                            ? "best-value"
-                            : ""
-                        }
-                      >
-                        {value}
-                        {row.label === "Preço" &&
-                          lowest !== null &&
-                          prices[i] === lowest && <small>MENOR PREÇO</small>}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-                <tr>
-                  <th>
-                    <span className="sr-only">Detalhes</span>
-                  </th>
-                  {items.map((p) => (
-                    <td key={p.id}>
-                      <Link
-                        className="button button-dark"
-                        href={"/produto/" + p.slug}
-                      >
-                        Ver produto <ArrowRight size={16} />
-                      </Link>
-                    </td>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="comparison-tip">
-            {differencesOnly ? "Características iguais foram ocultadas. " : ""}
-            Preços correspondem à primeira cor e medida cadastradas; confirme a
-            mesma medida para comparar valores. Características não informadas
-            não são estimadas.
-          </p>
-        </>
-      ) : (
-        <div className="empty-state">
-          <Scale size={40} />
-          <h2>Selecione os produtos que deseja comparar</h2>
-          <p>Marque “Comparar” nos produtos para ver até três lado a lado.</p>
-          <Link href="/catalogo" className="button">
-            Ver produtos <ArrowRight size={17} />
-          </Link>
-        </div>
-      )}
     </div>
   );
 }

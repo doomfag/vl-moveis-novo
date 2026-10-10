@@ -107,6 +107,50 @@ try {
     },
   );
   await check(
+    "Banner alterna fotos automaticamente, sem selo ou setas; pode pausar",
+    async () => {
+      await page.clock.install();
+      await page.goto(origin);
+      const hero = page.locator(".hero");
+      await hero
+        .getByRole("button", { name: "Pausar troca automática" })
+        .click();
+      await hero
+        .getByRole("button", { name: "Retomar troca automática" })
+        .click();
+      const original = await hero
+        .locator(".hero-image img")
+        .getAttribute("src");
+      await expect(hero.locator(".hero-stamp")).toHaveCount(0);
+      await expect(
+        hero.getByRole("button", { name: "Próximo destaque", exact: true }),
+      ).toHaveCount(0);
+      await expect(page.locator("footer .social svg circle")).toHaveCount(2);
+      await page.clock.fastForward(7200);
+      await expect(hero.locator(".hero-image img")).not.toHaveAttribute(
+        "src",
+        original,
+      );
+      const next = await hero.locator(".hero-image img").getAttribute("src");
+      await hero
+        .getByRole("button", { name: "Pausar troca automática" })
+        .click();
+      await page.clock.fastForward(7200);
+      await expect(hero.locator(".hero-image img")).toHaveAttribute(
+        "src",
+        next,
+      );
+      await hero
+        .getByRole("button", { name: "Retomar troca automática" })
+        .click();
+      await page.clock.fastForward(7200);
+      await expect(hero.locator(".hero-image img")).toHaveAttribute(
+        "src",
+        original,
+      );
+    },
+  );
+  await check(
     "Ajuda: filtros, busca sem acentos, respostas e crediário pelo WhatsApp",
     async () => {
       await page.goto(origin + "/ajuda");
@@ -221,6 +265,68 @@ try {
         .getAttribute("href");
       if (!link.startsWith("https://wa.me/5521990015722?text="))
         throw new Error("Wrong WhatsApp link");
+    },
+  );
+  await check(
+    "Comparação explica Soneca e Pluma, preço ausente e prioridade de algodão",
+    async () => {
+      await page.goto(origin + "/catalogo?categoria=Travesseiros");
+      // Remove previous comparison choices and select the exact two pillow models.
+      await page.goto(origin + "/comparar");
+      await page
+        .getByRole("button", { name: "Limpar comparação", exact: true })
+        .click();
+      await expect(
+        page.getByRole("heading", {
+          name: "0 produtos lado a lado",
+          exact: true,
+        }),
+      ).toBeVisible();
+      await page.goto(origin + "/catalogo?categoria=Travesseiros");
+      for (const name of ["Travesseiro Soneca", "Travesseiro Pluma"]) {
+        const card = page
+          .locator(".product-card")
+          .filter({ has: page.getByRole("link", { name, exact: true }) });
+        await card
+          .getByRole("checkbox", { name: "Comparar produto", exact: true })
+          .check();
+      }
+      await page.goto(origin + "/comparar");
+      await expect(
+        page.getByRole("checkbox", { name: "Mostrar apenas diferenças" }),
+      ).not.toBeChecked();
+      await expect(page.locator(".comparison-assessment")).toContainText(
+        "Custo-benefício depende dos preços",
+      );
+      await expect(page.locator(".comparison")).toContainText("100% algodão");
+      await expect(page.locator(".comparison")).toContainText(
+        "TNT 100% polipropileno",
+      );
+      await expect(page.locator(".comparison")).toContainText(
+        "Fibra siliconada",
+      );
+      await page
+        .getByRole("combobox", { name: "Prioridade da comparação" })
+        .selectOption("cotton");
+      await expect(page.locator(".comparison-assessment")).toContainText(
+        "Travesseiro Pluma:",
+      );
+      await page.goto(origin + "/produto/travesseiro-aman");
+      await page
+        .getByRole("button", { name: "Ampliar foto do produto" })
+        .click();
+      await expect(
+        page.getByRole("dialog", { name: "Foto ampliada do produto" }),
+      ).toBeVisible();
+      const width = await page
+        .locator(".photo-zoom img")
+        .evaluate((i) => i.naturalWidth);
+      if (width < 2000)
+        throw new Error("Original Aman photo resolution was not recovered");
+      await page.keyboard.press("Escape");
+      await expect(
+        page.getByRole("dialog", { name: "Foto ampliada do produto" }),
+      ).not.toBeVisible();
     },
   );
   const email = "browser-" + randomUUID() + "@example.test",

@@ -6,12 +6,13 @@ import {
   timingSafeEqual,
 } from "node:crypto";
 import { mailAvailable, localEmailMode, sendAccountEmail } from "@/lib/mail";
-import { writeFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import sharp from "sharp";
 import { z } from "zod";
 import {
   db,
+  grantConfiguredOwner,
   products,
   product,
   saveProduct,
@@ -452,6 +453,7 @@ async function dispatch(req: NextRequest, path: string[]) {
           .prepare("DELETE FROM email_tokens WHERE token=?")
           .run(tokenHash(input.token));
     });
+    grantConfiguredOwner();
     return {
       ok: true,
       message:
@@ -723,7 +725,12 @@ async function dispatch(req: NextRequest, path: string[]) {
         fail(400, "Imagem inválida. Envie JPG, PNG ou WebP.");
       }
       const name = randomUUID() + ".webp";
-      await writeFile(resolve("public/catalogo", name), image, { flag: "wx" });
+      const directory = resolve(
+        /* turbopackIgnore: true */ process.env.CATALOG_UPLOAD_DIR ||
+          "public/catalogo",
+      );
+      await mkdir(directory, { recursive: true });
+      await writeFile(resolve(directory, name), image, { flag: "wx" });
       audit(u, "image.upload", name);
       return { url: "/catalogo/" + name };
     }

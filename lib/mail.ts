@@ -36,7 +36,8 @@ export async function sendAccountEmail(
   const text = `${purpose === "verify" ? "Confirme seu endereço de e-mail para ativar sua conta na VL Móveis." : "Você solicitou uma nova senha para sua conta na VL Móveis."}\n\n${url.toString()}\n\n${purpose === "verify" ? "Este link vale por 24 horas." : "Este link vale por 30 minutos."} Se não foi você, ignore esta mensagem.`;
   if (localEmailMode(origin)) {
     const directory = resolve(
-      process.env.EMAIL_PREVIEW_DIR || "data/emails-local",
+      /* turbopackIgnore: true */ process.env.EMAIL_PREVIEW_DIR ||
+        "data/emails-local",
     );
     await mkdir(directory, { recursive: true, mode: 0o700 });
     await writeFile(

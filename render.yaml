@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: vl-moveis
+    runtime: docker
+    branch: preview-vl-moveis
+    plan: starter
+    numInstances: 1
+    healthCheckPath: /api/health
+    autoDeploy: false
+    disk:
+      name: vl-moveis-dados
+      mountPath: /var/lib/vl-moveis
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_PATH
+        value: /var/lib/vl-moveis/store.sqlite
+      - key: CATALOG_UPLOAD_DIR
+        value: /var/lib/vl-moveis/photos
+      - key: APP_ORIGIN
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: STORE_OWNER_EMAIL
+        sync: false

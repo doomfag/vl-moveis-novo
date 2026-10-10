@@ -10,7 +10,14 @@ export async function GET(
   if (!/^[a-zA-Z0-9_-]+\.(webp|png|jpg|jpeg)$/.test(file))
     return new Response("Not found", { status: 404 });
   try {
-    const bytes = await readFile(resolve("public/catalogo", file));
+    const bytes = process.env.CATALOG_UPLOAD_DIR
+      ? await readFile(
+          resolve(
+            /* turbopackIgnore: true */ process.env.CATALOG_UPLOAD_DIR,
+            file,
+          ),
+        ).catch(() => readFile(resolve("public/catalogo", file)))
+      : await readFile(resolve("public/catalogo", file));
     const ext = file.split(".").pop();
     return new Response(new Uint8Array(bytes), {
       headers: {

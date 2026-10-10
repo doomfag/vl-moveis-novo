@@ -3,6 +3,7 @@ import { mkdirSync, chmodSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import seed from "@/data/catalog.json";
 import mediaRefinement from "@/data/media-refinement.json";
+import catalogUpgrade from "@/data/catalog-upgrade-v4.json";
 import type { Product, User, Promotion } from "./types";
 const g = globalThis as unknown as { vlDb?: DatabaseSync };
 export function db() {
@@ -109,8 +110,97 @@ export function db() {
       throw error;
     }
   }
+  if (
+    !d.prepare("SELECT id FROM migrations WHERE id='catalog-upgrade-v4'").get()
+  ) {
+    d.exec("BEGIN IMMEDIATE");
+    try {
+      const changes = catalogUpgrade as Record<
+        string,
+        {
+          beforeSpecs: Record<string, string>;
+          specs: Record<string, string>;
+          beforeDescription: string;
+          description: string;
+          replacements: Record<string, string>;
+          extras: string[];
+        }
+      >;
+      for (const row of d.prepare("SELECT id,data FROM products").all()) {
+        const p = JSON.parse(String(row.data)) as Product;
+        const change = changes[p.id];
+        if (!change || !p.source) continue;
+        const replaced = p.images.some((image) => !!change.replacements[image]);
+        p.images = p.images.map((image) => change.replacements[image] || image);
+        p.colors = p.colors.map((color) => ({
+          ...color,
+          image: change.replacements[color.image] || color.image,
+        }));
+        if (replaced) p.images = [...new Set([...p.images, ...change.extras])];
+        for (const [key, value] of Object.entries(change.specs)) {
+          if (
+            !p.specs[key] ||
+            p.specs[key] === change.beforeSpecs[key] ||
+            /^(?:Consulte|Veja as especificações)/i.test(p.specs[key])
+          )
+            p.specs[key] = value;
+        }
+        for (const key of Object.keys(change.beforeSpecs)) {
+          if (
+            !(key in change.specs) &&
+            p.specs[key] === change.beforeSpecs[key]
+          )
+            delete p.specs[key];
+        }
+        if (p.description === change.beforeDescription)
+          p.description = change.description;
+        d.prepare("UPDATE products SET data=? WHERE id=?").run(
+          JSON.stringify(p),
+          p.id,
+        );
+      }
+      d.prepare(
+        "INSERT INTO migrations(id) VALUES('catalog-upgrade-v4')",
+      ).run();
+      d.exec("COMMIT");
+    } catch (error) {
+      d.exec("ROLLBACK");
+      throw error;
+    }
+  }
   g.vlDb = d;
+  grantConfiguredOwner();
   return d;
+}
+// Only a private server setting can designate the initial owner; verification is mandatory.
+export function grantConfiguredOwner() {
+  const email = process.env.STORE_OWNER_EMAIL?.trim().toLowerCase();
+  if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return false;
+  const d = db();
+  d.exec("BEGIN IMMEDIATE");
+  try {
+    const owner = d
+      .prepare(
+        "SELECT id FROM users WHERE email=? AND email_verified_at IS NOT NULL AND role='customer'",
+      )
+      .get(email);
+    if (
+      !owner ||
+      d.prepare("SELECT id FROM users WHERE role='admin' LIMIT 1").get()
+    ) {
+      d.exec("COMMIT");
+      return false;
+    }
+    d.prepare("UPDATE users SET role='admin' WHERE id=?").run(owner.id);
+    d.prepare(
+      "INSERT INTO audit(user_id,action,target) VALUES('server-owner-setting','admin.grant',?)",
+    ).run(owner.id);
+    d.exec("COMMIT");
+    return true;
+  } catch (error) {
+    d.exec("ROLLBACK");
+    throw error;
+  }
 }
 export function products(admin = false): Product[] {
   return (db().prepare("SELECT data FROM products").all() as { data: string }[])

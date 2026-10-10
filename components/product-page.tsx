@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ChevronRight,
+  ZoomIn,
+  X,
   ShoppingBag,
   Heart,
   Scale,
@@ -38,6 +40,7 @@ export function ProductPage({
   product: Product;
   products: Product[];
 }) {
+  const zoom = useRef<HTMLDialogElement>(null);
   const s = useStore(),
     [color, setColor] = useState(p.colors[0]),
     [size, setSize] = useState(p.sizes[0]),
@@ -108,6 +111,20 @@ export function ProductPage({
       </div>
       <div className="pdp">
         <div className="product-gallery">
+          <dialog
+            ref={zoom}
+            className="photo-zoom"
+            aria-label="Foto ampliada do produto"
+          >
+            <button
+              className="button button-dark"
+              onClick={() => zoom.current?.close()}
+            >
+              Fechar foto <X size={18} />
+            </button>
+            <img src={image} alt={p.name + " — foto ampliada"} />
+            <p>{p.name}</p>
+          </dialog>
           <div className="gallery-main">
             <img
               src={image}
@@ -115,6 +132,13 @@ export function ProductPage({
               width={800}
               height={650}
             />
+            <button
+              className="gallery-zoom button button-dark"
+              onClick={() => zoom.current?.showModal()}
+              aria-label="Ampliar foto do produto"
+            >
+              <ZoomIn size={18} /> Ampliar
+            </button>
             <button
               className={
                 "favorite-button " +

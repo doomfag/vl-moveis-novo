@@ -132,3 +132,17 @@ Em **Pedidos e clientes**, pedidos pendentes permitem desconto em reais. Esse va
 ## Atualizar sua cópia local
 
 Encerre o servidor com Ctrl+C, baixe a versão atual da branch `preview-vl-moveis` no GitHub e extraia sobre a mesma pasta do projeto, substituindo os arquivos do código. Preserve `.env.local`, `data/store.sqlite` e arquivos WAL; eles não são incluídos no ZIP. Não apague a pasta antiga com seus dados. Depois execute `bash iniciar-linux.sh` na pasta do projeto. As imagens originais são atualizadas com uma migração que preserva preços, estoque, pedidos e imagens personalizadas. A rota de PDFs antigos permanece bloqueada mesmo se arquivos de uma versão anterior ainda estiverem no disco.
+
+## Comparação e fotos
+
+A comparação mostra todas as características por padrão, explica composição e recursos e permite selecionar medida, cor e prioridade. Menor investimento só é indicado para modelos da mesma categoria e medidas equivalentes, com preços conhecidos nas variações escolhidas. A economia é calculada sobre esses preços. Preferências por algodão, viscoelástica ou baú usam somente características documentadas; não há uma nota geral de qualidade inventada.
+
+`python scripts/upgrade-catalog.py` recupera resolução nativa dos PDFs já fornecidos e transcreve as especificações dos travesseiros. `data/photo-audit.json` registra fonte, página e dimensões das fotos. `data/catalog-upgrade-v4.json` permite atualizar bancos existentes sem substituir preços, estoque, contas ou alterações manuais. A quantidade de ângulos continua limitada à fonte: embalagem não é foto do produto sem embalagem, e recortes ampliados não são anunciados como novos ângulos. Fontes web de terceiros precisam de identificação do modelo exato e autorização de uso.
+
+## Atualização local e administrador
+
+Na pasta nova, execute `bash atualizar-linux.sh`. Ele procura instalações antigas em Downloads, pede que você escolha uma pelo número e copia um backup consistente do SQLite (incluindo dados em WAL), as fotos personalizadas e `.env.local`. A pasta antiga permanece intacta. O script recusa substituir um banco já existente na pasta nova ou misturar configurações diferentes. Encerre o servidor antigo com Ctrl+C e inicie a nova pasta com `bash iniciar-linux.sh`.
+
+Para conceder acesso local ao administrador, primeiro cadastre e confirme sua conta no site. Em outro terminal aberto nessa mesma pasta, execute `bash habilitar-admin-linux.sh` e informe somente seu e-mail. Ele lê a configuração privada para usar o banco correto; não pede nem imprime senha ou chave.
+
+Na hospedagem, a configuração privada `STORE_OWNER_EMAIL` identifica o primeiro proprietário. O acesso só é concedido após a confirmação desse e-mail e se ainda não existir um administrador. O papel fica salvo no banco, tem auditoria e não é redefinido em reinícios. Outros clientes nunca escolhem o papel de administrador no cadastro. Consulte [PUBLICAR.md](PUBLICAR.md) para Render, disco persistente e mudança do domínio mantendo Zoho e Resend.

@@ -1,0 +1,1637 @@
+{
+  "sources": [
+    {
+      "file": "comercial.pdf",
+      "sha256": "d7f55334f37b8a6b5266af283c5f53625a017d21ea037e588e04ee19e5575359",
+      "rights": "Manufacturer catalogue supplied by shop; no third-party web images copied."
+    },
+    {
+      "file": "travesseiros.pdf",
+      "sha256": "76d7c79e2a70f7dcc6d7a77a6aee597d5fd3cce3427333b0bc40693345f8196f",
+      "rights": "Manufacturer catalogue supplied by shop; no third-party web images copied."
+    },
+    {
+      "file": "hotelaria.pdf",
+      "sha256": "5b4ae84e682b69ff248b0811d209e881d585d3b27815a960876100eecf317901",
+      "rights": "Manufacturer catalogue supplied by shop; no third-party web images copied."
+    },
+    {
+      "file": "revendedor-2021.pdf",
+      "sha256": "d2edd5f497d4950470c5d3948c4a021535376c36dd94545268558f542f73e380",
+      "rights": "Manufacturer catalogue supplied by shop; no third-party web images copied."
+    }
+  ],
+  "photos": [
+    {
+      "file": "/catalogo/comercial-3-produto-hd.webp",
+      "source": "comercial",
+      "page": 3,
+      "pixels": [
+        1358,
+        666
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-4-produto-hd.webp",
+      "source": "comercial",
+      "page": 4,
+      "pixels": [
+        1270,
+        625
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-5-produto-hd.webp",
+      "source": "comercial",
+      "page": 5,
+      "pixels": [
+        1364,
+        540
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-6-produto-hd.webp",
+      "source": "comercial",
+      "page": 6,
+      "pixels": [
+        1330,
+        643
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-7-produto-hd.webp",
+      "source": "comercial",
+      "page": 7,
+      "pixels": [
+        1359,
+        661
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-8-produto-hd.webp",
+      "source": "comercial",
+      "page": 8,
+      "pixels": [
+        1416,
+        727
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-9-produto-hd.webp",
+      "source": "comercial",
+      "page": 9,
+      "pixels": [
+        1338,
+        664
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-10-produto-hd.webp",
+      "source": "comercial",
+      "page": 10,
+      "pixels": [
+        1449,
+        694
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-12-produto-hd.webp",
+      "source": "comercial",
+      "page": 12,
+      "pixels": [
+        1397,
+        757
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-13-produto-hd.webp",
+      "source": "comercial",
+      "page": 13,
+      "pixels": [
+        271,
+        194
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-14-produto-hd.webp",
+      "source": "comercial",
+      "page": 14,
+      "pixels": [
+        1418,
+        693
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-15-produto-hd.webp",
+      "source": "comercial",
+      "page": 15,
+      "pixels": [
+        1419,
+        706
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-16-produto-hd.webp",
+      "source": "comercial",
+      "page": 16,
+      "pixels": [
+        1500,
+        680
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-17-produto-hd.webp",
+      "source": "comercial",
+      "page": 17,
+      "pixels": [
+        1426,
+        644
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-18-produto-hd.webp",
+      "source": "comercial",
+      "page": 18,
+      "pixels": [
+        1200,
+        626
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-19-produto-hd.webp",
+      "source": "comercial",
+      "page": 19,
+      "pixels": [
+        1773,
+        785
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-20-produto-hd.webp",
+      "source": "comercial",
+      "page": 20,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-21-produto-hd.webp",
+      "source": "comercial",
+      "page": 21,
+      "pixels": [
+        1207,
+        1167
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-22-produto-hd.webp",
+      "source": "comercial",
+      "page": 22,
+      "pixels": [
+        1374,
+        1374
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-23-produto-hd.webp",
+      "source": "comercial",
+      "page": 23,
+      "pixels": [
+        1779,
+        2001
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-24-produto-hd.webp",
+      "source": "comercial",
+      "page": 24,
+      "pixels": [
+        1379,
+        1379
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-25-produto-hd.webp",
+      "source": "comercial",
+      "page": 25,
+      "pixels": [
+        1355,
+        624
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-26-produto-hd.webp",
+      "source": "comercial",
+      "page": 26,
+      "pixels": [
+        1381,
+        1380
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-27-produto-hd.webp",
+      "source": "comercial",
+      "page": 27,
+      "pixels": [
+        1001,
+        1001
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-28-produto-hd.webp",
+      "source": "comercial",
+      "page": 28,
+      "pixels": [
+        1001,
+        1001
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-30-produto-hd.webp",
+      "source": "comercial",
+      "page": 30,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-31-produto-hd.webp",
+      "source": "comercial",
+      "page": 31,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-32-produto-hd.webp",
+      "source": "comercial",
+      "page": 32,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-33-produto-hd.webp",
+      "source": "comercial",
+      "page": 33,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-34-produto-hd.webp",
+      "source": "comercial",
+      "page": 34,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-35-produto-hd.webp",
+      "source": "comercial",
+      "page": 35,
+      "pixels": [
+        277,
+        198
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-36-produto-hd.webp",
+      "source": "comercial",
+      "page": 36,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-37-produto-hd.webp",
+      "source": "comercial",
+      "page": 37,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-38-produto-hd.webp",
+      "source": "comercial",
+      "page": 38,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-39-produto-hd.webp",
+      "source": "comercial",
+      "page": 39,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-40-produto-hd.webp",
+      "source": "comercial",
+      "page": 40,
+      "pixels": [
+        1001,
+        1001
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-41-produto-hd.webp",
+      "source": "comercial",
+      "page": 41,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-41-detalhes-hd.webp",
+      "source": "comercial",
+      "page": 41,
+      "pixels": [
+        2069,
+        364
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-41-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 41,
+      "pixels": [
+        401,
+        258
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-41-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 41,
+      "pixels": [
+        395,
+        258
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-41-detalhe-3-hd.webp",
+      "source": "comercial",
+      "page": 41,
+      "pixels": [
+        395,
+        258
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-42-produto-hd.webp",
+      "source": "comercial",
+      "page": 42,
+      "pixels": [
+        1528,
+        856
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-43-produto-hd.webp",
+      "source": "comercial",
+      "page": 43,
+      "pixels": [
+        1495,
+        838
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-44-produto-hd.webp",
+      "source": "comercial",
+      "page": 44,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-45-produto-hd.webp",
+      "source": "comercial",
+      "page": 45,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-46-produto-hd.webp",
+      "source": "comercial",
+      "page": 46,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-47-produto-hd.webp",
+      "source": "comercial",
+      "page": 47,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-48-produto-hd.webp",
+      "source": "comercial",
+      "page": 48,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-49-produto-hd.webp",
+      "source": "comercial",
+      "page": 49,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-50-produto-hd.webp",
+      "source": "comercial",
+      "page": 50,
+      "pixels": [
+        1001,
+        989
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-51-produto-hd.webp",
+      "source": "comercial",
+      "page": 51,
+      "pixels": [
+        1419,
+        804
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-52-produto-hd.webp",
+      "source": "comercial",
+      "page": 52,
+      "pixels": [
+        1001,
+        586
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-53-produto-hd.webp",
+      "source": "comercial",
+      "page": 53,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-54-produto-hd.webp",
+      "source": "comercial",
+      "page": 54,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-55-produto-hd.webp",
+      "source": "comercial",
+      "page": 55,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-56-produto-hd.webp",
+      "source": "comercial",
+      "page": 56,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-58-produto-hd.webp",
+      "source": "comercial",
+      "page": 58,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-59-produto-hd.webp",
+      "source": "comercial",
+      "page": 59,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-60-produto-hd.webp",
+      "source": "comercial",
+      "page": 60,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-61-produto-hd.webp",
+      "source": "comercial",
+      "page": 61,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-63-produto-hd.webp",
+      "source": "comercial",
+      "page": 63,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-63-pes-hd.webp",
+      "source": "comercial",
+      "page": 63,
+      "pixels": [
+        415,
+        267
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-64-produto-hd.webp",
+      "source": "comercial",
+      "page": 64,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-64-pes-hd.webp",
+      "source": "comercial",
+      "page": 64,
+      "pixels": [
+        417,
+        286
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-65-produto-hd.webp",
+      "source": "comercial",
+      "page": 65,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-65-pes-hd.webp",
+      "source": "comercial",
+      "page": 65,
+      "pixels": [
+        413,
+        289
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-67-produto-hd.webp",
+      "source": "comercial",
+      "page": 67,
+      "pixels": [
+        2068,
+        1236
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-69-produto-hd.webp",
+      "source": "comercial",
+      "page": 69,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-71-produto-hd.webp",
+      "source": "comercial",
+      "page": 71,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-73-produto-hd.webp",
+      "source": "comercial",
+      "page": 73,
+      "pixels": [
+        1308,
+        975
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-74-produto-hd.webp",
+      "source": "comercial",
+      "page": 74,
+      "pixels": [
+        1283,
+        955
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-75-produto-hd.webp",
+      "source": "comercial",
+      "page": 75,
+      "pixels": [
+        1350,
+        1005
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-76-produto-hd.webp",
+      "source": "comercial",
+      "page": 76,
+      "pixels": [
+        1310,
+        975
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-73-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 73,
+      "pixels": [
+        255,
+        272
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-73-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 73,
+      "pixels": [
+        255,
+        168
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-74-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 74,
+      "pixels": [
+        256,
+        272
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-74-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 74,
+      "pixels": [
+        256,
+        167
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-75-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 75,
+      "pixels": [
+        255,
+        272
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-75-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 75,
+      "pixels": [
+        255,
+        168
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-76-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 76,
+      "pixels": [
+        256,
+        273
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-76-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 76,
+      "pixels": [
+        256,
+        168
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-77-produto-hd.webp",
+      "source": "comercial",
+      "page": 77,
+      "pixels": [
+        1387,
+        1014
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-78-produto-hd.webp",
+      "source": "comercial",
+      "page": 78,
+      "pixels": [
+        1279,
+        953
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-79-produto-hd.webp",
+      "source": "comercial",
+      "page": 79,
+      "pixels": [
+        2068,
+        1540
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-80-produto-hd.webp",
+      "source": "comercial",
+      "page": 80,
+      "pixels": [
+        2068,
+        1540
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-81-produto-hd.webp",
+      "source": "comercial",
+      "page": 81,
+      "pixels": [
+        1328,
+        989
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-77-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 77,
+      "pixels": [
+        285,
+        297
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-77-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 77,
+      "pixels": [
+        285,
+        188
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-78-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 78,
+      "pixels": [
+        284,
+        298
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-78-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 78,
+      "pixels": [
+        284,
+        189
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-79-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 79,
+      "pixels": [
+        420,
+        439
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-79-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 79,
+      "pixels": [
+        420,
+        279
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-80-detalhe-1-hd.webp",
+      "source": "comercial",
+      "page": 80,
+      "pixels": [
+        414,
+        433
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-80-detalhe-2-hd.webp",
+      "source": "comercial",
+      "page": 80,
+      "pixels": [
+        414,
+        275
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-82-produto-hd.webp",
+      "source": "comercial",
+      "page": 82,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-83-produto-hd.webp",
+      "source": "comercial",
+      "page": 83,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-84-produto-hd.webp",
+      "source": "comercial",
+      "page": 84,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-85-produto-hd.webp",
+      "source": "comercial",
+      "page": 85,
+      "pixels": [
+        2068,
+        1228
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-86-produto-hd.webp",
+      "source": "comercial",
+      "page": 86,
+      "pixels": [
+        2068,
+        1540
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-87-produto-hd.webp",
+      "source": "comercial",
+      "page": 87,
+      "pixels": [
+        2068,
+        1540
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-88-produto-hd.webp",
+      "source": "comercial",
+      "page": 88,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-89-produto-hd.webp",
+      "source": "comercial",
+      "page": 89,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-90-produto-hd.webp",
+      "source": "comercial",
+      "page": 90,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-4-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 4,
+      "pixels": [
+        438,
+        158
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-5-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 5,
+      "pixels": [
+        467,
+        207
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-6-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 6,
+      "pixels": [
+        435,
+        249
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-7-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 7,
+      "pixels": [
+        446,
+        194
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-8-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 8,
+      "pixels": [
+        460,
+        194
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-9-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 9,
+      "pixels": [
+        405,
+        179
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-10-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 10,
+      "pixels": [
+        470,
+        182
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-11-produto-hd.webp",
+      "source": "hotelaria",
+      "page": 11,
+      "pixels": [
+        542,
+        235
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-12-colchao-hd.webp",
+      "source": "hotelaria",
+      "page": 12,
+      "pixels": [
+        283,
+        160
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-101-produto-hd.webp",
+      "source": "comercial",
+      "page": 101,
+      "pixels": [
+        1704,
+        826
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-103-produto-hd.webp",
+      "source": "comercial",
+      "page": 103,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-104-produto-hd.webp",
+      "source": "comercial",
+      "page": 104,
+      "pixels": [
+        1003,
+        655
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-105-produto-hd.webp",
+      "source": "comercial",
+      "page": 105,
+      "pixels": [
+        1345,
+        1009
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-106-produto-hd.webp",
+      "source": "comercial",
+      "page": 106,
+      "pixels": [
+        605,
+        771
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-108-produto-hd.webp",
+      "source": "comercial",
+      "page": 108,
+      "pixels": [
+        1501,
+        1501
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-109-produto-hd.webp",
+      "source": "comercial",
+      "page": 109,
+      "pixels": [
+        1777,
+        1777
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-110-produto-hd.webp",
+      "source": "comercial",
+      "page": 110,
+      "pixels": [
+        1293,
+        1293
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-111-produto-hd.webp",
+      "source": "comercial",
+      "page": 111,
+      "pixels": [
+        1108,
+        1107
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-112-produto-hd.webp",
+      "source": "comercial",
+      "page": 112,
+      "pixels": [
+        839,
+        1117
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-123-produto-hd.webp",
+      "source": "comercial",
+      "page": 123,
+      "pixels": [
+        413,
+        1028
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-124-produto-hd.webp",
+      "source": "comercial",
+      "page": 124,
+      "pixels": [
+        1023,
+        758
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-125-produto-hd.webp",
+      "source": "comercial",
+      "page": 125,
+      "pixels": [
+        933,
+        927
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-126-produto-hd.webp",
+      "source": "comercial",
+      "page": 126,
+      "pixels": [
+        2068,
+        1268
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-114-travesseiro-espuma-viscoelastica-hd.webp",
+      "source": "travesseiros",
+      "page": 3,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-114-travesseiro-espuma-latex-hd.webp",
+      "source": "travesseiros",
+      "page": 4,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-115-travesseiro-flocos-hd.webp",
+      "source": "travesseiros",
+      "page": 5,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-115-travesseiro-nuvem-hd.webp",
+      "source": "travesseiros",
+      "page": 6,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-116-travesseiro-percal-200-fios-hd.webp",
+      "source": "travesseiros",
+      "page": 7,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-116-travesseiro-max-malha-hd.webp",
+      "source": "travesseiros",
+      "page": 8,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-117-travesseiro-aman-hd.webp",
+      "source": "travesseiros",
+      "page": 9,
+      "pixels": [
+        2259,
+        892
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-117-travesseiro-amore-hd.webp",
+      "source": "travesseiros",
+      "page": 10,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-118-travesseiro-high-comfort-hd.webp",
+      "source": "travesseiros",
+      "page": 11,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-118-travesseiro-percal-200-fios-plus-hd.webp",
+      "source": "travesseiros",
+      "page": 12,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-119-travesseiro-casadinho-hd.webp",
+      "source": "travesseiros",
+      "page": 13,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-14-travesseiro-orthotel-percal-hd.webp",
+      "source": "travesseiros",
+      "page": 14,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/travesseiros-15-hd.webp",
+      "source": "travesseiros",
+      "page": 15,
+      "pixels": [
+        1934,
+        1288
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-10-hd.webp",
+      "source": "revendedor-2021",
+      "page": 10,
+      "pixels": [
+        1143,
+        556
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-11-hd.webp",
+      "source": "revendedor-2021",
+      "page": 11,
+      "pixels": [
+        1144,
+        555
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-13-hd.webp",
+      "source": "revendedor-2021",
+      "page": 13,
+      "pixels": [
+        1142,
+        555
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-14-hd.webp",
+      "source": "revendedor-2021",
+      "page": 14,
+      "pixels": [
+        1148,
+        558
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-15-hd.webp",
+      "source": "revendedor-2021",
+      "page": 15,
+      "pixels": [
+        1143,
+        556
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-16-hd.webp",
+      "source": "revendedor-2021",
+      "page": 16,
+      "pixels": [
+        1143,
+        556
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-17-hd.webp",
+      "source": "revendedor-2021",
+      "page": 17,
+      "pixels": [
+        1144,
+        555
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-18-hd.webp",
+      "source": "revendedor-2021",
+      "page": 18,
+      "pixels": [
+        1143,
+        556
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-45-cinza-hd.webp",
+      "source": "revendedor-2021",
+      "page": 45,
+      "pixels": [
+        1002,
+        580
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-45-crema-hd.webp",
+      "source": "revendedor-2021",
+      "page": 45,
+      "pixels": [
+        995,
+        569
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-45-nero-hd.webp",
+      "source": "revendedor-2021",
+      "page": 45,
+      "pixels": [
+        1002,
+        571
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-45-rosolare-hd.webp",
+      "source": "revendedor-2021",
+      "page": 45,
+      "pixels": [
+        945,
+        532
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-102-produto-hd.webp",
+      "source": "comercial",
+      "page": 102,
+      "pixels": [
+        1264,
+        507
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-107-produto-hd.webp",
+      "source": "comercial",
+      "page": 107,
+      "pixels": [
+        1775,
+        535
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-122-protetor-hd.webp",
+      "source": "comercial",
+      "page": 122,
+      "pixels": [
+        711,
+        511
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-122-saia-hd.webp",
+      "source": "comercial",
+      "page": 122,
+      "pixels": [
+        817,
+        252
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-127-roll-hd.webp",
+      "source": "comercial",
+      "page": 127,
+      "pixels": [
+        1272,
+        439
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/comercial-127-pet-hd.webp",
+      "source": "comercial",
+      "page": 127,
+      "pixels": [
+        1427,
+        492
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-12-base-hd.webp",
+      "source": "hotelaria",
+      "page": 12,
+      "pixels": [
+        283,
+        149
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-13-pluma-hd.webp",
+      "source": "hotelaria",
+      "page": 13,
+      "pixels": [
+        147,
+        95
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/hotelaria-13-union-hd.webp",
+      "source": "hotelaria",
+      "page": 13,
+      "pixels": [
+        151,
+        96
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    },
+    {
+      "file": "/catalogo/revendedor-2021-54-hd.webp",
+      "source": "revendedor-2021",
+      "page": 54,
+      "pixels": [
+        1142,
+        556
+      ],
+      "kind": "original manufacturer photo; recovered native resolution"
+    }
+  ],
+  "note": "Resolution is limited by original pixels. Packaging photos are not unwrapped photos. Additional angles require exact authorized originals."
+}

@@ -7,7 +7,7 @@
     "category": "Colchões",
     "description": "É com grande satisfação que apresentamos o Exclusive Gel. Um colchão imponente que possui bordado em matelassê em espuma macia, elevando o nível de maciez do produto e a sensação de conforto e aconchego. Conta ainda com o Pillow Top Touch em espuma viscoelástica com gel, no qual as células de memória moldam o formato do corpo e o gel deixa o colchão mais fresco. A espuma extra firme e a dupla camada de espuma firme entregam maior sustentação e durabilidade ao produto, garantindo assim a sua qualidade. Possui ainda uma estrutura de molas superpocket ensacadas individualmente, que moldam as curvas do corpo, proporcionando conforto individualizado.\n\n• Tecido em malha 100% Poliéster. • Pillow Top Touch em espuma viscoelástica em Gel. • Molas Superpocket ensacadas individualmente. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Espuma certificada firme 100% poliuretano • Dupla camada de espuma firme selada.",
     "images": [
-      "/catalogo/comercial-3-produto.webp"
+      "/catalogo/comercial-3-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -23,7 +23,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-3-produto.webp"
+        "image": "/catalogo/comercial-3-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -40,7 +40,8 @@
       "Linha": "Ortobom",
       "Material": "malha 100% Poliéster",
       "Altura": "34 cm",
-      "Estrutura de molas": "Superpocket"
+      "Estrutura de molas": "Superpocket",
+      "Camada superior": "Pillow Top Touch em espuma viscoelástica com gel"
     },
     "variantInventory": {}
   },
@@ -52,7 +53,7 @@
     "category": "Colchões",
     "description": "O Exclusive Visco é um colchão moderno feito com espuma viscoelástica com gel, que se molda aos contornos do corpo, dando maior suporte e reduzindo a quantidade de vezes que você se movimenta durante a noite. Seu matelassê é composto por tecido em malha 100% poliéster Super Soft e espuma Extra Firme, o que promove maior sustentação e durabilidade ao produto. Com seu tecido antiderrapante e sistema no turn, movimentos indesejados são evitados e não há a necessidade de virar o colchão, entregando maior praticidade durante os cuidados com o produto.\n\nCaracterísticas do produto • Tecido em malha 100% Poliéster. • Camada de conforto em espuma viscoelástica com gel. • Espuma extra firme em poliuretano ecologicamente correta. • Tecido antiderrapante que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-4-produto.webp"
+      "/catalogo/comercial-4-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -68,7 +69,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-4-produto.webp"
+        "image": "/catalogo/comercial-4-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -96,7 +97,7 @@
     "category": "Colchões",
     "description": "O colchão Exclusive Foam conta com design moderno e robusto. Apresenta espuma HR - High Resilience, uma espuma de alta tecnologia e elasticidade que proporciona melhor suporte nos pontos de pressão do corpo. Seu tecido em malha é superelegante e leve, proporcionando um toque suave. Com um bordado em matelassê em manta acrílica e espuma extra firme, entrega maior maciez, sustentação e durabilidade ao produto.\n\n• Tecido em malha 100% Poliéster com toque suave. • Bordado em Matelassê com manta acrílica. • Espuma HR - High Resilience. • Espuma certificada firme 100% poliuretano • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-5-produto.webp"
+      "/catalogo/comercial-5-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -112,7 +113,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-5-produto.webp"
+        "image": "/catalogo/comercial-5-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -140,7 +141,7 @@
     "category": "Colchões",
     "description": "Composto por molas superpocket ensacadas individualmente, Pillow Top com espuma viscoelástica (desenvolvida pela Nasa) e tecido de malha, o New Freedom é a perfeita combinação de qualidade, beleza, conforto, segurança e durabilidade. Sua estrutura de molas superpocket ensacadas individualmente reduz a vibração ao longo de toda a superfície do colchão. Seu Pillow Top com espuma viscoelástica proporciona uma perfeita acomodação e um repouso restaurador e aconchegante. O matelassê do colchão New Freedom é produzido com tecido de malha que oferece um toque diferenciado, resultando em muito mais maciez. O design sofi sticado e o sistema No Turn (não precisa virar o colchão) são outros diferenciais do colchão ideal para quem busca noites de sono com conforto privilegiado.\n\nCaracterísticas do produto • Tecido em malha 100% Poliéster com toque super soft. • Bordado em matelassê em espuma firme de alta performance. • Pillow Top em espuma viscoelástica de alta tecnologia. • Camada de sustentação em espuma D33 • Molas superpocket ensacadas individualmente. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-6-produto.webp"
+      "/catalogo/comercial-6-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -156,7 +157,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-6-produto.webp"
+        "image": "/catalogo/comercial-6-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -186,7 +187,7 @@
     "category": "Colchões",
     "description": "O colchão Exclusive Sleep possui bordado em matelassê em manta acrílica e tecido em malha de alta gramatura, elevando o nível de maciez e dando maior vida útil ao colchão. Sua espuma HR - High Resilience promove melhor adequação da coluna, aliviando dores e concedendo melhor postura durante o sono. O Exclusive Sleep conta com uma estrutura de molas superpocket ensacadas individualmente que moldam as curvas do corpo, proporcionando conforto individualizado.\n\nCaracterísticas do produto • Tecido em malha 100% Poliéster com toque suave. • Bordado em matelassê em manta acrílica e espuma convencional. • Camada de conforto em espuma HR - High Resilience. • Molas superpocket ensacadas individualmente. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-7-produto.webp"
+      "/catalogo/comercial-7-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -202,7 +203,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-7-produto.webp"
+        "image": "/catalogo/comercial-7-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -231,7 +232,7 @@
     "category": "Colchões",
     "description": "O Exclusive Spring possui estrutura de molas de fio contínuo que trabalha com resistência progressiva, onde quanto maior à força empregada maior o suporte. Conta com bordado em matelassê em espuma macia e tecido em malha super soft, entregando leveza, resistência e maior sensação de conforto. Sua espuma extra firme concede maior resistência e durabilidade ao produto, além do sistema No Turn, em que não se faz necessário virar o colchão.\n\nCaracterísticas do produto • Tecido em malha com toque super soft. • Bordado em matelassê em espuma macia. • Espuma extra firme certificada 100% poliuretano. • Molas Superlastic que entregam firmeza superior e maior suporte. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-8-produto.webp"
+      "/catalogo/comercial-8-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -247,7 +248,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-8-produto.webp"
+        "image": "/catalogo/comercial-8-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -275,7 +276,7 @@
     "category": "Colchões",
     "description": "O Orthopedic é produzido com madeira tratada e de reflorestamento, possuindo tratamento especial com agentes bacterícidas que impedem a proliferação de fungos, cupins e brocas. Conta também com tecido de malha, extremamente macio e resistente, e bordado em matelassê em manta acrílica e espuma, proporcionando noites de sono reparadoras. Sua espuma firme promove maior conforto e durabilidade ao produto.\n\nCaracterísticas do produto • Tecido em malha 100% poliéster. • Bordado em matelassê em manta acrílica e espuma convencional. • Espuma firme certificada 100% poliuretano. • Estrutura de madeira tratada de reflorestamento. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-9-produto.webp"
+      "/catalogo/comercial-9-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -288,7 +289,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-9-produto.webp"
+        "image": "/catalogo/comercial-9-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -316,7 +317,7 @@
     "category": "Colchões",
     "description": "O colchão Exclusive LFK apresenta uma estrutura de molas LFK com sistema de resistência progressiva, onde as molas se flexionam de maneira independente e devolvem a adequação de imediato, alinhando a coluna e proporcionando sono de qualidade. Seu bordado em matelassê em espuma firme e seu tecido em malha de poliéster e linho promovem maior conforto e sensação de aconchego. Esse colchão ainda conta com o sistema No Turn, não havendo necessidade de virar o colchão, entregando assim maior praticidade durante os cuidados com o produto.\n\nCaracterísticas do produto • Tecido em malha de poliéster e linho. • Bordado em matelassê em espuma firme. • Espuma extra firme certificada 100% poliuretano. • Molas LFK com sistema de resistência progressiva para menor transferência de movimento. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-10-produto.webp"
+      "/catalogo/comercial-10-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -332,7 +333,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-10-produto.webp"
+        "image": "/catalogo/comercial-10-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -361,7 +362,7 @@
     "category": "Colchões",
     "description": "O colchão Fit Spring Pocket apresenta estrutura de molas superpocket ensacadas individualmente, que proporcionam um melhor suporte às partes mais pesadas do corpo, elevando à qualidade do sono. Seu revestimento em tecido de malha com toque suave conta com a tecnologia de microporos, que facilita a passagem de ar no colchão, e seu bordado em matelassê em manta acrílica e espuma promovem maior maciez ao produto.\n\nCaracterísticas do produto •Tecido em malha com toque suave. • Bordado em matelassê em manta acrílica e espuma convencional. • Espuma firme certificada 100% poliuretano. • Molas Superpocket ensacadas individualmente. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-12-produto.webp"
+      "/catalogo/comercial-12-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -377,7 +378,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-12-produto.webp"
+        "image": "/catalogo/comercial-12-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -406,7 +407,7 @@
     "category": "Colchões",
     "description": "O Fit Progressive é sinônimo de conforto e bem-estar. Isso se dá pela sua estrutura de Molas Nanolastic Bicônicas, produzidas em aço e com resistência progressiva ao peso, agregando excelente flexibilidade e durabilidade ao colchão. Seu bordado em matelassê em manta acrílica e seu tecido em malha com toque suave proporcionam maior conforto e maciez ao produto, contribuindo assim para um sono reparador. Apresenta ainda o sistema No Turn, dispensando a necessidade de virar o colchão.\n\nCaracterísticas do produto • Tecido em malha com toque suave. • Bordado em matelassê em manta acrílica e espuma convencional. • Espuma firme selada 100% poliuretano. • Molas nanolastic de alta resistência e durabilidade. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-13-produto.webp"
+      "/catalogo/comercial-13-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -422,7 +423,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-13-produto.webp"
+        "image": "/catalogo/comercial-13-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -451,7 +452,7 @@
     "category": "Colchões",
     "description": "O colchão Fit Spring possui estrutura de molas de fio contínuo com sistema de resistência progressiva, onde quanto maior o peso empregado maior o suporte. Com revestimento em malha e bordado em matelassê em espuma, se eleva o nível de maciez do produto e dá maior vida útil ao mesmo, além de um toque de refrescância graças à tecnologia de microporos que facilita a passagem de ar no colchão.\n\nCaracterísticas do produto • Tecido em malha 100% poliéster. • Bordado em matelassê com espuma certificada. • Espuma firme 100% poliuretano. • Molas Superlastic de alta resistência. • Tecido antiderrapante, que evita que o colchão deslize sobre a base. • Sistema No Turn - não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-14-produto.webp"
+      "/catalogo/comercial-14-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -467,7 +468,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-14-produto.webp"
+        "image": "/catalogo/comercial-14-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -495,7 +496,7 @@
     "category": "Colchões",
     "description": "O colchão Fit Ortopédico é revestido por tecido resistente em poliéster e viscose. Sua estrutura em madeira tratada confere maior conforto e durabilidade. Para completar todos esses benefícios, o Fit Ortopédico é composto por espuma convencional 100% Poliuretano, proporcionando melhor sustentação, relaxamento e conforto.\n\nCaracterísticas do produto • Tecido 53% Poliester e 47% Viscose. • Bordado em Matelassê em espuma 100% Poliuretano em ambos os lados do produto. • Espuma Firme Certificada 100% Poliuretano. • Estrutura de Madeira Tratada de Reflorestamento. • Reforço Lateral em PU (Poliuretano).",
     "images": [
-      "/catalogo/comercial-15-produto.webp"
+      "/catalogo/comercial-15-produto-hd.webp"
     ],
     "sizes": [
       "188 × 138 cm",
@@ -508,7 +509,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-15-produto.webp"
+        "image": "/catalogo/comercial-15-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -536,7 +537,7 @@
     "category": "Colchões",
     "description": "O Colchão Fit 23 possui Tecido Resistente em malha de Poliéster e bordado em matelassê com espuma suave. Sua espuma certificada D23 é produzida em poliol de soja e oferece alta performance e excelente desempenho.\n\n• Revestimento em malha 100% poliéster. • Bordado em Matelassê. • Espuma certificada 100% poliuretano D23.",
     "images": [
-      "/catalogo/comercial-16-produto.webp"
+      "/catalogo/comercial-16-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -548,7 +549,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-16-produto.webp"
+        "image": "/catalogo/comercial-16-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -564,7 +565,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm",
       "Linha": "Ortobom",
       "Material": "malha 100% poliéster",
-      "Altura": "12 cm"
+      "Espuma": "D23",
+      "Alturas no catálogo": "12 cm · 17 cm · 20 cm"
     },
     "variantInventory": {}
   },
@@ -576,7 +578,7 @@
     "category": "Colchões",
     "description": "O colchão Fit 28 é revestido em malha resistente 100% com bordado em matelassê, entregando maior conforto e maciez. Sua espuma certificada é produzida com Poliol à base de soja e oferece alta performance e excelente desempenho.\n\nCaracterísticas do produto • Tecido em malha 100%poliéster. • Bordado em matelassê. • Espuma convencional certificada D28.",
     "images": [
-      "/catalogo/comercial-17-produto.webp"
+      "/catalogo/comercial-17-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -590,7 +592,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-17-produto.webp"
+        "image": "/catalogo/comercial-17-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -606,7 +608,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 188 × 158 cm · 198 × 158 cm",
       "Linha": "Ortobom",
       "Material": "malha 100%poliéster",
-      "Altura": "13 cm"
+      "Espuma": "D28",
+      "Alturas no catálogo": "13 cm · 17 cm · 20 cm"
     },
     "variantInventory": {}
   },
@@ -618,7 +621,7 @@
     "category": "Colchões",
     "description": "O Colchão FIT 33 possui revestimento em malha de Poliéster, com bordado em matelassê em espuma convencional. Sua espuma certificada 100% Poliuretano é produzida com Poliol à base de soja e oferece alta performance e excelente desempenho.\n\nCaracterísticas do produto • Revestimento em malha 100%poliéster. • Bordado em matelassê. • Espuma certificada em poliuretano D33.\n\nFit 33 - Altura 13 cm Fit 33 - Altura 17 cm Fit 33 - Altura 20 cm Fit 33 - Altura 25 cm Fit 33 - Altura 30 cm",
     "images": [
-      "/catalogo/comercial-18-produto.webp"
+      "/catalogo/comercial-18-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -631,7 +634,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-18-produto.webp"
+        "image": "/catalogo/comercial-18-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -647,7 +650,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm",
       "Linha": "Ortobom",
       "Material": "malha 100%poliéster",
-      "Altura": "13 cm"
+      "Espuma": "D33",
+      "Alturas no catálogo": "13 cm · 17 cm · 20 cm · 25 cm · 30 cm"
     },
     "variantInventory": {}
   },
@@ -659,7 +663,7 @@
     "category": "Colchões",
     "description": "O Colchão Fit 45 possui tecido resistente em malha de Poliéster. Seu bordado proporciona maior volume e maciez. O Fit 45 ainda conta com espuma certificada 100% Poliuretano produzida com poliol à base de soja.\n\nCaracterísticas do produto • Tecido em malha 100% poliéster. • Bordado em Matelassê. • Espuma certificada em poliuretano D45.\n\nFit 45 - Altura 13 cm Fit 45 - Altura 17 cm Fit 45 - Altura 20 cm Fit 45 - Altura 25 cm Fit 45 - Altura 30 cm",
     "images": [
-      "/catalogo/comercial-19-produto.webp"
+      "/catalogo/comercial-19-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -674,7 +678,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-19-produto.webp"
+        "image": "/catalogo/comercial-19-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -690,7 +694,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
       "Material": "malha 100% poliéster",
-      "Altura": "13 cm"
+      "Espuma": "D45",
+      "Alturas no catálogo": "13 cm · 17 cm · 20 cm · 25 cm · 30 cm"
     },
     "variantInventory": {}
   },
@@ -702,7 +707,7 @@
     "category": "Colchões",
     "description": "O Colchão Baby Light possui tecido e faixa lateral em Viscose e Poliéster. É revestido em Plavinil Vulca Brilho que evita o contato de líquidos com a espuma e o tecido, podendo ser usado para a troca de fraldas. A Espuma Certifi cada 100% Poliuretano oferece alta performance, apresentando excelente desempenho e presenteando o seu bebê com a sensação de aconchego. O colchão Baby Light ainda recebe o tratamento Actigard, que inibe a proliferação de ácaros, fungos e bactérias, ideal para a saúde do seu bebê.\n\n• Revestimento superior e faixa lateral em tecido Resistente em Poliéster. • Espuma Certifi cada 100% Poliuretano com Poliol à Base de Soja. • Revestimento inferior em Plavinil Vulca Brilho. • Tratamento antiácaro, antialérgico e antifúngico.",
     "images": [
-      "/catalogo/comercial-20-produto.webp"
+      "/catalogo/comercial-20-produto-hd.webp"
     ],
     "sizes": [
       "130 × 60 cm",
@@ -712,7 +717,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-20-produto.webp"
+        "image": "/catalogo/comercial-20-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -739,7 +744,7 @@
     "category": "Colchões",
     "description": "O Pic Go é um colchão de espuma viscoelástica, embalado a vácuo e altamente tecnológico, sendo uma opção perfeita para quem busca maciez e conforto.\n\n• Revestimento em malha 100% Poliéster. • Lâmina de espuma viscoelástica gel 100% Poliuretano. • Bordado em espuma convencional. • Colchão a vácuo.",
     "images": [
-      "/catalogo/comercial-21-produto.webp"
+      "/catalogo/comercial-21-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -755,7 +760,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-21-produto.webp"
+        "image": "/catalogo/comercial-21-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -783,7 +788,7 @@
     "category": "Colchões",
     "description": "O Self é um colchão embalado a vácuo que oferece extrema maciez e conforto. Composto por uma combinação de espuma Viscoelástica gel e espuma convencional 100% Poliuretano, o Self se adapta ao corpo mantendo a resistência.\n\n• Revestimento em malha 100% Poliéster. • Lâmina de espuma viscoelástica gel 100%. • Bordado em espuma convencional. • Colchão a vácuo.",
     "images": [
-      "/catalogo/comercial-22-produto.webp"
+      "/catalogo/comercial-22-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -799,7 +804,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-22-produto.webp"
+        "image": "/catalogo/comercial-22-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -827,7 +832,7 @@
     "category": "Colchões",
     "description": "O Star Exclusive apresenta uma estrutura com molas ensacadas e conta com revestimento 100% poliéster. Seu bordado em espuma convencional proporciona maior conforto.\n\n• Revestimento 100% Poliéster. • Estrutura em EPS. • Molas ensacadas individualmente. • Bordado em espuma convencional.",
     "images": [
-      "/catalogo/comercial-23-produto.webp"
+      "/catalogo/comercial-23-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -839,7 +844,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-23-produto.webp"
+        "image": "/catalogo/comercial-23-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -855,7 +860,8 @@
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
       "Linha": "Ortobom",
       "Material": "100% Poliéster",
-      "Altura": "42 cm"
+      "Altura": "42 cm",
+      "Estrutura de molas": "Molas ensacadas individualmente"
     },
     "variantInventory": {}
   },
@@ -867,7 +873,7 @@
     "category": "Colchões",
     "description": "O colchão Star New é composto por um revestimento em poliéster e viscose, combinado com uma estrutura de molas ensacadas. Seu bordado em espuma convencional fornece maior sensação de conforto.\n\n• Revestimento em malha de poliéster e viscose. • Bordado em espuma convencional 100% poliuretano. • Molejo estrutural em molas ensacadas individualmente.",
     "images": [
-      "/catalogo/comercial-24-produto.webp"
+      "/catalogo/comercial-24-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -879,7 +885,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-24-produto.webp"
+        "image": "/catalogo/comercial-24-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -895,7 +901,8 @@
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 203 × 193 cm",
       "Linha": "Ortobom",
       "Material": "malha de poliéster e viscose",
-      "Altura": "38 cm"
+      "Altura": "38 cm",
+      "Estrutura de molas": "Molas ensacadas individualmente"
     },
     "variantInventory": {}
   },
@@ -907,7 +914,7 @@
     "category": "Colchões",
     "description": "O colchão Star Black apresenta uma base tecnológica de molas ensacadas, que aliada à sua placa EPS, oferece maior estabilidade ao deitar. Sua camada de conforto foi confeccionada com espuma D26, proporcionando melhores noites de sono.\n\n• Revestimento 100% poliéster. • Lâmina de espuma viscoelástica 100% poliuretano. • Bordado em espuma convencional. • Estrutura em molas ensacadas individualmente. • Lâmina EPS.",
     "images": [
-      "/catalogo/comercial-25-produto.webp"
+      "/catalogo/comercial-25-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -919,7 +926,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-25-produto.webp"
+        "image": "/catalogo/comercial-25-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -936,7 +943,8 @@
       "Linha": "Ortobom",
       "Material": "100% poliéster",
       "Altura": "38 cm",
-      "Espuma": "D26"
+      "Espuma": "D26",
+      "Estrutura de molas": "Molas ensacadas individualmente"
     },
     "variantInventory": {}
   },
@@ -948,7 +956,7 @@
     "category": "Colchões",
     "description": "O colchão Star Superpocket apresenta um revestimento em malha de poliéster com viscose, bordado em manta acrílica e estrutura de molas ensacadas superpocket. Sua estrutura também oferece uma camada em EPS, que oferece maior estabilidade e ergonomia.\n\n• Revestimento em malha de poliéster e viscose. • Bordado em manta acrílica com espuma convencional. • Lâmina de espuma convencional 100% poliuretano. • Estrutura em molas ensacadas individualmente.",
     "images": [
-      "/catalogo/comercial-26-produto.webp"
+      "/catalogo/comercial-26-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -960,7 +968,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-26-produto.webp"
+        "image": "/catalogo/comercial-26-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -989,7 +997,7 @@
     "category": "Colchões",
     "description": "O colchão Baby Malha Petit Blanc apresenta um revestimento 100% poliéster. Sua estrutura de espuma convencional em poliuretano oferece maior conforto e estabilidade.",
     "images": [
-      "/catalogo/comercial-27-produto.webp"
+      "/catalogo/comercial-27-produto-hd.webp"
     ],
     "sizes": [
       "130 × 60 cm",
@@ -999,7 +1007,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-27-produto.webp"
+        "image": "/catalogo/comercial-27-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1026,7 +1034,7 @@
     "category": "Colchões",
     "description": "O colchão Baby Malha Petit Perle apresenta um revestimento 100% poliéster. Sua estrutura de espuma convencional em poliuretano oferece maior conforto e estabilidade.",
     "images": [
-      "/catalogo/comercial-28-produto.webp"
+      "/catalogo/comercial-28-produto-hd.webp"
     ],
     "sizes": [
       "130 × 60 cm",
@@ -1036,7 +1044,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-28-produto.webp"
+        "image": "/catalogo/comercial-28-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1063,7 +1071,7 @@
     "category": "Colchões",
     "description": "• Revestimento em malha. • Estrutura de Molas Superpocket ensacadas individualmente. • Lâmina de EPS (Poliestireno Expandido). • No Turn.\n\nO Airtech Springpocket tem o suporte ideal para a sua coluna, garantindo uma noite de sono perfeita. Prepare-se para um novo conceito de sono saudável.",
     "images": [
-      "/catalogo/comercial-30-produto.webp"
+      "/catalogo/comercial-30-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1078,7 +1086,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-30-produto.webp"
+        "image": "/catalogo/comercial-30-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1106,7 +1114,7 @@
     "category": "Colchões",
     "description": "• Revestimento em malha. • Estrutura de Molas Nanolastic. • Lâmina de EPS (Poliestireno Expandido). • No Turn.\n\nO Airtech Progressive tem a beleza das linhas clássicas alinhada à tradição e tecnologia. É destinado a quem procura conforto sem abrir mão da durabilidade.",
     "images": [
-      "/catalogo/comercial-31-produto.webp"
+      "/catalogo/comercial-31-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1120,7 +1128,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-31-produto.webp"
+        "image": "/catalogo/comercial-31-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1148,7 +1156,7 @@
     "category": "Colchões",
     "description": "O Colchão Airtech 1.5.0 possui tecnologia de microfuros, que facilita a passagem do ar, e toque mais refrescante, que proporciona mais conforto e melhores noites de sono.\n\nO tampo em malha max fios melhora o desempenho da malha, aumentando a durabilidade, além do Ortopillow Ortobom, que é uma camada extra de conforto e maciez.\n\n• Revestimento em malha. • Bordado em matelassê. • Camada de espuma firme selada (D45). • Lâmina de EPS (Poliestireno Expandido). • Altura: 28 cm.",
     "images": [
-      "/catalogo/comercial-32-produto.webp"
+      "/catalogo/comercial-32-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1163,7 +1171,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-32-produto.webp"
+        "image": "/catalogo/comercial-32-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1179,7 +1187,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 193 × 203 cm",
       "Linha": "Ortobom",
       "Material": "malha",
-      "Altura": "28 cm"
+      "Altura": "28 cm",
+      "Espuma": "D45"
     },
     "variantInventory": {}
   },
@@ -1191,7 +1200,7 @@
     "category": "Colchões",
     "description": "O Colchão Airtech 1.0.0 possui tecnologia de microfuros, que facilita a passagem do ar, e toque mais refrescante, que proporciona mais conforto e melhores noites de sono.\n\nO tampo em malha max fios melhora o desempenho da malha, aumentando a durabilidade, além do Ortopillow Ortobom, que é uma camada extra de conforto e maciez.\n\n• Revestimento em malha. • Bordado em matelassê. • Camada de espuma firme selada (D33). • Lâmina de EPS (Poliestireno Expandido). • Altura: 28 cm.",
     "images": [
-      "/catalogo/comercial-33-produto.webp"
+      "/catalogo/comercial-33-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1205,7 +1214,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-33-produto.webp"
+        "image": "/catalogo/comercial-33-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1221,7 +1230,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
       "Linha": "Ortobom",
       "Material": "malha",
-      "Altura": "28 cm"
+      "Altura": "28 cm",
+      "Espuma": "D33"
     },
     "variantInventory": {}
   },
@@ -1233,7 +1243,7 @@
     "category": "Colchões",
     "description": "O Colchão Airtech 6.0 possui tecnologia de microfuros, que facilita a passagem do ar, e toque mais refrescante, que proporciona mais conforto e melhores noites de sono.\n\nO tampo em malha max fios melhora o desempenho da malha, aumentando a durabilidade, além do Ortopillow Ortobom, que é uma camada extra de conforto e maciez.\n\n• Revestimento em malha. • Bordado em matelassê. • Camada de espuma firme selada (D28). • Lâmina de EPS (Poliestireno Expandido). • Altura: 28 cm.",
     "images": [
-      "/catalogo/comercial-34-produto.webp"
+      "/catalogo/comercial-34-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1247,7 +1257,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-34-produto.webp"
+        "image": "/catalogo/comercial-34-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1263,7 +1273,8 @@
       "Medidas": "188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm",
       "Linha": "Ortobom",
       "Material": "malha",
-      "Altura": "28 cm"
+      "Altura": "28 cm",
+      "Espuma": "D28"
     },
     "variantInventory": {}
   },
@@ -1275,7 +1286,7 @@
     "category": "Colchões",
     "description": "• Revestimento em tecido 100%poliéster com tratamento antialérgico e antiácaro. • Bordado em matelassê. • Estrutura Interna em EPS, com espumas de alta performance.\n\nO Colchão ISO DUPLA FACE é a novidade da Ortobom entre os colchões mistos. Seu interior possui a leve e tecnológica placa EPS, que oferece perfeito suporte à camada de conforto em espuma D28 Pró Aditivada de Alta Performance na parte superior, e uma espuma D33 na parte inferior, que pode ser ajustada para se adequar ao seu conforto ideal. Este colchão é para pessoas com até 100 quilos. O tampo é bordado em Matelassê, que entrega uma camada extra de conforto. Seu revestimento é 100% Poliester com tratamento antialérgico e antiácaro.",
     "images": [
-      "/catalogo/comercial-35-produto.webp"
+      "/catalogo/comercial-35-produto-hd.webp"
     ],
     "sizes": [
       "198 × 158 cm",
@@ -1289,7 +1300,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-35-produto.webp"
+        "image": "/catalogo/comercial-35-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1317,7 +1328,7 @@
     "category": "Colchões",
     "description": "• Revestimento em viscose. • Camada de espuma D28. • Lâmina de EPS (Poliestireno Expandido). • No Turn.\n\nO colchão Iso 6.0 proporciona sensação de aconchego e bem-estar, oferecendo um conforto diferenciado para noites de sono ainda mais completas.",
     "images": [
-      "/catalogo/comercial-36-produto.webp"
+      "/catalogo/comercial-36-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1331,7 +1342,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-36-produto.webp"
+        "image": "/catalogo/comercial-36-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1359,7 +1370,7 @@
     "category": "Colchões",
     "description": "• Revestimento em viscose. • Camada de espuma D33. • Lâmina de EPS (Poliestireno Expandido). • No Turn.",
     "images": [
-      "/catalogo/comercial-37-produto.webp"
+      "/catalogo/comercial-37-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1379,7 +1390,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-37-produto.webp"
+        "image": "/catalogo/comercial-37-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1407,7 +1418,7 @@
     "category": "Colchões",
     "description": "O colchão Iso 1.5.0 reúne conforto, bem estar e performance, deixando seu sono ainda mais tranquilo.",
     "images": [
-      "/catalogo/comercial-38-produto.webp"
+      "/catalogo/comercial-38-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1421,7 +1432,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-38-produto.webp"
+        "image": "/catalogo/comercial-38-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1449,7 +1460,7 @@
     "category": "Colchões",
     "description": "• Revestimento em poliéster. • Estrutura de Molas Nanolastic. • Lâmina de EPS (Poliestireno Expandido). • No Turn.\n\nO colchão Iso Nanolastic alia tradição e tecnologia. Excelente para quem procura conforto sem abrir mão da durabilidade.",
     "images": [
-      "/catalogo/comercial-39-produto.webp"
+      "/catalogo/comercial-39-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1464,7 +1475,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-39-produto.webp"
+        "image": "/catalogo/comercial-39-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1492,7 +1503,7 @@
     "category": "Colchões",
     "description": "O Physical Superpocket oferece um alto índice de conforto. Por meio de seu Ortopillow, que funciona como um grande travesseiro sobre o colchão, ele proporciona um melhor suporte nos pontos de pressão do corpo, adequando a coluna para uma melhor postura. A estrutura de Molas Ensacadas Individualmente complementa o conforto com a sustentação das curvas do corpo de forma independente. Ao redor da estrutura de molas há um reforço lateral com espuma de alta resistência utilizado em todo o perímetro do colchão, proporcionando maior estabilidade e durabilidade ao produto.\n\n• Tecido em Poliéster bordado em Matelassê com Espuma Certifi cada 100% Poliuretano. • Espuma Firme Certifi cada 100% Poliuretano. • Estrutura de Molas Superpocket Ensacadas Individualmente.\n\n• Reforço Lateral em PU (Poliuretano). • Base em Espuma Certifi cada 100% Poliuretano com Tecido Antiderrapante. • Sistema No Turn – não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-40-produto.webp"
+      "/catalogo/comercial-40-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1508,7 +1519,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-40-produto.webp"
+        "image": "/catalogo/comercial-40-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1537,8 +1548,11 @@
     "category": "Colchões",
     "description": "O colchão Physical Nanolastic proporciona o suporte adequado para a coluna devido à sua revolucionária estrutura de Molas Nanolastic Bicônicas, que apresentam alto teor de carbono e resistência progressiva ao peso, agregando excelente flexibilidade e durabilidade ao colchão. O Tecido em Poliéster recebe um tratamento especial com aloe vera, óleo de jojoba e vitamina E, bordado em matelassê em Espuma Firme 100% Poliuretano, aumentando a sensação de conforto.\n\n• Tecido em Poliéster bordado em Matelassê com Espuma Certifi cada 100% Poliuretano. • Camada de conforto em Espuma Firme Certifi cada 100% Poliuretano. • Estrutura de Molas Nanolastic Bicônicas.\n\n• Reforço Lateral em PU (Poliuretano). • Base em Espuma Certifi cada 100% Poliuretano com Tecido Antiderrapante. • Sistema No Turn – não precisa virar o colchão.",
     "images": [
-      "/catalogo/comercial-41-produto.webp",
-      "/catalogo/comercial-41-detalhes.webp"
+      "/catalogo/comercial-41-produto-hd.webp",
+      "/catalogo/comercial-41-detalhes-hd.webp",
+      "/catalogo/comercial-41-detalhe-1-hd.webp",
+      "/catalogo/comercial-41-detalhe-2-hd.webp",
+      "/catalogo/comercial-41-detalhe-3-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1554,7 +1568,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-41-produto.webp"
+        "image": "/catalogo/comercial-41-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1583,7 +1597,7 @@
     "category": "Colchões",
     "description": "Possui Tecido Resistente em Poliéster, tratado com aloe vera, óleo de jojoba e vitamina E, um verdadeiro tratamento de beleza enquanto se dorme. A Espuma Selada 100% Poliuretano, produzida com Poliol à Base de Soja, oferece alta performance e apresenta excelente desempenho. O bordado em matelassê proporciona maior volume e aumenta a sua maciez. Ainda recebe o Tratamento Actigard que protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.\n\n• Tecido Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano. • Espuma Selada 100% Poliuretano. Características do produto",
     "images": [
-      "/catalogo/comercial-42-produto.webp"
+      "/catalogo/comercial-42-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1596,7 +1610,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-42-produto.webp"
+        "image": "/catalogo/comercial-42-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1623,7 +1637,7 @@
     "category": "Colchões",
     "description": "Possui Tecido Resistente em Poliéster, tratado com aloe vera, óleo de jojoba e vitamina E, um verdadeiro tratamento de beleza enquanto se dorme. A Espuma Selada 100% Poliuretano, produzida com Poliol à Base de Soja, oferece alta performance e apresenta excelente desempenho. O bordado em matelassê proporciona maior volume e aumenta a sua maciez. Ainda recebe o Tratamento Actigard que protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.\n\n• Tecido Resistente em Poliéster com bordado em Matelassê em Espuma Selada 100% Poliuretano. • Espuma Selada 100% Poliuretano. Características do produto",
     "images": [
-      "/catalogo/comercial-43-produto.webp"
+      "/catalogo/comercial-43-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1636,7 +1650,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-43-produto.webp"
+        "image": "/catalogo/comercial-43-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1663,7 +1677,7 @@
     "category": "Colchões",
     "description": "O Colchão Physical Mega Resistente é revestido por tecido em Poliéster e fibra de alta resistência que aumenta a durabilidade do colchão. A Espuma Firme Certifi cada 100% Poliuretano é produzida com Poliol à base de soja e oferece alta performance, apresentando excelente desempenho. O colchão possui bordado em matelassê, proporcionando maior volume e aumentando a sua maciez. O Tratamento Actigard protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.\n\n• Tecido em Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano. • Espuma Firme Certifi cada 100% Poliuretano.",
     "images": [
-      "/catalogo/comercial-44-produto.webp"
+      "/catalogo/comercial-44-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1677,7 +1691,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-44-produto.webp"
+        "image": "/catalogo/comercial-44-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1704,7 +1718,7 @@
     "category": "Colchões",
     "description": "O Colchão Physical Ultra Resistente é revestido por tecido em Poliéster e fibra de alta resistência que aumenta a durabilidade do colchão. A Espuma Firme Certifi cada 100% Poliuretano é produzida com Poliol à base de soja e oferece alta performance, apresentando excelente desempenho. O colchão possui bordado em matelassê, proporcionando maior volume e aumentando a sua maciez. O Tratamento Actigard protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.\n\n• Tecido em Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano. • Espuma Certifi cada 100% Poliuretano.",
     "images": [
-      "/catalogo/comercial-45-produto.webp"
+      "/catalogo/comercial-45-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1716,7 +1730,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-45-produto.webp"
+        "image": "/catalogo/comercial-45-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1743,7 +1757,7 @@
     "category": "Colchões",
     "description": "O Colchão Physical Super Resistente é revestido por tecido em Poliéster e fibra de alta resistência que aumenta a durabilidade do colchão. A Espuma Certifi cada 100% Poliuretano é produzida com Poliol à base de soja e oferece alta performance, apresentando excelente desempenho. O colchão possui bordado em matelassê, proporcionando maior volume e aumentando a sua maciez. O Tratamento Actigard protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.\n\n• Tecido em Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano. • Espuma Certifi cada 100% Poliuretano.",
     "images": [
-      "/catalogo/comercial-46-produto.webp"
+      "/catalogo/comercial-46-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1755,7 +1769,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-46-produto.webp"
+        "image": "/catalogo/comercial-46-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1782,7 +1796,7 @@
     "category": "Colchões",
     "description": "O Colchão Physical Resistente Liso possui tecido em Poliéster e fibra de alta resistência que aumenta a durabilidade do colchão. A Espuma Certifi cada 100% Poliuretano produzida com Poliol à base de soja oferece alta performance e apresenta excelente desempenho. O Tratamento Actigard protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.",
     "images": [
-      "/catalogo/comercial-47-produto.webp"
+      "/catalogo/comercial-47-produto-hd.webp"
     ],
     "sizes": [
       "150 × 70 cm",
@@ -1795,7 +1809,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-47-produto.webp"
+        "image": "/catalogo/comercial-47-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1822,7 +1836,7 @@
     "category": "Colchões",
     "description": "O Colchão Physical Resistente é revestido por tecido em Poliéster e fibra de alta resistência que aumenta a durabilidade do colchão. A Espuma Certifi cada 100% Poliuretano é produzida com Poliol à base de soja e oferece alta performance, apresentando excelente desempenho. O colchão possui bordado em matelassê, proporcionando maior volume e aumentando a sua maciez. O Tratamento Actigard protege o tecido e a espuma contra infestações de ácaros, fungos e bactérias, garantindo noites tranquilas longe de rinites e outras doenças alérgicas.\n\n• Tecido em Poliéster com bordado em Matelassê em Espuma Certifi cada 100% Poliuretano. • Espuma Certifi cada 100% Poliuretano.",
     "images": [
-      "/catalogo/comercial-48-produto.webp"
+      "/catalogo/comercial-48-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -1834,7 +1848,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-48-produto.webp"
+        "image": "/catalogo/comercial-48-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1861,7 +1875,7 @@
     "category": "Colchões",
     "description": "O Colchão Auxiliar Cori é excelente para otimizar o espaço do seu quarto se usado junto com uma base vazada, além de proporcionar conforto e aconchego ao dormir. O Tecido em Poliéster é extremamente macio e junto com a Espuma Firme Certifi cada 100% Poliuretano garantem boas noites de sono.\n\n• Tecido em Poliéster, bordado em Matelassê em Espuma Certifi cada 100% Poliuretano. • Espuma Firme Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento.",
     "images": [
-      "/catalogo/comercial-49-produto.webp"
+      "/catalogo/comercial-49-produto-hd.webp"
     ],
     "sizes": [
       "171 × 79 cm"
@@ -1870,7 +1884,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-49-produto.webp"
+        "image": "/catalogo/comercial-49-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1897,7 +1911,7 @@
     "category": "Colchões",
     "description": "O Colchão Auxiliar Dream para base vazada é uma excelente opção e com ótimo custo- benefício para quem não tem tanto espaço e deseja acomodar com conforto seus hóspedes durante algumas noites. A base vazada para guardar o colchão auxiliar deve ser comprada separadamente.",
     "images": [
-      "/catalogo/comercial-50-produto.webp"
+      "/catalogo/comercial-50-produto-hd.webp"
     ],
     "sizes": [
       "172 × 79 cm"
@@ -1906,7 +1920,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-50-produto.webp"
+        "image": "/catalogo/comercial-50-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1934,7 +1948,7 @@
     "category": "Colchões",
     "description": "O Colchão Auxiliar Orthopedic para base vazada é uma excelente opção e com ótimo custo-benefício para quem não tem tanto espaço e deseja acomodar com conforto seus hóspedes durante algumas noites. A base vazada para guardar o colchão auxiliar deve ser comprada separadamente.\n\n• Revestimento em tecido 100% Poliéster. • Lâmina em espuma convencional 100% poliuretano. • Estrutura de madeira tratada de reflorestamento de 5,0 cm.",
     "images": [
-      "/catalogo/comercial-51-produto.webp"
+      "/catalogo/comercial-51-produto-hd.webp"
     ],
     "sizes": [
       "172 × 79 cm"
@@ -1943,7 +1957,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-51-produto.webp"
+        "image": "/catalogo/comercial-51-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -1970,7 +1984,7 @@
     "category": "Colchões",
     "description": "O Colchão Auxiliar Union para base vazada é uma excelente opção e com ótimo custo- benefício para quem não tem tanto espaço e deseja acomodar com conforto seus hóspedes durante algumas noites. A base vazada para guardar o colchão auxiliar deve ser comprada separadamente.",
     "images": [
-      "/catalogo/comercial-52-produto.webp"
+      "/catalogo/comercial-52-produto-hd.webp"
     ],
     "sizes": [
       "171 × 79 cm"
@@ -1979,7 +1993,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-52-produto.webp"
+        "image": "/catalogo/comercial-52-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2007,7 +2021,7 @@
     "category": "Colchões",
     "description": "O Colchão Auxiliar Cori é excelente para otimizar o espaço do seu quarto se usado junto com uma base vazada, além de proporcionar conforto e aconchego ao dormir. O Tecido em Poliéster é extremamente macio e junto com a Espuma Firme Certifi cada 100% Poliuretano garantem boas noites de sono.\n\n• Tecido em Poliéster, bordado em Matelassê em Espuma Certifi cada 100% Poliuretano. • Espuma Firme Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento.",
     "images": [
-      "/catalogo/comercial-53-produto.webp"
+      "/catalogo/comercial-53-produto-hd.webp"
     ],
     "sizes": [
       "171 × 79 cm"
@@ -2016,7 +2030,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-53-produto.webp"
+        "image": "/catalogo/comercial-53-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2043,7 +2057,7 @@
     "category": "Colchões",
     "description": "O Colchonete Physical é uma ótima opção de conforto para aproveitar os momentos de lazer em família. A Espuma Certifi cada 100% Poliuretano de alta performance é produzida com Poliol à base de soja, um produto ecologicamente correto.",
     "images": [
-      "/catalogo/comercial-54-produto.webp"
+      "/catalogo/comercial-54-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -2054,7 +2068,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-54-produto.webp"
+        "image": "/catalogo/comercial-54-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2081,7 +2095,7 @@
     "category": "Colchões",
     "description": "O Colchão Baby Physical possui tecido em Poliéster. Sua lateral e fi tim com motivos infantis realçam o visual do produto, destacando-o no ponto de venda e no quarto do cliente, resultando em um design mais moderno e atrativo. A Espuma Certifi cada 100% Poliuretano oferece alta performance, apresentando excelente desempenho e presenteando o seu bebê com a sensação de aconchego. Espuma produzida com Poliol à base de soja, ecologicamente correta, colaborando para a sustentabilidade do planeta.\n\n• Tecido em Poliéster. • Espuma Certifi cada 100% Poliuretano. • Revestimento inferior em plástico impermeável.",
     "images": [
-      "/catalogo/comercial-55-produto.webp"
+      "/catalogo/comercial-55-produto-hd.webp"
     ],
     "sizes": [
       "130 × 60 cm",
@@ -2091,7 +2105,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-55-produto.webp"
+        "image": "/catalogo/comercial-55-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2118,7 +2132,7 @@
     "category": "Colchões",
     "description": "• Revestimento em malha. • Estrutura de Molas Superpocket ensacadas individualmente. • Lâmina de EPS (Poliestireno Expandido). • No Turn.\n\nO colchão Iso Superpocket proporciona conforto extra com o melhor custo-benefício sem abrir mão da tecnologia.",
     "images": [
-      "/catalogo/comercial-56-produto.webp"
+      "/catalogo/comercial-56-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm",
@@ -2133,7 +2147,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-56-produto.webp"
+        "image": "/catalogo/comercial-56-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2161,7 +2175,7 @@
     "category": "Colchões",
     "description": "O Colchão Conjugado Union Ortopedic é composto por Espuma Firme Certifi cada 100% Poliuretano com Poliol à base de soja, que oferece maior sustentação e durabilidade ao produto. Seu revestimento em Poliéster proporciona conforto e resistência, diminuindo as chances de ruptura do tecido. O Colchão Conjugado Union Ortopedic ainda é composto por uma estrutura de madeira tratada de reflorestamento, ecolgicamente correta, tratada com agente natural que protege contra bactérias, cupins, fungos, e brocas, garantindo maior durabilidade.\n\n• Tecido em Poliéster, bordado em Matelassê com Espuma Certifi cada 100% Poliuretano. • Espuma Firme Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés com acabamento cromado.",
     "images": [
-      "/catalogo/comercial-58-produto.webp"
+      "/catalogo/comercial-58-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2172,7 +2186,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-58-produto.webp"
+        "image": "/catalogo/comercial-58-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2199,7 +2213,7 @@
     "category": "Colchões",
     "description": "O Colchão Conjugado Union Spring é revestido por um Tecido de Malha em Poliéster que oferece maior resistência e maciez ao produto. A Espuma Firme Certifi cada 100% Poliuretano recebe maior adição de matéria-prima e, junto com as Molas Nanolastic Bicônicas, proporciona ao colchão maior sensação de conforto e durabilidade. O Colchão Conjugado Union Spring recebe em sua composição uma estrutura de madeira de reflorestamento, ecolgicamente correta, tratada com agente natural que protege contra bactérias, cupins, fungos, e brocas, garantindo maior durabilidade.\n\n• Tecido em Poliéster, bordado em Espuma Certifi cada 100% Poliuretano. • Espuma Firme Certifi cada100% Poliuretano. • Estrutura de Molas Nanolastic Bicônicas. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés com acabamento cromado.",
     "images": [
-      "/catalogo/comercial-59-produto.webp"
+      "/catalogo/comercial-59-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2209,7 +2223,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-59-produto.webp"
+        "image": "/catalogo/comercial-59-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2237,7 +2251,7 @@
     "category": "Colchões",
     "description": "O Conjugado Cori Bianco Vazado oferece um toque de leveza e praticidade. O tecido e a espuma recebem um tratamento industrial de higienização que impede a proliferação de ácaros, bactérias e fungos, protegendo a sua família de doenças respiratórias. A estrutura de madeira é ecologicamente correta e recebe um tratamento antifungo, garantindo maior durabilidade ao produto.\n\n• Tecido em Poliéster. • Bordado em Espuma Certifi cada 100% Poliuretano. • Espuma Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-60-produto.webp"
+      "/catalogo/comercial-60-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm"
@@ -2246,7 +2260,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-60-produto.webp"
+        "image": "/catalogo/comercial-60-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2273,7 +2287,7 @@
     "category": "Colchões",
     "description": "O Conjugado Cori Nero Vazado oferece um toque de elegância e praticidade. O tecido e a espuma recebem um tratamento industrial de higienização que impede a proliferação de ácaros, bactérias e fungos, protegendo a sua família de doenças respiratórias. A estrutura de madeira é ecologicamente correta e recebe um tratamento antifungo, garantindo maior durabilidade ao produto.\n\n• Tecido em Poliéster. • Bordado em Espuma Certifi cada 100% Poliuretano. • Espuma Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-61-produto.webp"
+      "/catalogo/comercial-61-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm"
@@ -2282,7 +2296,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-61-produto.webp"
+        "image": "/catalogo/comercial-61-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2309,7 +2323,8 @@
     "category": "Cabeceiras",
     "description": "A Cabeceira Piave Linho possui um acabamento diferenciado. Revestida em linho 100% Poliéster, ela oferece ao seu ambiente um toque moderno e agradável, ideal para combinar com sua decoração.\n\n• Revestimento: linho 100% Poliéster. • Placa de Espuma Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento, tampo e base. • Pés rosqueáveis.\n\nPoliéster, ela oferece ao seu ambiente um toque moderno e agradável, ideal para combinar com sua decoração.",
     "images": [
-      "/catalogo/comercial-63-produto.webp"
+      "/catalogo/comercial-63-produto-hd.webp",
+      "/catalogo/comercial-63-pes-hd.webp"
     ],
     "sizes": [
       "125 × 90 cm",
@@ -2322,7 +2337,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-63-produto.webp"
+        "image": "/catalogo/comercial-63-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2337,7 +2352,8 @@
     "specs": {
       "Medidas": "125 × 90 cm · 125 × 140 cm · 125 × 160 cm · 125 × 188 cm · 125 × 195 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2349,7 +2365,8 @@
     "category": "Cabeceiras",
     "description": "A Cabeceira Piave Veludo possui um acabamento diferenciado. Revestida em veludo 100% Poliéster, ela oferece ao seu ambiente um toque moderno e agradável, ideal para combinar com sua decoração.\n\n• Revestimento: veludo 100% Poliéster. • Placa de Espuma Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento, tampo e base. • Pés rosqueáveis.\n\nPoliéster, ela oferece ao seu ambiente um toque moderno e agradável, ideal para combinar com sua decoração.",
     "images": [
-      "/catalogo/comercial-64-produto.webp"
+      "/catalogo/comercial-64-produto-hd.webp",
+      "/catalogo/comercial-64-pes-hd.webp"
     ],
     "sizes": [
       "125 × 90 cm",
@@ -2362,7 +2379,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-64-produto.webp"
+        "image": "/catalogo/comercial-64-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2377,7 +2394,8 @@
     "specs": {
       "Medidas": "125 × 90 cm · 125 × 140 cm · 125 × 160 cm · 125 × 188 cm · 125 × 195 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2389,7 +2407,8 @@
     "category": "Cabeceiras",
     "description": "A Cabeceira Murat Facto possui um acabamento diferenciado. Revestida em facto 100% Poliéster, ela oferece ao seu ambiente um toque moderno e agradável, ideal para combinar com sua decoração.\n\n• Revestimento: facto 100% Poliéster. • Placa de Espuma Certifi cada 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento, tampo e base. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-65-produto.webp"
+      "/catalogo/comercial-65-produto-hd.webp",
+      "/catalogo/comercial-65-pes-hd.webp"
     ],
     "sizes": [
       "125 × 90 cm",
@@ -2402,7 +2421,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-65-produto.webp"
+        "image": "/catalogo/comercial-65-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2417,7 +2436,8 @@
     "specs": {
       "Medidas": "125 × 90 cm · 125 × 140 cm · 125 × 160 cm · 125 × 188 cm · 125 × 195 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2429,7 +2449,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Corino destaca-se por sua sofi sticação e requinte com forração em tecido sintético 100% Poliéster. Oferece mais firmeza na sustentação ao colchão sem comprometer o conforto.\n\n• Espuma produzida com Poliol a base de soja, ecologicamente correto, colaborando para a sustentabilidade do planeta. • Estrutura interna de madeira de reflorestamento, ecologicamente correta, concedendo maior resistência e durabilidade ao produto.",
     "images": [
-      "/catalogo/comercial-67-produto.webp"
+      "/catalogo/comercial-67-produto-hd.webp"
     ],
     "sizes": [
       "188 × 69 cm",
@@ -2446,7 +2466,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-67-produto.webp"
+        "image": "/catalogo/comercial-67-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2461,7 +2481,8 @@
     "specs": {
       "Medidas": "188 × 69 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Estrutura": "Madeira de reflorestamento"
     },
     "variantInventory": {}
   },
@@ -2473,7 +2494,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Camurça possui forração em Material Sintético 100% Poliéster nas cores preto, marrom, creme e cinza, com superfície aveludada, destacando a sofi sticação do produto.\n\n• Espuma 100% Poliuretano de alta densidade na parte superior, proporcionando uma proteção para a estrutura e um fi no acabamento ao produto.\n\n• Estrutura interna em madeira de reflorestamento, ecologicamente correta, que proporciona maior resistência e durabilidade ao produto.",
     "images": [
-      "/catalogo/comercial-69-produto.webp"
+      "/catalogo/comercial-69-produto-hd.webp"
     ],
     "sizes": [
       "188 × 69 cm",
@@ -2490,7 +2511,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-69-produto.webp"
+        "image": "/catalogo/comercial-69-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2505,7 +2526,8 @@
     "specs": {
       "Medidas": "188 × 69 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Estrutura": "Madeira de reflorestamento"
     },
     "variantInventory": {}
   },
@@ -2517,7 +2539,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Linho oferece leveza e delicadeza ao ambiente, deixando-o muito mais romântico e acolhedor.\n\n• Estrutura interna de madeira de reflorestamento, ecologicamente correta, concedendo maior resistência e durabilidade ao produto.",
     "images": [
-      "/catalogo/comercial-71-produto.webp"
+      "/catalogo/comercial-71-produto-hd.webp"
     ],
     "sizes": [
       "188 × 69 cm",
@@ -2534,7 +2556,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-71-produto.webp"
+        "image": "/catalogo/comercial-71-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2549,7 +2571,9 @@
     "specs": {
       "Medidas": "188 × 69 cm · 188 × 78 cm · 188 × 88 cm · 188 × 128 cm · 188 × 138 cm · 198 × 108 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "100% Poliéster e pés rosqueáveis"
+      "Material": "100% Poliéster e pés rosqueáveis",
+      "Estrutura": "Madeira de reflorestamento",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2561,10 +2585,18 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Baú Camurça oferece estilo e praticidade. Sua estrutura é de madeira de reflorestamento, ecologicamente correta, tratada com agente natural que protege contra bactérias, cupins, fungos, e brocas, garantindo maior durabilidade. Seu tampo e módulos são bipartidos, oferecendo maior versatilidade para manuseio, transporte e montagem do produto. Para completar, a Base Sommier Baú Camurça possui um sistema de amortecedores pneumáticos que permite a abertura e o fechamento do produto sem esforço, facilitando o seu manuseio diário.\n\n• Estrutura de madeira de reflorestamento, ecologicamente correta, tratada com agente natural que protege contra bactérias, cupins, fungos, e brocas, garantindo maior durabilidade.",
     "images": [
-      "/catalogo/comercial-73-produto.webp",
-      "/catalogo/comercial-74-produto.webp",
-      "/catalogo/comercial-75-produto.webp",
-      "/catalogo/comercial-76-produto.webp"
+      "/catalogo/comercial-73-produto-hd.webp",
+      "/catalogo/comercial-74-produto-hd.webp",
+      "/catalogo/comercial-75-produto-hd.webp",
+      "/catalogo/comercial-76-produto-hd.webp",
+      "/catalogo/comercial-73-detalhe-1-hd.webp",
+      "/catalogo/comercial-73-detalhe-2-hd.webp",
+      "/catalogo/comercial-74-detalhe-1-hd.webp",
+      "/catalogo/comercial-74-detalhe-2-hd.webp",
+      "/catalogo/comercial-75-detalhe-1-hd.webp",
+      "/catalogo/comercial-75-detalhe-2-hd.webp",
+      "/catalogo/comercial-76-detalhe-1-hd.webp",
+      "/catalogo/comercial-76-detalhe-2-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2577,22 +2609,22 @@
       {
         "name": "Cinza",
         "hex": "#747472",
-        "image": "/catalogo/comercial-73-produto.webp"
+        "image": "/catalogo/comercial-73-produto-hd.webp"
       },
       {
         "name": "Bege",
         "hex": "#bfb29e",
-        "image": "/catalogo/comercial-74-produto.webp"
+        "image": "/catalogo/comercial-74-produto-hd.webp"
       },
       {
         "name": "Preto",
         "hex": "#252525",
-        "image": "/catalogo/comercial-75-produto.webp"
+        "image": "/catalogo/comercial-75-produto-hd.webp"
       },
       {
         "name": "Marrom",
         "hex": "#6b4b38",
-        "image": "/catalogo/comercial-76-produto.webp"
+        "image": "/catalogo/comercial-76-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2607,7 +2639,10 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Estrutura": "Madeira de reflorestamento",
+      "Armazenamento": "Compartimento baú",
+      "Abertura": "Amortecedores pneumáticos"
     },
     "variantInventory": {}
   },
@@ -2619,11 +2654,19 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Baú Corino oferece estilo e praticidade. Sua estrutura é de madeira de reflorestamento, ecologicamente correta, tratada com agente natural que protege contra bactérias, cupins, fungos, e brocas, garantindo maior durabilidade. Seu tampo e módulos são bipartidos, oferecendo maior versatilidade para manuseio, transporte e montagem do produto. Para completar, a Base Sommier Baú Corino possui um sistema de amortecedores pneumáticos que permite a abertura e o fechamento do produto sem esforço, facilitando o seu manuseio diário.\n\n• Estrutura de madeira de reflorestamento, ecologicamente correta, tratada com agente natural que protege contra bactérias, cupins, fungos, e brocas, garantindo maior durabilidade.",
     "images": [
-      "/catalogo/comercial-77-produto.webp",
-      "/catalogo/comercial-78-produto.webp",
-      "/catalogo/comercial-79-produto.webp",
-      "/catalogo/comercial-80-produto.webp",
-      "/catalogo/comercial-81-produto.webp"
+      "/catalogo/comercial-77-produto-hd.webp",
+      "/catalogo/comercial-78-produto-hd.webp",
+      "/catalogo/comercial-79-produto-hd.webp",
+      "/catalogo/comercial-80-produto-hd.webp",
+      "/catalogo/comercial-81-produto-hd.webp",
+      "/catalogo/comercial-77-detalhe-1-hd.webp",
+      "/catalogo/comercial-77-detalhe-2-hd.webp",
+      "/catalogo/comercial-78-detalhe-1-hd.webp",
+      "/catalogo/comercial-78-detalhe-2-hd.webp",
+      "/catalogo/comercial-79-detalhe-1-hd.webp",
+      "/catalogo/comercial-79-detalhe-2-hd.webp",
+      "/catalogo/comercial-80-detalhe-1-hd.webp",
+      "/catalogo/comercial-80-detalhe-2-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2636,27 +2679,27 @@
       {
         "name": "Branco",
         "hex": "#f5f4ef",
-        "image": "/catalogo/comercial-77-produto.webp"
+        "image": "/catalogo/comercial-77-produto-hd.webp"
       },
       {
         "name": "Cinza",
         "hex": "#7d7d7d",
-        "image": "/catalogo/comercial-78-produto.webp"
+        "image": "/catalogo/comercial-78-produto-hd.webp"
       },
       {
         "name": "Bege",
         "hex": "#c1b098",
-        "image": "/catalogo/comercial-79-produto.webp"
+        "image": "/catalogo/comercial-79-produto-hd.webp"
       },
       {
         "name": "Preto",
         "hex": "#222222",
-        "image": "/catalogo/comercial-80-produto.webp"
+        "image": "/catalogo/comercial-80-produto-hd.webp"
       },
       {
         "name": "Marrom",
         "hex": "#6b4839",
-        "image": "/catalogo/comercial-81-produto.webp"
+        "image": "/catalogo/comercial-81-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2671,7 +2714,10 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Estrutura": "Madeira de reflorestamento",
+      "Armazenamento": "Compartimento baú",
+      "Abertura": "Amortecedores pneumáticos"
     },
     "variantInventory": {}
   },
@@ -2683,7 +2729,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Baú Corino Branco Vazada possui amplo espaço interno para ajudar na arrumação do seu quarto. É revestida em couro ecologicamente correto e sua estrutura de madeira recebe um tratamento antifungo, garantindo maior durabilidade ao produto.\n\n• Estrutura de Madeira Tratada e de Refl orestamento. • Revestimento lateral em couro ecologicamente correto 100% Poliéster. • Sistema de amortecedores pneumáticos. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-82-produto.webp"
+      "/catalogo/comercial-82-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm"
@@ -2692,7 +2738,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-82-produto.webp"
+        "image": "/catalogo/comercial-82-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2707,7 +2753,10 @@
     "specs": {
       "Medidas": "188 × 88 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster",
+      "Armazenamento": "Compartimento baú",
+      "Abertura": "Amortecedores pneumáticos",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2719,7 +2768,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Baú Corino Preto Vazada possui amplo espaço interno para ajudar na arrumação do seu quarto. É revestida em couro ecologicamente correto e sua estrutura de madeira recebe um tratamento antifungo, garantindo maior durabilidade ao produto.\n\n• Estrutura de Madeira Tratada e de Refl orestamento. • Revestimento lateral em couro ecologicamente correto 100% Poliéster. • Sistema de amortecedores pneumáticos. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-83-produto.webp"
+      "/catalogo/comercial-83-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm"
@@ -2728,7 +2777,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-83-produto.webp"
+        "image": "/catalogo/comercial-83-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2743,7 +2792,10 @@
     "specs": {
       "Medidas": "188 × 88 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster",
+      "Armazenamento": "Compartimento baú",
+      "Abertura": "Amortecedores pneumáticos",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2755,7 +2807,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Corino Branco Vazado é revestida em couro ecologicamente correto. A estrutura de madeira recebe um tratamento antifungo, garantindo maior durabilidade ao produto.\n\n• Estrutura de Madeira Tratada e de Refl orestamento. • Revestimento lateral em couro ecologicamente correto 100% Poliéster. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-84-produto.webp"
+      "/catalogo/comercial-84-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2765,7 +2817,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-84-produto.webp"
+        "image": "/catalogo/comercial-84-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2780,7 +2832,8 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2792,7 +2845,7 @@
     "category": "Bases e camas",
     "description": "A Base Sommier Corino Preto Vazada é revestida em couro ecologicamente correto. A estrutura de madeira recebe um tratamento antifungo, garantindo maior durabilidade ao produto.\n\n• Estrutura de Madeira Tratada e de Refl orestamento. • Revestimento lateral em couro ecologicamente correto 100% Poliéster. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-85-produto.webp"
+      "/catalogo/comercial-85-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2802,7 +2855,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-85-produto.webp"
+        "image": "/catalogo/comercial-85-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2817,7 +2870,8 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em couro ecologicamente correto 100% Poliéster"
+      "Material": "lateral em couro ecologicamente correto 100% Poliéster",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2829,7 +2883,7 @@
     "category": "Bases e camas",
     "description": "Produto desenvolvido para quem necessita de mais espaço, já que a Base Baú funciona como um grande armário horizontal. Utilizando madeira de reflorestamento ecologicamente correta, tratada com bactericida natural que a protege de cupins, fungos e brocas, garantindo maior durabilidade. Conta com uma camada extra de espuma na superfície destinada ao colchão para aumentar a área de conforto do produto.\n\n• Revestimento lateral em tecido 100% Poliéster. • Sistema de abertura e fechamento com pistões pneumáticos (amortecedores). • Alça de apoio para o colchão. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-86-produto.webp"
+      "/catalogo/comercial-86-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2839,7 +2893,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-86-produto.webp"
+        "image": "/catalogo/comercial-86-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2854,7 +2908,11 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em tecido 100% Poliéster"
+      "Material": "lateral em tecido 100% Poliéster",
+      "Estrutura": "Madeira de reflorestamento",
+      "Armazenamento": "Compartimento baú",
+      "Abertura": "Amortecedores pneumáticos",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2866,7 +2924,7 @@
     "category": "Bases e camas",
     "description": "Produto desenvolvido para quem necessita de mais espaço, já que a Base Baú funciona como um grande armário horizontal. Utilizando madeira de reflorestamento ecologicamente correta, tratada com bactericida natural que a protege de cupins, fungos e brocas, garantindo maior durabilidade. Conta com uma camada extra de espuma na superfície destinada ao colchão para aumentar a área de conforto do produto.\n\n• Revestimento lateral em tecido 100% Poliéster. • Sistema de abertura e fechamento com pistões pneumáticos (amortecedores). • Alça de apoio para o colchão. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-87-produto.webp"
+      "/catalogo/comercial-87-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2876,7 +2934,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-87-produto.webp"
+        "image": "/catalogo/comercial-87-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2891,7 +2949,11 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em tecido 100% Poliéster"
+      "Material": "lateral em tecido 100% Poliéster",
+      "Estrutura": "Madeira de reflorestamento",
+      "Armazenamento": "Compartimento baú",
+      "Abertura": "Amortecedores pneumáticos",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2903,7 +2965,7 @@
     "category": "Bases e camas",
     "description": "Utilizando madeira de reflorestamento, ecologicamente correta, tratada com bactericida natural que a protege de cupins, fungos e brocas, garantindo maior durabilidade. Conta com uma camada extra de espuma na superfície destinada ao colchão para aumentar a área de conforto do produto.\n\n• Revestimento lateral em tecido 100% Poliéster na cor preta. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-88-produto.webp"
+      "/catalogo/comercial-88-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2916,7 +2978,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-88-produto.webp"
+        "image": "/catalogo/comercial-88-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2931,7 +2993,9 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em tecido 100% Poliéster na cor preta"
+      "Material": "lateral em tecido 100% Poliéster na cor preta",
+      "Estrutura": "Madeira de reflorestamento",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2943,7 +3007,7 @@
     "category": "Bases e camas",
     "description": "Utilizando madeira de reflorestamento, ecologicamente correta, tratada com bactericida natural que a protege de cupins, fungos e brocas, garantindo maior durabilidade. Conta com uma camada extra de espuma na superfície destinada ao colchão para aumentar a área de conforto do produto.\n\n• Revestimento lateral em tecido 100% Poliéster na cor branca. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-89-produto.webp"
+      "/catalogo/comercial-89-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2956,7 +3020,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-89-produto.webp"
+        "image": "/catalogo/comercial-89-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -2971,7 +3035,9 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em tecido 100% Poliéster na cor branca"
+      "Material": "lateral em tecido 100% Poliéster na cor branca",
+      "Estrutura": "Madeira de reflorestamento",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -2983,7 +3049,7 @@
     "category": "Bases e camas",
     "description": "Utilizando madeira de reflorestamento, ecologicamente correta, tratada com bactericida natural que a protege de cupins, fungos e brocas, garantindo maior durabilidade. Conta com uma camada extra de espuma na superfície destinada ao colchão para aumentar a área de conforto do produto.\n\n• Revestimento lateral em tecido 100% Poliéster, bordado em espuma 100% Poliuretano. • Estrutura de Madeira Tratada e de Refl orestamento. • Pés rosqueáveis.",
     "images": [
-      "/catalogo/comercial-90-produto.webp"
+      "/catalogo/comercial-90-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -2996,7 +3062,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-90-produto.webp"
+        "image": "/catalogo/comercial-90-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3011,7 +3077,9 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 198 × 186 cm · 203 × 193 cm",
       "Linha": "Ortobom",
-      "Material": "lateral em tecido 100% Poliéster, bordado em espuma 100% Poliuretano"
+      "Material": "lateral em tecido 100% Poliéster, bordado em espuma 100% Poliuretano",
+      "Estrutura": "Madeira de reflorestamento",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -3023,7 +3091,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Boutique apresenta o mix perfeito de sofisticação e conforto. Produzido com os mais modernos e atuais insumos disponíveis no mercado, este colchão foi desenvolvido para atender a hotelaria de alto padrão. Sua camada de conforto em espuma viscoelástica e molas ensacadas individualmente de alta tecnologia proporcionam o maior conforto e suavidade ao deitar. Camada de sustentação em espuma selada D45 proporciona durabilidade e maior suporte de peso.\n\n• Revestimento 100% malha de alta gramatura (300 g/m2). • Estrutura combinada de lâminas de espuma selada D45 e viscoelástica. • Molas ensacadas individualmente de alta tecnologia (sistema pocket ecopillow com 237 molas por m2). • Barramento super-reforçado em espuma D45 e AG80.",
     "images": [
-      "/catalogo/hotelaria-4-produto.webp"
+      "/catalogo/hotelaria-4-produto-hd.webp"
     ],
     "sizes": [
       "200 × 200 cm",
@@ -3040,7 +3108,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-4-produto.webp"
+        "image": "/catalogo/hotelaria-4-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3070,7 +3138,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Dupla Face possui resistência, maciez e durabilidade em ambos lados para proporcionar as melhores noites de sono para os seus hóspedes. Com 33 cm de altura, é revestido em malha, bordado em Matelassê em espuma 100% Poliuretano (D26) e ainda conta com a espuma Extra Firme 100% Poliuretano (D33). Suas molas Superpocket ensacadas individualmente moldam-se aos contornos do corpo e impedem que o movimento de uma pessoa interfira no descanso da outra. Tudo isso com práticas alças de rotação.\n\n• Revestimento em malha nas duas faces. • Bordado em Matelassê em espuma 100% Poliuretano - D26. • Espuma Extra Firme 100% Poliuretano - D33. • Estrutura de molas Superpocket ensacadas individualmente. • Alças de rotação.",
     "images": [
-      "/catalogo/hotelaria-5-produto.webp"
+      "/catalogo/hotelaria-5-produto-hd.webp"
     ],
     "sizes": [
       "200 × 200 cm",
@@ -3086,7 +3154,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-5-produto.webp"
+        "image": "/catalogo/hotelaria-5-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3103,7 +3171,8 @@
       "Linha": "Hotelaria",
       "Material": "malha nas duas faces",
       "Altura": "33 cm",
-      "Estrutura de molas": "Superpocket"
+      "Estrutura de molas": "Superpocket",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3115,7 +3184,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Superpocket Super Luxo oferece elevado conforto e maciez, por meio do seu Tecido Maquinetado em Poliéster, bordado em Matelassê. A espuma HR - High Resilience proporciona aos hóspedes melhor suporte dos pontos de pressão do corpo, promovendo assim o alinhamento da coluna, aliviando dores e melhorando a postura durante o repouso. Outro diferencial do Orthotel Superpocket Super Luxo é sua estrutura por Molas Superpocket ensacadas individualmente, que oferecem um conforto único, uma vez que o movimento de uma pessoa não interfere no sono da outra. Desta forma, esse colchão proporciona uma noite de sono muito mais tranquila e agradável para todos os seus hóspedes.\n\n• Tecido Maquinetado em Poliéster. • Bordado em Matelassê. • Camada de conforto em espuma HR - High Resilience. • Camada de sustentação em espuma Extra Firme Selada 100% Poliuretano - D33.",
     "images": [
-      "/catalogo/hotelaria-6-produto.webp"
+      "/catalogo/hotelaria-6-produto-hd.webp"
     ],
     "sizes": [
       "193 × 203 cm",
@@ -3129,7 +3198,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-6-produto.webp"
+        "image": "/catalogo/hotelaria-6-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3146,7 +3215,8 @@
       "Linha": "Hotelaria",
       "Material": "Maquinetado em Poliéster",
       "Altura": "30 cm",
-      "Estrutura de molas": "Superpocket"
+      "Estrutura de molas": "Superpocket",
+      "Espuma": "D33"
     },
     "variantInventory": {}
   },
@@ -3158,7 +3228,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Superluxo oferece elevado conforto e maciez, em razão do seu Tecido Maquinetado em Poliéster, bordado em Matelassê. A espuma HR - High Resilience proporciona aos hóspedes melhor suporte dos pontos de pressão do corpo, promovendo, assim, o alinhamento da coluna, aliviando dores e melhorando a postura durante o repouso. Outro diferencial do Orthotel Superluxo é sua estrutura de Molas de Fio Contínuo Interconectadas de alta tecnologia. Desta forma, esse colchão proporciona uma noite de sono muito mais tranquila e agradável para todos os seus hóspedes.\n\n• Tecido Maquinetado em Poliéster. • Bordado em Matelassê. • Camada de conforto em espuma HR - High Resilience. • Camada de sustentação em espuma Extra Firme Selada 100% Poliuretano - D33. • Estrutura de Molas de Fio Contínuo Interconectadas, com borda de aço. • Reforço lateral em PU (Poliuretano).",
     "images": [
-      "/catalogo/hotelaria-7-produto.webp"
+      "/catalogo/hotelaria-7-produto-hd.webp"
     ],
     "sizes": [
       "193 × 203 cm",
@@ -3172,7 +3242,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-7-produto.webp"
+        "image": "/catalogo/hotelaria-7-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3187,7 +3257,8 @@
     "specs": {
       "Medidas": "193 × 203 cm · 186 × 198 cm · 158 × 198 cm · 138 × 188 cm · 100 × 200 cm · 88 × 188 cm",
       "Linha": "Hotelaria",
-      "Material": "Maquinetado em Poliéster"
+      "Material": "Maquinetado em Poliéster",
+      "Espuma": "D33"
     },
     "variantInventory": {}
   },
@@ -3199,7 +3270,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Superpocket Luxo proporciona aos seus hóspedes uma noite de sono tranquila e muito confortável. Seu revestimento em Tecido Maquinetado em Poliéster possui maior entrelaçamento de fios acetinados, que facilitam a limpeza e a manutenção do produto. Com elevado nível de maciez, seus hóspedes desfrutarão de um colchão luxuoso, com excelente flexibilidade, além de uma ótima acomodação. A estrutura de Molas Ensacadas Individualmente oferece um conforto único, uma vez que o movimento de uma pessoa não interfere no sono da outra.\n\n• Tecido Maquinetado em Poliéster. • Bordado em Matelassê. • Espuma Firme Selada 100% Poliuretano - D26. • Molas Ensacadas Individualmente. • Reforço lateral em PU (Poliuretano).",
     "images": [
-      "/catalogo/hotelaria-8-produto.webp"
+      "/catalogo/hotelaria-8-produto-hd.webp"
     ],
     "sizes": [
       "193 × 203 cm",
@@ -3213,7 +3284,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-8-produto.webp"
+        "image": "/catalogo/hotelaria-8-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3230,7 +3301,8 @@
       "Linha": "Hotelaria",
       "Material": "Maquinetado em Poliéster",
       "Altura": "27 cm",
-      "Estrutura de molas": "Superpocket"
+      "Estrutura de molas": "Superpocket",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3242,7 +3314,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Luxo proporciona aos seus hóspedes uma noite de sono tranquila e muito confortável. Seu revestimento em Tecido Maquinetado em Poliéster possui maior entrelaçamento de fios acetinados, que facilitam a limpeza e a manutenção do produto. Com elevado nível de maciez, seus hóspedes desfrutarão de um colchão luxuoso, com excelente flexibilidade, além de uma ótima acomodação. A estrutura de Molas de Fio Contínuo Interconectadas com borda de aço proporciona o máximo de conforto em uma superfície com suporte de peso uniforme, mantendo o alinhamento corporal. As etiquetas dos trimestres indicam quando o colchão deve ser rotacionado, permitindo a manutenção de forma simples, garantindo a resistência e a durabilidade do produto. Sem dúvida, com o colchão Orthotel Luxo seus hóspedes jamais esquecerão da sensação de bem-estar e aconchego após dormirem em seu hotel.\n\n• Tecido Maquinetado em Poliéster. • Bordado em Matelassê. • Espuma Firme Certificada 100% Poliuretano - D26. • Estrutura de Molas de Fio Contínuo Interconectadas, com borda de aço. • Reforço lateral em PU (Poliuretano). • Respiros laterais. • Base em Tecido Antiderrapante.",
     "images": [
-      "/catalogo/hotelaria-9-produto.webp"
+      "/catalogo/hotelaria-9-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -3254,7 +3326,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-9-produto.webp"
+        "image": "/catalogo/hotelaria-9-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3269,7 +3341,8 @@
     "specs": {
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 200 × 100 cm",
       "Linha": "Hotelaria",
-      "Material": "Maquinetado em Poliéster"
+      "Material": "Maquinetado em Poliéster",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3281,7 +3354,7 @@
     "category": "Hotelaria",
     "description": "O colchão Orthotel Standard proporciona conforto e bem-estar para os seus hóspedes. Revestido em Tecido Maquinetado em Poliéster com bordado em alto relevo imponente e requintado, esse colchão é produzido com estrutura de Molas Fio Contínuo, oferecendo resistência progressiva ao peso, além de ser reforçado com longarinas de espuma 100% Poliuretano entre as fileiras de molas, proporcionando maior sustentação e durabilidade. Desta forma, esse colchão proporciona uma noite de sono muito mais tranquila e agradável para todos os seus hóspedes.\n\n• Tecido Maquinetado em Poliéster. • Bordado em Matelassê. • Espuma Firme Certificada 100% Poliuretano - D26. • Estrutura de Molas Fio Contínuo.\n\nColchão Orthotel Standard • Reforço com longarinas de espuma 100% Poliuretano entre a fileira de molas. • Reforço lateral em PU (Poliuretano). • Base em Tecido Antiderrapante.",
     "images": [
-      "/catalogo/hotelaria-10-produto.webp"
+      "/catalogo/hotelaria-10-produto-hd.webp"
     ],
     "sizes": [
       "188 × 88 cm",
@@ -3295,7 +3368,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-10-produto.webp"
+        "image": "/catalogo/hotelaria-10-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3311,7 +3384,8 @@
       "Medidas": "188 × 88 cm · 188 × 138 cm · 198 × 158 cm · 200 × 100 cm · 198 × 186 cm · 193 × 203 cm",
       "Linha": "Hotelaria",
       "Material": "Maquinetado em Poliéster",
-      "Altura": "24 cm"
+      "Altura": "24 cm",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3323,7 +3397,7 @@
     "category": "Hotelaria",
     "description": "• Tecido Maquinetado em Poliéster. • Bordado em Matelassê. • Espuma Firme Certificada 100% Poliuretano - D26. • Estrutura de Molas de Fio Contínuo Interconectadas, com borda de aço.\n\n• Reforço lateral em PU (Poliuretano). • Estrutura de Madeira Tratada e de Reflorestamento. • Pés dobráveis.\n\nO Colchão Versátil Orthotel Luxo apresenta design inovador, perfeito para valorizar o ambiente. Revestido em Tecido Maquinetado em Poliéster, com maior entrelaçamento de fios acetinados, bordado em alto relevo imponente, requintado e confortável, elevando a sensação de maciez e aconchego. Outro diferencial do Colchão Versátil Orthotel Luxo é sua estrutura de Molas de Fio Contínuo Interconectadas de alta tecnologia, que utiliza o sistema de molas mais moderno existente. Já a versatilidade fica por conta dos pés articulados, que proporcionam suporte adequado e amplitude ao produto, em suas diferentes variações de montagem, atendendo às diferentes necessidades de seus hóspedes.",
     "images": [
-      "/catalogo/hotelaria-11-produto.webp"
+      "/catalogo/hotelaria-11-produto-hd.webp"
     ],
     "sizes": [
       "200 × 100 cm"
@@ -3332,7 +3406,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-11-produto.webp"
+        "image": "/catalogo/hotelaria-11-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3347,7 +3421,8 @@
     "specs": {
       "Medidas": "200 × 100 cm",
       "Linha": "Hotelaria",
-      "Material": "Maquinetado em Poliéster"
+      "Material": "Maquinetado em Poliéster",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3359,7 +3434,7 @@
     "category": "Hotelaria",
     "description": "• Tecido Maquinetado em Poliéster e Polipropileno. • Bordado em Matelassê. • Espuma Firme Selada 100% Poliuretano - D26. • Estrutura de Molas de Fio Contínuo.\n\n• Tecido Maquinetado em Poliéster e Polipropileno. • Estrutura de Madeira Tratada e de Reflorestamento. • Pés rosqueáveis.\n\nO colchão Versátil Orthotel Standard tem design inovador, valorizando, assim, o ambiente. Seu bordado em Matelassê oferece uma camada extra de conforto, elevando a sensação de maciez e aconchego. As molas de Fio Contínuo entrelaçado, de altíssima tecnologia, utiliza a forma de arame mais moderna que existe, ganhando a reputação de ser o principal molejo para colchões de alta qualidade. Sua versatilidade fica por conta dos pés rosqueáveis e dobráveis, proporcionando suporte adequado ao produto em suas variações de montagem, atendendo às diferentes necessidades de seus hóspedes.\n\nA Base Orthotel Ortobom é revestida em Tecido Maquinetado em Poliéster e Propileno, que oferece maior resistência aos atritos do dia a dia, aumentando a sua durabilidade. Sua estrutura de madeira proveniente de áreas de reflorestamento é tratada com um agente bactericida, o qual impede a proliferação de fungos, cupins e brocas. Os pés rosqueáveis são de fácil manuseio e montagem, proporcionando um suporte adequado ao produto.",
     "images": [
-      "/catalogo/hotelaria-12-colchao.webp"
+      "/catalogo/hotelaria-12-colchao-hd.webp"
     ],
     "sizes": [
       "182 × 90 × 26 cm"
@@ -3368,7 +3443,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-12-colchao.webp"
+        "image": "/catalogo/hotelaria-12-colchao-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3384,7 +3459,8 @@
       "Medidas": "182 × 90 × 26 cm",
       "Linha": "Hotelaria",
       "Material": "Maquinetado em Poliéster e Polipropileno",
-      "Observação": "Colchão e base vendidos separadamente."
+      "Observação": "Colchão e base vendidos separadamente.",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3396,7 +3472,7 @@
     "category": "Acessórios",
     "description": "O colchão Baby Hospitalar oferece conforto e comodidade aos pacientes infantis durante internação ou atendimento clínico.",
     "images": [
-      "/catalogo/comercial-101-produto.webp"
+      "/catalogo/comercial-101-produto-hd.webp"
     ],
     "sizes": [
       "70 × 130 cm",
@@ -3406,7 +3482,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-101-produto.webp"
+        "image": "/catalogo/comercial-101-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3434,7 +3510,7 @@
     "category": "Acessórios",
     "description": "• Revestimento em napa azul 100% Poliéster impermeável. • Placa de espuma 100% Poliuretano nas densidades D26, D28, D33 e D45.\n\nO Colchonete para Maca de Resgate é ideal para oferecer o conforto e bem-estar que as pessoas necessitam ao se deitarem ou serem transportadas em um atendimento clínico ou hospitalar.",
     "images": [
-      "/catalogo/comercial-103-produto.webp"
+      "/catalogo/comercial-103-produto-hd.webp"
     ],
     "sizes": [
       "188 × 78 cm"
@@ -3443,7 +3519,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-103-produto.webp"
+        "image": "/catalogo/comercial-103-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3458,7 +3534,8 @@
     "specs": {
       "Medidas": "188 × 78 cm",
       "Linha": "Ortobom",
-      "Material": "napa azul 100% Poliéster impermeável"
+      "Material": "napa azul 100% Poliéster impermeável",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -3470,7 +3547,7 @@
     "category": "Acessórios",
     "description": "Confeccionado em Revestimento em Napa 100% Poliéster, não retém líquidos, ideal para ser usado na prática de exercícios físicos. A Espuma Certifi cada 100% Poliuretano acomoda o corpo evitando o atrito com o solo.",
     "images": [
-      "/catalogo/comercial-104-produto.webp"
+      "/catalogo/comercial-104-produto-hd.webp"
     ],
     "sizes": [
       "90 × 43 cm"
@@ -3479,7 +3556,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-104-produto.webp"
+        "image": "/catalogo/comercial-104-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3506,7 +3583,7 @@
     "category": "Acessórios",
     "description": "Travesseiro Hospitalar, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/comercial-105-produto.webp"
+      "/catalogo/comercial-105-produto-hd.webp"
     ],
     "sizes": [
       "60 × 40 cm"
@@ -3515,7 +3592,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-105-produto.webp"
+        "image": "/catalogo/comercial-105-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3542,7 +3619,7 @@
     "category": "Acessórios",
     "description": "O Suavencosto alveolado é uma almofada massageadora que proporciona conforto e relaxamento, além de ajudar na prevenção de lesões.\n\nO Suavencosto Hospitalar é uma almofada ergonômica que oferece conforto e auxilia no alívio de tensões musculares.",
     "images": [
-      "/catalogo/comercial-106-produto.webp"
+      "/catalogo/comercial-106-produto-hd.webp"
     ],
     "sizes": [
       "30 × 45 cm",
@@ -3552,7 +3629,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-106-produto.webp"
+        "image": "/catalogo/comercial-106-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3579,7 +3656,7 @@
     "category": "Acessórios",
     "description": "O Travesseiro Conforto Anatômico alivia o estresse, diminuindo as tensões funcionando como um suporte para a cervical durante o sono.",
     "images": [
-      "/catalogo/comercial-108-produto.webp"
+      "/catalogo/comercial-108-produto-hd.webp"
     ],
     "sizes": [
       "40 × 60 cm"
@@ -3588,7 +3665,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-108-produto.webp"
+        "image": "/catalogo/comercial-108-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3615,7 +3692,7 @@
     "category": "Acessórios",
     "description": "O Suporte Anatômico é a opção perfeita para alívio das dores no pescoço e nas costas. Possui fácil fi xação no encosto do carro ou na cadeira de escritório.\n\n• Capa removível em tecido 100% poliéster. • Enchimento em espuma viscoelástica. • Formato anatômico. • Tecido leve e respirável.",
     "images": [
-      "/catalogo/comercial-109-produto.webp"
+      "/catalogo/comercial-109-produto-hd.webp"
     ],
     "sizes": [
       "24 × 48 cm"
@@ -3624,7 +3701,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-109-produto.webp"
+        "image": "/catalogo/comercial-109-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3651,7 +3728,7 @@
     "category": "Acessórios",
     "description": "O Suporte Ortopédico para Lombar proporciona melhor ergonomia e alívio da dor, sendo altamente indicado para quem passa longas horas sentado.",
     "images": [
-      "/catalogo/comercial-110-produto.webp"
+      "/catalogo/comercial-110-produto-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -3660,7 +3737,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-110-produto.webp"
+        "image": "/catalogo/comercial-110-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3687,7 +3764,7 @@
     "category": "Acessórios",
     "description": "A Almofada Terapêutica da Ortobom proporciona maior alívio da pressão em áreas sensíveis e maior conforto para longos períodos sentado.\n\n• Capa em malha de Poliéster com Viscose. • Enchimento em espuma viscoelástica 100% Poliuretano. • Formato quadrado.",
     "images": [
-      "/catalogo/comercial-111-produto.webp"
+      "/catalogo/comercial-111-produto-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -3696,7 +3773,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-111-produto.webp"
+        "image": "/catalogo/comercial-111-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3724,7 +3801,7 @@
     "category": "Acessórios",
     "description": "A Almofada Terapêutica da Ortobom proporciona maior alívio da pressão em áreas sensíveis e maior conforto para longos períodos sentado.\n\n• Capa em malha de poliéster com viscose. • Enchimento em espuma viscoelástica 100% poliuretano. • Formato quadrado.",
     "images": [
-      "/catalogo/comercial-112-produto.webp"
+      "/catalogo/comercial-112-produto-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -3733,7 +3810,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-112-produto.webp"
+        "image": "/catalogo/comercial-112-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3760,7 +3837,7 @@
     "category": "Acessórios",
     "description": "A Mochila Camping é prática, leve e pode ser usada tanto no transporte quanto na conservação do colchonete, uma vez que pode manter o produto guardado após o uso. O colchonete que compõe o kit é confeccionado em Espuma Certifi cada 100% Poliuretano, oferecendo maciez e conforto para seus momentos de lazer.\n\n• Tecido em Poliéster. • Placa de Espuma Certifi cada 100% Poliuretano. Características do produto",
     "images": [
-      "/catalogo/comercial-123-produto.webp"
+      "/catalogo/comercial-123-produto-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -3769,7 +3846,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-123-produto.webp"
+        "image": "/catalogo/comercial-123-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3796,7 +3873,7 @@
     "category": "Acessórios",
     "description": "O Suavencosto Sleep Baby proporciona maior conforto e segurança para o seu bebê. Sua superfície macia e inclinada permite acomodar o bebê em três posições importantes para os cuidados do dia a dia como, por exemplo, para o melhor repouso após a amamentação. Seu tecido suave é composto por malha Belga com Viscose, que retém menos calor e possui maior resistência a rasgos. Sua espuma possui selos de tratamentos antiácaro e antifungos, além de ser aprovada pelos testes físicos de resistência à ruptura, densidade e resiliência. O Suavencosto Sleep Baby possui características para proporcionar conforto e segurança ao seu bebê.\n\n• Placa de espuma flexível convencional 100% Poliuretano. • Tecido malha Belga 90% Poliéster e 10% Viscose. • Superfície suavemente inclinada.",
     "images": [
-      "/catalogo/comercial-124-produto.webp"
+      "/catalogo/comercial-124-produto-hd.webp"
     ],
     "sizes": [
       "40 × 60 cm",
@@ -3806,7 +3883,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-124-produto.webp"
+        "image": "/catalogo/comercial-124-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3833,7 +3910,7 @@
     "category": "Acessórios",
     "description": "Peça de espuma que serve de apoio para se recostar confortavelmente. Ideal para os momentos de relaxamento.",
     "images": [
-      "/catalogo/comercial-125-produto.webp"
+      "/catalogo/comercial-125-produto-hd.webp"
     ],
     "sizes": [
       "40 × 40 cm"
@@ -3842,7 +3919,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-125-produto.webp"
+        "image": "/catalogo/comercial-125-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3869,7 +3946,7 @@
     "category": "Acessórios",
     "description": "O Encosto Dino Veludo foi desenvolvido especialmente para o seu descanso e relaxamento. É ideal para acomodar o corpo enquanto assiste TV ou lê um livro, um produto indicado para idosos e gestantes, proporcionando relaxamento e apoio para o corpo.",
     "images": [
-      "/catalogo/comercial-126-produto.webp"
+      "/catalogo/comercial-126-produto-hd.webp"
     ],
     "sizes": [
       "75 × 50 cm"
@@ -3878,7 +3955,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-126-produto.webp"
+        "image": "/catalogo/comercial-126-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3903,9 +3980,9 @@
     "name": "Travesseiro Espuma Viscoelástica",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Espuma Viscoelástica oferece maior capacidade de absorção de peso, moldando-se aos contornos do corpo e proporcionando uma elevada sensação de conforto. Seu tecido 90% Algodão e 10% Poliéster oferece propriedade térmica natural e não absorve o calor do corpo, reduzindo a transpiração.",
+    "description": "Travesseiro Espuma Viscoelástica. Revestimento: 90% algodão e 10% poliéster. Enchimento: Espuma viscoelástica 100% poliuretano. Medida: 40 × 60 cm.",
     "images": [
-      "/catalogo/comercial-114-travesseiro-espuma-viscoelastica.webp"
+      "/catalogo/comercial-114-travesseiro-espuma-viscoelastica-hd.webp"
     ],
     "sizes": [
       "40 × 60 cm"
@@ -3914,7 +3991,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-114-travesseiro-espuma-viscoelastica.webp"
+        "image": "/catalogo/comercial-114-travesseiro-espuma-viscoelastica-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3929,7 +4006,8 @@
     "specs": {
       "Medidas": "40 × 60 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "90% algodão e 10% poliéster",
+      "Enchimento": "Espuma viscoelástica 100% poliuretano"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -3940,9 +4018,9 @@
     "name": "Travesseiro Espuma Látex",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Espuma Látex é confeccionado com Espuma 100% Poliuretano de Alta Resiliência que possui características similares à espuma de látex, oferecendo a melhor relação de flexibilidade, suporte e retorno, proporcionando maior índice de conforto e melhores noites de sono.",
+    "description": "Travesseiro Espuma Látex. Revestimento: 90% algodão e 10% poliéster. Enchimento: Espuma 100% poliuretano de alta resiliência. Observação: Espuma com características similares ao látex; não é látex natural.. Medida: 40 × 60 cm.",
     "images": [
-      "/catalogo/comercial-114-travesseiro-espuma-latex.webp"
+      "/catalogo/comercial-114-travesseiro-espuma-latex-hd.webp"
     ],
     "sizes": [
       "40 × 60 cm"
@@ -3951,7 +4029,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-114-travesseiro-espuma-latex.webp"
+        "image": "/catalogo/comercial-114-travesseiro-espuma-latex-hd.webp"
       }
     ],
     "priceCents": null,
@@ -3966,7 +4044,9 @@
     "specs": {
       "Medidas": "40 × 60 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "90% algodão e 10% poliéster",
+      "Enchimento": "Espuma 100% poliuretano de alta resiliência",
+      "Observação": "Espuma com características similares ao látex; não é látex natural."
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -3977,9 +4057,9 @@
     "name": "Travesseiro Flocos",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Flocos é produzido com fl ocos de Espuma 100% Poliuretano, proporcionando maciez e distribuição de pressão dos fl ocos individuais que se acomodam sob o peso da cabeça.",
+    "description": "Travesseiro Flocos. Revestimento: TNT 100% polipropileno, bordado em espuma 100% poliuretano. Enchimento: Flocos de espuma 100% poliuretano. Medida: 45 × 65 cm.",
     "images": [
-      "/catalogo/comercial-115-travesseiro-flocos.webp"
+      "/catalogo/comercial-115-travesseiro-flocos-hd.webp"
     ],
     "sizes": [
       "45 × 65 cm"
@@ -3988,7 +4068,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-115-travesseiro-flocos.webp"
+        "image": "/catalogo/comercial-115-travesseiro-flocos-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4003,7 +4083,8 @@
     "specs": {
       "Medidas": "45 × 65 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "TNT 100% polipropileno, bordado em espuma 100% poliuretano",
+      "Enchimento": "Flocos de espuma 100% poliuretano"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4014,9 +4095,9 @@
     "name": "Travesseiro Nuvem",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Nuvem é confeccionado em espuma Hiper Soft que oferece alta flexibilidade, proporcionando maior maciez e alto índice de conforto. Seu revestimento em tecido não tecido 100% Polipropileno retém menos calor, reduzindo a transpiração.",
+    "description": "Travesseiro Nuvem. Revestimento: TNT 100% polipropileno. Enchimento: Espuma 100% poliuretano de alta resiliência Hiper Soft. Medida: 40 × 60 cm.",
     "images": [
-      "/catalogo/comercial-115-travesseiro-nuvem.webp"
+      "/catalogo/comercial-115-travesseiro-nuvem-hd.webp"
     ],
     "sizes": [
       "40 × 60 cm"
@@ -4025,7 +4106,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-115-travesseiro-nuvem.webp"
+        "image": "/catalogo/comercial-115-travesseiro-nuvem-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4040,7 +4121,8 @@
     "specs": {
       "Medidas": "40 × 60 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "TNT 100% polipropileno",
+      "Enchimento": "Espuma 100% poliuretano de alta resiliência Hiper Soft"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4051,9 +4133,9 @@
     "name": "Travesseiro Percal 200 Fios",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Percal 200 Fios oferece um conforto diferenciado. Seu tecido 100% Algodão em Percal 200 Fios possui maior entrelaçamento de fios, o que lhe confere uma característica fina e densa, proporcionando maior durabilidade ao tecido, além de um toque delicado e suave. Confeccionado com enchimento 100% Poliéster e fibra siliconada, proporciona excelente acomodação para perfeitas noites de sono.",
+    "description": "Travesseiro Percal 200 Fios. Revestimento: Percal 100% algodão. Enchimento: Fibra siliconada 100% poliéster. Contagem de fios: 200 fios. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/comercial-116-travesseiro-percal-200-fios.webp"
+      "/catalogo/comercial-116-travesseiro-percal-200-fios-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -4062,7 +4144,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-116-travesseiro-percal-200-fios.webp"
+        "image": "/catalogo/comercial-116-travesseiro-percal-200-fios-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4077,7 +4159,9 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "Percal 100% algodão",
+      "Enchimento": "Fibra siliconada 100% poliéster",
+      "Contagem de fios": "200 fios"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4088,9 +4172,9 @@
     "name": "Travesseiro Max Malha",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Max Malha é revestido com tecido em malha penteada 100% Algodão, que possui propriedade natural antitérmica e permite ajuste da temperatura ao corpo. Seu teor de absorção facilita a transpiração. Seu enchimento 100% Poliéster de Fibra Siliconada possui propriedade especial que faz a distribuição uniforme das fibras, permitindo uma adaptação a toda forma de dormir. Você ajusta o travesseiro da maneira que preferir. É inodoro e possui tratamento antiácaro e antifungo.",
+    "description": "Travesseiro Max Malha. Revestimento: Malha 100% algodão. Enchimento: Fibra siliconada 100% poliéster. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/comercial-116-travesseiro-max-malha.webp"
+      "/catalogo/comercial-116-travesseiro-max-malha-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -4099,7 +4183,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-116-travesseiro-max-malha.webp"
+        "image": "/catalogo/comercial-116-travesseiro-max-malha-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4114,7 +4198,8 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "Malha 100% algodão",
+      "Enchimento": "Fibra siliconada 100% poliéster"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4125,9 +4210,9 @@
     "name": "Travesseiro Aman",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "Travesseiro Ortobom Aman. Veja composição e medidas no catálogo original.",
+    "description": "Travesseiro Aman. Revestimento: 100% algodão. Enchimento: Fibra siliconada 100% poliéster. Formato: Travesseiro de corpo, 50 × 130 cm. Medida: 50 × 130 cm.",
     "images": [
-      "/catalogo/comercial-117-travesseiro-aman.webp"
+      "/catalogo/comercial-117-travesseiro-aman-hd.webp"
     ],
     "sizes": [
       "50 × 130 cm"
@@ -4136,7 +4221,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-117-travesseiro-aman.webp"
+        "image": "/catalogo/comercial-117-travesseiro-aman-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4151,7 +4236,9 @@
     "specs": {
       "Medidas": "50 × 130 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "100% algodão",
+      "Enchimento": "Fibra siliconada 100% poliéster",
+      "Formato": "Travesseiro de corpo, 50 × 130 cm"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4162,9 +4249,9 @@
     "name": "Travesseiro Amore",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Amore é revestido por tecido de Microfibra Peletizada 100% Poliéster, que possui aspecto suave, despertando a sensação de conforto e maciez. Seu enchimento confortável facilita a acomodação da cabeça, pescoço e ombros, e suas fibras possuem o melhor índice de memória de retorno, proporcionando melhores noites de sono.",
+    "description": "Travesseiro Amore. Revestimento: Microfibra peletizada 100% poliéster. Enchimento: Fibra siliconada 100% poliéster. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/comercial-117-travesseiro-amore.webp"
+      "/catalogo/comercial-117-travesseiro-amore-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -4173,7 +4260,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-117-travesseiro-amore.webp"
+        "image": "/catalogo/comercial-117-travesseiro-amore-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4188,7 +4275,8 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "Microfibra peletizada 100% poliéster",
+      "Enchimento": "Fibra siliconada 100% poliéster"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4199,9 +4287,9 @@
     "name": "Travesseiro High-Comfort",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro High-Comfort é revestido com tecido 100% Algodão, o mais desejado do mercado. O algodão é antitérmico e permite o ajuste da temperatura ao corpo, facilitando a transpiração. Seu enchimento 100% Poliéster de Fibra Siliconada é a tradição da nobreza inglesa. Sua alta maciez proporciona alto índice de conforto e facilita a acomodação do corpo.",
+    "description": "Travesseiro High-Comfort. Revestimento: 100% algodão. Enchimento: Fibra siliconada 100% poliéster. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/comercial-118-travesseiro-high-comfort.webp"
+      "/catalogo/comercial-118-travesseiro-high-comfort-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -4210,7 +4298,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-118-travesseiro-high-comfort.webp"
+        "image": "/catalogo/comercial-118-travesseiro-high-comfort-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4225,7 +4313,8 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "100% algodão",
+      "Enchimento": "Fibra siliconada 100% poliéster"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4236,9 +4325,9 @@
     "name": "Travesseiro Percal 200 Fios Plus",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Percal 200 Fios Plus possui enchimento 100% Poliéster com Fibra Siliconada, que proporciona um toque extramacio. Seu tecido 100% Algodão Percal 200 fios possui propriedade natural antitérmica que diminui a transpiração.",
+    "description": "Travesseiro Percal 200 Fios Plus. Revestimento: Percal 100% algodão. Enchimento: Fibra siliconada 100% poliéster. Contagem de fios: 200 fios. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/comercial-118-travesseiro-percal-200-fios-plus.webp"
+      "/catalogo/comercial-118-travesseiro-percal-200-fios-plus-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -4247,7 +4336,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-118-travesseiro-percal-200-fios-plus.webp"
+        "image": "/catalogo/comercial-118-travesseiro-percal-200-fios-plus-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4262,7 +4351,9 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "Percal 100% algodão",
+      "Enchimento": "Fibra siliconada 100% poliéster",
+      "Contagem de fios": "200 fios"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4273,9 +4364,9 @@
     "name": "Travesseiro Casadinho",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "Travesseiro Ortobom Casadinho. Veja composição e medidas no catálogo original.",
+    "description": "Travesseiro Casadinho. Revestimento: 100% poliéster. Enchimento: Fibra siliconada. Conteúdo da embalagem: 2 travesseiros. Medida: 45 × 65 cm.",
     "images": [
-      "/catalogo/comercial-119-travesseiro-casadinho.webp"
+      "/catalogo/comercial-119-travesseiro-casadinho-hd.webp"
     ],
     "sizes": [
       "45 × 65 cm"
@@ -4284,7 +4375,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-119-travesseiro-casadinho.webp"
+        "image": "/catalogo/comercial-119-travesseiro-casadinho-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4299,7 +4390,9 @@
     "specs": {
       "Medidas": "45 × 65 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "100% poliéster",
+      "Enchimento": "Fibra siliconada",
+      "Conteúdo da embalagem": "2 travesseiros"
     },
     "variantInventory": {},
     "photoNote": "O fabricante forneceu foto deste modelo na embalagem. Ainda não há foto confirmada sem embalagem."
@@ -4310,9 +4403,9 @@
     "name": "Travesseiro Orthotel Percal",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "Travesseiro Ortobom Orthotel Percal. Veja composição e medidas no catálogo original.",
+    "description": "Travesseiro Orthotel Percal. Revestimento: Percal 100% algodão. Enchimento: Fibra siliconada 100% poliéster. Contagem de fios: 200 fios. Lavável: Sim, conforme instruções do fabricante. Medida: 50 × 90 cm.",
     "images": [
-      "/catalogo/hotelaria-14-travesseiro-orthotel-percal.webp"
+      "/catalogo/hotelaria-14-travesseiro-orthotel-percal-hd.webp"
     ],
     "sizes": [
       "50 × 90 cm"
@@ -4321,7 +4414,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-14-travesseiro-orthotel-percal.webp"
+        "image": "/catalogo/hotelaria-14-travesseiro-orthotel-percal-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4336,7 +4429,10 @@
     "specs": {
       "Medidas": "50 × 90 cm",
       "Linha": "Hotelaria",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "Percal 100% algodão",
+      "Enchimento": "Fibra siliconada 100% poliéster",
+      "Contagem de fios": "200 fios",
+      "Lavável": "Sim, conforme instruções do fabricante"
     },
     "variantInventory": {},
     "photoNote": "Fotografia do Travesseiro Orthotel Percal 200 Fios, fornecida pelo fabricante."
@@ -4347,9 +4443,9 @@
     "name": "Travesseiro Soneca",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "O Travesseiro Soneca possui enchimento de Fibra Siliconada 100% Poliéster superfi na que proporciona um toque extramacio.",
+    "description": "Travesseiro Soneca. Revestimento: TNT 100% polipropileno. Enchimento: Fibra siliconada 100% poliéster extramacia. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/travesseiros-15.webp"
+      "/catalogo/travesseiros-15-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -4358,7 +4454,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/travesseiros-15.webp"
+        "image": "/catalogo/travesseiros-15-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4373,7 +4469,8 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "Consulte a composição na descrição"
+      "Revestimento": "TNT 100% polipropileno",
+      "Enchimento": "Fibra siliconada 100% poliéster extramacia"
     },
     "variantInventory": {},
     "photoNote": "Foto da embalagem deste modelo, fornecida pelo fabricante."
@@ -4386,7 +4483,7 @@
     "category": "Colchões",
     "description": "bordado em Matelassê em Espuma Firme Selada 100% Poliuretano; •Camada de conforto em Espuma Firme Selada 100% Poliuretano; •Estrutura de Molas Superpocket",
     "images": [
-      "/catalogo/revendedor-2021-10.webp"
+      "/catalogo/revendedor-2021-10-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4395,7 +4492,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-10.webp"
+        "image": "/catalogo/revendedor-2021-10-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4423,7 +4520,7 @@
     "category": "Colchões",
     "description": "Selada 100% Poliuretano; •Estrutura de Molas Nanolastic Bicônicas; •Reforço Lateral em PU (Poliuretano); •Base em Espuma Selada 100% Poliuretano com Tecido Antiderrapante; •Respiros Laterais que facilitam a passagem de ar; •Sistema No Turn – não precisa virar o colchão.",
     "images": [
-      "/catalogo/revendedor-2021-11.webp"
+      "/catalogo/revendedor-2021-11-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4432,7 +4529,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-11.webp"
+        "image": "/catalogo/revendedor-2021-11-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4460,7 +4557,7 @@
     "category": "Colchões",
     "description": "Light Superpocket, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/revendedor-2021-13.webp"
+      "/catalogo/revendedor-2021-13-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4469,7 +4566,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-13.webp"
+        "image": "/catalogo/revendedor-2021-13-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4497,7 +4594,7 @@
     "category": "Colchões",
     "description": "Light Nanolastic, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/revendedor-2021-14.webp"
+      "/catalogo/revendedor-2021-14-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4506,7 +4603,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-14.webp"
+        "image": "/catalogo/revendedor-2021-14-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4534,7 +4631,7 @@
     "category": "Colchões",
     "description": "Light D45, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/revendedor-2021-15.webp"
+      "/catalogo/revendedor-2021-15-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4543,7 +4640,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-15.webp"
+        "image": "/catalogo/revendedor-2021-15-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4570,7 +4667,7 @@
     "category": "Colchões",
     "description": "Light D33, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/revendedor-2021-16.webp"
+      "/catalogo/revendedor-2021-16-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4579,7 +4676,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-16.webp"
+        "image": "/catalogo/revendedor-2021-16-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4606,7 +4703,7 @@
     "category": "Colchões",
     "description": "Light D28, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/revendedor-2021-17.webp"
+      "/catalogo/revendedor-2021-17-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4615,7 +4712,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-17.webp"
+        "image": "/catalogo/revendedor-2021-17-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4642,7 +4739,7 @@
     "category": "Colchões",
     "description": "Light D23, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/revendedor-2021-18.webp"
+      "/catalogo/revendedor-2021-18-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4651,7 +4748,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-18.webp"
+        "image": "/catalogo/revendedor-2021-18-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4678,10 +4775,10 @@
     "category": "Cabeceiras",
     "description": "•Revestimento: veludo 100% Poliéster; •Placa de Espuma Selada 100% Poliuretano; •Estrutura de Madeira Tratada e de Refl orestamento,",
     "images": [
-      "/catalogo/revendedor-2021-45-cinza.webp",
-      "/catalogo/revendedor-2021-45-crema.webp",
-      "/catalogo/revendedor-2021-45-nero.webp",
-      "/catalogo/revendedor-2021-45-rosolare.webp"
+      "/catalogo/revendedor-2021-45-cinza-hd.webp",
+      "/catalogo/revendedor-2021-45-crema-hd.webp",
+      "/catalogo/revendedor-2021-45-nero-hd.webp",
+      "/catalogo/revendedor-2021-45-rosolare-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -4690,22 +4787,22 @@
       {
         "name": "Cinza",
         "hex": "#747474",
-        "image": "/catalogo/revendedor-2021-45-cinza.webp"
+        "image": "/catalogo/revendedor-2021-45-cinza-hd.webp"
       },
       {
         "name": "Crema",
         "hex": "#b4a38e",
-        "image": "/catalogo/revendedor-2021-45-crema.webp"
+        "image": "/catalogo/revendedor-2021-45-crema-hd.webp"
       },
       {
         "name": "Nero",
         "hex": "#222222",
-        "image": "/catalogo/revendedor-2021-45-nero.webp"
+        "image": "/catalogo/revendedor-2021-45-nero-hd.webp"
       },
       {
         "name": "Rosolare",
         "hex": "#6b4d3a",
-        "image": "/catalogo/revendedor-2021-45-rosolare.webp"
+        "image": "/catalogo/revendedor-2021-45-rosolare-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4720,7 +4817,8 @@
     "specs": {
       "Medidas": "Consultar medida",
       "Linha": "Ortobom",
-      "Material": "Veja as especificações do fabricante"
+      "Material": "Veja as especificações do fabricante",
+      "Pés": "Rosqueáveis"
     },
     "variantInventory": {}
   },
@@ -4732,7 +4830,7 @@
     "category": "Acessórios",
     "description": "Colchão Hospitalar Ortobom, da linha Ortobom. Consulte as especificações completas no catálogo do fabricante.",
     "images": [
-      "/catalogo/comercial-102-produto.webp"
+      "/catalogo/comercial-102-produto-hd.webp"
     ],
     "sizes": [
       "D20 · 78 × 188 × 12 cm",
@@ -4745,7 +4843,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-102-produto.webp"
+        "image": "/catalogo/comercial-102-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4773,7 +4871,7 @@
     "category": "Acessórios",
     "description": "O Colchonete Alveolado é composto por espuma alveolada, que possui gomos massageadores com funções relaxantes, ajudando a manter o sono sempre saudável.",
     "images": [
-      "/catalogo/comercial-107-produto.webp"
+      "/catalogo/comercial-107-produto-hd.webp"
     ],
     "sizes": [
       "Azul D28 · 190 × 80 × 7 cm",
@@ -4784,7 +4882,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-107-produto.webp"
+        "image": "/catalogo/comercial-107-produto-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4811,7 +4909,7 @@
     "category": "Acessórios",
     "description": "O Protetor de Colchão Impermeável protege o colchão contra líquidos, suor e impurezas. Tecido em poliéster com tratamento em poliuretano e revestimento lateral em poliéster.",
     "images": [
-      "/catalogo/comercial-122-protetor.webp"
+      "/catalogo/comercial-122-protetor-hd.webp"
     ],
     "sizes": [
       "190 × 90 cm",
@@ -4823,7 +4921,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-122-protetor.webp"
+        "image": "/catalogo/comercial-122-protetor-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4850,7 +4948,7 @@
     "category": "Acessórios",
     "description": "A saia babado protege e proporciona acabamento à cama box. Tecido 50% algodão e 50% poliéster, com acabamento nas laterais em ponto palito.",
     "images": [
-      "/catalogo/comercial-122-saia.webp"
+      "/catalogo/comercial-122-saia-hd.webp"
     ],
     "sizes": [
       "190 × 90 cm",
@@ -4862,7 +4960,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-122-saia.webp"
+        "image": "/catalogo/comercial-122-saia-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4889,7 +4987,7 @@
     "category": "Acessórios",
     "description": "Almofada com enchimento em espuma flocada e revestimento em tecido nobuck. Cores do catálogo: bege, cinza, marrom e preto. Consulte a fotografia de outras cores com a loja.",
     "images": [
-      "/catalogo/comercial-127-roll.webp"
+      "/catalogo/comercial-127-roll-hd.webp"
     ],
     "sizes": [
       "85 × 20 cm",
@@ -4900,7 +4998,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-127-roll.webp"
+        "image": "/catalogo/comercial-127-roll-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4929,7 +5027,7 @@
     "category": "Acessórios",
     "description": "Base para pet com estrutura interna em madeira e espuma D23. Revestimento em malha com bordado em manta acrílica e espuma. Capacidade de suporte de até 40 kg, conforme o fabricante. Cores do catálogo: bege e marrom; consulte disponibilidade.",
     "images": [
-      "/catalogo/comercial-127-pet.webp"
+      "/catalogo/comercial-127-pet-hd.webp"
     ],
     "sizes": [
       "45 × 65 cm",
@@ -4940,7 +5038,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/comercial-127-pet.webp"
+        "image": "/catalogo/comercial-127-pet-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4969,7 +5067,7 @@
     "category": "Hotelaria",
     "description": "Base revestida em tecido maquinetado em poliéster e polipropileno, com madeira tratada de reflorestamento e pés rosqueáveis. Colchão e base vendidos separadamente.",
     "images": [
-      "/catalogo/hotelaria-12-base.webp"
+      "/catalogo/hotelaria-12-base-hd.webp"
     ],
     "sizes": [
       "200 × 100 × 32 cm"
@@ -4978,7 +5076,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-12-base.webp"
+        "image": "/catalogo/hotelaria-12-base-hd.webp"
       }
     ],
     "priceCents": null,
@@ -4993,7 +5091,8 @@
     "specs": {
       "Medidas": "200 × 100 × 32 cm",
       "Linha": "Hotelaria",
-      "Material": "Maquinetado em Poliéster e Polipropileno"
+      "Material": "Maquinetado em Poliéster e Polipropileno",
+      "Espuma": "D26"
     },
     "variantInventory": {}
   },
@@ -5003,9 +5102,9 @@
     "name": "Travesseiro Pluma",
     "brand": "Ortobom",
     "category": "Travesseiros",
-    "description": "Travesseiro com revestimento em tecido 100% algodão e enchimento 100% poliéster, fibra de pluma siliconada. Produto inodoro e antifungo, conforme catálogo de hotelaria 2024.",
+    "description": "Travesseiro Pluma. Revestimento: 100% algodão. Enchimento: 100% poliéster, fibra de pluma siliconada. Observação: Não é enchimento de pluma animal.. Medida: 50 × 70 cm.",
     "images": [
-      "/catalogo/hotelaria-13-pluma.webp"
+      "/catalogo/hotelaria-13-pluma-hd.webp"
     ],
     "sizes": [
       "50 × 70 cm"
@@ -5014,7 +5113,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-13-pluma.webp"
+        "image": "/catalogo/hotelaria-13-pluma-hd.webp"
       }
     ],
     "priceCents": null,
@@ -5029,7 +5128,9 @@
     "specs": {
       "Medidas": "50 × 70 cm",
       "Linha": "Ortobom",
-      "Material": "tecido 100% Algodão 200 Fios"
+      "Revestimento": "100% algodão",
+      "Enchimento": "100% poliéster, fibra de pluma siliconada",
+      "Observação": "Não é enchimento de pluma animal."
     },
     "variantInventory": {},
     "photoNote": "Foto da embalagem deste modelo, fornecida pelo fabricante."
@@ -5042,7 +5143,7 @@
     "category": "Acessórios",
     "description": "Capa com matelassê bordado. Transforma a composição de dois colchões solteiro em uma composição de casal, conforme o fabricante. Consulte compatibilidade e medidas com a loja.",
     "images": [
-      "/catalogo/hotelaria-13-union.webp"
+      "/catalogo/hotelaria-13-union-hd.webp"
     ],
     "sizes": [
       "Consultar compatibilidade"
@@ -5051,7 +5152,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/hotelaria-13-union.webp"
+        "image": "/catalogo/hotelaria-13-union-hd.webp"
       }
     ],
     "priceCents": null,
@@ -5078,7 +5179,7 @@
     "category": "Bases e camas",
     "description": "com Viscose, bordado em Matelassê em Espuma Firme Selada 100% Poliuretano; •Camada de conforto em Espuma Firme Selada",
     "images": [
-      "/catalogo/revendedor-2021-54.webp"
+      "/catalogo/revendedor-2021-54-hd.webp"
     ],
     "sizes": [
       "Consultar medida"
@@ -5087,7 +5188,7 @@
       {
         "name": "Original",
         "hex": "#dedbd4",
-        "image": "/catalogo/revendedor-2021-54.webp"
+        "image": "/catalogo/revendedor-2021-54-hd.webp"
       }
     ],
     "priceCents": null,

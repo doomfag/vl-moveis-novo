@@ -1,0 +1,11 @@
+.git
+node_modules
+.next
+.env*
+data/*.sqlite*
+data/emails-local
+sources
+__pycache__
+*.tsbuildinfo
+test-results
+playwright-report

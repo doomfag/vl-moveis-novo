@@ -17,6 +17,9 @@ test(
     const changes = JSON.parse(
       readFileSync("data/media-refinement.json", "utf8"),
     );
+    const upgrade = JSON.parse(
+      readFileSync("data/catalog-upgrade-v4.json", "utf8"),
+    );
     const p = structuredClone(
       seed.find((p) => p.id === "colchao-ortobom-physical-nanolastic"),
     );
@@ -80,7 +83,10 @@ test(
       assert.equal(updated.discountPercent, 5);
       assert.equal(updated.images[0], p.images[0]);
       assert.equal(updated.colors[0].image, p.colors[0].image);
-      assert.equal(updated.images[1], changes[p.id].replacements[old]);
+      assert.equal(
+        updated.images[1],
+        upgrade[p.id].replacements[changes[p.id].replacements[old]],
+      );
       assert.equal(updated.specs.Material, p.specs.Material);
       const inspect = new DatabaseSync(path);
       const user = inspect
