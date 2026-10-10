@@ -548,6 +548,129 @@ try {
       if (overflow) throw new Error("Horizontal overflow at " + width);
     }
   });
+  await check(
+    "Celular: temas claro e escuro preservam fotos, contraste e consulta de entrega",
+    async () => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      for (const theme of ["light", "dark"]) {
+        await page.emulateMedia({ colorScheme: theme });
+        await page.goto(origin);
+        await expect(page.locator('meta[name="darkreader-lock"]')).toHaveCount(
+          1,
+        );
+        await expect(page.locator('meta[name="color-scheme"]')).toHaveAttribute(
+          "content",
+          "light dark",
+        );
+        const colors = await page.evaluate(() => ({
+          body: getComputedStyle(document.body).backgroundColor,
+          text: getComputedStyle(document.body).color,
+          imageBackground: getComputedStyle(
+            document.querySelector(".product-image"),
+          ).backgroundColor,
+          blend: getComputedStyle(document.querySelector(".product-image img"))
+            .mixBlendMode,
+          filter: getComputedStyle(document.querySelector(".product-image img"))
+            .filter,
+        }));
+        expect(colors.body).toBe(
+          theme === "light" ? "rgb(255, 255, 255)" : "rgb(25, 29, 25)",
+        );
+        expect(colors.text).toBe(
+          theme === "light" ? "rgb(32, 34, 31)" : "rgb(242, 243, 239)",
+        );
+        expect(colors.imageBackground).toBe("rgb(255, 255, 255)");
+        expect(colors.blend).toBe("normal");
+        expect(colors.filter).toBe("none");
+        await page.screenshot({
+          path: join(artifacts, `home-mobile-${theme}.png`),
+          fullPage: true,
+        });
+        await page.goto(origin + "/produto/travesseiro-aman");
+        await page
+          .getByRole("textbox", { name: "CEP para entrega" })
+          .fill("23550740");
+        await page
+          .getByRole("button", { name: "Consultar", exact: true })
+          .click();
+        await expect(page.locator(".shipping-result")).toContainText(
+          "Confirmamos prazo, disponibilidade e valor",
+        );
+        const contrast = await page
+          .locator(".shipping-result p")
+          .evaluate((element) => {
+            const luminance = (color) => {
+              const values = color
+                .match(/\d+/g)
+                .slice(0, 3)
+                .map(Number)
+                .map((n) => {
+                  const v = n / 255;
+                  return v <= 0.04045
+                    ? v / 12.92
+                    : ((v + 0.055) / 1.055) ** 2.4;
+                });
+              return (
+                values[0] * 0.2126 + values[1] * 0.7152 + values[2] * 0.0722
+              );
+            };
+            const text = luminance(getComputedStyle(element).color);
+            const bg = luminance(
+              getComputedStyle(element.closest(".shipping-box"))
+                .backgroundColor,
+            );
+            return (Math.max(text, bg) + 0.05) / (Math.min(text, bg) + 0.05);
+          });
+        expect(contrast).toBeGreaterThanOrEqual(4.5);
+        await expect(page.locator(".gallery-main > img")).toHaveCSS(
+          "mix-blend-mode",
+          "normal",
+        );
+        const overflow = await page.evaluate(
+          () => document.documentElement.scrollWidth > innerWidth + 1,
+        );
+        expect(overflow).toBe(false);
+        await page.screenshot({
+          path: join(artifacts, `product-mobile-${theme}.png`),
+          fullPage: true,
+        });
+      }
+      await page.emulateMedia({ colorScheme: "light" });
+    },
+  );
+  if (process.env.VL_DARKREADER_SCRIPT) {
+    await check(
+      "Motor Dark Reader respeita o tema nativo e não transforma as fotos",
+      async () => {
+        await page.goto(origin);
+        const code = readFileSync(process.env.VL_DARKREADER_SCRIPT, "utf8");
+        await page.evaluate((source) => {
+          const script = document.createElement("script");
+          script.nonce = document.querySelector("script[nonce]").nonce;
+          script.textContent = source;
+          document.head.append(script);
+          window.DarkReader.enable({
+            brightness: 100,
+            contrast: 90,
+            sepia: 10,
+          });
+        }, code);
+        await expect(page.locator("html")).not.toHaveAttribute(
+          "data-darkreader-mode",
+          "dynamic",
+        );
+        await expect(page.locator("style.darkreader")).toHaveCount(0);
+        await expect(page.locator(".product-image img").first()).toHaveCSS(
+          "filter",
+          "none",
+        );
+        await expect(page.locator("body")).toHaveCSS(
+          "background-color",
+          "rgb(255, 255, 255)",
+        );
+      },
+    );
+  }
   if (errors.length)
     throw new Error("Browser errors: " + [...new Set(errors)].join(" | "));
   console.log(

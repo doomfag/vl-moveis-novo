@@ -146,3 +146,9 @@ Na pasta nova, execute `bash atualizar-linux.sh`. Ele procura instalações anti
 Para conceder acesso local ao administrador, primeiro cadastre e confirme sua conta no site. Em outro terminal aberto nessa mesma pasta, execute `bash habilitar-admin-linux.sh` e informe somente seu e-mail. Ele lê a configuração privada para usar o banco correto; não pede nem imprime senha ou chave.
 
 Na hospedagem, a configuração privada `STORE_OWNER_EMAIL` identifica o primeiro proprietário. O acesso só é concedido após a confirmação desse e-mail e se ainda não existir um administrador. O papel fica salvo no banco, tem auditoria e não é redefinido em reinícios. Outros clientes nunca escolhem o papel de administrador no cadastro. Consulte [PUBLICAR.md](PUBLICAR.md) para Render, disco persistente e mudança do domínio mantendo Zoho e Resend.
+
+### Tema e entrega
+
+O tema acompanha `prefers-color-scheme` do dispositivo. Fotografias usam fundo claro fixo, sem mistura `multiply`, filtro ou inversão. A marcação `darkreader-lock` impede uma segunda transformação pelo Dark Reader, pois a loja já fornece tema escuro. Os testes de navegador verificam ambos os temas, contraste do orçamento de entrega e imagens. Para verificar também o motor Dark Reader instalado fora do projeto, informe `VL_DARKREADER_SCRIPT` apontando para seu arquivo `darkreader.js`; isso não adiciona dependência ao aplicativo.
+
+A entrega segue por orçamento com CEP e produto no WhatsApp enquanto a empresa define regiões atendidas, tabela de entrega própria e eventual transportadora. Não existe cálculo automático de frete nesta versão.
