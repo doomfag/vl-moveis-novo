@@ -31,9 +31,29 @@ server.on('error', () => {
 server.listen(port, '127.0.0.1', () => server.close());
 JS
 
-./node_modules/.bin/next dev --hostname 127.0.0.1 --port "$VL_PREVIEW_PORT" &
-vl_server_pid=$!
-trap 'kill "$vl_server_pid" 2>/dev/null || true' EXIT
+vl_launch_group=0
+if command -v setsid >/dev/null 2>&1; then
+  setsid ./node_modules/.bin/next dev --hostname 127.0.0.1 --port "$VL_PREVIEW_PORT" &
+  vl_server_pid=$!
+  vl_launch_group=1
+else
+  ./node_modules/.bin/next dev --hostname 127.0.0.1 --port "$VL_PREVIEW_PORT" &
+  vl_server_pid=$!
+fi
+vl_cleanup() {
+  if [[ "$vl_launch_group" == 1 ]]; then
+    kill -TERM -- "-$vl_server_pid" 2>/dev/null || true
+    for ((vl_stop_attempt=0; vl_stop_attempt<10; vl_stop_attempt++)); do
+      if ! kill -0 -- "-$vl_server_pid" 2>/dev/null; then break; fi
+      sleep .2
+    done
+    kill -KILL -- "-$vl_server_pid" 2>/dev/null || true
+  else
+    kill -INT "$vl_server_pid" 2>/dev/null || true
+  fi
+  wait "$vl_server_pid" 2>/dev/null || true
+}
+trap vl_cleanup EXIT
 trap 'exit 130' INT TERM
 
 vl_ready=0
