@@ -438,11 +438,11 @@ p {
   align-items: center;
   z-index: 3;
 }
-.hero-controls > div:last-child {
+.hero-controls > div:not(.hero-dots) {
   display: flex;
   gap: 7px;
 }
-.hero-controls > div:last-child button {
+.hero-controls > div:not(.hero-dots) button {
   width: 31px;
   height: 31px;
   border: 1px solid #ffffff80;
@@ -3246,7 +3246,7 @@ form label > small {
     bottom: 19px;
     right: 18px;
   }
-  .hero-controls > div:last-child button {
+  .hero-controls > div:not(.hero-dots) button {
     height: 29px;
     width: 29px;
   }
@@ -4812,7 +4812,8 @@ textarea {
 .cart-line > a,
 .admin-product-list img {
   background: #fff;
-  color-scheme: light;
+  color-scheme: only light;
+  forced-color-adjust: none;
 }
 .category-tile img,
 .product-image img,
@@ -4906,5 +4907,86 @@ textarea::placeholder {
   }
   .header form.search input {
     color: var(--ink);
+  }
+}
+
+/* Keep the entire banner photograph visible on narrow screens. */
+@media (max-width: 560px) {
+  .hero {
+    display: grid;
+    grid-template-areas: "content" "photo" "controls";
+    min-height: 0;
+    border: 1px solid var(--border);
+  }
+  .hero-content {
+    grid-area: content;
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    min-height: 244px;
+    width: 100%;
+    padding: 22px;
+    animation: none;
+  }
+  .hero-eyebrow {
+    margin: 0;
+    font-size: 12px;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(28px, 8.2vw, 34px);
+    line-height: 1.12;
+  }
+  .hero p {
+    margin: 0;
+    max-width: none;
+    line-height: 1.55;
+  }
+  .hero-content .button {
+    justify-self: start;
+  }
+  .hero-image {
+    grid-area: photo;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background: #fff;
+    color-scheme: only light;
+    forced-color-adjust: none;
+  }
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: none;
+  }
+  .hero-shade {
+    display: none;
+  }
+  .hero-controls {
+    grid-area: controls;
+    position: static;
+    justify-content: center;
+    padding: 10px;
+    background: var(--hero-fill);
+  }
+  .hero-dots {
+    gap: 8px;
+    align-items: center;
+  }
+  .hero-dots button {
+    width: 28px;
+    height: 24px;
+    background: var(--muted);
+    border: 8px solid var(--hero-fill);
+    border-radius: 8px;
+  }
+  .hero-dots button[aria-current="true"] {
+    width: 40px;
+    background: var(--ink);
   }
 }

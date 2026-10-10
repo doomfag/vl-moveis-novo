@@ -1,4 +1,5 @@
 import { chromium, expect } from "@playwright/test";
+import sharp from "sharp";
 import { spawn, execFileSync } from "node:child_process";
 import {
   mkdtempSync,
@@ -313,6 +314,36 @@ try {
       await expect(
         page.getByRole("dialog", { name: "Foto ampliada do produto" }),
       ).not.toBeVisible();
+    },
+  );
+  await check(
+    "Banner no celular mostra as duas fotos inteiras sem sobrepor o texto",
+    async () => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      for (const theme of ["light", "dark"]) {
+        await page.emulateMedia({ colorScheme: theme });
+        await page.goto(origin);
+        for (const index of [1, 2]) {
+          await page
+            .getByRole("button", { name: "Ver destaque " + index, exact: true })
+            .click();
+          const image = page.locator(".hero-image img");
+          await expect(image).toHaveCSS("object-fit", "contain");
+          await expect
+            .poll(() => image.evaluate((i) => i.complete && i.naturalWidth > 0))
+            .toBe(true);
+          const photo = await page.locator(".hero-image").boundingBox();
+          const content = await page.locator(".hero-content").boundingBox();
+          expect(photo.y).toBeGreaterThanOrEqual(
+            content.y + content.height - 1,
+          );
+          await page.locator(".hero").screenshot({
+            path: join(artifacts, `hero-mobile-${theme}-${index}.png`),
+          });
+        }
+      }
+      await page.emulateMedia({ colorScheme: "light" });
+      await page.setViewportSize({ width: 1440, height: 1080 });
     },
   );
   const email = "browser-" + randomUUID() + "@example.test",
@@ -651,6 +682,35 @@ try {
         });
       }
       await page.emulateMedia({ colorScheme: "light" });
+    },
+  );
+  await check(
+    "Modo escuro forçado do Chrome mantém toda a área da foto branca",
+    async () => {
+      const forcedBrowser = await chromium.launch({
+        executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
+        headless: true,
+        args: ["--enable-features=WebContentsForceDark"],
+      });
+      try {
+        const forcedPage = await forcedBrowser.newPage({
+          viewport: { width: 390, height: 844 },
+          colorScheme: "dark",
+        });
+        await forcedPage.goto(origin);
+        const photo = forcedPage.locator(".product-image").first();
+        await expect(photo).toHaveCSS("color-scheme", "light only");
+        const bytes = await photo.screenshot({
+          path: join(artifacts, "product-photo-chrome-forced-dark.png"),
+        });
+        const { data, info } = await sharp(bytes)
+          .raw()
+          .toBuffer({ resolveWithObject: true });
+        const offset = ((info.height - 8) * info.width + 8) * info.channels;
+        expect([...data.subarray(offset, offset + 3)]).toEqual([255, 255, 255]);
+      } finally {
+        await forcedBrowser.close();
+      }
     },
   );
   if (process.env.VL_DARKREADER_SCRIPT) {
