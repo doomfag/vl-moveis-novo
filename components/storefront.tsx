@@ -93,13 +93,12 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
   ];
   const slides = promotions.length ? promotions : defaults;
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const current = slides[index % slides.length];
   useEffect(() => {
-    if (paused || slides.length < 2) return;
+    if (slides.length < 2) return;
     const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), 7000);
     return () => clearInterval(t);
-  }, [slides.length, paused]);
+  }, [slides.length]);
   return (
     <section
       className="hero"
@@ -152,17 +151,6 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
             />
           ))}
         </div>
-        {slides.length > 1 && (
-          <button
-            className="hero-pause"
-            onClick={() => setPaused(!paused)}
-            aria-label={
-              paused ? "Retomar troca automática" : "Pausar troca automática"
-            }
-          >
-            {paused ? "Retomar" : "Pausar"}
-          </button>
-        )}
       </div>
     </section>
   );

@@ -107,17 +107,15 @@ try {
     },
   );
   await check(
-    "Banner alterna fotos automaticamente, sem selo ou setas; pode pausar",
+    "Banner alterna fotos automaticamente, sem selo, setas ou botão de pausa",
     async () => {
       await page.clock.install();
       await page.goto(origin);
       const hero = page.locator(".hero");
       await hero
-        .getByRole("button", { name: "Pausar troca automática" })
+        .getByRole("button", { name: "Ver destaque 1", exact: true })
         .click();
-      await hero
-        .getByRole("button", { name: "Retomar troca automática" })
-        .click();
+      await expect(hero.locator(".hero-pause")).toHaveCount(0);
       const original = await hero
         .locator(".hero-image img")
         .getAttribute("src");
@@ -131,18 +129,6 @@ try {
         "src",
         original,
       );
-      const next = await hero.locator(".hero-image img").getAttribute("src");
-      await hero
-        .getByRole("button", { name: "Pausar troca automática" })
-        .click();
-      await page.clock.fastForward(7200);
-      await expect(hero.locator(".hero-image img")).toHaveAttribute(
-        "src",
-        next,
-      );
-      await hero
-        .getByRole("button", { name: "Retomar troca automática" })
-        .click();
       await page.clock.fastForward(7200);
       await expect(hero.locator(".hero-image img")).toHaveAttribute(
         "src",

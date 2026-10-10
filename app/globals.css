@@ -4691,13 +4691,6 @@ textarea {
     gap: 12px;
   }
 }
-.hero-controls .hero-pause {
-  width: auto;
-  height: auto;
-  border-radius: 5px;
-  padding: 7px 12px;
-  font-size: 14px;
-}
 .comparison-assessment {
   border: 1px solid #ddd;
   border-radius: 8px;
