@@ -437,6 +437,11 @@ test(
             notification.data.conversations.find((c) => c.id === id).pending,
             0,
           );
+          assert.equal(
+            notification.data.conversations.find((c) => c.id === id)
+              .latest_customer_row,
+            messages.data.messages.at(-1).sequence,
+          );
           await request(
             "chat",
             "POST",

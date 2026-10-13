@@ -127,10 +127,10 @@ export default function Admin() {
         const newlyUnread = result.conversations.filter(
           (c: any) =>
             c.unread > 0 &&
-            c.latest_row > (seenConversations.current[c.id] || 0),
+            c.latest_customer_row > (seenConversations.current[c.id] || 0),
         );
         result.conversations.forEach((c: any) => {
-          seenConversations.current[c.id] = c.latest_row;
+          seenConversations.current[c.id] = c.latest_customer_row;
         });
         setData((prev) =>
           prev ? { ...prev, conversations: result.conversations } : prev,

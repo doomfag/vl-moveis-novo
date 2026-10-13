@@ -590,6 +590,41 @@ try {
     }),
     mobilePage = await mobile.newPage();
   await check(
+    "Nova mensagem atualiza aviso e pendência sem recarregar o painel",
+    async () => {
+      const response = await context.request.post(origin + "/api/chat", {
+        headers: { Origin: origin },
+        data: { text: "Nova mensagem de teste para avisar o responsável" },
+      });
+      if (!response.ok()) throw new Error("New message was not accepted");
+      await expect(page.locator(".toast")).toContainText(
+        "Você tem novas mensagens",
+        { timeout: 10000 },
+      );
+      await expect(page.locator(".chat-pending-notice")).toContainText(
+        "aguardando resposta",
+      );
+      await page
+        .locator(".admin-nav")
+        .getByRole("button", { name: /^Atendimento/ })
+        .click();
+      await page.locator(".admin-chat aside button").first().click();
+      await expect(page.locator(".admin-conversation .messages")).toContainText(
+        "Nova mensagem de teste para avisar o responsável",
+      );
+      await expect(page.locator(".chat-pending-notice")).toContainText(
+        "aguardando resposta",
+      );
+      await page
+        .getByRole("textbox", { name: "Resposta ao cliente" })
+        .fill("Nova mensagem respondida no teste.");
+      await page
+        .getByRole("button", { name: "Enviar resposta", exact: true })
+        .click();
+      await expect(page.locator(".chat-pending-notice")).toHaveCount(0);
+    },
+  );
+  await check(
     "Celular: menu, produto, imagens e ausência de rolagem horizontal",
     async () => {
       await mobilePage.goto(origin);
