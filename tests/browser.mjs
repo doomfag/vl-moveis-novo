@@ -592,6 +592,10 @@ try {
   await check(
     "Nova mensagem atualiza aviso e pendência sem recarregar o painel",
     async () => {
+      await page.goto(origin + "/admin");
+      await expect(
+        page.getByRole("heading", { name: "Um olhar no seu negócio." }),
+      ).toBeVisible();
       const response = await context.request.post(origin + "/api/chat", {
         headers: { Origin: origin },
         data: { text: "Nova mensagem de teste para avisar o responsável" },
