@@ -26,6 +26,7 @@ import {
   whatsapp,
   variantPrice,
 } from "@/lib/types";
+import type { Highlights } from "@/lib/merchandising";
 import { ProductCard } from "./product-card";
 import { useStore } from "./store-context";
 import { ProductPage } from "./product-page";
@@ -158,9 +159,11 @@ function Hero({ promotions }: { promotions: Promotion[] }) {
 function Home({
   products,
   promotions,
+  highlights,
 }: {
   products: Product[];
   promotions: Promotion[];
+  highlights?: Highlights;
 }) {
   const featured = [
     ...products.filter((p) => p.featured),
@@ -168,11 +171,22 @@ function Home({
     ...products.filter((p) => p.category === "Travesseiros"),
   ];
   const picks = [
+    ...(highlights?.priority || []).map((id) =>
+      products.find((p) => p.id === id),
+    ),
     featured[0],
     featured[3],
     products.find((p) => p.id === "base-sommier-bau-camurca"),
     products.find((p) => p.id === "travesseiro-percal-200-fios"),
-  ].filter(Boolean) as Product[];
+  ]
+    .filter(
+      (p, index, all) =>
+        p && all.findIndex((other) => other?.id === p.id) === index,
+    )
+    .slice(0, 4) as Product[];
+  const bestSellers = (highlights?.bestSellers || [])
+    .map((id) => products.find((p) => p.id === id))
+    .filter(Boolean) as Product[];
   const categoryPicks = [
     "Colchões",
     "Bases e camas",
@@ -216,6 +230,20 @@ function Home({
             </span>
           </div>
         </div>
+        {bestSellers.length > 0 && (
+          <section className="section" aria-label="Mais comprados">
+            <Heading
+              eyebrow="ESCOLHAS DOS CLIENTES"
+              title="Mais comprados"
+              description="Produtos mais comprados nos últimos 90 dias, considerando pagamentos confirmados."
+            />
+            <div className="product-grid">
+              {bestSellers.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
+        )}
         <section className="section">
           <Heading
             eyebrow="CATEGORIAS"
@@ -756,7 +784,9 @@ export default function Storefront({
   products,
   selected,
   promotions,
+  highlights,
 }: {
+  highlights?: Highlights;
   view: string;
   products: Product[];
   selected?: Product;
@@ -765,7 +795,11 @@ export default function Storefront({
   return (
     <main id="conteudo">
       {view === "home" ? (
-        <Home products={products} promotions={promotions} />
+        <Home
+          products={products}
+          promotions={promotions}
+          highlights={highlights}
+        />
       ) : view === "catalogo" || view === "favoritos" ? (
         <Suspense
           fallback={

@@ -35,16 +35,37 @@ function backup() {
     },
   );
 }
+let notifying = false;
+const messages = setInterval(() => {
+  if (
+    notifying ||
+    !existsSync(resolve(process.env.DB_PATH || "data/store.sqlite"))
+  )
+    return;
+  notifying = true;
+  execFile(
+    process.execPath,
+    ["scripts/chat-notifications.mjs"],
+    { env: process.env, timeout: 120000 },
+    (error) => {
+      notifying = false;
+      if (error)
+        console.error("Falha no processamento dos avisos de atendimento.");
+    },
+  );
+}, 20000);
 const first = setTimeout(backup, 60000);
 const daily = setInterval(backup, 86400000);
 for (const signal of ["SIGTERM", "SIGINT"])
   process.on(signal, () => {
     clearTimeout(first);
+    clearInterval(messages);
     clearInterval(daily);
     server.kill(signal);
   });
 server.on("exit", (code) => {
   clearTimeout(first);
+  clearInterval(messages);
   clearInterval(daily);
   process.exitCode = code ?? 1;
 });

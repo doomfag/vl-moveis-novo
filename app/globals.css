@@ -4990,3 +4990,18 @@ textarea::placeholder {
     background: var(--ink);
   }
 }
+
+.chat-pending-notice {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-left: 4px solid var(--orange);
+  margin-bottom: 20px;
+}
+.chat-pending-notice p {
+  margin: 0;
+}
+.chat-pending-notice .button {
+  margin-left: auto;
+}

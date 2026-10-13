@@ -24,6 +24,8 @@ export function db() {
     CREATE TABLE IF NOT EXISTS carts (user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, data TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS reviews (id TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id), product_id TEXT NOT NULL REFERENCES products(id), stars INTEGER NOT NULL CHECK(stars BETWEEN 1 AND 5), text TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, UNIQUE(user_id, product_id));
     CREATE TABLE IF NOT EXISTS messages (id TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id), sender TEXT NOT NULL CHECK(sender IN ('customer','admin')), text TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
+    CREATE TABLE IF NOT EXISTS chat_reads (reader_id TEXT NOT NULL REFERENCES users(id), customer_id TEXT NOT NULL REFERENCES users(id), last_row INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(reader_id,customer_id));
+    CREATE TABLE IF NOT EXISTS chat_alerts (customer_id TEXT PRIMARY KEY REFERENCES users(id), queued_row INTEGER NOT NULL, delivered_row INTEGER NOT NULL DEFAULT 0, attempts INTEGER NOT NULL DEFAULT 0, next_attempt INTEGER NOT NULL DEFAULT 0, locked_until INTEGER NOT NULL DEFAULT 0);
     CREATE TABLE IF NOT EXISTS orders (id TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id), status TEXT NOT NULL, total INTEGER NOT NULL, delivery TEXT NOT NULL, data TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
     CREATE TABLE IF NOT EXISTS order_lines (order_id TEXT NOT NULL REFERENCES orders(id), product_id TEXT NOT NULL REFERENCES products(id), variant TEXT NOT NULL, quantity INTEGER NOT NULL, price INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS cash (id TEXT PRIMARY KEY, direction TEXT NOT NULL CHECK(direction IN ('in','out')), amount INTEGER NOT NULL CHECK(amount>0), label TEXT NOT NULL, order_id TEXT UNIQUE REFERENCES orders(id), created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
@@ -32,6 +34,7 @@ export function db() {
     CREATE TABLE IF NOT EXISTS audit (id INTEGER PRIMARY KEY, user_id TEXT NOT NULL, action TEXT NOT NULL, target TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
     CREATE TABLE IF NOT EXISTS integration_events (id TEXT PRIMARY KEY, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
     CREATE TABLE IF NOT EXISTS migrations (id TEXT PRIMARY KEY);
+    CREATE TABLE IF NOT EXISTS marketing_costs (product_id TEXT NOT NULL REFERENCES products(id), variant TEXT NOT NULL DEFAULT '', cost_cents INTEGER NOT NULL CHECK(cost_cents>=0), updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(product_id,variant));
     CREATE TABLE IF NOT EXISTS email_tokens (token TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, purpose TEXT NOT NULL CHECK(purpose IN ('verify','reset')), expires INTEGER NOT NULL);
   `);
   if (
@@ -168,6 +171,9 @@ export function db() {
       throw error;
     }
   }
+  d.exec(`INSERT OR IGNORE INTO chat_alerts(customer_id,queued_row)
+    SELECT m.user_id,MAX(m.rowid) FROM messages m WHERE m.sender='customer'
+    GROUP BY m.user_id HAVING MAX(m.rowid)>COALESCE((SELECT MAX(a.rowid) FROM messages a WHERE a.user_id=m.user_id AND a.sender='admin'),0)`);
   g.vlDb = d;
   grantConfiguredOwner();
   return d;

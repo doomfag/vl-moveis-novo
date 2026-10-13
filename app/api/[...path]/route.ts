@@ -5,6 +5,8 @@ import {
   createHmac,
   timingSafeEqual,
 } from "node:crypto";
+import { conversations } from "@/lib/chat";
+import { merchandising } from "@/lib/merchandising";
 import { mailAvailable, localEmailMode, sendAccountEmail } from "@/lib/mail";
 import { writeFile, mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
@@ -336,6 +338,7 @@ async function dispatch(req: NextRequest, path: string[]) {
   if (route === "products" && method === "GET")
     return {
       products: products(),
+      highlights: merchandising().highlights,
       promotions: promotions().filter((p) => p.active),
     };
   if (route === "auth/me" && method === "GET")
@@ -671,7 +674,7 @@ async function dispatch(req: NextRequest, path: string[]) {
       return {
         messages: db()
           .prepare(
-            "SELECT id,sender,text,created_at FROM messages WHERE user_id=? ORDER BY created_at,id",
+            "SELECT rowid AS sequence,id,sender,text,created_at FROM messages WHERE user_id=? ORDER BY rowid",
           )
           .all(u.id),
       };
@@ -681,16 +684,32 @@ async function dispatch(req: NextRequest, path: string[]) {
         .parse(await body(req));
       if (limited("chat:" + u.id, 30, 60000))
         fail(429, "Aguarde um instante para enviar mais mensagens.");
-      db()
-        .prepare(
-          "INSERT INTO messages(id,user_id,sender,text) VALUES(?,?,'customer',?)",
-        )
-        .run(randomUUID(), u.id, input.text);
+      transaction(() => {
+        const latestReply = Number(
+          db()
+            .prepare(
+              "SELECT COALESCE(MAX(rowid),0) AS n FROM messages WHERE user_id=? AND sender='admin'",
+            )
+            .get(u.id)?.n || 0,
+        );
+        const inserted = db()
+          .prepare(
+            "INSERT INTO messages(id,user_id,sender,text) VALUES(?,?,'customer',?)",
+          )
+          .run(randomUUID(), u.id, input.text);
+        db()
+          .prepare(
+            "INSERT INTO chat_alerts(customer_id,queued_row) VALUES(?,?) ON CONFLICT(customer_id) DO UPDATE SET queued_row=excluded.queued_row,delivered_row=0,attempts=0,next_attempt=0,locked_until=0 WHERE chat_alerts.queued_row<=?",
+          )
+          .run(u.id, Number(inserted.lastInsertRowid), latestReply);
+      });
       return { ok: true };
     }
   }
   if (path[0] === "admin") {
     const u = authorize(req, true);
+    if (route === "admin/chat-notifications" && method === "GET")
+      return { conversations: conversations(u.id) };
     if (route === "admin/backup" && (method === "GET" || method === "POST")) {
       if (method === "POST" && limited("backup:" + u.id, 3, 3600000))
         fail(
@@ -774,17 +793,14 @@ async function dispatch(req: NextRequest, path: string[]) {
     if (route === "admin/dashboard" && method === "GET")
       return {
         products: products(true),
+        marketing: merchandising(),
         orders: db()
           .prepare(
             "SELECT o.*,u.name,u.email FROM orders o JOIN users u ON o.user_id=u.id ORDER BY o.created_at DESC",
           )
           .all(),
         cash: db().prepare("SELECT * FROM cash ORDER BY created_at DESC").all(),
-        conversations: db()
-          .prepare(
-            "SELECT u.id,u.name,u.email,MAX(m.created_at) AS last_message,COUNT(m.id) AS messages FROM messages m JOIN users u ON m.user_id=u.id GROUP BY u.id ORDER BY last_message DESC",
-          )
-          .all(),
+        conversations: conversations(u.id),
         promotions: promotions(),
         counts: {
           customers: (
@@ -804,6 +820,41 @@ async function dispatch(req: NextRequest, path: string[]) {
               : "Envio externo não conectado",
         },
       };
+    if (route === "admin/marketing-cost" && method === "PUT") {
+      const input = z
+        .object({
+          productId: z.string().max(100),
+          color: z.string().max(80).optional(),
+          size: z.string().max(100).optional(),
+          costCents: z.number().int().min(0).max(100000000).nullable(),
+        })
+        .parse(await body(req));
+      const p = product(input.productId);
+      if (!p) fail(404, "Produto não encontrado.");
+      let key = "";
+      if (input.color || input.size) {
+        if (
+          !p.colors.some((c) => c.name === input.color) ||
+          !p.sizes.includes(input.size || "")
+        )
+          fail(400, "Escolha uma cor e uma medida válidas.");
+        key = variantKey(input.color!, input.size!);
+      }
+      if (input.costCents === null)
+        db()
+          .prepare(
+            "DELETE FROM marketing_costs WHERE product_id=? AND variant=?",
+          )
+          .run(p.id, key);
+      else
+        db()
+          .prepare(
+            "INSERT INTO marketing_costs(product_id,variant,cost_cents) VALUES(?,?,?) ON CONFLICT(product_id,variant) DO UPDATE SET cost_cents=excluded.cost_cents,updated_at=CURRENT_TIMESTAMP",
+          )
+          .run(p.id, key, input.costCents);
+      audit(u, "marketing.cost", p.id);
+      return { ok: true };
+    }
     if (route === "admin/products" && method === "PUT") {
       const p = productSchema.parse(await body(req)) as Product;
       for (const [key] of Object.entries(p.variantInventory)) {
@@ -996,12 +1047,33 @@ async function dispatch(req: NextRequest, path: string[]) {
       audit(u, "promotion.update", p.id);
       return { ok: true };
     }
-    if (path[1] === "chat" && path[2]) {
+    if (
+      path[1] === "chat" &&
+      path[2] &&
+      path[3] === "read" &&
+      path.length === 4 &&
+      method === "POST"
+    ) {
+      const input = z
+        .object({ lastRow: z.number().int().min(0) })
+        .parse(await body(req));
+      const row = db()
+        .prepare("SELECT MAX(rowid) AS lastRow FROM messages WHERE user_id=?")
+        .get(path[2]);
+      if (!row?.lastRow) fail(404, "Conversa não encontrada.");
+      db()
+        .prepare(
+          "INSERT INTO chat_reads(reader_id,customer_id,last_row) VALUES(?,?,?) ON CONFLICT(reader_id,customer_id) DO UPDATE SET last_row=MAX(chat_reads.last_row,excluded.last_row)",
+        )
+        .run(u.id, path[2], Math.min(input.lastRow, Number(row.lastRow)));
+      return { ok: true };
+    }
+    if (path[1] === "chat" && path[2] && path.length === 3) {
       if (method === "GET")
         return {
           messages: db()
             .prepare(
-              "SELECT id,sender,text,created_at FROM messages WHERE user_id=? ORDER BY created_at,id",
+              "SELECT rowid AS sequence,id,sender,text,created_at FROM messages WHERE user_id=? ORDER BY rowid",
             )
             .all(path[2]),
         };

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { products, product, promotions } from "@/lib/db";
+import { merchandising } from "@/lib/merchandising";
 import Storefront from "@/components/storefront";
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ slug?: string[] }> };
@@ -55,6 +56,7 @@ export default async function Page({ params }: Props) {
   return (
     <Storefront
       view={page}
+      highlights={page === "home" ? merchandising().highlights : undefined}
       products={list}
       selected={p ? (({ sourceText, ...rest }) => rest)(p) : undefined}
       promotions={promotions().filter((p) => p.active)}

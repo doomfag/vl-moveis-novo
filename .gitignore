@@ -12,3 +12,6 @@ test-results/
 data/emails-local/
 
 __pycache__/
+
+data/backups/
+vl-moveis-*.tar.gz

@@ -321,6 +321,282 @@ test(
           assert.ok(status.data.lastBackupAt);
         },
       );
+      await t.test(
+        "Chat registra não lidas e pendências; leitura não elimina a necessidade de resposta e e-mails não se repetem",
+        async () => {
+          const direct = new DatabaseSync(join(dir, "store.sqlite"));
+          const id = direct
+            .prepare("SELECT id FROM users WHERE email=?")
+            .get(customerEmail).id;
+          await request(
+            "chat",
+            "POST",
+            { text: "Mensagem de teste da notificação" },
+            customerCookie,
+          );
+          let notification = await request(
+            "admin/chat-notifications",
+            "GET",
+            undefined,
+            adminCookie,
+          );
+          let conversation = notification.data.conversations.find(
+            (c) => c.id === id,
+          );
+          assert.equal(conversation.unread, 1);
+          assert.equal(conversation.pending, 1);
+          assert.equal(
+            (
+              await request(
+                "admin/chat-notifications",
+                "GET",
+                undefined,
+                customerCookie,
+              )
+            ).status,
+            403,
+          );
+          const workerEnv = {
+            ...process.env,
+            DB_PATH: join(dir, "store.sqlite"),
+            APP_ORIGIN: origin,
+            EMAIL_MODE: "local",
+            EMAIL_PREVIEW_DIR: join(dir, "emails"),
+            CHAT_NOTIFY_EMAIL: "owner-notifications@example.test",
+            RESEND_API_KEY: "",
+          };
+          const runWorker = () =>
+            execFileSync(process.execPath, ["scripts/chat-notifications.mjs"], {
+              env: workerEnv,
+              stdio: "pipe",
+            });
+          const notifications = () =>
+            readdirSync(join(dir, "emails"))
+              .map((file) =>
+                JSON.parse(readFileSync(join(dir, "emails", file), "utf8")),
+              )
+              .filter(
+                (m) => m.subject === "Nova mensagem de cliente — VL Móveis",
+              );
+          runWorker();
+          assert.equal(notifications().length, 1);
+          assert.equal(
+            notifications()[0].to,
+            "owner-notifications@example.test",
+          );
+          assert.ok(notifications()[0].text.includes(origin + "/admin"));
+          assert.ok(!notifications()[0].text.includes("Mensagem de teste"));
+          await request(
+            "chat",
+            "POST",
+            { text: "Mais uma mensagem na mesma conversa" },
+            customerCookie,
+          );
+          runWorker();
+          assert.equal(notifications().length, 1);
+          const messages = await request(
+            "admin/chat/" + id,
+            "GET",
+            undefined,
+            adminCookie,
+          );
+          assert.equal(
+            messages.data.messages.at(-1).text,
+            "Mais uma mensagem na mesma conversa",
+          );
+          await request(
+            "admin/chat/" + id + "/read",
+            "POST",
+            { lastRow: messages.data.messages.at(-1).sequence },
+            adminCookie,
+          );
+          notification = await request(
+            "admin/chat-notifications",
+            "GET",
+            undefined,
+            adminCookie,
+          );
+          conversation = notification.data.conversations.find(
+            (c) => c.id === id,
+          );
+          assert.equal(conversation.unread, 0);
+          assert.equal(conversation.pending, 2);
+          await request(
+            "admin/chat/" + id,
+            "POST",
+            { text: "Resposta de teste" },
+            adminCookie,
+          );
+          notification = await request(
+            "admin/chat-notifications",
+            "GET",
+            undefined,
+            adminCookie,
+          );
+          assert.equal(
+            notification.data.conversations.find((c) => c.id === id).pending,
+            0,
+          );
+          await request(
+            "chat",
+            "POST",
+            { text: "Nova solicitação após a resposta" },
+            customerCookie,
+          );
+          runWorker();
+          assert.equal(notifications().length, 2);
+          await request(
+            "admin/chat/" + id,
+            "POST",
+            { text: "Concluído" },
+            adminCookie,
+          );
+          direct.prepare("DELETE FROM chat_reads WHERE customer_id=?").run(id);
+          direct.prepare("DELETE FROM chat_alerts WHERE customer_id=?").run(id);
+          direct.prepare("DELETE FROM messages WHERE user_id=?").run(id);
+          direct.close();
+        },
+      );
+      await t.test(
+        "Destaques usam recebimentos dos últimos 90 dias, custos ficam privados e sem estoque não ganha prioridade",
+        async () => {
+          const direct = new DatabaseSync(join(dir, "store.sqlite"));
+          const userId = direct
+            .prepare("SELECT id FROM users WHERE email=?")
+            .get(customerEmail).id;
+          const original = (await request("products")).data.products[0];
+          const fixtures = ["a", "b", "empty", "inactive"].map((suffix) => ({
+            ...original,
+            id: "merch-" + suffix,
+            slug: "merch-" + suffix,
+            name: "Produto de teste " + suffix,
+            category: suffix === "b" ? "Eletros" : "Colchões",
+            priceCents: 30000,
+            discountPercent: 0,
+            stock: suffix === "empty" ? 0 : 20,
+            active: suffix !== "inactive",
+            variantInventory: {},
+          }));
+          for (const p of fixtures) {
+            assert.equal(
+              (await request("admin/products", "PUT", p, adminCookie)).status,
+              200,
+            );
+            assert.equal(
+              (
+                await request(
+                  "admin/marketing-cost",
+                  "PUT",
+                  { productId: p.id, costCents: 10000 },
+                  adminCookie,
+                )
+              ).status,
+              200,
+            );
+          }
+          assert.equal(
+            (
+              await request(
+                "admin/marketing-cost",
+                "PUT",
+                { productId: fixtures[0].id, costCents: 0 },
+                customerCookie,
+              )
+            ).status,
+            403,
+          );
+          assert.equal(
+            (
+              await request(
+                "admin/marketing-cost",
+                "PUT",
+                { productId: fixtures[0].id, costCents: -1 },
+                adminCookie,
+              )
+            ).status,
+            400,
+          );
+          const sale = (p, status, quantity, old = false) => {
+            const id = randomUUID();
+            direct
+              .prepare(
+                "INSERT INTO orders(id,user_id,status,total,delivery,data) VALUES(?,?,?,?,?,?)",
+              )
+              .run(
+                id,
+                userId,
+                status,
+                30000 * quantity,
+                "pickup-sepetiba",
+                "{}",
+              );
+            direct
+              .prepare("INSERT INTO order_lines VALUES(?,?,?,?,?)")
+              .run(id, p.id, "", quantity, 30000);
+            if (["paid", "completed"].includes(status))
+              direct
+                .prepare(
+                  "INSERT INTO cash(id,direction,amount,label,order_id,created_at) VALUES(?,'in',?,'Test',?,datetime('now',?))",
+                )
+                .run(
+                  randomUUID(),
+                  30000 * quantity,
+                  id,
+                  old ? "-95 days" : "+0 days",
+                );
+          };
+          sale(fixtures[0], "paid", 3);
+          sale(fixtures[1], "completed", 2);
+          sale(fixtures[2], "paid", 500);
+          sale(fixtures[3], "paid", 500);
+          sale(fixtures[0], "pending", 1000);
+          sale(fixtures[1], "cancelled", 1000);
+          sale(fixtures[1], "paid", 1000, true);
+          const publicResponse = await request("products");
+          assert.deepEqual(publicResponse.data.highlights.bestSellers, [
+            fixtures[0].id,
+            fixtures[1].id,
+          ]);
+          assert.deepEqual(publicResponse.data.highlights.priority, [
+            fixtures[0].id,
+            fixtures[1].id,
+          ]);
+          assert.ok(!JSON.stringify(publicResponse.data).includes("costCents"));
+          const html = await (await fetch(origin)).text();
+          assert.ok(html.includes("Mais comprados"));
+          assert.ok(!html.includes('"costCents":'));
+          const dashboard = await request(
+            "admin/dashboard",
+            "GET",
+            undefined,
+            adminCookie,
+          );
+          assert.ok(
+            dashboard.data.marketing.costs.some(
+              (c) => c.productId === fixtures[0].id && c.costCents === 10000,
+            ),
+          );
+          for (const p of fixtures) {
+            const orderRows = direct
+              .prepare("SELECT order_id FROM order_lines WHERE product_id=?")
+              .all(p.id);
+            for (const row of orderRows) {
+              direct
+                .prepare("DELETE FROM cash WHERE order_id=?")
+                .run(row.order_id);
+              direct
+                .prepare("DELETE FROM order_lines WHERE order_id=?")
+                .run(row.order_id);
+              direct.prepare("DELETE FROM orders WHERE id=?").run(row.order_id);
+            }
+            direct
+              .prepare("DELETE FROM marketing_costs WHERE product_id=?")
+              .run(p.id);
+            direct.prepare("DELETE FROM products WHERE id=?").run(p.id);
+          }
+          direct.close();
+        },
+      );
       let p;
       await t.test(
         "Sacola persistente, sem variações inexistentes",

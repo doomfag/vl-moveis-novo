@@ -34,6 +34,27 @@ export async function sendAccountEmail(
       ? "Confirme seu e-mail — VL Móveis"
       : "Redefina sua senha — VL Móveis";
   const text = `${purpose === "verify" ? "Confirme seu endereço de e-mail para ativar sua conta na VL Móveis." : "Você solicitou uma nova senha para sua conta na VL Móveis."}\n\n${url.toString()}\n\n${purpose === "verify" ? "Este link vale por 24 horas." : "Este link vale por 30 minutos."} Se não foi você, ignore esta mensagem.`;
+  return deliverEmail(to, subject, text, origin);
+}
+export async function sendOwnerChatEmail(origin: string) {
+  const to = process.env.CHAT_NOTIFY_EMAIL || process.env.STORE_OWNER_EMAIL;
+  if (!to || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to))
+    throw new Error("Store notification recipient is not configured");
+  return deliverEmail(
+    to,
+    "Nova mensagem de cliente — VL Móveis",
+    "Há uma conversa de cliente aguardando resposta na VL Móveis.\n\n" +
+      new URL("/admin", origin).toString() +
+      "\n\nEntre com sua conta de administrador para atender. Este aviso não inclui o conteúdo privado da conversa.",
+    origin,
+  );
+}
+async function deliverEmail(
+  to: string,
+  subject: string,
+  text: string,
+  origin: string,
+) {
   if (localEmailMode(origin)) {
     const directory = resolve(
       /* turbopackIgnore: true */ process.env.EMAIL_PREVIEW_DIR ||

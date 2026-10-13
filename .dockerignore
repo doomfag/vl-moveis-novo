@@ -9,3 +9,6 @@ __pycache__
 *.tsbuildinfo
 test-results
 playwright-report
+
+data/backups/
+vl-moveis-*.tar.gz

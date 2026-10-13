@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   LayoutDashboard,
   Package,
@@ -35,6 +35,12 @@ type Dashboard = {
   promotions: Promotion[];
   counts: { customers: number };
   integrations: Record<string, string>;
+  marketing: {
+    highlights: { priority: string[] };
+    costs: { productId: string; variant: string; costCents: number }[];
+    sales: { productId: string; quantity: number }[];
+    margins: { productId: string; marginCents: number }[];
+  };
 };
 const categories = [
   "Colchões",
@@ -55,6 +61,7 @@ const tabs = [
   { id: "cash", label: "Fluxo de caixa", icon: Wallet },
   { id: "integrations", label: "Integrações", icon: Settings },
   { id: "backup", label: "Backup", icon: ShieldCheck },
+  { id: "marketing", label: "Destaques automáticos", icon: Megaphone },
 ];
 function emptyProduct(): Product {
   const id = "produto-" + crypto.randomUUID().slice(0, 8);
@@ -107,6 +114,42 @@ export default function Admin() {
     [edit, setEdit] = useState<Product | null>(null),
     [promotion, setPromotion] = useState<Promotion | null>(null),
     [busy, setBusy] = useState(false);
+  const seenConversations = useRef<Record<string, number>>({});
+  useEffect(() => {
+    if (s.user?.role !== "admin") return;
+    let active = true;
+    seenConversations.current = {};
+    const check = async () => {
+      if (document.visibilityState !== "visible") return;
+      try {
+        const result = await api("admin/chat-notifications");
+        if (!active) return;
+        const newlyUnread = result.conversations.filter(
+          (c: any) =>
+            c.unread > 0 &&
+            c.latest_row > (seenConversations.current[c.id] || 0),
+        );
+        result.conversations.forEach((c: any) => {
+          seenConversations.current[c.id] = c.latest_row;
+        });
+        setData((prev) =>
+          prev ? { ...prev, conversations: result.conversations } : prev,
+        );
+        if (newlyUnread.length)
+          s.notify("Você tem novas mensagens de clientes no atendimento.");
+      } catch {
+        /* A failed poll must not erase pending conversations. */
+      }
+    };
+    check();
+    const timer = setInterval(check, 5000);
+    document.addEventListener("visibilitychange", check);
+    return () => {
+      active = false;
+      clearInterval(timer);
+      document.removeEventListener("visibilitychange", check);
+    };
+  }, [s.user]);
   const load = async () => {
     try {
       setData(await api("admin/dashboard"));
@@ -191,6 +234,12 @@ export default function Admin() {
             >
               <t.icon size={18} />
               {t.label}
+              {t.id === "chat" &&
+                !!data?.conversations.some((c) => c.pending > 0) && (
+                  <span aria-label="Conversas aguardando resposta">
+                    {data.conversations.filter((c) => c.pending > 0).length}
+                  </span>
+                )}
               {t.id === "orders" &&
               data?.orders.filter((o) => o.status === "pending").length ? (
                 <span>
@@ -204,6 +253,20 @@ export default function Admin() {
           </Link>
         </nav>
         <section className="admin-content">
+          {!!data?.conversations.some((c) => c.pending > 0) && (
+            <div className="panel chat-pending-notice" role="status">
+              <p>
+                {data.conversations.filter((c) => c.pending > 0).length}{" "}
+                conversa(s) aguardando resposta.
+              </p>
+              <button
+                className="button button-outline"
+                onClick={() => setTab("chat")}
+              >
+                Abrir atendimento
+              </button>
+            </div>
+          )}
           {error && (
             <div className="form-error" role="alert">
               {error}
@@ -565,6 +628,13 @@ export default function Admin() {
                 </>
               )}
               {tab === "backup" && <BackupPanel />}
+              {tab === "marketing" && (
+                <MarketingPanel
+                  products={data.products}
+                  marketing={data.marketing}
+                  onRefresh={load}
+                />
+              )}
               {tab === "integrations" && (
                 <>
                   <h2>Tudo conectado, no seu tempo.</h2>
@@ -1452,6 +1522,7 @@ function AdminChat({
   conversations: any[];
   onRefresh: () => Promise<void>;
 }) {
+  const lastRead = useRef<Record<string, number>>({});
   const [selected, setSelected] = useState(""),
     [messages, setMessages] = useState<any[]>([]),
     [text, setText] = useState(""),
@@ -1463,7 +1534,22 @@ function AdminChat({
     const load = () =>
       api("admin/chat/" + selected)
         .then((d) => {
-          if (active) setMessages(d.messages);
+          if (active) {
+            setMessages(d.messages);
+            const sequence = d.messages.at(-1)?.sequence || 0;
+            if (
+              document.visibilityState === "visible" &&
+              sequence > (lastRead.current[selected] || 0)
+            ) {
+              api("admin/chat/" + selected + "/read", "POST", {
+                lastRow: sequence,
+              })
+                .then(() => {
+                  lastRead.current[selected] = sequence;
+                })
+                .catch(() => {});
+            }
+          }
         })
         .catch((e: Error) => {
           if (active) setError(e.message);
@@ -1502,6 +1588,12 @@ function AdminChat({
                 <span>
                   <b>{c.name}</b>
                   <small>{c.email}</small>
+                  {c.pending > 0 && (
+                    <small className="status pending">
+                      Aguardando resposta
+                    </small>
+                  )}
+                  {c.unread > 0 && <small>{c.unread} não lida(s)</small>}
                 </span>
                 <ChevronRight size={15} />
               </button>
@@ -1536,6 +1628,7 @@ function AdminChat({
                     await api("admin/chat/" + selected, "POST", { text });
                     setText("");
                     setMessages((await api("admin/chat/" + selected)).messages);
+                    await onRefresh();
                     setError("");
                   } catch (e) {
                     setError((e as Error).message);
@@ -1653,6 +1746,167 @@ function BackupPanel() {
         O arquivo contém dados privados. A restauração deve ser feita com o site
         parado, para preservar os dados atuais.
       </p>
+    </div>
+  );
+}
+
+function MarketingPanel({
+  products,
+  marketing,
+  onRefresh,
+}: {
+  products: Product[];
+  marketing: Dashboard["marketing"];
+  onRefresh: () => Promise<void>;
+}) {
+  const [productId, setProductId] = useState(products[0]?.id || "");
+  const [scope, setScope] = useState("");
+  const [cost, setCost] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState("");
+  const p = products.find((p) => p.id === productId);
+  useEffect(() => {
+    const saved = marketing.costs.find(
+      (c) => c.productId === productId && c.variant === scope,
+    );
+    setCost(saved ? String(saved.costCents / 100) : "");
+  }, [productId, scope, marketing.costs]);
+  return (
+    <div className="panel">
+      <h2>Destaques automáticos</h2>
+      <p>
+        A página inicial mostra os mais comprados dos últimos 90 dias. Somente
+        pedidos pagos ou concluídos, com recebimento confirmado, contam.
+        Produtos inativos ou sem estoque conhecido disponível são retirados da
+        seleção.
+      </p>
+      <h3>Prioridade por margem do produto</h3>
+      <p>
+        Até dois produtos com maior margem unitária cadastrada ganham prioridade
+        nos destaques. O cálculo considera o preço atual, descontos e custo da
+        variação exibida. Não inclui taxas de pagamento, frete, impostos ou
+        anúncios; não representa lucro líquido.
+      </p>
+      <p>
+        Os custos ficam privados no painel. Se não houver custo cadastrado, o
+        produto não participa dessa prioridade.
+      </p>
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setBusy(true);
+          setMessage("");
+          try {
+            const pair = scope ? JSON.parse(scope) : null;
+            await api("admin/marketing-cost", "PUT", {
+              productId,
+              ...(pair ? { color: pair[0], size: pair[1] } : {}),
+              costCents:
+                cost.trim() === ""
+                  ? null
+                  : Math.round(Number(cost.replace(",", ".")) * 100),
+            });
+            await onRefresh();
+            setMessage(
+              "Custo privado salvo. Os destaques serão atualizados na próxima visita à página inicial.",
+            );
+          } catch (e) {
+            setMessage(
+              e instanceof Error ? e.message : "Não foi possível salvar.",
+            );
+          } finally {
+            setBusy(false);
+          }
+        }}
+      >
+        <label>
+          Produto
+          <select
+            aria-label="Produto"
+            value={productId}
+            onChange={(e) => {
+              setProductId(e.target.value);
+              setScope("");
+            }}
+          >
+            {products.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Aplicar custo a
+          <select
+            aria-label="Aplicar custo a"
+            value={scope}
+            onChange={(e) => setScope(e.target.value)}
+          >
+            <option value="">Todas as variações sem custo específico</option>
+            {p?.colors.flatMap((c) =>
+              p.sizes.map((size) => (
+                <option
+                  key={variantKey(c.name, size)}
+                  value={variantKey(c.name, size)}
+                >
+                  {c.name} · {size}
+                </option>
+              )),
+            )}
+          </select>
+        </label>
+        <label>
+          Custo unitário de aquisição (R$)
+          <input
+            value={cost}
+            onChange={(e) => setCost(e.target.value)}
+            inputMode="decimal"
+            type="number"
+            min="0"
+            step="0.01"
+            max="1000000"
+          />
+        </label>
+        <p>
+          Deixe vazio para remover esse custo. Use custos por cor e medida
+          quando as variações tiverem custos diferentes.
+        </p>
+        <button className="button" disabled={busy}>
+          {busy ? "Salvando…" : "Salvar custo privado"}
+        </button>
+      </form>
+      {message && <p role="status">{message}</p>}
+      <h3>Seleção atual por margem</h3>
+      {marketing.highlights.priority.length ? (
+        <ul>
+          {marketing.highlights.priority.map((id) => (
+            <li key={id}>
+              {products.find((p) => p.id === id)?.name} · Margem unitária
+              estimada:{" "}
+              {money(
+                marketing.margins.find((m) => m.productId === id)
+                  ?.marginCents || 0,
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Cadastre custos e preços reais para ativar essa seleção.</p>
+      )}
+      <h3>Mais comprados</h3>
+      {marketing.sales.length ? (
+        <ul>
+          {marketing.sales.slice(0, 10).map((row) => (
+            <li key={row.productId}>
+              {products.find((p) => p.id === row.productId)?.name}:{" "}
+              {row.quantity} unidades
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Ainda não há vendas elegíveis para formar o ranking.</p>
+      )}
     </div>
   );
 }

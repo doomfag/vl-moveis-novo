@@ -498,13 +498,58 @@ try {
     );
   });
   await check(
+    "Admin cadastra custo privado e ativa prioridade automática",
+    async () => {
+      await page
+        .getByRole("button", { name: "Destaques automáticos", exact: true })
+        .click();
+      await page
+        .getByLabel("Produto", { exact: true })
+        .selectOption("base-sommier-bau-camurca");
+      await page
+        .getByLabel("Custo unitário de aquisição (R$)", { exact: true })
+        .fill("500");
+      await page
+        .getByRole("button", { name: "Salvar custo privado", exact: true })
+        .click();
+      await expect(page.locator(".admin-content p[role=status]")).toContainText(
+        "Custo privado salvo",
+      );
+      const response = await context.request.get(origin + "/api/products");
+      const data = await response.json();
+      if (!data.highlights.priority.includes("base-sommier-bau-camurca"))
+        throw new Error("Known positive margin did not receive priority");
+      if (JSON.stringify(data).includes("costCents"))
+        throw new Error("Private cost leaked in public API");
+    },
+  );
+  await check(
     "Admin responde atendimento com histórico e publica campanha",
     async () => {
       await page
-        .getByRole("button", { name: "Atendimento", exact: true })
+        .locator(".admin-nav")
+        .getByRole("button", { name: /^Atendimento/ })
         .click();
       await page.locator(".admin-chat aside button").first().click();
       await expect(page.locator(".admin-conversation .message")).toHaveCount(1);
+      await expect(
+        page
+          .locator(".admin-nav button")
+          .filter({ hasText: "Atendimento" })
+          .locator("span"),
+      ).toContainText("1");
+      await expect
+        .poll(async () => {
+          const r = await context.request.get(
+            origin + "/api/admin/chat-notifications",
+          );
+          const conversations = (await r.json()).conversations;
+          return conversations[0]?.unread;
+        })
+        .toBe(0);
+      await expect(page.locator(".chat-pending-notice")).toContainText(
+        "aguardando resposta",
+      );
       await page
         .getByRole("textbox", { name: "Resposta ao cliente" })
         .fill("Olá! Vamos confirmar a disponibilidade.");
@@ -512,6 +557,7 @@ try {
         .getByRole("button", { name: "Enviar resposta", exact: true })
         .click();
       await expect(page.locator(".admin-conversation .message")).toHaveCount(2);
+      await expect(page.locator(".chat-pending-notice")).toHaveCount(0);
       await page
         .getByRole("button", { name: "Banners e campanhas", exact: true })
         .click();
